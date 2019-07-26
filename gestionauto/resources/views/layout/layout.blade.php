@@ -1,507 +1,557 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
+
+<!-- Mirrored from foxythemes.net/preview/products/beagle/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Jul 2019 13:11:22 GMT -->
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
-
-  <title>@yield('title','Tableau de Bord') </title>
-
-  <!-- Font Awesome Icons -->
-  <link rel="stylesheet" href="admin/plugins/fontawesome-free/css/all.min.css">
-  <!-- overlayScrollbars -->
-  <link rel="stylesheet" href="admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
-  <!-- Theme style -->
-  <link rel="stylesheet" href="admin/dist/css/adminlte.min.css">
-  <!-- Google Font: Source Sans Pro -->
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="author" content="">
+  <link rel="shortcut icon" href="assets/img/logo-fav.png">
+  <title>Beagle</title>
+  <link rel="stylesheet" type="text/css" href="assets/lib/perfect-scrollbar/css/perfect-scrollbar.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/lib/material-design-icons/css/material-design-iconic-font.min.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/lib/jqvmap/jqvmap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="assets/lib/datetimepicker/css/bootstrap-datetimepicker.min.css"/>
+  <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
 </head>
-<body class="hold-transition sidebar-mini layout-fixed layout-navbar-fixed layout-footer-fixed">
-<div class="wrapper">
-  <!-- Navbar -->
-  <nav class="main-header navbar navbar-expand navbar-white navbar-light border-bottom">
-    <!-- Left navbar links -->
-
-
-    <!-- SEARCH FORM -->
-    <form class="form-inline ml-3">
-      <div class="input-group input-group-sm">
-        <input class="form-control form-control-navbar" type="search" placeholder="Search" aria-label="Search">
-        <div class="input-group-append">
-          <button class="btn btn-navbar" type="submit">
-            <i class="fas fa-search"></i>
-          </button>
-        </div>
+<body>
+<div class="be-wrapper be-fixed-sidebar">
+  <nav class="navbar navbar-expand fixed-top be-top-header">
+    <div class="container-fluid">
+      <div class="be-navbar-header"><a class="navbar-brand" href="index-2.html"></a>
       </div>
-    </form>
-
-    <!-- Right navbar links -->
-    <ul class="navbar-nav ml-auto">
-      <!-- Messages Dropdown Menu -->
-      <li class="nav-item dropdown">
-        <a class="nav-link" data-toggle="dropdown" href="#">
-          <i class="far fa-comments"></i>
-          <span class="badge badge-danger navbar-badge">3</span>
-        </a>
-        <div class="dropdown-menu dropdown-menu-lg dropdown-menu-right">
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="dist/img/user1-128x128.jpg" alt="User Avatar" class="img-size-50 mr-3 img-circle">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Brad Diesel
-                  <span class="float-right text-sm text-danger"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">Call me whenever you can...</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
+      <div class="page-title"><span>Dashboard</span></div>
+      <div class="be-right-navbar">
+        <ul class="nav navbar-nav float-right be-user-nav">
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><img src="assets/img/avatar.png" alt="Avatar"><span class="user-name">Túpac Amaru</span></a>
+            <div class="dropdown-menu" role="menu">
+              <div class="user-info">
+                <div class="user-name">Túpac Amaru</div>
+                <div class="user-position online">Available</div>
+              </div><a class="dropdown-item" href="pages-profile.html"><span class="icon mdi mdi-face"></span>Account</a><a class="dropdown-item" href="#"><span class="icon mdi mdi-settings"></span>Settings</a><a class="dropdown-item" href="pages-login.html"><span class="icon mdi mdi-power"></span>Logout</a>
             </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="dist/img/user8-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  John Pierce
-                  <span class="float-right text-sm text-muted"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">I got your message bro</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item">
-            <!-- Message Start -->
-            <div class="media">
-              <img src="admin/dist/img/user3-128x128.jpg" alt="User Avatar" class="img-size-50 img-circle mr-3">
-              <div class="media-body">
-                <h3 class="dropdown-item-title">
-                  Nora Silvester
-                  <span class="float-right text-sm text-warning"><i class="fas fa-star"></i></span>
-                </h3>
-                <p class="text-sm">The subject goes here</p>
-                <p class="text-sm text-muted"><i class="far fa-clock mr-1"></i> 4 Hours Ago</p>
-              </div>
-            </div>
-            <!-- Message End -->
-          </a>
-          <div class="dropdown-divider"></div>
-          <a href="#" class="dropdown-item dropdown-footer">See All Messages</a>
-        </div>
-      </li>
-      <!-- Notifications Dropdown Menu -->
-
-    </ul>
-  </nav>
-  <!-- /.navbar -->
-
-  <!-- Main Sidebar Container -->
-  <aside class="main-sidebar sidebar-dark-primary elevation-4">
-    <!-- Brand Logo -->
-    <a href="index3.html" class="brand-link">
-      <img src="admin/dist/img/AdminLTELogo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3"
-           style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
-    </a>
-
-    <!-- Sidebar -->
-    <div class="sidebar">
-      <!-- Sidebar user panel (optional) -->
-      <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-        <div class="image">
-          <img src="admin/dist/img/user2-160x160.jpg" class="img-circle elevation-2" alt="User Image">
-        </div>
-        <div class="info">
-          <a href="#" class="d-block"></a>
-        </div>
-      </div>
-
-      <!-- Sidebar Menu -->
-      <nav class="mt-2">
-        <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
-          <!-- Add icons to the links using the .nav-icon class
-               with font-awesome or any other icon font library -->
-          <li class="nav-item has-treeview menu-open">
-            <a href="#" class="nav-link active">
-              <i class="nav-icon fas fa-tachometer-alt"></i>
-              <p>
-                Dashboard
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="./index.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v1</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index2.html" class="nav-link active">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v2</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="./index3.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Dashboard v3</p>
-                </a>
-              </li>
-            </ul>
           </li>
-
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-copy"></i>
-              <p>
-                Layout Options
-                <i class="fas fa-angle-left right"></i>
-                <span class="badge badge-info right">6</span>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/layout/top-nav.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Top Navigation</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/boxed.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Boxed</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/fixed.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Fixed</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/fixed-topnav.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Fixed Navbar</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/fixed-footer.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Fixed Footer</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/layout/collapsed-sidebar.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Collapsed Sidebar</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-chart-pie"></i>
-              <p>
-                Charts
-                <i class="right fas fa-angle-left"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/charts/chartjs.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>ChartJS</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/charts/flot.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Flot</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/charts/inline.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Inline</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-tree"></i>
-              <p>
-                UI Elements
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/UI/general.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>General</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/icons.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Icons</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/buttons.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Buttons</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/sliders.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Sliders</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/UI/modals.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Modals & Alerts</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-edit"></i>
-              <p>
-                Forms
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/forms/general.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>General Elements</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/advanced.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Advanced Elements</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/forms/editors.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Editors</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-table"></i>
-              <p>
-                Tables
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/tables/simple.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Simple Tables</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/tables/data.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Data Tables</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-header">EXAMPLES</li>
-          <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
-              <i class="nav-icon fas fa-calendar-alt"></i>
-              <p>
-                Calendar
-                <span class="badge badge-info right">2</span>
-              </p>
-            </a>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-envelope"></i>
-              <p>
-                Mailbox
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/mailbox/mailbox.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Inbox</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/mailbox/compose.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Compose</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/mailbox/read-mail.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Read</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon fas fa-book"></i>
-              <p>
-                Pages
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/examples/invoice.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Invoice</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/profile.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Profile</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/login.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Login</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/register.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Register</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/lockscreen.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Lockscreen</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item has-treeview">
-            <a href="#" class="nav-link">
-              <i class="nav-icon far fa-plus-square"></i>
-              <p>
-                Extras
-                <i class="fas fa-angle-left right"></i>
-              </p>
-            </a>
-            <ul class="nav nav-treeview">
-              <li class="nav-item">
-                <a href="pages/examples/404.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Error 404</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/500.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Error 500</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/blank.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Blank Page</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="starter.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Starter Page</p>
-                </a>
-              </li>
-              <li class="nav-item">
-                <a href="pages/examples/legacy-user-menu.html" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Legacy User Menu</p>
-                </a>
-              </li>
-            </ul>
-          </li>
-
-
-
         </ul>
-      </nav>
-      <!-- /.sidebar-menu -->
+        <ul class="nav navbar-nav float-right be-icons-nav">
+          <li class="nav-item dropdown"><a class="nav-link be-toggle-right-sidebar" href="#" role="button" aria-expanded="false"><span class="icon mdi mdi-settings"></span></a></li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><span class="icon mdi mdi-notifications"></span><span class="indicator"></span></a>
+            <ul class="dropdown-menu be-notifications">
+              <li>
+                <div class="title">Notifications<span class="badge badge-pill">3</span></div>
+                <div class="list">
+                  <div class="be-scroller-notifications">
+                    <div class="content">
+                      <ul>
+                        <li class="notification notification-unread"><a href="#">
+                            <div class="image"><img src="assets/img/avatar2.png" alt="Avatar"></div>
+                            <div class="notification-info">
+                              <div class="text"><span class="user-name">Jessica Caruso</span> accepted your invitation to join the team.</div><span class="date">2 min ago</span>
+                            </div></a></li>
+                        <li class="notification"><a href="#">
+                            <div class="image"><img src="assets/img/avatar3.png" alt="Avatar"></div>
+                            <div class="notification-info">
+                              <div class="text"><span class="user-name">Joel King</span> is now following you</div><span class="date">2 days ago</span>
+                            </div></a></li>
+                        <li class="notification"><a href="#">
+                            <div class="image"><img src="assets/img/avatar4.png" alt="Avatar"></div>
+                            <div class="notification-info">
+                              <div class="text"><span class="user-name">John Doe</span> is watching your main repository</div><span class="date">2 days ago</span>
+                            </div></a></li>
+                        <li class="notification"><a href="#">
+                            <div class="image"><img src="assets/img/avatar5.png" alt="Avatar"></div>
+                            <div class="notification-info"><span class="text"><span class="user-name">Emily Carter</span> is now following you</span><span class="date">5 days ago</span></div></a></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer"> <a href="#">View all notifications</a></div>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><span class="icon mdi mdi-apps"></span></a>
+            <ul class="dropdown-menu be-connections">
+              <li>
+                <div class="list">
+                  <div class="content">
+                    <div class="row">
+                      <div class="col"><a class="connection-item" href="#"><img src="assets/img/github.png" alt="Github"><span>GitHub</span></a></div>
+                      <div class="col"><a class="connection-item" href="#"><img src="assets/img/bitbucket.png" alt="Bitbucket"><span>Bitbucket</span></a></div>
+                      <div class="col"><a class="connection-item" href="#"><img src="assets/img/slack.png" alt="Slack"><span>Slack</span></a></div>
+                    </div>
+                    <div class="row">
+                      <div class="col"><a class="connection-item" href="#"><img src="assets/img/dribbble.png" alt="Dribbble"><span>Dribbble</span></a></div>
+                      <div class="col"><a class="connection-item" href="#"><img src="assets/img/mail_chimp.png" alt="Mail Chimp"><span>Mail Chimp</span></a></div>
+                      <div class="col"><a class="connection-item" href="#"><img src="assets/img/dropbox.png" alt="Dropbox"><span>Dropbox</span></a></div>
+                    </div>
+                  </div>
+                </div>
+                <div class="footer"> <a href="#">More</a></div>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
     </div>
-    <!-- /.sidebar -->
-  </aside>
-
-  <!-- Content Wrapper. Contains page content -->
-
-
-
-  <!-- /.content-wrapper -->
-
-  <!-- Control Sidebar -->
-
-  <!-- /.control-sidebar -->
-
-  <!-- Main Footer -->
-  <footer class="main-footer">
-    <strong>Copyright &copy; 2014-2018 <a href="http://adminlte.io">AdminLTE.io</a>.</strong>
-    All rights reserved.
-    <div class="float-right d-none d-sm-inline-block">
-      <b>Version</b> 3.0.0-beta.1
+  </nav>
+  <div class="be-left-sidebar">
+    <div class="left-sidebar-wrapper"><a class="left-sidebar-toggle" href="#">Dashboard</a>
+      <div class="left-sidebar-spacer">
+        <div class="left-sidebar-scroll">
+          <div class="left-sidebar-content">
+            <ul class="sidebar-elements">
+              <li class="divider">Menu</li>
+              <li class="active"><a href="index-2.html"><i class="icon mdi mdi-home"></i><span>Dashboard</span></a>
+              </li>
+              <li class="parent"><a href="#"><i class="icon mdi mdi-face"></i><span>UI Elements</span></a>
+                <ul class="sub-menu">
+                  <li><a href="ui-alerts.html">Alerts</a>
+                  </li>
+                  <li><a href="ui-buttons.html">Buttons</a>
+                  </li>
+                  <li><a href="ui-cards.html"><span class="badge badge-primary float-right">New</span>Cards</a>
+                  </li>
+                  <li><a href="ui-panels.html">Panels</a>
+                  </li>
+                  <li><a href="ui-general.html">General</a>
+                  </li>
+                  <li><a href="ui-modals.html">Modals</a>
+                  </li>
+                  <li><a href="ui-notifications.html">Notifications</a>
+                  </li>
+                  <li><a href="ui-icons.html">Icons</a>
+                  </li>
+                  <li><a href="ui-grid.html">Grid</a>
+                  </li>
+                  <li><a href="ui-tabs-accordions.html">Tabs &amp; Accordions</a>
+                  </li>
+                  <li><a href="ui-nestable-lists.html">Nestable Lists</a>
+                  </li>
+                  <li><a href="ui-typography.html">Typography</a>
+                  </li>
+                  <li><a href="ui-dragdrop.html"><span class="badge badge-primary float-right">New</span>Drag &amp; Drop</a>
+                  </li>
+                  <li><a href="ui-sweetalert2.html"><span class="badge badge-primary float-right">New</span>Sweetalert 2</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="parent"><a href="charts.html"><i class="icon mdi mdi-chart-donut"></i><span>Charts</span></a>
+                <ul class="sub-menu">
+                  <li><a href="charts-flot.html">Flot</a>
+                  </li>
+                  <li><a href="charts-sparkline.html">Sparklines</a>
+                  </li>
+                  <li><a href="charts-chartjs.html">Chart.js</a>
+                  </li>
+                  <li><a href="charts-morris.html">Morris.js</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="parent"><a href="#"><i class="icon mdi mdi-dot-circle"></i><span>Forms</span></a>
+                <ul class="sub-menu">
+                  <li><a href="form-elements.html">Elements</a>
+                  </li>
+                  <li><a href="form-validation.html">Validation</a>
+                  </li>
+                  <li><a href="form-multiselect.html">Multiselect</a>
+                  </li>
+                  <li><a href="form-wizard.html">Wizard</a>
+                  </li>
+                  <li><a href="form-masks.html">Input Masks</a>
+                  </li>
+                  <li><a href="form-wysiwyg.html">WYSIWYG Editor</a>
+                  </li>
+                  <li><a href="form-upload.html">Multi Upload</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="parent"><a href="#"><i class="icon mdi mdi-border-all"></i><span>Tables</span></a>
+                <ul class="sub-menu">
+                  <li><a href="tables-general.html">General</a>
+                  </li>
+                  <li><a href="tables-datatables.html">Data Tables</a>
+                  </li>
+                  <li><a href="tables-filters.html"><span class="badge badge-primary float-right">New</span>Table Filters</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="parent"><a href="#"><i class="icon mdi mdi-layers"></i><span>Pages</span></a>
+                <ul class="sub-menu">
+                  <li><a href="pages-blank.html">Blank Page</a>
+                  </li>
+                  <li><a href="pages-blank-header.html">Blank Page Header</a>
+                  </li>
+                  <li><a href="pages-login.html">Login</a>
+                  </li>
+                  <li><a href="pages-login2.html">Login v2</a>
+                  </li>
+                  <li><a href="pages-404.html">404 Page</a>
+                  </li>
+                  <li><a href="pages-sign-up.html">Sign Up</a>
+                  </li>
+                  <li><a href="pages-forgot-password.html">Forgot Password</a>
+                  </li>
+                  <li><a href="pages-profile.html">Profile</a>
+                  </li>
+                  <li><a href="pages-pricing-tables.html">Pricing Tables</a>
+                  </li>
+                  <li><a href="pages-pricing-tables2.html">Pricing Tables v2</a>
+                  </li>
+                  <li><a href="pages-timeline.html">Timeline</a>
+                  </li>
+                  <li><a href="pages-timeline2.html">Timeline v2</a>
+                  </li>
+                  <li><a href="pages-invoice.html"><span class="badge badge-primary float-right">New</span>Invoice</a>
+                  </li>
+                  <li><a href="pages-calendar.html">Calendar</a>
+                  </li>
+                  <li><a href="pages-gallery.html">Gallery</a>
+                  </li>
+                  <li><a href="pages-code-editor.html"><span class="badge badge-primary float-right">New    </span>Code Editor</a>
+                  </li>
+                  <li><a href="pages-booking.html"><span class="badge badge-primary float-right">New</span>Booking</a>
+                  </li>
+                  <li><a href="pages-loaders.html"><span class="badge badge-primary float-right">New</span>Loaders</a>
+                  </li>
+                  <li><a href="pages-ajax-loader.html"><span class="badge badge-primary float-right">New</span>AJAX Loader</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="divider">Features</li>
+              <li class="parent"><a href="#"><i class="icon mdi mdi-inbox"></i><span>Email</span></a>
+                <ul class="sub-menu">
+                  <li><a href="email-inbox.html">Inbox</a>
+                  </li>
+                  <li><a href="email-read.html">Email Detail</a>
+                  </li>
+                  <li><a href="email-compose.html">Email Compose</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="parent"><a href="#"><i class="icon mdi mdi-view-web"></i><span>Layouts</span></a>
+                <ul class="sub-menu">
+                  <li><a href="layouts-primary-header.html">Primary Header</a>
+                  </li>
+                  <li><a href="layouts-success-header.html">Success Header</a>
+                  </li>
+                  <li><a href="layouts-warning-header.html">Warning Header</a>
+                  </li>
+                  <li><a href="layouts-danger-header.html">Danger Header</a>
+                  </li>
+                  <li><a href="layouts-search-input.html">Search Input</a>
+                  </li>
+                  <li><a href="layouts-offcanvas-menu.html">Off Canvas Menu</a>
+                  </li>
+                  <li><a href="layouts-top-menu.html"><span class="badge badge-primary float-right">New</span>Top Menu</a>
+                  </li>
+                  <li><a href="layouts-nosidebar-left.html">Without Left Sidebar</a>
+                  </li>
+                  <li><a href="layouts-nosidebar-right.html">Without Right Sidebar</a>
+                  </li>
+                  <li><a href="layouts-nosidebars.html">Without Both Sidebars</a>
+                  </li>
+                  <li><a href="layouts-fixed-sidebar.html">Fixed Left Sidebar</a>
+                  </li>
+                  <li><a href="layouts-boxed-layout.html"><span class="badge badge-primary float-right">New</span>Boxed Layout</a>
+                  </li>
+                  <li><a href="pages-blank-aside.html">Page Aside</a>
+                  </li>
+                  <li><a href="layouts-collapsible-sidebar.html">Collapsible Sidebar</a>
+                  </li>
+                  <li><a href="layouts-sub-navigation.html"><span class="badge badge-primary float-right">New</span>Sub Navigation</a>
+                  </li>
+                  <li><a href="layouts-mega-menu.html"><span class="badge badge-primary float-right">New</span>Mega Menu</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="parent"><a href="#"><i class="icon mdi mdi-pin"></i><span>Maps</span></a>
+                <ul class="sub-menu">
+                  <li><a href="maps-google.html">Google Maps</a>
+                  </li>
+                  <li><a href="maps-vector.html">Vector Maps</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="parent"><a href="#"><i class="icon mdi mdi-folder"></i><span>Menu Levels</span></a>
+                <ul class="sub-menu">
+                  <li class="parent"><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 1</span></a>
+                    <ul class="sub-menu">
+                      <li><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 2</span></a>
+                      </li>
+                      <li class="parent"><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 2</span></a>
+                        <ul class="sub-menu">
+                          <li><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 3</span></a>
+                          </li>
+                          <li><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 3</span></a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="parent"><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 1</span></a>
+                    <ul class="sub-menu">
+                      <li><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 2</span></a>
+                      </li>
+                      <li class="parent"><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 2</span></a>
+                        <ul class="sub-menu">
+                          <li><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 3</span></a>
+                          </li>
+                          <li><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 3</span></a>
+                          </li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li><a href="documentation.html"><i class="icon mdi mdi-book"></i><span>Documentation</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="progress-widget">
+        <div class="progress-data"><span class="progress-value">60%</span><span class="name">Current Project</span></div>
+        <div class="progress">
+          <div class="progress-bar progress-bar-primary" style="width: 60%;"></div>
+        </div>
+      </div>
     </div>
-  </footer>
-</div>
-<!-- ./wrapper -->
+  </div>
+  <div class="be-content">
 
-<!-- REQUIRED SCRIPTS -->
-<!-- jQuery -->
-<script src="admin/plugins/jquery/jquery.min.js"></script>
-<!-- Bootstrap -->
-<script src="admin/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
-<!-- overlayScrollbars -->
-<script src="admin/plugins/overlayScrollbars/js/jquery.overlayScrollbars.min.js"></script>
-<!-- AdminLTE App -->
-<script src="admin/dist/js/adminlte.js"></script>
 
-<!-- OPTIONAL SCRIPTS -->
-<script src="admin/dist/js/demo.js"></script>
+   @yield('content')
 
-<!-- PAGE PLUGINS -->
-<!-- jQuery Mapael -->
-<script src="admin/plugins/jquery-mousewheel/jquery.mousewheel.js"></script>
-<script src="admin/plugins/raphael/raphael.min.js"></script>
-<script src="admin/plugins/jquery-mapael/jquery.mapael.min.js"></script>
-<script src="admin/plugins/jquery-mapael/maps/world_countries.min.js"></script>
-<!-- ChartJS -->
-<script src="admin/plugins/chart.js/Chart.min.js"></script>
 
-<!-- PAGE SCRIPTS -->
-<script src="admin/dist/js/pages/dashboard2.js"></script>
+    <nav class="be-right-sidebar">
+      <div class="sb-content">
+        <div class="tab-navigation">
+          <ul class="nav nav-tabs nav-justified" role="tablist">
+            <li class="nav-item" role="presentation"><a class="nav-link active" href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Chat</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Todo</a></li>
+            <li class="nav-item" role="presentation"><a class="nav-link" href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">Settings</a></li>
+          </ul>
+        </div>
+        <div class="tab-panel">
+          <div class="tab-content">
+            <div class="tab-pane tab-chat active" id="tab1" role="tabpanel">
+              <div class="chat-contacts">
+                <div class="chat-sections">
+                  <div class="be-scroller-chat">
+                    <div class="content">
+                      <h2>Recent</h2>
+                      <div class="contact-list contact-list-recent">
+                        <div class="user"><a href="#"><img src="assets/img/avatar1.png" alt="Avatar">
+                            <div class="user-data"><span class="status away"></span><span class="name">Claire Sassu</span><span class="message">Can you share the...</span></div></a></div>
+                        <div class="user"><a href="#"><img src="assets/img/avatar2.png" alt="Avatar">
+                            <div class="user-data"><span class="status"></span><span class="name">Maggie jackson</span><span class="message">I confirmed the info.</span></div></a></div>
+                        <div class="user"><a href="#"><img src="assets/img/avatar3.png" alt="Avatar">
+                            <div class="user-data"><span class="status offline"></span><span class="name">Joel King		</span><span class="message">Ready for the meeti...</span></div></a></div>
+                      </div>
+                      <h2>Contacts</h2>
+                      <div class="contact-list">
+                        <div class="user"><a href="#"><img src="assets/img/avatar4.png" alt="Avatar">
+                            <div class="user-data2"><span class="status"></span><span class="name">Mike Bolthort</span></div></a></div>
+                        <div class="user"><a href="#"><img src="assets/img/avatar5.png" alt="Avatar">
+                            <div class="user-data2"><span class="status"></span><span class="name">Maggie jackson</span></div></a></div>
+                        <div class="user"><a href="#"><img src="assets/img/avatar6.png" alt="Avatar">
+                            <div class="user-data2"><span class="status offline"></span><span class="name">Jhon Voltemar</span></div></a></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom-input">
+                  <input type="text" placeholder="Search..." name="q"><span class="mdi mdi-search"></span>
+                </div>
+              </div>
+              <div class="chat-window">
+                <div class="title">
+                  <div class="user"><img src="assets/img/avatar2.png" alt="Avatar">
+                    <h2>Maggie jackson</h2><span>Active 1h ago</span>
+                  </div><span class="icon return mdi mdi-chevron-left"></span>
+                </div>
+                <div class="chat-messages">
+                  <div class="be-scroller-messages">
+                    <div class="content">
+                      <ul>
+                        <li class="friend">
+                          <div class="msg">Hello</div>
+                        </li>
+                        <li class="self">
+                          <div class="msg">Hi, how are you?</div>
+                        </li>
+                        <li class="friend">
+                          <div class="msg">Good, I'll need support with my pc</div>
+                        </li>
+                        <li class="self">
+                          <div class="msg">Sure, just tell me what is going on with your computer?</div>
+                        </li>
+                        <li class="friend">
+                          <div class="msg">I don't know it just turns off suddenly</div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="chat-input">
+                  <div class="input-wrapper"><span class="photo mdi mdi-camera"></span>
+                    <input type="text" placeholder="Message..." name="q" autocomplete="off"><span class="send-msg mdi mdi-mail-send"></span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane tab-todo" id="tab2" role="tabpanel">
+              <div class="todo-container">
+                <div class="todo-wrapper">
+                  <div class="be-scroller-todo">
+                    <div class="todo-content"><span class="category-title">Today</span>
+                      <ul class="todo-list">
+                        <li>
+                          <div class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                            <input class="custom-control-input" type="checkbox" checked="" id="tck1">
+                            <label class="custom-control-label" for="tck1">Initialize the project</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                            <input class="custom-control-input" type="checkbox" id="tck2">
+                            <label class="custom-control-label" for="tck2">Create the main structure							</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                            <input class="custom-control-input" type="checkbox" id="tck3">
+                            <label class="custom-control-label" for="tck3">Updates changes to GitHub							</label>
+                          </div>
+                        </li>
+                      </ul><span class="category-title">Tomorrow</span>
+                      <ul class="todo-list">
+                        <li>
+                          <div class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                            <input class="custom-control-input" type="checkbox" id="tck4">
+                            <label class="custom-control-label" for="tck4">Initialize the project							</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                            <input class="custom-control-input" type="checkbox" id="tck5">
+                            <label class="custom-control-label" for="tck5">Create the main structure							</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                            <input class="custom-control-input" type="checkbox" id="tck6">
+                            <label class="custom-control-label" for="tck6">Updates changes to GitHub							</label>
+                          </div>
+                        </li>
+                        <li>
+                          <div class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
+                            <input class="custom-control-input" type="checkbox" id="tck7">
+                            <label class="custom-control-label" for="tck7" title="This task is too long to be displayed in a normal space!">This task is too long to be displayed in a normal space!							</label>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="bottom-input">
+                  <input type="text" placeholder="Create new task..." name="q"><span class="mdi mdi-plus"></span>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane tab-settings" id="tab3" role="tabpanel">
+              <div class="settings-wrapper">
+                <div class="be-scroller-settings"><span class="category-title">General</span>
+                  <ul class="settings-list">
+                    <li>
+                      <div class="switch-button switch-button-sm">
+                        <input type="checkbox" checked="" name="st1" id="st1"><span>
+                            <label for="st1"></label></span>
+                      </div><span class="name">Available</span>
+                    </li>
+                    <li>
+                      <div class="switch-button switch-button-sm">
+                        <input type="checkbox" checked="" name="st2" id="st2"><span>
+                            <label for="st2"></label></span>
+                      </div><span class="name">Enable notifications</span>
+                    </li>
+                    <li>
+                      <div class="switch-button switch-button-sm">
+                        <input type="checkbox" checked="" name="st3" id="st3"><span>
+                            <label for="st3"></label></span>
+                      </div><span class="name">Login with Facebook</span>
+                    </li>
+                  </ul><span class="category-title">Notifications</span>
+                  <ul class="settings-list">
+                    <li>
+                      <div class="switch-button switch-button-sm">
+                        <input type="checkbox" name="st4" id="st4"><span>
+                            <label for="st4"></label></span>
+                      </div><span class="name">Email notifications</span>
+                    </li>
+                    <li>
+                      <div class="switch-button switch-button-sm">
+                        <input type="checkbox" checked="" name="st5" id="st5"><span>
+                            <label for="st5"></label></span>
+                      </div><span class="name">Project updates</span>
+                    </li>
+                    <li>
+                      <div class="switch-button switch-button-sm">
+                        <input type="checkbox" checked="" name="st6" id="st6"><span>
+                            <label for="st6"></label></span>
+                      </div><span class="name">New comments</span>
+                    </li>
+                    <li>
+                      <div class="switch-button switch-button-sm">
+                        <input type="checkbox" name="st7" id="st7"><span>
+                            <label for="st7"></label></span>
+                      </div><span class="name">Chat messages</span>
+                    </li>
+                  </ul><span class="category-title">Workflow</span>
+                  <ul class="settings-list">
+                    <li>
+                      <div class="switch-button switch-button-sm">
+                        <input type="checkbox" name="st8" id="st8"><span>
+                            <label for="st8"></label></span>
+                      </div><span class="name">Deploy on commit</span>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </div>
+  <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
+  <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
+  <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
+  <script src="assets/js/app.js" type="text/javascript"></script>
+  <script src="assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
+  <script src="assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
+  <script src="assets/lib/jquery-flot/jquery.flot.time.js" type="text/javascript"></script>
+  <script src="assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
+  <script src="assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
+  <script src="assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
+  <script src="assets/lib/jquery-flot/plugins/jquery.flot.tooltip.js" type="text/javascript"></script>
+  <script src="assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
+  <script src="assets/lib/countup/countUp.min.js" type="text/javascript"></script>
+  <script src="assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+  <script src="assets/lib/jqvmap/jquery.vmap.min.js" type="text/javascript"></script>
+  <script src="assets/lib/jqvmap/maps/jquery.vmap.world.js" type="text/javascript"></script>
+  <script type="text/javascript">
+    $(document).ready(function(){
+      //-initialize the javascript
+      App.init();
+      App.dashboard();
+
+    });
+  </script>
 </body>
+
+<!-- Mirrored from foxythemes.net/preview/products/beagle/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Jul 2019 13:11:22 GMT -->
 </html>

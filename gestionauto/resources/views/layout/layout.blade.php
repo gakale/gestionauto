@@ -1,557 +1,770 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<!-- Mirrored from foxythemes.net/preview/products/beagle/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Jul 2019 13:11:22 GMT -->
+<html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="description" content="">
-  <meta name="author" content="">
-  <link rel="shortcut icon" href="assets/img/logo-fav.png">
-  <title>Beagle</title>
-  <link rel="stylesheet" type="text/css" href="assets/lib/perfect-scrollbar/css/perfect-scrollbar.css"/>
-  <link rel="stylesheet" type="text/css" href="assets/lib/material-design-icons/css/material-design-iconic-font.min.css"/>
-  <link rel="stylesheet" type="text/css" href="assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.css"/>
-  <link rel="stylesheet" type="text/css" href="assets/lib/jqvmap/jqvmap.min.css"/>
-  <link rel="stylesheet" type="text/css" href="assets/lib/datetimepicker/css/bootstrap-datetimepicker.min.css"/>
-  <link rel="stylesheet" href="assets/css/app.css" type="text/css"/>
+  <title>AdminLTE 2 | Dashboard</title>
+  <!-- Tell the browser to be responsive to screen width -->
+  <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+  <!-- Bootstrap 3.3.7 -->
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+  <!-- Ionicons -->
+  <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
+  <!-- Theme style -->
+  <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
+  <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+  <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css">
+  <!-- Morris chart -->
+  <link rel="stylesheet" href="bower_components/morris.js/morris.css">
+  <!-- jvectormap -->
+  <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
+  <!-- Date Picker -->
+  <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
+  <!-- Daterange picker -->
+  <link rel="stylesheet" href="bower_components/bootstrap-daterangepicker/daterangepicker.css">
+  <!-- bootstrap wysihtml5 - text editor -->
+  <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
+
+  <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+
+  <!-- Google Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
 </head>
-<body>
-<div class="be-wrapper be-fixed-sidebar">
-  <nav class="navbar navbar-expand fixed-top be-top-header">
-    <div class="container-fluid">
-      <div class="be-navbar-header"><a class="navbar-brand" href="index-2.html"></a>
-      </div>
-      <div class="page-title"><span>Dashboard</span></div>
-      <div class="be-right-navbar">
-        <ul class="nav navbar-nav float-right be-user-nav">
-          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><img src="assets/img/avatar.png" alt="Avatar"><span class="user-name">Túpac Amaru</span></a>
-            <div class="dropdown-menu" role="menu">
-              <div class="user-info">
-                <div class="user-name">Túpac Amaru</div>
-                <div class="user-position online">Available</div>
-              </div><a class="dropdown-item" href="pages-profile.html"><span class="icon mdi mdi-face"></span>Account</a><a class="dropdown-item" href="#"><span class="icon mdi mdi-settings"></span>Settings</a><a class="dropdown-item" href="pages-login.html"><span class="icon mdi mdi-power"></span>Logout</a>
-            </div>
+<body class="hold-transition skin-blue sidebar-mini">
+<div class="wrapper">
+
+  <header class="main-header">
+    <!-- Logo -->
+    <a href="index2.html" class="logo">
+      <!-- mini logo for sidebar mini 50x50 pixels -->
+      <span class="logo-mini"><b>A</b>LT</span>
+      <!-- logo for regular state and mobile devices -->
+      <span class="logo-lg"><b>Admin</b>LTE</span>
+    </a>
+    <!-- Header Navbar: style can be found in header.less -->
+    <nav class="navbar navbar-static-top">
+      <!-- Sidebar toggle button-->
+      <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+        <span class="sr-only">Toggle navigation</span>
+      </a>
+
+      <div class="navbar-custom-menu">
+        <ul class="nav navbar-nav">
+          <!-- Messages: style can be found in dropdown.less-->
+          <li class="dropdown messages-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-envelope-o"></i>
+              <span class="label label-success">4</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 4 messages</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li><!-- start message -->
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Support Team
+                        <small><i class="fa fa-clock-o"></i> 5 mins</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <!-- end message -->
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        AdminLTE Design Team
+                        <small><i class="fa fa-clock-o"></i> 2 hours</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Developers
+                        <small><i class="fa fa-clock-o"></i> Today</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="dist/img/user3-128x128.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Sales Department
+                        <small><i class="fa fa-clock-o"></i> Yesterday</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <div class="pull-left">
+                        <img src="dist/img/user4-128x128.jpg" class="img-circle" alt="User Image">
+                      </div>
+                      <h4>
+                        Reviewers
+                        <small><i class="fa fa-clock-o"></i> 2 days</small>
+                      </h4>
+                      <p>Why not buy a new awesome theme?</p>
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer"><a href="#">See All Messages</a></li>
+            </ul>
+          </li>
+          <!-- Notifications: style can be found in dropdown.less -->
+          <li class="dropdown notifications-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-bell-o"></i>
+              <span class="label label-warning">10</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 10 notifications</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-users text-aqua"></i> 5 new members joined today
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-warning text-yellow"></i> Very long description here that may not fit into the
+                      page and may cause design problems
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-users text-red"></i> 5 new members joined
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-shopping-cart text-green"></i> 25 sales made
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#">
+                      <i class="fa fa-user text-red"></i> You changed your username
+                    </a>
+                  </li>
+                </ul>
+              </li>
+              <li class="footer"><a href="#">View all</a></li>
+            </ul>
+          </li>
+          <!-- Tasks: style can be found in dropdown.less -->
+          <li class="dropdown tasks-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="fa fa-flag-o"></i>
+              <span class="label label-danger">9</span>
+            </a>
+            <ul class="dropdown-menu">
+              <li class="header">You have 9 tasks</li>
+              <li>
+                <!-- inner menu: contains the actual data -->
+                <ul class="menu">
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Design some buttons
+                        <small class="pull-right">20%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-aqua" style="width: 20%" role="progressbar"
+                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">20% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Create a nice theme
+                        <small class="pull-right">40%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-green" style="width: 40%" role="progressbar"
+                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">40% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Some task I need to do
+                        <small class="pull-right">60%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-red" style="width: 60%" role="progressbar"
+                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">60% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                  <li><!-- Task item -->
+                    <a href="#">
+                      <h3>
+                        Make beautiful transitions
+                        <small class="pull-right">80%</small>
+                      </h3>
+                      <div class="progress xs">
+                        <div class="progress-bar progress-bar-yellow" style="width: 80%" role="progressbar"
+                             aria-valuenow="20" aria-valuemin="0" aria-valuemax="100">
+                          <span class="sr-only">80% Complete</span>
+                        </div>
+                      </div>
+                    </a>
+                  </li>
+                  <!-- end task item -->
+                </ul>
+              </li>
+              <li class="footer">
+                <a href="#">View all tasks</a>
+              </li>
+            </ul>
+          </li>
+          <!-- User Account: style can be found in dropdown.less -->
+          <li class="dropdown user user-menu">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+              <span class="hidden-xs">Alexander Pierce</span>
+            </a>
+            <ul class="dropdown-menu">
+              <!-- User image -->
+              <li class="user-header">
+                <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+
+                <p>
+                  Alexander Pierce - Web Developer
+                  <small>Member since Nov. 2012</small>
+                </p>
+              </li>
+              <!-- Menu Body -->
+              <li class="user-body">
+                <div class="row">
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Followers</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Sales</a>
+                  </div>
+                  <div class="col-xs-4 text-center">
+                    <a href="#">Friends</a>
+                  </div>
+                </div>
+                <!-- /.row -->
+              </li>
+              <!-- Menu Footer-->
+              <li class="user-footer">
+                <div class="pull-left">
+                  <a href="#" class="btn btn-default btn-flat">Profile</a>
+                </div>
+                <div class="pull-right">
+                  <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                </div>
+              </li>
+            </ul>
+          </li>
+          <!-- Control Sidebar Toggle Button -->
+          <li>
+{{--            <a href="#" data-toggle="control-sidebar"><i class="fa fa-gears"></i></a>--}}
           </li>
         </ul>
-        <ul class="nav navbar-nav float-right be-icons-nav">
-          <li class="nav-item dropdown"><a class="nav-link be-toggle-right-sidebar" href="#" role="button" aria-expanded="false"><span class="icon mdi mdi-settings"></span></a></li>
-          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><span class="icon mdi mdi-notifications"></span><span class="indicator"></span></a>
-            <ul class="dropdown-menu be-notifications">
-              <li>
-                <div class="title">Notifications<span class="badge badge-pill">3</span></div>
-                <div class="list">
-                  <div class="be-scroller-notifications">
-                    <div class="content">
-                      <ul>
-                        <li class="notification notification-unread"><a href="#">
-                            <div class="image"><img src="assets/img/avatar2.png" alt="Avatar"></div>
-                            <div class="notification-info">
-                              <div class="text"><span class="user-name">Jessica Caruso</span> accepted your invitation to join the team.</div><span class="date">2 min ago</span>
-                            </div></a></li>
-                        <li class="notification"><a href="#">
-                            <div class="image"><img src="assets/img/avatar3.png" alt="Avatar"></div>
-                            <div class="notification-info">
-                              <div class="text"><span class="user-name">Joel King</span> is now following you</div><span class="date">2 days ago</span>
-                            </div></a></li>
-                        <li class="notification"><a href="#">
-                            <div class="image"><img src="assets/img/avatar4.png" alt="Avatar"></div>
-                            <div class="notification-info">
-                              <div class="text"><span class="user-name">John Doe</span> is watching your main repository</div><span class="date">2 days ago</span>
-                            </div></a></li>
-                        <li class="notification"><a href="#">
-                            <div class="image"><img src="assets/img/avatar5.png" alt="Avatar"></div>
-                            <div class="notification-info"><span class="text"><span class="user-name">Emily Carter</span> is now following you</span><span class="date">5 days ago</span></div></a></li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="footer"> <a href="#">View all notifications</a></div>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-expanded="false"><span class="icon mdi mdi-apps"></span></a>
-            <ul class="dropdown-menu be-connections">
-              <li>
-                <div class="list">
-                  <div class="content">
-                    <div class="row">
-                      <div class="col"><a class="connection-item" href="#"><img src="assets/img/github.png" alt="Github"><span>GitHub</span></a></div>
-                      <div class="col"><a class="connection-item" href="#"><img src="assets/img/bitbucket.png" alt="Bitbucket"><span>Bitbucket</span></a></div>
-                      <div class="col"><a class="connection-item" href="#"><img src="assets/img/slack.png" alt="Slack"><span>Slack</span></a></div>
-                    </div>
-                    <div class="row">
-                      <div class="col"><a class="connection-item" href="#"><img src="assets/img/dribbble.png" alt="Dribbble"><span>Dribbble</span></a></div>
-                      <div class="col"><a class="connection-item" href="#"><img src="assets/img/mail_chimp.png" alt="Mail Chimp"><span>Mail Chimp</span></a></div>
-                      <div class="col"><a class="connection-item" href="#"><img src="assets/img/dropbox.png" alt="Dropbox"><span>Dropbox</span></a></div>
-                    </div>
-                  </div>
-                </div>
-                <div class="footer"> <a href="#">More</a></div>
-              </li>
-            </ul>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-  <div class="be-left-sidebar">
-    <div class="left-sidebar-wrapper"><a class="left-sidebar-toggle" href="#">Dashboard</a>
-      <div class="left-sidebar-spacer">
-        <div class="left-sidebar-scroll">
-          <div class="left-sidebar-content">
-            <ul class="sidebar-elements">
-              <li class="divider">Menu</li>
-              <li class="active"><a href="index-2.html"><i class="icon mdi mdi-home"></i><span>Dashboard</span></a>
-              </li>
-              <li class="parent"><a href="#"><i class="icon mdi mdi-face"></i><span>UI Elements</span></a>
-                <ul class="sub-menu">
-                  <li><a href="ui-alerts.html">Alerts</a>
-                  </li>
-                  <li><a href="ui-buttons.html">Buttons</a>
-                  </li>
-                  <li><a href="ui-cards.html"><span class="badge badge-primary float-right">New</span>Cards</a>
-                  </li>
-                  <li><a href="ui-panels.html">Panels</a>
-                  </li>
-                  <li><a href="ui-general.html">General</a>
-                  </li>
-                  <li><a href="ui-modals.html">Modals</a>
-                  </li>
-                  <li><a href="ui-notifications.html">Notifications</a>
-                  </li>
-                  <li><a href="ui-icons.html">Icons</a>
-                  </li>
-                  <li><a href="ui-grid.html">Grid</a>
-                  </li>
-                  <li><a href="ui-tabs-accordions.html">Tabs &amp; Accordions</a>
-                  </li>
-                  <li><a href="ui-nestable-lists.html">Nestable Lists</a>
-                  </li>
-                  <li><a href="ui-typography.html">Typography</a>
-                  </li>
-                  <li><a href="ui-dragdrop.html"><span class="badge badge-primary float-right">New</span>Drag &amp; Drop</a>
-                  </li>
-                  <li><a href="ui-sweetalert2.html"><span class="badge badge-primary float-right">New</span>Sweetalert 2</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="parent"><a href="charts.html"><i class="icon mdi mdi-chart-donut"></i><span>Charts</span></a>
-                <ul class="sub-menu">
-                  <li><a href="charts-flot.html">Flot</a>
-                  </li>
-                  <li><a href="charts-sparkline.html">Sparklines</a>
-                  </li>
-                  <li><a href="charts-chartjs.html">Chart.js</a>
-                  </li>
-                  <li><a href="charts-morris.html">Morris.js</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="parent"><a href="#"><i class="icon mdi mdi-dot-circle"></i><span>Forms</span></a>
-                <ul class="sub-menu">
-                  <li><a href="form-elements.html">Elements</a>
-                  </li>
-                  <li><a href="form-validation.html">Validation</a>
-                  </li>
-                  <li><a href="form-multiselect.html">Multiselect</a>
-                  </li>
-                  <li><a href="form-wizard.html">Wizard</a>
-                  </li>
-                  <li><a href="form-masks.html">Input Masks</a>
-                  </li>
-                  <li><a href="form-wysiwyg.html">WYSIWYG Editor</a>
-                  </li>
-                  <li><a href="form-upload.html">Multi Upload</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="parent"><a href="#"><i class="icon mdi mdi-border-all"></i><span>Tables</span></a>
-                <ul class="sub-menu">
-                  <li><a href="tables-general.html">General</a>
-                  </li>
-                  <li><a href="tables-datatables.html">Data Tables</a>
-                  </li>
-                  <li><a href="tables-filters.html"><span class="badge badge-primary float-right">New</span>Table Filters</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="parent"><a href="#"><i class="icon mdi mdi-layers"></i><span>Pages</span></a>
-                <ul class="sub-menu">
-                  <li><a href="pages-blank.html">Blank Page</a>
-                  </li>
-                  <li><a href="pages-blank-header.html">Blank Page Header</a>
-                  </li>
-                  <li><a href="pages-login.html">Login</a>
-                  </li>
-                  <li><a href="pages-login2.html">Login v2</a>
-                  </li>
-                  <li><a href="pages-404.html">404 Page</a>
-                  </li>
-                  <li><a href="pages-sign-up.html">Sign Up</a>
-                  </li>
-                  <li><a href="pages-forgot-password.html">Forgot Password</a>
-                  </li>
-                  <li><a href="pages-profile.html">Profile</a>
-                  </li>
-                  <li><a href="pages-pricing-tables.html">Pricing Tables</a>
-                  </li>
-                  <li><a href="pages-pricing-tables2.html">Pricing Tables v2</a>
-                  </li>
-                  <li><a href="pages-timeline.html">Timeline</a>
-                  </li>
-                  <li><a href="pages-timeline2.html">Timeline v2</a>
-                  </li>
-                  <li><a href="pages-invoice.html"><span class="badge badge-primary float-right">New</span>Invoice</a>
-                  </li>
-                  <li><a href="pages-calendar.html">Calendar</a>
-                  </li>
-                  <li><a href="pages-gallery.html">Gallery</a>
-                  </li>
-                  <li><a href="pages-code-editor.html"><span class="badge badge-primary float-right">New    </span>Code Editor</a>
-                  </li>
-                  <li><a href="pages-booking.html"><span class="badge badge-primary float-right">New</span>Booking</a>
-                  </li>
-                  <li><a href="pages-loaders.html"><span class="badge badge-primary float-right">New</span>Loaders</a>
-                  </li>
-                  <li><a href="pages-ajax-loader.html"><span class="badge badge-primary float-right">New</span>AJAX Loader</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="divider">Features</li>
-              <li class="parent"><a href="#"><i class="icon mdi mdi-inbox"></i><span>Email</span></a>
-                <ul class="sub-menu">
-                  <li><a href="email-inbox.html">Inbox</a>
-                  </li>
-                  <li><a href="email-read.html">Email Detail</a>
-                  </li>
-                  <li><a href="email-compose.html">Email Compose</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="parent"><a href="#"><i class="icon mdi mdi-view-web"></i><span>Layouts</span></a>
-                <ul class="sub-menu">
-                  <li><a href="layouts-primary-header.html">Primary Header</a>
-                  </li>
-                  <li><a href="layouts-success-header.html">Success Header</a>
-                  </li>
-                  <li><a href="layouts-warning-header.html">Warning Header</a>
-                  </li>
-                  <li><a href="layouts-danger-header.html">Danger Header</a>
-                  </li>
-                  <li><a href="layouts-search-input.html">Search Input</a>
-                  </li>
-                  <li><a href="layouts-offcanvas-menu.html">Off Canvas Menu</a>
-                  </li>
-                  <li><a href="layouts-top-menu.html"><span class="badge badge-primary float-right">New</span>Top Menu</a>
-                  </li>
-                  <li><a href="layouts-nosidebar-left.html">Without Left Sidebar</a>
-                  </li>
-                  <li><a href="layouts-nosidebar-right.html">Without Right Sidebar</a>
-                  </li>
-                  <li><a href="layouts-nosidebars.html">Without Both Sidebars</a>
-                  </li>
-                  <li><a href="layouts-fixed-sidebar.html">Fixed Left Sidebar</a>
-                  </li>
-                  <li><a href="layouts-boxed-layout.html"><span class="badge badge-primary float-right">New</span>Boxed Layout</a>
-                  </li>
-                  <li><a href="pages-blank-aside.html">Page Aside</a>
-                  </li>
-                  <li><a href="layouts-collapsible-sidebar.html">Collapsible Sidebar</a>
-                  </li>
-                  <li><a href="layouts-sub-navigation.html"><span class="badge badge-primary float-right">New</span>Sub Navigation</a>
-                  </li>
-                  <li><a href="layouts-mega-menu.html"><span class="badge badge-primary float-right">New</span>Mega Menu</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="parent"><a href="#"><i class="icon mdi mdi-pin"></i><span>Maps</span></a>
-                <ul class="sub-menu">
-                  <li><a href="maps-google.html">Google Maps</a>
-                  </li>
-                  <li><a href="maps-vector.html">Vector Maps</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="parent"><a href="#"><i class="icon mdi mdi-folder"></i><span>Menu Levels</span></a>
-                <ul class="sub-menu">
-                  <li class="parent"><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 1</span></a>
-                    <ul class="sub-menu">
-                      <li><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 2</span></a>
-                      </li>
-                      <li class="parent"><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 2</span></a>
-                        <ul class="sub-menu">
-                          <li><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 3</span></a>
-                          </li>
-                          <li><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 3</span></a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li class="parent"><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 1</span></a>
-                    <ul class="sub-menu">
-                      <li><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 2</span></a>
-                      </li>
-                      <li class="parent"><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 2</span></a>
-                        <ul class="sub-menu">
-                          <li><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 3</span></a>
-                          </li>
-                          <li><a href="#"><i class="icon mdi mdi-undefined"></i><span>Level 3</span></a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                </ul>
-              </li>
-              <li><a href="documentation.html"><i class="icon mdi mdi-book"></i><span>Documentation</span></a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-      <div class="progress-widget">
-        <div class="progress-data"><span class="progress-value">60%</span><span class="name">Current Project</span></div>
-        <div class="progress">
-          <div class="progress-bar progress-bar-primary" style="width: 60%;"></div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="be-content">
-
-
-   @yield('content')
-
-
-    <nav class="be-right-sidebar">
-      <div class="sb-content">
-        <div class="tab-navigation">
-          <ul class="nav nav-tabs nav-justified" role="tablist">
-            <li class="nav-item" role="presentation"><a class="nav-link active" href="#tab1" aria-controls="tab1" role="tab" data-toggle="tab">Chat</a></li>
-            <li class="nav-item" role="presentation"><a class="nav-link" href="#tab2" aria-controls="tab2" role="tab" data-toggle="tab">Todo</a></li>
-            <li class="nav-item" role="presentation"><a class="nav-link" href="#tab3" aria-controls="tab3" role="tab" data-toggle="tab">Settings</a></li>
-          </ul>
-        </div>
-        <div class="tab-panel">
-          <div class="tab-content">
-            <div class="tab-pane tab-chat active" id="tab1" role="tabpanel">
-              <div class="chat-contacts">
-                <div class="chat-sections">
-                  <div class="be-scroller-chat">
-                    <div class="content">
-                      <h2>Recent</h2>
-                      <div class="contact-list contact-list-recent">
-                        <div class="user"><a href="#"><img src="assets/img/avatar1.png" alt="Avatar">
-                            <div class="user-data"><span class="status away"></span><span class="name">Claire Sassu</span><span class="message">Can you share the...</span></div></a></div>
-                        <div class="user"><a href="#"><img src="assets/img/avatar2.png" alt="Avatar">
-                            <div class="user-data"><span class="status"></span><span class="name">Maggie jackson</span><span class="message">I confirmed the info.</span></div></a></div>
-                        <div class="user"><a href="#"><img src="assets/img/avatar3.png" alt="Avatar">
-                            <div class="user-data"><span class="status offline"></span><span class="name">Joel King		</span><span class="message">Ready for the meeti...</span></div></a></div>
-                      </div>
-                      <h2>Contacts</h2>
-                      <div class="contact-list">
-                        <div class="user"><a href="#"><img src="assets/img/avatar4.png" alt="Avatar">
-                            <div class="user-data2"><span class="status"></span><span class="name">Mike Bolthort</span></div></a></div>
-                        <div class="user"><a href="#"><img src="assets/img/avatar5.png" alt="Avatar">
-                            <div class="user-data2"><span class="status"></span><span class="name">Maggie jackson</span></div></a></div>
-                        <div class="user"><a href="#"><img src="assets/img/avatar6.png" alt="Avatar">
-                            <div class="user-data2"><span class="status offline"></span><span class="name">Jhon Voltemar</span></div></a></div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="bottom-input">
-                  <input type="text" placeholder="Search..." name="q"><span class="mdi mdi-search"></span>
-                </div>
-              </div>
-              <div class="chat-window">
-                <div class="title">
-                  <div class="user"><img src="assets/img/avatar2.png" alt="Avatar">
-                    <h2>Maggie jackson</h2><span>Active 1h ago</span>
-                  </div><span class="icon return mdi mdi-chevron-left"></span>
-                </div>
-                <div class="chat-messages">
-                  <div class="be-scroller-messages">
-                    <div class="content">
-                      <ul>
-                        <li class="friend">
-                          <div class="msg">Hello</div>
-                        </li>
-                        <li class="self">
-                          <div class="msg">Hi, how are you?</div>
-                        </li>
-                        <li class="friend">
-                          <div class="msg">Good, I'll need support with my pc</div>
-                        </li>
-                        <li class="self">
-                          <div class="msg">Sure, just tell me what is going on with your computer?</div>
-                        </li>
-                        <li class="friend">
-                          <div class="msg">I don't know it just turns off suddenly</div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="chat-input">
-                  <div class="input-wrapper"><span class="photo mdi mdi-camera"></span>
-                    <input type="text" placeholder="Message..." name="q" autocomplete="off"><span class="send-msg mdi mdi-mail-send"></span>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane tab-todo" id="tab2" role="tabpanel">
-              <div class="todo-container">
-                <div class="todo-wrapper">
-                  <div class="be-scroller-todo">
-                    <div class="todo-content"><span class="category-title">Today</span>
-                      <ul class="todo-list">
-                        <li>
-                          <div class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
-                            <input class="custom-control-input" type="checkbox" checked="" id="tck1">
-                            <label class="custom-control-label" for="tck1">Initialize the project</label>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
-                            <input class="custom-control-input" type="checkbox" id="tck2">
-                            <label class="custom-control-label" for="tck2">Create the main structure							</label>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
-                            <input class="custom-control-input" type="checkbox" id="tck3">
-                            <label class="custom-control-label" for="tck3">Updates changes to GitHub							</label>
-                          </div>
-                        </li>
-                      </ul><span class="category-title">Tomorrow</span>
-                      <ul class="todo-list">
-                        <li>
-                          <div class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
-                            <input class="custom-control-input" type="checkbox" id="tck4">
-                            <label class="custom-control-label" for="tck4">Initialize the project							</label>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
-                            <input class="custom-control-input" type="checkbox" id="tck5">
-                            <label class="custom-control-label" for="tck5">Create the main structure							</label>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
-                            <input class="custom-control-input" type="checkbox" id="tck6">
-                            <label class="custom-control-label" for="tck6">Updates changes to GitHub							</label>
-                          </div>
-                        </li>
-                        <li>
-                          <div class="custom-checkbox custom-control custom-control-sm"><span class="delete mdi mdi-delete"></span>
-                            <input class="custom-control-input" type="checkbox" id="tck7">
-                            <label class="custom-control-label" for="tck7" title="This task is too long to be displayed in a normal space!">This task is too long to be displayed in a normal space!							</label>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-                <div class="bottom-input">
-                  <input type="text" placeholder="Create new task..." name="q"><span class="mdi mdi-plus"></span>
-                </div>
-              </div>
-            </div>
-            <div class="tab-pane tab-settings" id="tab3" role="tabpanel">
-              <div class="settings-wrapper">
-                <div class="be-scroller-settings"><span class="category-title">General</span>
-                  <ul class="settings-list">
-                    <li>
-                      <div class="switch-button switch-button-sm">
-                        <input type="checkbox" checked="" name="st1" id="st1"><span>
-                            <label for="st1"></label></span>
-                      </div><span class="name">Available</span>
-                    </li>
-                    <li>
-                      <div class="switch-button switch-button-sm">
-                        <input type="checkbox" checked="" name="st2" id="st2"><span>
-                            <label for="st2"></label></span>
-                      </div><span class="name">Enable notifications</span>
-                    </li>
-                    <li>
-                      <div class="switch-button switch-button-sm">
-                        <input type="checkbox" checked="" name="st3" id="st3"><span>
-                            <label for="st3"></label></span>
-                      </div><span class="name">Login with Facebook</span>
-                    </li>
-                  </ul><span class="category-title">Notifications</span>
-                  <ul class="settings-list">
-                    <li>
-                      <div class="switch-button switch-button-sm">
-                        <input type="checkbox" name="st4" id="st4"><span>
-                            <label for="st4"></label></span>
-                      </div><span class="name">Email notifications</span>
-                    </li>
-                    <li>
-                      <div class="switch-button switch-button-sm">
-                        <input type="checkbox" checked="" name="st5" id="st5"><span>
-                            <label for="st5"></label></span>
-                      </div><span class="name">Project updates</span>
-                    </li>
-                    <li>
-                      <div class="switch-button switch-button-sm">
-                        <input type="checkbox" checked="" name="st6" id="st6"><span>
-                            <label for="st6"></label></span>
-                      </div><span class="name">New comments</span>
-                    </li>
-                    <li>
-                      <div class="switch-button switch-button-sm">
-                        <input type="checkbox" name="st7" id="st7"><span>
-                            <label for="st7"></label></span>
-                      </div><span class="name">Chat messages</span>
-                    </li>
-                  </ul><span class="category-title">Workflow</span>
-                  <ul class="settings-list">
-                    <li>
-                      <div class="switch-button switch-button-sm">
-                        <input type="checkbox" name="st8" id="st8"><span>
-                            <label for="st8"></label></span>
-                      </div><span class="name">Deploy on commit</span>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
       </div>
     </nav>
+  </header>
+  <!-- Left side column. contains the logo and sidebar -->
+  <aside class="main-sidebar">
+    <!-- sidebar: style can be found in sidebar.less -->
+    <section class="sidebar">
+      <!-- Sidebar user panel -->
+      <div class="user-panel">
+        <div class="pull-left image">
+          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+        </div>
+        <div class="pull-left info">
+          <p>Alexander Pierce</p>
+          <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+        </div>
+      </div>
+      <!-- search form -->
+      <form action="#" method="get" class="sidebar-form">
+        <div class="input-group">
+          <input type="text" name="q" class="form-control" placeholder="Search...">
+          <span class="input-group-btn">
+                <button type="submit" name="search" id="search-btn" class="btn btn-flat"><i class="fa fa-search"></i>
+                </button>
+              </span>
+        </div>
+      </form>
+      <!-- /.search form -->
+      <!-- sidebar menu: : style can be found in sidebar.less -->
+      <ul class="sidebar-menu" data-widget="tree">
+        <li class="header">MAIN NAVIGATION</li>
+        <li class="active treeview">
+          <a href="#">
+            <i class="fa fa-dashboard"></i> <span>Dashboard</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Dashboard v1</a></li>
+            <li><a href="index2.html"><i class="fa fa-circle-o"></i> Dashboard v2</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-files-o"></i>
+            <span>Layout Options</span>
+            <span class="pull-right-container">
+              <span class="label label-primary pull-right">4</span>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/layout/top-nav.html"><i class="fa fa-circle-o"></i> Top Navigation</a></li>
+            <li><a href="pages/layout/boxed.html"><i class="fa fa-circle-o"></i> Boxed</a></li>
+            <li><a href="pages/layout/fixed.html"><i class="fa fa-circle-o"></i> Fixed</a></li>
+            <li><a href="pages/layout/collapsed-sidebar.html"><i class="fa fa-circle-o"></i> Collapsed Sidebar</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="pages/widgets.html">
+            <i class="fa fa-th"></i> <span>Widgets</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-green">new</small>
+            </span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-pie-chart"></i>
+            <span>Charts</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/charts/chartjs.html"><i class="fa fa-circle-o"></i> ChartJS</a></li>
+            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
+            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
+            <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-laptop"></i>
+            <span>UI Elements</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
+            <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
+            <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
+            <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
+            <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
+            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-edit"></i> <span>Forms</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
+            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
+            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-table"></i> <span>Tables</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
+            <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
+          </ul>
+        </li>
+        <li>
+          <a href="pages/calendar.html">
+            <i class="fa fa-calendar"></i> <span>Calendar</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-red">3</small>
+              <small class="label pull-right bg-blue">17</small>
+            </span>
+          </a>
+        </li>
+        <li>
+          <a href="pages/mailbox/mailbox.html">
+            <i class="fa fa-envelope"></i> <span>Mailbox</span>
+            <span class="pull-right-container">
+              <small class="label pull-right bg-yellow">12</small>
+              <small class="label pull-right bg-green">16</small>
+              <small class="label pull-right bg-red">5</small>
+            </span>
+          </a>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-folder"></i> <span>Examples</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
+            <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
+            <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
+            <li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
+            <li><a href="pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
+            <li><a href="pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
+            <li><a href="pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
+            <li><a href="pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
+            <li><a href="pages/examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
+          </ul>
+        </li>
+        <li class="treeview">
+          <a href="#">
+            <i class="fa fa-share"></i> <span>Multilevel</span>
+            <span class="pull-right-container">
+              <i class="fa fa-angle-left pull-right"></i>
+            </span>
+          </a>
+          <ul class="treeview-menu">
+            <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+            <li class="treeview">
+              <a href="#"><i class="fa fa-circle-o"></i> Level One
+                <span class="pull-right-container">
+                  <i class="fa fa-angle-left pull-right"></i>
+                </span>
+              </a>
+              <ul class="treeview-menu">
+                <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
+                <li class="treeview">
+                  <a href="#"><i class="fa fa-circle-o"></i> Level Two
+                    <span class="pull-right-container">
+                      <i class="fa fa-angle-left pull-right"></i>
+                    </span>
+                  </a>
+                  <ul class="treeview-menu">
+                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+          </ul>
+        </li>
+        <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+        <li class="header">LABELS</li>
+        <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
+        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
+        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+      </ul>
+    </section>
+    <!-- /.sidebar -->
+  </aside>
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+      <h1>
+        Dashboard
+        <small>Control panel</small>
+      </h1>
+      <ol class="breadcrumb">
+        <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+        <li class="active">Dashboard</li>
+      </ol>
+    </section>
+
+    <!-- Main content -->
+{{--    c'est ici que nous avons inséré le dashboad--}}
+    @yield('content')
   </div>
-  <script src="assets/lib/jquery/jquery.min.js" type="text/javascript"></script>
-  <script src="assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" type="text/javascript"></script>
-  <script src="assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" type="text/javascript"></script>
-  <script src="assets/js/app.js" type="text/javascript"></script>
-  <script src="assets/lib/jquery-flot/jquery.flot.js" type="text/javascript"></script>
-  <script src="assets/lib/jquery-flot/jquery.flot.pie.js" type="text/javascript"></script>
-  <script src="assets/lib/jquery-flot/jquery.flot.time.js" type="text/javascript"></script>
-  <script src="assets/lib/jquery-flot/jquery.flot.resize.js" type="text/javascript"></script>
-  <script src="assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" type="text/javascript"></script>
-  <script src="assets/lib/jquery-flot/plugins/curvedLines.js" type="text/javascript"></script>
-  <script src="assets/lib/jquery-flot/plugins/jquery.flot.tooltip.js" type="text/javascript"></script>
-  <script src="assets/lib/jquery.sparkline/jquery.sparkline.min.js" type="text/javascript"></script>
-  <script src="assets/lib/countup/countUp.min.js" type="text/javascript"></script>
-  <script src="assets/lib/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
-  <script src="assets/lib/jqvmap/jquery.vmap.min.js" type="text/javascript"></script>
-  <script src="assets/lib/jqvmap/maps/jquery.vmap.world.js" type="text/javascript"></script>
-  <script type="text/javascript">
-    $(document).ready(function(){
-      //-initialize the javascript
-      App.init();
-      App.dashboard();
+  <!-- /.content-wrapper -->
+  <footer class="main-footer">
+    <div class="pull-right hidden-xs">
+      <b>Version</b> 2.4.0
+    </div>
+    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Almsaeed Studio</a>.</strong> All rights
+    reserved.
+  </footer>
 
-    });
-  </script>
+  <!-- Control Sidebar -->
+  <aside class="control-sidebar control-sidebar-dark" style="display: none;">
+    <!-- Create the tabs -->
+    <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+      <li><a href="#control-sidebar-home-tab" data-toggle="tab"><i class="fa fa-home"></i></a></li>
+      <li><a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="fa fa-gears"></i></a></li>
+    </ul>
+    <!-- Tab panes -->
+    <div class="tab-content">
+      <!-- Home tab content -->
+      <div class="tab-pane" id="control-sidebar-home-tab">
+        <h3 class="control-sidebar-heading">Recent Activity</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                <p>Will be 23 on April 24th</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-user bg-yellow"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+
+                <p>New phone +1(800)555-1234</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+
+                <p>nora@example.com</p>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <i class="menu-icon fa fa-file-code-o bg-green"></i>
+
+              <div class="menu-info">
+                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+
+                <p>Execution time 5 seconds</p>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+        <h3 class="control-sidebar-heading">Tasks Progress</h3>
+        <ul class="control-sidebar-menu">
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Custom Template Design
+                <span class="label label-danger pull-right">70%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Update Resume
+                <span class="label label-success pull-right">95%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Laravel Integration
+                <span class="label label-warning pull-right">50%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="javascript:void(0)">
+              <h4 class="control-sidebar-subheading">
+                Back End Framework
+                <span class="label label-primary pull-right">68%</span>
+              </h4>
+
+              <div class="progress progress-xxs">
+                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <!-- /.control-sidebar-menu -->
+
+      </div>
+      <!-- /.tab-pane -->
+      <!-- Stats tab content -->
+      <div class="tab-pane" id="control-sidebar-stats-tab">Stats Tab Content</div>
+      <!-- /.tab-pane -->
+      <!-- Settings tab content -->
+      <div class="tab-pane" id="control-sidebar-settings-tab">
+        <form method="post">
+          <h3 class="control-sidebar-heading">General Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Report panel usage
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Some information about this general settings option
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Allow mail redirect
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Other sets of options are available
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Expose author name in posts
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+
+            <p>
+              Allow the user to show his name in blog posts
+            </p>
+          </div>
+          <!-- /.form-group -->
+
+          <h3 class="control-sidebar-heading">Chat Settings</h3>
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Show me as online
+              <input type="checkbox" class="pull-right" checked>
+            </label>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Turn off notifications
+              <input type="checkbox" class="pull-right">
+            </label>
+          </div>
+          <!-- /.form-group -->
+
+          <div class="form-group">
+            <label class="control-sidebar-subheading">
+              Delete chat history
+              <a href="javascript:void(0)" class="text-red pull-right"><i class="fa fa-trash-o"></i></a>
+            </label>
+          </div>
+          <!-- /.form-group -->
+        </form>
+      </div>
+      <!-- /.tab-pane -->
+    </div>
+  </aside>
+  <!-- /.control-sidebar -->
+  <!-- Add the sidebar's background. This div must be placed
+       immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+</div>
+<!-- ./wrapper -->
+
+<!-- jQuery 3 -->
+<script src="bower_components/jquery/dist/jquery.min.js"></script>
+<!-- jQuery UI 1.11.4 -->
+<script src="bower_components/jquery-ui/jquery-ui.min.js"></script>
+<!-- Resolve conflict in jQuery UI tooltip with Bootstrap tooltip -->
+<script>
+  $.widget.bridge('uibutton', $.ui.button);
+</script>
+<!-- Bootstrap 3.3.7 -->
+<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<!-- Morris.js charts -->
+<script src="bower_components/raphael/raphael.min.js"></script>
+<script src="bower_components/morris.js/morris.min.js"></script>
+<!-- Sparkline -->
+<script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
+<!-- jvectormap -->
+<script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<!-- jQuery Knob Chart -->
+<script src="bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
+<!-- daterangepicker -->
+<script src="bower_components/moment/min/moment.min.js"></script>
+<script src="bower_components/bootstrap-daterangepicker/daterangepicker.js"></script>
+<!-- datepicker -->
+<script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
+<!-- Bootstrap WYSIHTML5 -->
+<script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<!-- Slimscroll -->
+<script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+<!-- FastClick -->
+<script src="bower_components/fastclick/lib/fastclick.js"></script>
+<!-- AdminLTE App -->
+<script src="dist/js/adminlte.min.js"></script>
+<!-- AdminLTE dashboard demo (This is only for demo purposes) -->
+<script src="dist/js/pages/dashboard.js"></script>
+<!-- AdminLTE for demo purposes -->
+<script src="dist/js/demo.js"></script>
 </body>
-
-<!-- Mirrored from foxythemes.net/preview/products/beagle/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 25 Jul 2019 13:11:22 GMT -->
 </html>

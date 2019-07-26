@@ -2,65 +2,69 @@
 
 
 @section('content')
-<div class="container">
+    @section('grand-text','Tableau de Bord')
+    @section('grands','Tableau de Bord')
+    @section('petit-text','Tableau de Bord')
+
+<div class="container-fluid">
     <div class="row">
         <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-info">
+            <div class="small-box bg-green">
                 <div class="inner">
                     <h3>150</h3>
 
-                    <p>New Orders</p>
+                    <p>Nombre de Voiture</p>
                 </div>
                 <div class="icon">
-                    <i class="ion ion-bag"></i>
+                    <i class="fa fa-car"></i>
                 </div>
-                <a class="small-box-footer" href="#">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a class="small-box-footer" href="#">Voire plus <i class="fa fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
         <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-success">
+            <div class="small-box bg-blue">
                 <div class="inner">
-                    <h3>53<sup style="font-size: 20px">%</sup></h3>
+                    <h3>53<sup style="font-size: 20px"></sup></h3>
 
-                    <p>Bounce Rate</p>
+                    <p>Total Réparation</p>
                 </div>
                 <div class="icon">
-                    <i class="ion ion-stats-bars"></i>
+                    <i class="fa fa-gears"></i>
                 </div>
-                <a class="small-box-footer" href="#">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a class="small-box-footer" href="#">Voire plus <i class="fa fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
         <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-warning">
+            <div class="small-box bg-red">
                 <div class="inner">
                     <h3>44</h3>
 
-                    <p>User Registrations</p>
+                    <p>Total Vente</p>
                 </div>
                 <div class="icon">
-                    <i class="ion ion-person-add"></i>
+                    <i class="ion ion-ios-cart-outline"></i>
                 </div>
-                <a class="small-box-footer" href="#">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a class="small-box-footer" href="#">Voire plus <i class="fa fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
         <div class="col-lg-3 col-6">
             <!-- small box -->
-            <div class="small-box bg-danger">
+            <div class="small-box bg-olive">
                 <div class="inner">
                     <h3>65</h3>
 
-                    <p>Unique Visitors</p>
+                    <p>Total Client</p>
                 </div>
                 <div class="icon">
-                    <i class="ion ion-pie-graph"></i>
+                    <i class="ion ion-ios-people-outline"></i>
                 </div>
-                <a class="small-box-footer" href="#">More info <i class="fas fa-arrow-circle-right"></i></a>
+                <a class="small-box-footer" href="#">Voire plus <i class="fa fa-arrow-circle-right"></i></a>
             </div>
         </div>
         <!-- ./col -->
@@ -71,12 +75,12 @@
                     <div class="inner">
                         <h3>150</h3>
 
-                        <p>New Orders</p>
+                        <p>Total Location</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-bag"></i>
                     </div>
-                    <a class="small-box-footer" href="#">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    <a class="small-box-footer" href="#">Voire plus <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -86,27 +90,27 @@
                     <div class="inner">
                         <h3>53<sup style="font-size: 20px">%</sup></h3>
 
-                        <p>Bounce Rate</p>
+                        <p>Total Utilisateurs</p>
                     </div>
                     <div class="icon">
-                        <i class="ion ion-stats-bars"></i>
+                        <i class="fa fa-users"></i>
                     </div>
-                    <a class="small-box-footer" href="#">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    <a class="small-box-footer" href="#">Voire plus <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
             <div class="col-lg-3 col-6">
                 <!-- small box -->
-                <div class="small-box bg-warning">
+                <div class="small-box bg-orange">
                     <div class="inner">
                         <h3>44</h3>
 
-                        <p>User Registrations</p>
+                        <p>Total Conducteur </p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-person-add"></i>
                     </div>
-                    <a class="small-box-footer" href="#">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    <a class="small-box-footer" href="#">Voire plus <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
@@ -116,18 +120,18 @@
                     <div class="inner">
                         <h3>65</h3>
 
-                        <p>Unique Visitors</p>
+                        <p>Voiture Garre</p>
                     </div>
                     <div class="icon">
                         <i class="ion ion-pie-graph"></i>
                     </div>
-                    <a class="small-box-footer" href="#">More info <i class="fas fa-arrow-circle-right"></i></a>
+                    <a class="small-box-footer" href="#">Voire plus <i class="fa fa-arrow-circle-right"></i></a>
                 </div>
             </div>
             <!-- ./col -->
         </div>
     </div>
 
-
+    
 
 @stop

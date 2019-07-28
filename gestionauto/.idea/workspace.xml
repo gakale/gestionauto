@@ -3,229 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5f1bd056-8186-4933-a2ae-711253ddffcf" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/css/app.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/1088x336.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/140x140.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/342x239.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/346x106.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/362x239.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/404-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/529x161.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/avatar-150.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/avatar1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/avatar2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/avatar3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/avatar4.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/avatar5.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/avatar6.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/bitbucket.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/docs/img1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/docs/img2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/docs/img3.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/dribbble.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/dropbox.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/gallery/img1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/gallery/img10.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/gallery/img11.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/gallery/img12.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/gallery/img2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/gallery/img3.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/gallery/img4.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/gallery/img5.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/gallery/img6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/gallery/img7.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/gallery/img8.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/gallery/img9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/github.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/logo-fav.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/logo-symbol.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/logo-white-xx.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/logo-white.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/logo-xx.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/mail_chimp.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/slack.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/img/user-profile-display.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/js/app.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/bootstrap-slider/bootstrap-slider.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/bootstrap-slider/css/bootstrap-slider.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/bootstrap/dist/js/bootstrap.bundle.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/bs-custom-file-input/bs-custom-file-input.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/chartjs/Chart.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/countup/countUp.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/datatables/datatables.net-bs4/css/dataTables.bootstrap4.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/datatables/datatables.net-bs4/js/dataTables.bootstrap4.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/datatables/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/datatables/datatables.net-buttons/js/buttons.colVis.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/datatables/datatables.net-buttons/js/buttons.flash.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/datatables/datatables.net-buttons/js/buttons.html5.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/datatables/datatables.net-buttons/js/buttons.print.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/datatables/datatables.net-buttons/js/dataTables.buttons.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/datatables/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/datatables/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/datatables/datatables.net-responsive/js/dataTables.responsive.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/datatables/datatables.net/js/jquery.dataTables.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/datatables/jszip/jszip.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/datatables/pdfmake/pdfmake.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/datatables/pdfmake/vfs_fonts.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/datetimepicker/css/bootstrap-datetimepicker.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/datetimepicker/js/bootstrap-datetimepicker.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/dragula/dragula.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/dragula/dragula.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/dropzone/dropzone.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/dropzone/dropzone.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/fuelux/js/wizard.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery-flot/jquery.flot.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery-flot/jquery.flot.pie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery-flot/jquery.flot.resize.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery-flot/jquery.flot.time.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery-flot/plugins/curvedLines.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery-flot/plugins/jquery.flot.orderBars.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery-flot/plugins/jquery.flot.tooltip.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery-ui/jquery-ui.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.codemirror/addon/edit/matchbrackets.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.codemirror/lib/codemirror.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.codemirror/lib/codemirror.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.codemirror/mode/css/css.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.codemirror/mode/htmlmixed/htmlmixed.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.codemirror/mode/xml/xml.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.codemirror/theme/monokai.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.fullcalendar/fullcalendar.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.fullcalendar/fullcalendar.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.gritter/css/jquery.gritter.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.gritter/images/gritter-bg.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.gritter/images/gritter-light.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.gritter/images/gritter.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.gritter/images/ie-spacer.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.gritter/js/jquery.gritter.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.magnific-popup/jquery.magnific-popup.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.magnific-popup/magnific-popup.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.maskedinput/jquery.maskedinput.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.nestable/jquery.nestable.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.niftymodals/js/jquery.niftymodals.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.sparkline/jquery.sparkline.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.vectormap/jquery-jvectormap-1.2.2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.vectormap/maps/jquery-jvectormap-au-mill-en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.vectormap/maps/jquery-jvectormap-ca-lcc-en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.vectormap/maps/jquery-jvectormap-fr-merc-en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.vectormap/maps/jquery-jvectormap-in-mill-en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.vectormap/maps/jquery-jvectormap-map.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.vectormap/maps/jquery-jvectormap-uk-mill-en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.vectormap/maps/jquery-jvectormap-us-il-chicago-mill-en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.vectormap/maps/jquery-jvectormap-us-merc-en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jquery/jquery.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jqvmap/jquery.vmap.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jqvmap/jqvmap.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/jqvmap/maps/jquery.vmap.world.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/masonry-layout/masonry.pkgd.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/material-design-icons/css/material-design-iconic-font.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/material-design-icons/fonts/Material-Design-Iconic-Fontd1f1.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/material-design-icons/fonts/Material-Design-Iconic-Fontd1f1.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/material-design-icons/fonts/Material-Design-Iconic-Fontd1f1.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/moment.js/min/moment.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/morrisjs/morris.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/morrisjs/morris.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/mprogress/css/mprogress.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/mprogress/js/mprogress.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/multiselect/css/multi-select.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/multiselect/img/switch.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/multiselect/js/jquery.multi-select.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/parsley/parsley.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/perfect-scrollbar/css/perfect-scrollbar.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/perfect-scrollbar/js/perfect-scrollbar.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/prettify/prettify.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/quicksearch/jquery.quicksearch.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/raphael/raphael.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Black.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Black.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Black.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Black.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Black.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-BlackItalic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-BlackItalic.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-BlackItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-BlackItalic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-BlackItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-BlackItalicd41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Blackd41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Bold.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Bold.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Bold.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Bold.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Bold.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-BoldItalic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-BoldItalic.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-BoldItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-BoldItalic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-BoldItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-BoldItalicd41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Boldd41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Light.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Light.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Light.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Light.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Light.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-LightItalic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-LightItalic.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-LightItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-LightItalic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-LightItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-LightItalicd41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Lightd41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Medium.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Medium.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Medium.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Medium.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Medium.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-MediumItalic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-MediumItalic.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-MediumItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-MediumItalic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-MediumItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-MediumItalicd41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Mediumd41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Regular.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Regular.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Regular.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Regular.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Regular.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-RegularItalic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-RegularItalic.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-RegularItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-RegularItalic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-RegularItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-RegularItalicd41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Regulard41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Thin.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Thin.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Thin.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Thin.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Thin.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-ThinItalic.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-ThinItalic.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-ThinItalic.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-ThinItalic.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-ThinItalic.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-ThinItalicd41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/roboto/Roboto-Thind41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/select2/css/select2.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/select2/js/select2.full.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/select2/js/select2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/summernote/font/summernote9d3d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/summernote/font/summernote9d3d.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/summernote/font/summernote9d3d.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/summernote/font/summernoted41d.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/summernote/summernote-bs4.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/summernote/summernote-bs4.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/summernote/summernote-ext-beagle.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/sweetalert2/sweetalert2.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/assets/lib/sweetalert2/sweetalert2.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/index-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layout/layout.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layout/layout.blade.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -250,36 +27,24 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/resources/views/admin/dashboard.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="206">
-              <caret line="129" selection-start-line="129" selection-end-line="129" />
+            <state relative-caret-position="2278">
+              <caret line="134" column="4" selection-start-line="134" selection-start-column="4" selection-end-line="134" selection-end-column="4" />
               <folding>
-                <element signature="e#778#801#0#HTML" expanded="true" />
-                <element signature="e#3025#3048#0#HTML" expanded="true" />
+                <element signature="e#796#819#0#HTML" expanded="true" />
+                <element signature="e#3012#3035#0#HTML" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/resources/views/layout/layout.blade.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="570" column="14" lean-forward="true" selection-start-line="570" selection-start-column="14" selection-end-line="570" selection-end-column="14" />
-              <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#li#1;n#ul#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#1;n#ul#0;n#li#1;n#ul#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#2;n#ul#0;n#li#1;n#ul#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#3;n#ul#0;n#li#1;n#ul#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#23280#23286#0#HTML" expanded="true" />
-                <element signature="n#style#0;n#aside#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-              </folding>
+            <state relative-caret-position="323">
+              <caret line="225" column="19" lean-forward="true" selection-start-line="225" selection-start-column="19" selection-end-line="225" selection-end-column="19" />
             </state>
           </provider>
         </entry>
@@ -295,7 +60,15 @@
       <find>Layout Options</find>
       <find>fa fa-gears</find>
       <find>row</find>
+      <find>Control pane</find>
+      <find>9</find>
+      <find>4</find>
+      <find>44</find>
+      <find>das</find>
     </findStrings>
+    <replaceStrings>
+      <replace>Voire plus</replace>
+    </replaceStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -307,8 +80,8 @@
         <option value="$PROJECT_DIR$/resources/views/vue.blade.php" />
         <option value="$PROJECT_DIR$/app/Http/Controllers/AdminController.php" />
         <option value="$PROJECT_DIR$/routes/web.php" />
-        <option value="$PROJECT_DIR$/resources/views/layout/layout.blade.php" />
         <option value="$PROJECT_DIR$/resources/views/admin/dashboard.blade.php" />
+        <option value="$PROJECT_DIR$/resources/views/layout/layout.blade.php" />
       </list>
     </option>
   </component>
@@ -494,17 +267,18 @@
       <option name="presentableId" value="Default" />
       <updated>1564063440027</updated>
       <workItem from="1564063448376" duration="14335000" />
-      <workItem from="1564140435904" duration="7729000" />
+      <workItem from="1564140435904" duration="13542000" />
+      <workItem from="1564171316683" duration="13753000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="22064000" />
+    <option name="totallyTimeSpent" value="41630000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1382" height="784" extended-state="7" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24659607" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25037822" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="npm" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
@@ -557,33 +331,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/layout/layout.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/admin/dashboard.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="570" column="14" lean-forward="true" selection-start-line="570" selection-start-column="14" selection-end-line="570" selection-end-column="14" />
+        <state relative-caret-position="2278">
+          <caret line="134" column="4" selection-start-line="134" selection-start-column="4" selection-end-line="134" selection-end-column="4" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#li#1;n#ul#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#1;n#ul#0;n#li#1;n#ul#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#2;n#ul#0;n#li#1;n#ul#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#3;n#ul#0;n#li#1;n#ul#0;n#li#2;n#ul#0;n#div#0;n#nav#0;n#header#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#23280#23286#0#HTML" expanded="true" />
-            <element signature="n#style#0;n#aside#1;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#0;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#1;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#2;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#0;n#div#0;n#a#0;n#li#3;n#ul#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="e#796#819#0#HTML" expanded="true" />
+            <element signature="e#3012#3035#0#HTML" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/resources/views/admin/dashboard.blade.php">
+    <entry file="file://$PROJECT_DIR$/resources/views/layout/layout.blade.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="129" selection-start-line="129" selection-end-line="129" />
-          <folding>
-            <element signature="e#778#801#0#HTML" expanded="true" />
-            <element signature="e#3025#3048#0#HTML" expanded="true" />
-          </folding>
+        <state relative-caret-position="323">
+          <caret line="225" column="19" lean-forward="true" selection-start-line="225" selection-start-column="19" selection-end-line="225" selection-end-column="19" />
         </state>
       </provider>
     </entry>

@@ -13,3 +13,5 @@
 
 
 Route::get('/dashboard','AdminController@index')->name('dash');
+
+Route::get('/users','AdminController@users')->name('users');

@@ -86,4 +86,15 @@ class AdminController extends Controller
     {
         return view('admin/users');
     }
+    public function chauffeur()
+    {
+        return view('admin/chauffeur');
+    }
+    public function operateur()
+    {
+        return view('admin/operateur');
+    } public function fournisseur()
+    {
+        return view('admin/fournisseur');
+    }
 }

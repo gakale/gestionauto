@@ -206,6 +206,7 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="users"><i class="fa fa-user"></i>Utilisateurs</a></li>
+            <li><a href="personnel"><i class="fa fa-user-secret"></i>Personnel</a></li>
             <li><a href="chauffeur"><i class="fa fa-taxi"></i>Chauffeur</a></li>
               <li><a href="fournisseur"><i class="fa fa-send"></i>Fourniseur</a></li>
             <li><a href="operateur"><i class="fa fa-opera"></i>Operateur</a></li>
@@ -215,13 +216,13 @@
         <li class="treeview">
           <a href="#">
             <i class="fa fa-laptop"></i>
-            <span>UI Elements</span>
+            <span>Gestion des Client</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
+            <li><a href="clients"><i class="fa fa-circle-o"></i> Clients</a></li>
             <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
             <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
             <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>

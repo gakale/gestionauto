@@ -15,6 +15,7 @@ class CreateChauffeursTable extends Migration
     {
         Schema::create('chauffeurs', function (Blueprint $table) {
             $table->bigIncrements('id');
+
             $table->timestamps();
         });
     }

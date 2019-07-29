@@ -16,8 +16,9 @@ Route::get('/dashboard','AdminController@index')->name('dash');
 
 Route::get('/users','AdminController@users')->name('users');
 
-Route::get('/chauffeur','AdminController@operateur')->name('chauffeur');
+Route::get('/chauffeur','AdminController@chauffeur')->name('chauffeur');
+
+Route::get('/fournisseur','AdminController@fournisseur')->name('fournisseur');
+
 
 Route::get('/operateur','AdminController@operateur')->name('operateur');
-
-Route::get('/fournisseur','AdminController@operateur')->name('fournisseur');

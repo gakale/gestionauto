@@ -206,9 +206,9 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="users"><i class="fa fa-user"></i>Utilisateurs</a></li>
-            <li><a href="operateurs"><i class="fa fa-circle-o"></i>Chauffeur</a></li>
-            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i>Operateur</a></li>
-            <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i>Fourniseur</a></li>
+            <li><a href="chauffeur"><i class="fa fa-taxi"></i>Chauffeur</a></li>
+            <li><a href="operateur"><i class="fa fa-opera"></i>Operateur</a></li>
+            <li><a href="fournisseur"><i class="fa fa-send"></i>Fourniseur</a></li>
           </ul>
         </li>
         <li class="treeview">

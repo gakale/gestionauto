@@ -28,31 +28,31 @@
                                 <form action="#" class="form-group" method="post">
                                     <div class="form-group col-md-6">
                                         <label for="recipient-name" class="col-form-label">Nom</label>
-                                        <input type="text" class="form-control" id="recipient-name">
+                                        <input type="text" name="name" class="form-control" id="recipient-name">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="message-text" class="col-form-label">Prenom</label>
-                                        <input class="form-control" id="message-text">
+                                        <input class="form-control" name="prenom" id="message-text">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="recipient-name" class="col-form-label">Login</label>
-                                        <input type="text" class="form-control" id="recipient-name">
+                                        <input type="text" name="login" class="form-control" id="recipient-name">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="message-text" class="col-form-label">Email</label>
-                                        <input class="form-control" id="message-text">
+                                        <input class="form-control" name="email" id="message-text">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="recipient-name" class="col-form-label">Password</label>
-                                        <input type="password" class="form-control" id="recipient-name">
+                                        <input type="password" name="password" class="form-control" id="recipient-name">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="message-text" class="col-form-label">Fonction</label>
-                                        <input class="form-control" id="message-text">
+                                        <input class="form-control" name="fonction" id="message-text">
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="recipient-name" class="col-form-label">Role</label>
-                                        <select type="text" class="form-control select2 select2-hidden-accessible" id="recipient-name">
+                                        <select type="text" name="role" class="form-control select2 select2-hidden-accessible" id="recipient-name">
                                             <option value="Administrateur">Administrateur</option>
                                             <option value="utilisateur">Utilisatateur</option>
                                         </select>

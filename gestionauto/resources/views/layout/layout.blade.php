@@ -207,8 +207,9 @@
           <ul class="treeview-menu">
             <li><a href="users"><i class="fa fa-user"></i>Utilisateurs</a></li>
             <li><a href="chauffeur"><i class="fa fa-taxi"></i>Chauffeur</a></li>
+              <li><a href="fournisseur"><i class="fa fa-send"></i>Fourniseur</a></li>
             <li><a href="operateur"><i class="fa fa-opera"></i>Operateur</a></li>
-            <li><a href="fournisseur"><i class="fa fa-send"></i>Fourniseur</a></li>
+
           </ul>
         </li>
         <li class="treeview">

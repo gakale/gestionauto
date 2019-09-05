@@ -20,6 +20,8 @@
   <!-- Morris chart -->
   <link rel="stylesheet" href="bower_components/morris.js/morris.css">
   <!-- jvectormap -->
+  <link rel="stylesheet" href="bower_components/chart.js/dist/chart.css">
+
   <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
   <!-- Date Picker -->
   <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
@@ -29,10 +31,11 @@
   <link rel="stylesheet" href="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css">
 
   <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!-- WARNING: Respond.js doesn t work if you view the page via file:// -->
   <!--[if lt IE 9]>
   <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
   <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+
   <![endif]-->
 
   <!-- Google Font -->
@@ -199,13 +202,12 @@
         <li class="treeview">
           <a href="#">
             <i class="fa fa-users"></i>
-            <span>Gestion Utilisateur</span>
+            <span>Gestion Personnel</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="users"><i class="fa fa-user"></i>Utilisateurs</a></li>
             <li><a href="personnel"><i class="fa fa-user-secret"></i>Personnel</a></li>
             <li><a href="chauffeur"><i class="fa fa-taxi"></i>Chauffeur</a></li>
               <li><a href="fournisseur"><i class="fa fa-send"></i>Fourniseur</a></li>
@@ -213,62 +215,39 @@
 
           </ul>
         </li>
+
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-laptop"></i>
-            <span>Gestion des Client</span>
+            <i class="fa fa-edit"></i> <span>Gestion Mission</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="clients"><i class="fa fa-circle-o"></i> Clients</a></li>
-            <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
-            <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
-            <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
-            <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
-            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
+            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Rédaction</a></li>
+            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i>Les Mission</a></li>
+            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i>Les Cours</a></li>
+
           </ul>
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-edit"></i> <span>Forms</span>
+            <i class="fa fa-car"></i> <span>Gestion Vehicule</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> General Elements</a></li>
-            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i> Advanced Elements</a></li>
-            <li><a href="pages/forms/editors.html"><i class="fa fa-circle-o"></i> Editors</a></li>
+            <li><a href="pages/tables/simple.html"><i class="fa fa-car"></i>Ajout Voiture</a></li>
+            <li><a href="pages/tables/data.html"><i class="fa fa-taxi"></i> Liste Voitures</a></li>
           </ul>
         </li>
-        <li class="treeview">
-          <a href="#">
-            <i class="fa fa-table"></i> <span>Tables</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
-          </a>
-          <ul class="treeview-menu">
-            <li><a href="pages/tables/simple.html"><i class="fa fa-circle-o"></i> Simple tables</a></li>
-            <li><a href="pages/tables/data.html"><i class="fa fa-circle-o"></i> Data tables</a></li>
-          </ul>
-        </li>
-        <li>
-          <a href="pages/calendar.html">
-            <i class="fa fa-calendar"></i> <span>Calendar</span>
-            <span class="pull-right-container">
-              <small class="label pull-right bg-red">3</small>
-              <small class="label pull-right bg-blue">17</small>
-            </span>
-          </a>
-        </li>
+
         <li>
           <a href="pages/mailbox/mailbox.html">
-            <i class="fa fa-envelope"></i> <span>Mailbox</span>
+            <i class="fa fa-envelope"></i> <span>Mail</span>
             <span class="pull-right-container">
-              <small class="label pull-right bg-yellow">12</small>
+              <small class="label pull-right bg-yellow">Ecrire Message</small>
               <small class="label pull-right bg-green">16</small>
               <small class="label pull-right bg-red">5</small>
             </span>
@@ -276,7 +255,7 @@
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-folder"></i> <span>Examples</span>
+            <i class="fa fa-folder"></i> <span>PANNE</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -295,7 +274,7 @@
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-share"></i> <span>Multilevel</span>
+            <i class="fa fa-share"></i> <span>GARAGE</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
@@ -309,7 +288,7 @@
                 </span>
               </a>
               <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i> Level Two</a></li>
+                <li><a href="#"><i class="fa fa-circle-o"></i>STOCKS</a></li>
                 <li class="treeview">
                   <a href="#"><i class="fa fa-circle-o"></i> Level Two
                     <span class="pull-right-container">
@@ -380,7 +359,7 @@
               <i class="menu-icon fa fa-birthday-cake bg-red"></i>
 
               <div class="menu-info">
-                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+                <h4 class="control-sidebar-subheading">Langdon s Birthday</h4>
 
                 <p>Will be 23 on April 24th</p>
               </div>
@@ -552,7 +531,7 @@
     </div>
   </aside>
   <!-- /.control-sidebar -->
-  <!-- Add the sidebar's background. This div must be placed
+  <!-- Add the sidebar s background. This div must be placed
        immediately after the control sidebar -->
   <div class="control-sidebar-bg"></div>
 </div>
@@ -595,5 +574,31 @@
 <script src="dist/js/pages/dashboard.js"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
+<script src="bower_components/chart.js/dist/chart.js"></script>
+<script>
+    new Chart(document.getElementById("bar-chart-grouped"), {
+        type: 'bar',
+        data: {
+          labels: ["2010", "2012", "1999", "2050"],
+          datasets: [
+            {
+              label: "Accident",
+              backgroundColor: "#ff4162",
+              data: [133,221,783,2478]
+            }, {
+              label: "Voiture",
+              backgroundColor: "#3e95cd",
+              data: [408,547,675,734]
+            }
+          ]
+        },
+        options: {
+          title: {
+            display: true,
+            text: 'Statistique  (millions)'
+          }
+        }
+    });
+</script>
 </body>
 </html>

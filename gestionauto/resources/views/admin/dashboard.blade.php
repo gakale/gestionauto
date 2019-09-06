@@ -1,17 +1,17 @@
-                    @extends('layout.layout')
+@extends('layout.layout')
 
 
-                    @section('content')
-                        @section('grand-text','Tableau de Bord')
-                        @section('grands','Tableau de Bord')
-                        @section('petit-text','Tableau de Bord')
+@section('content')
+@section('grand-text','Tableau de Bord')
+@section('grands','Tableau de Bord')
+@section('petit-text','Tableau de Bord')
 
-                    <div class="container-fluid">
-                        <div class="row">
-                            <div class="col-lg-3 col-6">
-                                <!-- small box -->
-                                <div class="small-box bg-green">
-                                    <div class="inner">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-lg-3 col-6">
+                 <!-- small box -->
+                <div class="small-box bg-green">
+                    <div class="inner">
                                         <h3>150</h3>
 
                                         <p>Nombre de Voiture</p>
@@ -130,54 +130,95 @@
                                 </div>
                                 <!-- ./col -->
                             </div>
-                        </div>
-                            <div class="container">
-                                <div class="row">
-                                    <div class="col-md-8 col-sm-12 col-xs-12">
-                                        <div class="box box-warning">
-                                        <div class="box-header with-border">
-                                            <h3 class="box-title">Statistique</h3>
+                    </div>
+                    <div class="container">
+                            <div class="row">
+                                    <div class="col-md-8">
+                                            <div class="box box-warning">
+                                              <div class="box-header with-border">
+                                                <h3 class="box-title">Graphe</h3>
 
-                                            <div class="box-tools pull-right">
-                                            <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
-                                            </button>
+                                                <div class="box-tools pull-right">
+                                                  <button type="button" class="btn btn-box-tool" data-widget="collapse"><i class="fa fa-minus"></i>
+                                                  </button>
+                                                </div>
+                                                <!-- /.box-tools -->
+                                              </div>
+                                              <!-- /.box-header -->
+                                              <div class="box-body">
+                                                            <canvas id="line-chart" width="800" height="450"></canvas>
+
+                                              <!-- /.box-body -->
                                             </div>
-                                            <!-- /.box-tools -->
-                                        </div>
-                                        <!-- /.box-header -->
-                                        <div class="box-body">
-                                            <canvas id="bar-chart-grouped" width="800" height="450"></canvas>
+                                            <!-- /.box -->
+                                          </div>
 
-                                        </div>
-                                        <!-- /.box-body -->
-                                        </div>
-                                        <!-- /.box -->
-                                    </div>
+                                  </div>
+                                  <div class="col-md-4">
+                                        <div class="info-box bg-red">
+                                                <span class="info-box-icon"><i class="fa fa-money"></i></span>
 
+                                                <div class="info-box-content">
+                                                  <span class="info-box-text">Cout Moyent par Véhicule</span>
+                                                  <span class="info-box-number">5,200</span>
 
+                                                  <div class="progress">
+                                                    <div class="progress-bar" style="width: 50%"></div>
+                                                  </div>
+                                                  <span class="progress-description">
+                                                        50% Increase in 30 Days
+                                                      </span>
+                                                </div>
+                                                <!-- /.info-box-content -->
+                                              </div>
+                                              <div class="info-box bg-blue">
+                                                    <span class="info-box-icon"><i class="fa fa-tachometer"></i></span>
 
+                                                    <div class="info-box-content">
+                                                      <span class="info-box-text">Cout par Kilometre</span>
+                                                      <span class="info-box-number">5,200</span>
 
-                                            <!-- /.info-box -->
-                                    </div>
+                                                      <div class="progress">
+                                                        <div class="progress-bar" style="width: 50%"></div>
+                                                      </div>
+                                                      <span class="progress-description">
+                                                            50% Increase in 30 Days
+                                                          </span>
+                                                    </div>
+                                                    <!-- /.info-box-content -->
+                                                  </div>
+                                                  <div class="info-box bg-green">
+                                                        <span class="info-box-icon"><i class="fa fa-clock-o"></i></span>
 
+                                                        <div class="info-box-content">
+                                                          <span class="info-box-text">Nombre D enregistrement</span>
+                                                          <span class="info-box-number">5,200</span>
 
-
+                                                          <div class="progress">
+                                                            <div class="progress-bar" style="width: 50%"></div>
+                                                          </div>
+                                                          <span class="progress-description">
+                                                                50% Increase in 30 Days
+                                                              </span>
+                                                        </div>
+                                                        <!-- /.info-box-content -->
+                                                      </div>
 
 
                                 </div>
+                    </div>
 
 
-                            </div>
-
-
-
-
-
-
-
-                            </div>
+                 </div>
 
 
 
 
-                    @stop
+
+
+
+      </div>
+
+
+
+ @stop

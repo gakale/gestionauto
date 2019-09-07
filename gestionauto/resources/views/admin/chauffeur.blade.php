@@ -57,6 +57,26 @@
                                         <label for="message-text" class="col-form-label">CNI</label>
                                         <input class="form-control" id="message-text">
                                     </div>
+                                    <hr>
+                                    <div class="form-group col-md-6">
+                                        <label for="message-text" class="col-form-label">Photo Permis</label>
+                                        <input type="file" class="form-control" id="message-text">
+                                    </div>  <div class="form-group col-md-6">
+                                        <label for="message-text" class="col-form-label">Categorie de permis </label>
+                                        <select class="form-control" id="message-text">
+                                            <option value="">Permis A1</option>
+                                            <option value="">Permis A2</option>
+
+                                            <option value="">Permis A</option>
+
+                                            <option value="">Permis B</option>
+
+                                        </select>
+                                    </div>
+                                      <div class="form-group col-md-6">
+                                        <label for="message-text" class="col-form-label">Date Permis</label>
+                                        <input class="form-control" id="message-text">
+                                    </div>
 
                                 </form>
                             </div>

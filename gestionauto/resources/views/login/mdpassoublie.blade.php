@@ -12,15 +12,15 @@
         <script type="text/javascript" src="Styles/jQuery.js"></script>
     </head>
     <body>
-        <!--   La page de connexion au tableau de bord   -->
+        <!--   La page de mot de passe oublié au tableau de bord   -->
         <div class="container-fluid row loginForm">
 
-            <!--  Bannière de l image de la page de connexion  -->
+            <!--  Bannière de l image de la page de mot de passe oublié  -->
             <div class="banImg col-md-6">
                 <img src="" alt="">
             </div>
 
-            <!--  Bannière du saisir de compte de la page de connexion  -->
+            <!--  Bannière du saisir de E-mail de la page de mot de passe oublié  -->
             <div class="BanLogin col-md-6">
                 <h1>PARC AUTO</h1>
                 <p>Entrez votre E-mail et nous vous enverrons un lien de réinitialisation de mot de passe.</p>
@@ -34,7 +34,7 @@
                         <input type="submit" value="Envoyez la requête" class="bouton">
                     </div>
                     <div class="signature row">
-                        <p>By MediaTEC Group / Tout droit réservé !</p>
+                        <p>By MediaTEC Group | Tout droit réservé !</p>
                     </div>
                 </form>
             </div>

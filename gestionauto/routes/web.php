@@ -22,3 +22,12 @@ Route::get('/fournisseur','AdminController@fournisseur')->name('fournisseur');
 
 
 Route::get('/operateur','AdminController@operateur')->name('operateur');
+
+
+Route::get('users/{id}', function ($id) {
+
+});
+
+Route::get('login' , function () {
+    return view('login/login');
+});

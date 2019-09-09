@@ -22,3 +22,5 @@ Route::get('/fournisseur','AdminController@fournisseur')->name('fournisseur');
 
 
 Route::get('/operateur','AdminController@operateur')->name('operateur');
+
+Route::get('/mail','MailController@index')->name('mail');

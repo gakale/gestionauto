@@ -92,7 +92,7 @@ class AdminController extends Controller
     }
     public function operateur()
     {
-        return view('admin/operateur');
+        return view('admin/users');
     } public function fournisseur()
     {
         return view('admin/fournisseur');

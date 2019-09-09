@@ -28,6 +28,9 @@ Route::get('users/{id}', function ($id) {
 
 });
 
-Route::get('login' , function () {
+Route::get('/' , function () {
     return view('login/login');
+});
+Route::get('mdpassoublie' , function () {
+    return view('login/mdpassoublie');
 });

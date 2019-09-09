@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Connexion</title>
+        <title>Parc Auto | Connexion</title>
 
         <!--   Liens des CSS et Javacript   -->
         <link rel="stylesheet" href="Styles/bootstrap.min.css">
@@ -42,14 +42,14 @@
                         </div>
                                 
                         <div class="mdpO col-md-6 col-sm-6 col-xs-6">
-                            <a href="mdpassoublie.html">Mot de passe oublié ?</a>
+                            <a href="mdpassoublie">Mot de passe oublié ?</a>
                         </div>
                     </div>
                     <div class="rowb">
                         <input type="submit" value="Se connecter" class="bouton">
                     </div>
                     <div class="signature row">
-                        <p>By MediaTEC Group / Tout droit réservé !</p>
+                        <p>By MediaTEC Group | Tout droit réservé !</p>
                     </div>
                 </form>
             </div>

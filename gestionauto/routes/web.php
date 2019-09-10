@@ -20,7 +20,20 @@ Route::get('/chauffeur','AdminController@chauffeur')->name('chauffeur');
 
 Route::get('/fournisseur','AdminController@fournisseur')->name('fournisseur');
 
+Route::get('/carburant','AdminController@carburant')->name('carburant');
+
+Route::get('/voiture','AdminController@voiture');
 
 Route::get('/operateur','AdminController@operateur')->name('operateur');
 
 Route::get('/mail','MailController@index')->name('mail');
+
+
+Route::get('/' , function () {
+    return view('login/login');
+});
+
+
+Route::get('mdpassoublie' , function () {
+    return view('login/mdpassoublie');
+});

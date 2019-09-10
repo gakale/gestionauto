@@ -238,8 +238,10 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/tables/simple.html"><i class="fa fa-car"></i>Ajout Voiture</a></li>
-            <li><a href="pages/tables/data.html"><i class="fa fa-taxi"></i> Liste Voitures</a></li>
+            <li><a href="voiture"><i class="fa fa-car"></i>Ajout Voiture</a></li>
+            <li><a href="pages/tables/simple.html"><i class="fa fa-car"></i>Ajout Marque</a></li>
+            <li><a href="pages/tables/simple.html"><i class="fa fa-car"></i>Ajout Modele</a></li>
+            <li><a href="pages/tables/data.html"><i class="fa fa-taxi"></i>Liste Voitures</a></li>
           </ul>
         </li>
 
@@ -307,7 +309,7 @@
         </li>
         <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
         <li class="header">LABELS</li>
-        <li><a href="#"><i class="fa fa-circle-o text-red"></i> <span>Important</span></a></li>
+        <li><a href="carburant"><i class="fa fa-thermometer-full text-red"></i> <span>CARBURANT</span></a></li>
         <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
         <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
       </ul>

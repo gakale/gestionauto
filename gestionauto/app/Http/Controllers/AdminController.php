@@ -96,5 +96,11 @@ class AdminController extends Controller
     } public function fournisseur()
     {
         return view('admin/fournisseur');
+    } public function carburant()
+    {
+        return view('admin/carburant');
+    } public function voiture()
+    {
+        return view('admin/voiture');
     }
 }

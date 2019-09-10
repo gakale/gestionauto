@@ -29,3 +29,9 @@ Route::get('/operateur','AdminController@operateur')->name('operateur');
 Route::get('/mail','MailController@index')->name('mail');
 
 
+
+
+Route::get('/' , 'LoginsController@login')->name('login');
+
+Route::get('/mdpassoublie' , 'LoginsController@mdpassoublie')->name('mdpassoublie');
+

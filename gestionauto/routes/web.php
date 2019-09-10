@@ -28,9 +28,6 @@ Route::get('users/{id}', function ($id) {
 
 });
 
-Route::get('/' , function () {
-    return view('login/login');
-});
-Route::get('mdpassoublie' , function () {
-    return view('login/mdpassoublie');
-});
+Route::get('/' , 'LoginsController@login')->name('login');
+
+Route::get('/mdpassoublie' , 'LoginsController@mdpassoublie')->name('mdpassoublie');

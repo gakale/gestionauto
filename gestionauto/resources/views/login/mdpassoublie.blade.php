@@ -43,7 +43,7 @@
 
         <!--   Le code jquery de la page login   -->
         <script type="text/javascript">
-            $(".texte input").on("focus", function(){
+            $(".texte input").on("click", function(){
                 $(this).addClass("focus");
             });
 

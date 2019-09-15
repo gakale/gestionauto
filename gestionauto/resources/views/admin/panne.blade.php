@@ -13,8 +13,7 @@
 
                 <input placeholder="Recherche" id="recherche" class="form-control" style="width: 20%;margin: 10px;" type="search">
 
-                <input class="btn btn-sm" type="button" value="Nouvelle Marque">
-                <input class="btn btn-sm" type="button" value="Nouveaux Model">
+
 
             </form>
             <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="float: right">Ajouter</button>
@@ -107,34 +106,8 @@
 
                                         </select>
                                     </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">Utilisation</label>
-                                        <select type="file" class="form-control" id="message-text">
-                                                <option value="">Service</option>
-                                                <option value="">Comptable</option>
-
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">Carosserie</label>
-                                        <select class="form-control select2" id="message-text">
-                                            <option value="">Break</option>
-                                            <option value="">Bicorps</option>
-
-                                            <option value="">Tricorps</option>
-
-                                            <option value="">Coupé</option>
-                                            <option value="">Cabriolet</option>
-
-                                            <option value="">Roadster</option>
-                                            <option value="">Spider</option>
-
-                                            <option value="">	Pick-up</option>
 
 
-
-                                        </select>
-                                    </div>
 
 
 

@@ -239,19 +239,14 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="voiture"><i class="fa fa-car"></i>Ajout Voiture</a></li>
-            <li><a href="pages/tables/simple.html"><i class="fa fa-car"></i>Ajout Marque</a></li>
-            <li><a href="pages/tables/simple.html"><i class="fa fa-car"></i>Ajout Modele</a></li>
-            <li><a href="pages/tables/data.html"><i class="fa fa-taxi"></i>Liste Voitures</a></li>
           </ul>
         </li>
 
         <li>
-          <a href="pages/mailbox/mailbox.html">
+          <a href="mail">
             <i class="fa fa-envelope"></i> <span>Mail</span>
             <span class="pull-right-container">
               <small class="label pull-right bg-yellow">Ecrire Message</small>
-              <small class="label pull-right bg-green">16</small>
-              <small class="label pull-right bg-red">5</small>
             </span>
           </a>
         </li>
@@ -263,55 +258,29 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/examples/invoice.html"><i class="fa fa-circle-o"></i> Invoice</a></li>
-            <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i> Profile</a></li>
-            <li><a href="pages/examples/login.html"><i class="fa fa-circle-o"></i> Login</a></li>
-            <li><a href="pages/examples/register.html"><i class="fa fa-circle-o"></i> Register</a></li>
-            <li><a href="pages/examples/lockscreen.html"><i class="fa fa-circle-o"></i> Lockscreen</a></li>
-            <li><a href="pages/examples/404.html"><i class="fa fa-circle-o"></i> 404 Error</a></li>
-            <li><a href="pages/examples/500.html"><i class="fa fa-circle-o"></i> 500 Error</a></li>
-            <li><a href="pages/examples/blank.html"><i class="fa fa-circle-o"></i> Blank Page</a></li>
-            <li><a href="pages/examples/pace.html"><i class="fa fa-circle-o"></i> Pace Page</a></li>
+            <li><a href="panne"><i class="fa fa-circle-o"></i>Panne</a></li>
+            <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i>Top 10 Panne</a></li>
+
           </ul>
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-share"></i> <span>GARAGE</span>
+            <i class="fa fa-cog"></i> <span>GARAGE</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+            <li><a href="garage"><i class="fa fa-cog"></i>Entretient</a></li>
             <li class="treeview">
-              <a href="#"><i class="fa fa-circle-o"></i> Level One
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
-              <ul class="treeview-menu">
-                <li><a href="#"><i class="fa fa-circle-o"></i>STOCKS</a></li>
-                <li class="treeview">
-                  <a href="#"><i class="fa fa-circle-o"></i> Level Two
-                    <span class="pull-right-container">
-                      <i class="fa fa-angle-left pull-right"></i>
-                    </span>
-                  </a>
-                  <ul class="treeview-menu">
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                    <li><a href="#"><i class="fa fa-circle-o"></i> Level Three</a></li>
-                  </ul>
-                </li>
-              </ul>
-            </li>
-            <li><a href="#"><i class="fa fa-circle-o"></i> Level One</a></li>
+
           </ul>
         </li>
         <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
         <li class="header">LABELS</li>
         <li><a href="carburant"><i class="fa fa-thermometer-full text-red"></i> <span>CARBURANT</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-yellow"></i> <span>Warning</span></a></li>
-        <li><a href="#"><i class="fa fa-circle-o text-aqua"></i> <span>Information</span></a></li>
+        <li><a href="#"><i class="fa fa-share text-yellow"></i> <span>STOCK</span></a></li>
+        <li><a href="#"><i class="fa fa-map text-aqua"></i> <span>GPS</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->
@@ -565,7 +534,7 @@
 <!-- datepicker -->
 <script src="bower_components/bootstrap-datepicker/dist/js/bootstrap-datepicker.min.js"></script>
 <!-- Bootstrap WYSIHTML5 -->
-<script src="plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
+<script src="/plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js"></script>
 <!-- Slimscroll -->
 <script src="bower_components/jquery-slimscroll/jquery.slimscroll.min.js"></script>
 <!-- FastClick -->
@@ -577,6 +546,7 @@
 <!-- AdminLTE for demo purposes -->
 <script src="dist/js/demo.js"></script>
 <script src="bower_components/chart.js/dist/chart.js"></script>
+
 <script>
 new Chart(document.getElementById("line-chart"), {
   type: 'line',
@@ -621,6 +591,10 @@ new Chart(document.getElementById("line-chart"), {
     }
   }
 });
+
+  });
+
+
 </script>
 </body>
 </html>

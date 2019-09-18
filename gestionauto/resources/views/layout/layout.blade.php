@@ -22,7 +22,7 @@
   <!-- jvectormap -->
   <link rel="stylesheet" href="bower_components/chart.js/dist/chart.css">
 
-  <link rel="stylesheet" href="bower_components/jvectormap/jquery-jvectormap.css">
+  <link rel="stylesheet" href="../../bower_components/jvectormap/jquery-jvectormap.css">
   <!-- Date Picker -->
   <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
   <!-- Daterange picker -->
@@ -224,7 +224,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/forms/general.html"><i class="fa fa-circle-o"></i> Rédaction</a></li>
+            <li><a href="pages/forms/general.html"><i class="fa fa-book"></i> Rédaction</a></li>
             <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i>Les Mission</a></li>
             <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i>Les Cours</a></li>
 
@@ -276,11 +276,11 @@
 
           </ul>
         </li>
-        <li><a href="https://adminlte.io/docs"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
+        <li><a href="documents"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
         <li class="header">LABELS</li>
         <li><a href="carburant"><i class="fa fa-thermometer-full text-red"></i> <span>CARBURANT</span></a></li>
-        <li><a href="#"><i class="fa fa-share text-yellow"></i> <span>STOCK</span></a></li>
-        <li><a href="#"><i class="fa fa-map text-aqua"></i> <span>GPS</span></a></li>
+        <li><a href="stock"><i class="fa fa-share text-yellow"></i> <span>STOCK</span></a></li>
+        <li><a href="maps"><i class="fa fa-map text-aqua"></i> <span>GPS</span></a></li>
       </ul>
     </section>
     <!-- /.sidebar -->
@@ -524,8 +524,8 @@
 <!-- Sparkline -->
 <script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
 <!-- jvectormap -->
-<script src="plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+<script src="../../plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
+<script src="../../plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
 <!-- jQuery Knob Chart -->
 <script src="bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
 <!-- daterangepicker -->
@@ -590,7 +590,6 @@ new Chart(document.getElementById("line-chart"), {
       text: 'Evolution des coûts'
     }
   }
-});
 
   });
 

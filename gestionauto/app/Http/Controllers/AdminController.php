@@ -137,4 +137,22 @@ class AdminController extends Controller
     {
         return view('admin/panne');
     }
+
+
+    public function stock()
+    {
+        return view('admin/stock');
+    }
+
+
+    public function documents()
+    {
+        return view('admin/documents');
+    }
+
+
+    public function maps()
+    {
+        return view('admin/maps');
+    }
 }

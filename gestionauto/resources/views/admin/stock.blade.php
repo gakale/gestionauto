@@ -1,24 +1,24 @@
 @extends('layout.layout')
 @section('content')
-@section('grand-text','Tableau de Bord')
+@section('grand-text','Stock')
 @section('grands','Tableau de Bord')
-@section('petit-text','Carburant')
+@section('petit-text','Stock')
 
 <div class="container-fluid ">
-    <div class="box">
+    <div class="box ">
         <div class="box-header">
-            <h3 class="box-title">Carburant</h3>
+            <h3 class="box-title">Gestion Stock</h3>
             <form action="" class="form-group">
                 <input placeholder="Recherche" id="recherche" class="form-control" style="width: 20%;margin: 10px;" type="search">
 
             </form>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="float: right">Ajouter</button>
+            <button type="button" class="btn btn-primary my-1" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="float: right">Ajouter</button>
 
             <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                 <div class="modal-dialog" role="document">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Nouveau Carburant</h5>
+                            <h5 class="modal-title" id="exampleModalLabel">Nouveau Chauffeur</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span>
                             </button>
@@ -27,7 +27,7 @@
                             <div class="row">
                                 <form action="#" class="form-group" method="post">
                                     <div class="form-group col-md-6">
-                                        <label for="recipient-name" class="col-form-label">Nom Station</label>
+                                        <label for="recipient-name" class="col-form-label">Nom Produit</label>
                                         <input type="text" class="form-control" id="recipient-name">
                                     </div>
                                     <div class="form-group col-md-6">
@@ -35,44 +35,33 @@
                                         <input class="form-control" id="message-text">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="recipient-name" class="col-form-label">Litrage</label>
+                                        <label for="recipient-name" class="col-form-label">Stock</label>
                                         <input type="text" class="form-control" id="recipient-name">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">Montant</label>
+                                        <label for="message-text" class="col-form-label">Prix</label>
                                         <input class="form-control" id="message-text">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="recipient-name" class="col-form-label">Quantité</label>
+                                        <label for="recipient-name" class="col-form-label">Date</label>
                                         <input type="password" class="form-control" id="recipient-name">
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">Date</label>
+                                        <label for="message-text" class="col-form-label">Quantité Entrée</label>
                                         <input class="form-control" id="message-text">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">AvantRecharge</label>
+                                    </div>  <div class="form-group col-md-6">
+                                        <label for="message-text" class="col-form-label">Quantité Sortie</label>
                                         <input class="form-control" id="message-text">
                                     </div>
                                       <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">AprèsRecharge</label>
+                                        <label for="message-text" class="col-form-label">Stock FINAL </label>
                                         <input class="form-control" id="message-text">
                                     </div>
                                     <hr>
                                     <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">Reçu de Paiement</label>
+                                        <label for="message-text" class="col-form-label">Reçu de paiement </label>
                                         <input type="file" class="form-control" id="message-text">
                                     </div>
-                                     <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">Voiture</label>
-                                        <select class="form-control" id="message-text">
-                                            <option value="">Mercedece</option>
-
-                                            <option value="">Permis B</option>
-
-                                        </select>
-                                    </div>
-
 
                                 </form>
                             </div>
@@ -90,35 +79,61 @@
         <div class="box-body no-padding">
             <table class="table table-bordered  table-striped">
                 <tbody>
-                    <tr>
-                        <th>Nom Station</th>
-                        <th>Designation</th>
-                        <th>Litrage</th>
-                        <th>AvantRecharge</th>
-                        <th>AprèsRecharge</th>
-                        <th>Action</th>
-                    </tr>
-                    <tr>
-                        <td>qklsdksd</td>
-                        <td>qlqsdkk</td>
-                        <td>qkldskls </td>
-                        <td>sdkqlmlqs</td>
-                        <td>qsdkmlkqsd</td>
-                        <td>
+                <tr>
+                    <th>Nom Produit</th>
+                    <th>Designation</th>
+                    <th>Stock</th>
+                    <th>Quantite Entrée</th>
+                    <th>Quantite Sortie</th>
+                    <th>Action</th>
+                </tr>
+                <tr>
+                    <td>qklsdksd</td>
+                    <td>qlqsdkk</td>
+                    <td>qkldskls </td>
+                    <td>sdkqlmlqs</td>
+                    <td>qsdkmlkqsd</td>
+                    <td>
 
-                            <a href="#" class="fa fa-eye">
+                        <a href="#" class="fa fa-eye">
+
+                        </a>
+                        <a href="#" class="fa fa-pencil">
 
                             </a>
-                            <a href="#" class="fa fa-pencil">
+                            <a href="#" class="red fa fa-trash">
 
                                 </a>
-                                <a href="#" class="red fa fa-trash">
+                    </td>
 
-                                    </a>
-                        </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
 
-                    </tr>
-                    <tr>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td> </td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+                <tr>
                         <td></td>
                         <td></td>
                         <td> </td>
@@ -127,23 +142,7 @@
                         <td></td>
 
                     </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td> </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
 
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td> </td>
-                        <td></td>
-                        <td></td>
-
-                    </tr>
                     <tr>
                             <td></td>
                             <td></td>
@@ -152,20 +151,10 @@
                             <td></td>
                             <td></td>
 
+
                         </tr>
 
-                        <tr>
-                                <td></td>
-                                <td></td>
-                                <td> </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-
-
-                            </tr>
-
-                    </tbody>
+                </tbody>
             </table>
         </div>
         <!-- /.box-body -->

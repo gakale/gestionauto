@@ -28,7 +28,11 @@ Route::get('/operateur','AdminController@operateur')->name('operateur');
 
 Route::get('/garage','AdminController@garage')->name('garage');
 
-Route::get('/document','AdminController@document')->name('document');
+Route::get('/documents','AdminController@documents')->name('document');
+
+Route::get('/stock','AdminController@stock')->name('stock');
+
+Route::get('/maps','AdminController@maps')->name('maps');
 
 
 Route::get('/mail','AdminController@mail')->name('mail');

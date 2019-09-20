@@ -19,7 +19,7 @@
                                     <div class="icon">
                                         <i class="fa fa-car"></i>
                                     </div>
-                                    <a class="small-box-footer" href="#">Voire plus <i class="fa fa-arrow-circle-right"></i></a>
+                                    <a class="small-box-footer" href="voiture">Voire plus <i class="fa fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                             <!-- ./col -->
@@ -34,7 +34,7 @@
                                     <div class="icon">
                                         <i class="fa fa-gears"></i>
                                     </div>
-                                    <a class="small-box-footer" href="#">Voire plus <i class="fa fa-arrow-circle-right"></i></a>
+                                    <a class="small-box-footer" href="panne">Voire plus <i class="fa fa-arrow-circle-right"></i></a>
                                 </div>
                             </div>
                             <!-- ./col -->
@@ -222,3 +222,4 @@
 
 
  @stop
+

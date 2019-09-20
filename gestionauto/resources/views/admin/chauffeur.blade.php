@@ -94,39 +94,82 @@
         <div class="box-body no-padding">
             <table class="table table-bordered  table-striped">
                 <tbody>
-                <tr>
-                    <th>Nom</th>
-                    <th>Prenom</th>
-                    <th>Email</th>
-                    <th>Adresse</th>
-                    <th>Action</th>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td> </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td> </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td> </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td> </td>
-                    <td></td>
-                </tr>
+                    <tr>
+                        <th>Nom Station</th>
+                        <th>Designation</th>
+                        <th>Litrage</th>
+                        <th>AvantRecharge</th>
+                        <th>AprèsRecharge</th>
+                        <th>Action</th>
+                    </tr>
+                    <tr>
+                        <td>qklsdksd</td>
+                        <td>qlqsdkk</td>
+                        <td>qkldskls </td>
+                        <td>sdkqlmlqs</td>
+                        <td>qsdkmlkqsd</td>
+                        <td>
 
-                </tbody>
+                            <a href="#" class="fa fa-eye">
+
+                            </a>
+                            <a href="#" class="fa fa-pencil">
+
+                                </a>
+                                <a href="#" class="red fa fa-trash">
+
+                                    </a>
+                        </td>
+
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td> </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td> </td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td> </td>
+                        <td></td>
+                        <td></td>
+
+                    </tr>
+                    <tr>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+                        </tr>
+
+                        <tr>
+                                <td></td>
+                                <td></td>
+                                <td> </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+
+
+                            </tr>
+
+                    </tbody>
             </table>
         </div>
         <!-- /.box-body -->

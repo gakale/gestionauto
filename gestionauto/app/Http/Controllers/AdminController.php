@@ -155,4 +155,12 @@ class AdminController extends Controller
     {
         return view('admin/maps');
     }
+
+
+
+
+    public function coursse()
+    {
+        return view('admin/coursse');
+    }
 }

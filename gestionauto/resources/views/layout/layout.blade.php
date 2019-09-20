@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css">
+
   <!-- Ionicons -->
   <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css">
   <!-- Theme style -->
@@ -22,7 +23,6 @@
   <!-- jvectormap -->
   <link rel="stylesheet" href="bower_components/chart.js/dist/chart.css">
 
-  <link rel="stylesheet" href="../../bower_components/jvectormap/jquery-jvectormap.css">
   <!-- Date Picker -->
   <link rel="stylesheet" href="bower_components/bootstrap-datepicker/dist/css/bootstrap-datepicker.min.css">
   <!-- Daterange picker -->
@@ -226,7 +226,7 @@
           <ul class="treeview-menu">
             <li><a href="pages/forms/general.html"><i class="fa fa-book"></i> Rédaction</a></li>
             <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i>Les Mission</a></li>
-            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i>Les Cours</a></li>
+            <li><a href="coursse"><i class="fa fa-circle-o"></i>Les Cours</a></li>
 
           </ul>
         </li>
@@ -524,8 +524,7 @@
 <!-- Sparkline -->
 <script src="bower_components/jquery-sparkline/dist/jquery.sparkline.min.js"></script>
 <!-- jvectormap -->
-<script src="../../plugins/jvectormap/jquery-jvectormap-1.2.2.min.js"></script>
-<script src="../../plugins/jvectormap/jquery-jvectormap-world-mill-en.js"></script>
+
 <!-- jQuery Knob Chart -->
 <script src="bower_components/jquery-knob/dist/jquery.knob.min.js"></script>
 <!-- daterangepicker -->

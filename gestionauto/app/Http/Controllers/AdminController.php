@@ -98,7 +98,7 @@ class AdminController extends Controller
 
 
     {
-        return view('admin/users');
+        return view('admin/operateur');
     } public function fournisseur()
     {
 
@@ -159,8 +159,14 @@ class AdminController extends Controller
 
 
 
-    public function coursse()
+    public function course()
     {
-        return view('admin/coursse');
+        return view('admin/course');
+    }
+
+
+    public function mission()
+    {
+        return view('admin/mission');
     }
 }

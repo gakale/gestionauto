@@ -24,15 +24,15 @@
             <div class="BanLogin col-md-6">
                 <h1>PARC AUTO</h1>
                 <p>Bienvenue ! SVP connectez vous à votre compte.</p>
-                <form action="" method="post">
+                <form action="dashboard">
                     <div class="texte">
-                        <input type="email" name="" id="" required="required">
+                        <input type="email" name="" id="" >
                         <span data-placeholder="E-mail"></span>
                     </div>
-            
+
                     <div class="texte">
-                        <input type="password" name="" required="required">
-                        <span data-placeholder="Mot de passe"></span>  
+                        <input type="password" name="">
+                        <span data-placeholder="Mot de passe"></span>
                     </div>
 
                     <div class="row">
@@ -40,7 +40,7 @@
                             <input type="checkbox" name="souvenir" id="">
                             <label for="">Se souvenir de moi</label>
                         </div>
-                                
+
                         <div class="mdpO col-md-6 col-sm-6 col-xs-6">
                             <a href="mdpassoublie">Mot de passe oublié ?</a>
                         </div>

@@ -86,14 +86,14 @@
                                 <!-- ./col -->
                                 <div class="col-lg-3 col-6">
                                     <!-- small box -->
-                                    <div class="small-box bg-success">
+                                    <div class="small-box bg-purple">
                                         <div class="inner">
-                                            <h3>53<sup style="font-size: 20px">%</sup></h3>
+                                            <h3>10000<sup style="font-size: 20px"></sup></h3>
 
-                                            <p>Total Utilisateurs</p>
+                                            <p>Total Carburant</p>
                                         </div>
                                         <div class="icon">
-                                            <i class="fa fa-users"></i>
+                                            <i class="fa fa-user"></i>
                                         </div>
                                         <a class="small-box-footer" href="users">Voire plus <i class="fa fa-arrow-circle-right"></i></a>
                                     </div>

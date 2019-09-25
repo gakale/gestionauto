@@ -35,6 +35,10 @@ Route::get('/stock','AdminController@stock')->name('stock');
 Route::get('/maps','AdminController@maps')->name('maps');
 
 
+// les mission et course
+
+Route::get('/mission','AdminController@mission');
+
 Route::get('/mail','AdminController@mail')->name('mail');
 
 

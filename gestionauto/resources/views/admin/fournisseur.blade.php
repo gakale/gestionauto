@@ -1,137 +1,188 @@
+
 @extends('layout.layout')
 @section('content')
-@section('grand-text','Tableau de Bord')
+@section('grand-text','gestion des fournisseurs')
 @section('grands','Tableau de Bord')
-@section('petit-text','Fournisseur')
+@section('petit-text','Fournisseurs')
 
-<div class="container-fluid ">
+
+<div class="container-fluid">
+    
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">Utilisateurs</h3>
+            <h3 class="box-title">Nos Fourniseurs</h3>
             <form action="" class="form-group">
+                
                 <input placeholder="Recherche" id="recherche" class="form-control" style="width: 20%;margin: 10px;" type="search">
-
+                
+                
+                
             </form>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="float: right">Ajouter</button>
-
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Nouveau Fournisseur</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+            
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default"  style="float: right">
+                Nouveau Fourniseur        
+            </button>
+        </div>
+        {{--  nouveaux modal   --}}
+        <div class="modal fade" id="modal-default">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">Nouveaux chauffeur  </h4>
                         </div>
                         <div class="modal-body">
                             <div class="row">
                                 <form action="#" class="form-group" method="post">
-                                    <div class="form-group col-md-6">
-                                        <label for="recipient-name" class="col-form-label">Nom</label>
-                                        <input type="text" class="form-control" id="recipient-name">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">Prenom</label>
-                                        <input class="form-control" id="message-text">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="recipient-name" class="col-form-label">Login</label>
-                                        <input type="text" class="form-control" id="recipient-name">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">Email</label>
-                                        <input class="form-control" id="message-text">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="recipient-name" class="col-form-label">Password</label>
-                                        <input type="password" class="form-control" id="recipient-name">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">Fonction</label>
-                                        <input class="form-control" id="message-text">
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="recipient-name" class="col-form-label">Role</label>
-                                        <select type="text" class="form-control select2 select2-hidden-accessible" id="recipient-name">
-                                            <option value="Administrateur">Administrateur</option>
-                                            <option value="utilisateur">Utilisatateur</option>
-                                        </select>
-                                    </div>
+                                    <form action="#" class="form-group" method="post">
+                                        <div class="form-group col-md-6">
+                                            <label for="recipient-name" class="col-form-label">Nom du Fourniseur</label>
+                                            <input type="text" name="name" class="form-control" id="recipient-name">
+                                        </div>
+                                        
+                                        
+                                        
+                                        <div class="form-group col-md-6">
+                                            <label for="recipient-name" class="col-form-label">Localisation</label>
+                                            <input name="localisation" type="password" class="form-control" id="recipient-name">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="message-text" class="col-form-label">Téléphone</label>
+                                            <input name="telephone" class="form-control" id="message-text">
+                                        </div>  <div class="form-group col-md-6">
+                                            <label for="message-text" class="col-form-label">Email</label>
+                                            <input name="email" type="email" class="form-control" id="message-text">
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="message-text" class="col-form-label">N° CNI</label>
+                                            <input  name="cni" type="text" class="form-control" id="message-text">
+                                        </div>
 
-                                </form>
+                                        <div class="form-group col-md-6">
+                                            <label for="message-text" class="col-form-label">Depuis</label>
+                                            <input  name="depuis" type="date" class="form-control" id="message-text">
+                                        </div>
+                                        <hr>
+                                        
+                                        
+                                        
+                                    </form>
+                                </div>
+                                
+                                
                             </div>
-
+                            
+                            
+                            
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Ferme</button>
-                            <button type="submit" class="btn btn-primary">Enregister</button>
-                        </div>
+                        <!-- /.modal-content -->
                     </div>
+                    
+                    <!-- /.modal-dialog -->
                 </div>
+                
+                <!-- /.box-header -->
+                <div class="box-body no-padding">
+                    <table class="table table-bordered  table-striped">
+                        <tbody>
+                            <tr>
+                                <th>Nom du Fourniseur</th>
+                                <th>Téléphone</th>
+                                <th>Numero de CNI</th>
+                                <th>Email</th>
+                                <th>Depuis</th>
+                                <th>localisation</th>
+
+                                <th>Action</th>
+                            </tr>
+                            <tr>
+                                <td>gnakale</td>
+                                <td>022 0 5 0 5</td>
+                                <td>C001 2025 </td>
+                                <td>A1@gmailcom
+                                <td>19/2019/2019</td>
+
+                                <td>Abidjan plataux</td>
+                                <td>
+                                    
+                                    <a href="#" class="fa fa-eye">
+                                        
+                                    </a>
+                                    <a href="#" class="fa fa-pencil">
+                                        
+                                    </a>
+                                    <a href="#" class="red fa fa-trash">
+                                        
+                                    </a>
+                                </td>
+                                
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td> </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td> </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                
+                            </tr>
+                            
+                            <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td> </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+
+                            </tr>
+                            <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td> </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+                                
+                            </tr>
+                            
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td> </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                                
+                            </tr>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.box-body -->
             </div>
+            
+            
         </div>
-        <!-- /.box-header -->
-        <div class="box-body no-padding">
-            <table class="table table-bordered  table-striped">
-                <tbody>
-                <tr>
-                    <th>Nom</th>
-                    <th>Login</th>
-                    <th>Email</th>
-                    <th>Role</th>
-                    <th>Action</th>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>
-
-                    </td>
-                    <td>
-                    </td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>
-
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>
-
-                    </td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td>
-
-                    </td>
-                    <td></td>
-                </tr>
-
-                </tbody>
-            </table>
-        </div>
-        <!-- /.box-body -->
-    </div>
-
-</div>
-<script>
-    $('#exampleModal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget) // Button that triggered the modal
-        var recipient = button.data('whatever') // Extract info from data-* attributes
-        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-        var modal = $(this)
-        modal.find('.modal-title').text('New message to ' + recipient)
-        modal.find('.modal-body input').val(recipient)
-    })
-</script>
-
-@stop
+        
+        
+        
+        
+        @stop
+        

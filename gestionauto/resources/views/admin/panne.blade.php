@@ -1,228 +1,263 @@
+
 @extends('layout.layout')
 @section('content')
 @section('grand-text','Tableau de Bord')
 @section('grands','Tableau de Bord')
 @section('petit-text','Voiture')
 
-<div class="container-fluid">
 
+<div class="container-fluid">
+    
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">Voiture</h3>
+            <h3 class="box-title">Maintenance</h3>
             <form action="" class="form-group">
-
+                
                 <input placeholder="Recherche" id="recherche" class="form-control" style="width: 20%;margin: 10px;" type="search">
-
-
-
+                
+                
+                
             </form>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="float: right">Ajouter</button>
-
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
+            
+                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default"  style="float: right">
+                    Nouvelle Panne        
+                </button>
+            </div>
+            {{--  nouveaux modal   --}}
+            <div class="modal fade" id="modal-default">
+                <div class="modal-dialog">
                     <div class="modal-content">
                         <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Ajout Vehicule</h5>
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row">
-                                <form action="#" class="form-group" method="post">
-                                    <div class="form-group col-md-4">
-                                        <label for="recipient-name" class="col-form-label">Immatriculation</label>
-                                        <input type="text" class="form-control" id="recipient-name">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="message-text" class="col-form-label">Kilometrage</label>
-                                        <input class="form-control" id="message-text">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="recipient-name" class="col-form-label">Date</label>
-                                        <input type="text" class="form-control" id="recipient-name">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="message-text" class="col-form-label">Puisance</label>
-                                        <input class="form-control" id="message-text">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="recipient-name" class="col-form-label">Poids Vide</label>
-                                        <input type="password" class="form-control" id="recipient-name">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="message-text" class="col-form-label">Nombre Place</label>
-                                        <input class="form-control" id="message-text">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="message-text" class="col-form-label">Capacité de Bagage</label>
-                                        <input class="form-control" id="message-text">
-                                    </div>
-                                      <div class="form-group col-md-4">
-                                        <label for="message-text" class="col-form-label">Etat</label>
-                                        <input class="form-control" id="message-text">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="message-text" class="col-form-label">Transmission</label>
-                                        <select class="form-control" id="message-text">
-                                            <option value="">Atomatique</option>
-                                            <option value="">Manuelle</option>
-                                        </select>
-                                    </div>
-                                    <hr>
-                                    <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">Marque</label>
-                                        <select type="" class="form-control" id="message-text">
-                                            <option value="">Fiat</option>
-                                            <option value="">Bmw</option>
-                                            <option value="">Peugeot</option>
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">Modele</label>
-                                        <select type="file" class="form-control" id="message-text">
-                                            <option value="">Fiat</option>
-                                            <option value="">Bmw</option>
-                                            <option value="">Peugeot</option>
-
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">Categorie</label>
-                                        <select type="file" class="form-control" id="message-text">
-                                            <option value="">Cars</option>
-                                            <option value="">Camion</option>
-
-                                        </select>
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">Carburant</label>
-                                        <select  class="form-control select2-selection__rendered" id="message-text">
-                                            <option value="">Hybride</option>
-                                            <option value="">Essence</option>
-
-                                            <option value="">Électrique</option>
-                                            <option value="">Diesel</option>
-
-                                        </select>
-                                    </div>
-
-
-
-
-
-                                </form>
+                                <span aria-hidden="true">&times;</span></button>
+                                <h4 class="modal-title">Nouelle Maintenance</h4>
                             </div>
-
+                            <div class="modal-body">
+                                <div class="row">
+                                    <form action="#" class="form-group" method="post">
+                                        <div class="form-group col-md-6">
+                                            <label for="message-text" class="col-form-label">Immatriculation</label>
+                                            <select type="" class="form-control" id="message-text">
+                                                <option value="">2341BP01</option>
+                                                <option value="">36BP04</option>
+                                                <option value="">0738BP05</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="message-text" class="col-form-label">Action Méné</label>
+                                            <select class="form-control js-example-basic-multiple" id="message-text" name="states[]" multiple="multiple">
+                                                <option value="are-brise"> pare-brise</option>
+                                                <option value="">pare-soleil intérieur</option>
+                                                <option value="">vitres latérales, lunette arrière</option>
+                                                <option value="">rétroviseur intérieur</option>
+                                                <option value=""> sièges et banquettes</option>
+                                                <option value=""> ceinture de sécurité</option>
+                                                <option value=""> coussins gonflables (état, témoin)</option>
+                                                <option value=""> lampes témoins (fonctionnement)</option>
+                                                <option value=""> moteur en marche</option>
+                                                <option value="">volant (jeu)</option>
+                                                <option value=""> démarrage au neutre</option>
+                                                <option value="">commande d’accélérateur</option>
+                                                <option value="">commande d’embrayage</option>
+                                                <option value="">commande de freins</option>
+                                                <option value="">frein de service</option>
+                                                <option value="">freins de stationnement</option>
+                                                <option value="">course de la pédale de frein</option>
+                                                <option value="">essuie-glaces (fonctionnement)</option>
+                                                <option value="">lave-glace (fonctionnement)</option>
+                                                <option value="">chauffage, dégivrage</option></option>
+                                                <option value="">indicateur de vitesse et totalisateur</option>
+                                                <option value="">éclairage du tableau de bord</option>
+                                                <option value="">avertisseur sonore (klaxon)</option>
+                                                <option value="">feux de jour</option>
+                                                <option value="">phares de route</option>
+                                                <option value="">phares de croisement</option>
+                                                <option value="">feux de direction</option>
+                                                <option value="">feux d’arrêt</option>
+                                                <option value="">feux de position</option>
+                                                <option value="">feux de plaque</option>
+                                                <option value="">feux de détresse</option>
+                                                <option value="">feux de recul</option>
+                                                <option value="">tous les réflecteurs</option>
+                                                
+                                                
+                                                <option value="">portières</option>
+                                                <option value=""> rétroviseurs extérieurs</option>
+                                                <option value="">essuie-glaces (balais)</option>
+                                                <option value="">ailes, carrosserie</option>
+                                                <option value="">capot, crochet de sécurité</option>
+                                                <option value=""> pare-soleil extérieur</option>
+                                                <option value="">pneus</option>
+                                                <option value=""> roues, valves</option>
+                                                <option value=""> boulons, écrous, pièces de fixation</option>
+                                                <option value="">roulement de roue</option>
+                                                <option value="">portillon, bouchon</option>
+                                                <option value="">vignette valide (carburant gazeux)</option>
+                                                <option value=""> dispositif d’attelage</option>
+                                                <option value=""> sellette d’attelage</option>
+                                                <option value="">mécanisme de verrouillage</option>
+                                                <option value=""> fiche (freins de remorque)</option>
+                                                <option value=""> fiche (éclairage de remorque)</option>
+                                                <option value=""> câbles, chaînes, crochet</option>
+                                                <option value=""> barres d’attellage</option>
+                                                <option value="">espace de chargement</option>
+                                                <option value=""> plateforme</option>
+                                                <option value="">panneaux</option>
+                                                <option value=""> fixations</option>
+                                                <option value="">ridelles</option>
+                                                <option value=""> suspension et freins</option>
+                                                <option value=""> amortisseurs</option>
+                                                <option value="">ancrages</option>
+                                                <option value=""> lames maîtresses</option>
+                                                <option value=""> pièces de fixation</option>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="recipient-name" class="col-form-label">Prix de L action </label>
+                                            <input type="text" class="form-control" id="recipient-name">
+                                        </div>
+                                        
+                                        <div class="form-group col-md-6">
+                                            <label for="recipient-name" class="col-form-label">Reçu de Paiement</label>
+                                            <input type="file" class="form-control" id="recipient-name">
+                                        </div>
+                                        
+                                        
+                                        <div class="form-group col-md-6">
+                                            <label for="message-text" class="col-form-label">Nom du Garage</label>
+                                            <select type="file" class="form-control" id="message-text">
+                                                <option value="">Cars</option>
+                                                <option value="">Camion</option>
+                                                
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="message-text" class="col-form-label">Nom du Chauffeur</label>
+                                            <select type="file" class="form-control" id="message-text">
+                                                <option value="">Cars</option>
+                                                <option value="">Camion</option>
+                                                
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-6">
+                                            <label for="message-text" class="col-form-label">Date de Réparation</label>
+                                            <input type="date" class="form-control select2-selection__rendered" id="message-text">
+                                            
+                                        </div>
+                                        
+                                        
+                                        
+                                        
+                                        
+                                    </form>
+                                </div>
+                                
+                            
                         </div>
+                        
+                        
+                        
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Ferme</button>
-                            <button type="submit" class="btn btn-primary">Enregister</button>
+                            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-primary">Save changes</button>
                         </div>
                     </div>
+                    <!-- /.modal-content -->
                 </div>
+                
+                <!-- /.modal-dialog -->
             </div>
-        </div>
-
-        {{--  nouveaux modal   --}}
-
-
-        <!-- /.box-header -->
-        <div class="box-body no-padding">
-            <table class="table table-bordered  table-striped">
-                <tbody>
-                    <tr>
-                        <th>Immatriculation</th>
-                        <th>Modele</th>
-                        <th>Date</th>
-                        <th>Utilisation</th>
-                        <th>Categorie</th>
-                        <th>Action</th>
-                    </tr>
-                    <tr>
-                        <td>022 BP 01</td>
-                        <td>BMW</td>
-                        <td>2019 </td>
-                        <td>Compabilité</td>
-                        <td>Camion</td>
-                        <td>
-
-                            <a href="#" class="fa fa-eye">
-
-                            </a>
-                            <a href="#" class="fa fa-pencil">
-
+            
+            <!-- /.box-header -->
+            <div class="box-body no-padding">
+                <table class="table table-bordered  table-striped">
+                    <tbody>
+                        <tr>
+                            <th>Immatriculation</th>
+                            <th>Motif de Rep</th>
+                            <th>Date Rep</th>
+                            <th>Chauffeur</th>
+                            <th>Montant Dépensé</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td>022 BP 01</td>
+                            <td>BMW</td>
+                            <td>2019 </td>
+                            <td>Compabilité</td>
+                            <td>Camion</td>
+                            <td>
+                                
+                                <a href="#" class="fa fa-eye">
+                                    
+                                </a>
+                                <a href="#" class="fa fa-pencil">
+                                    
                                 </a>
                                 <a href="#" class="red fa fa-trash">
-
-                                    </a>
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td> </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td> </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td> </td>
-                        <td></td>
-                        <td></td>
-
-                    </tr>
-                    <tr>
+                                    
+                                </a>
+                            </td>
+                            
+                        </tr>
+                        <tr>
                             <td></td>
                             <td></td>
                             <td> </td>
                             <td></td>
                             <td></td>
                             <td></td>
-
+                            
                         </tr>
-
                         <tr>
-                                <td></td>
-                                <td></td>
-                                <td> </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
-
-
-                            </tr>
-
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td></td>
+                            <td></td>
+                            
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
+                        </tr>
+                        
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            
+                            
+                        </tr>
+                        
                     </tbody>
-            </table>
+                </table>
+            </div>
+            <!-- /.box-body -->
         </div>
-        <!-- /.box-body -->
+        
+        
     </div>
 
+   
 
-</div>
-<script>
-    $('#exampleModal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget) // Button that triggered the modal
-        var recipient = button.data('whatever') // Extract info from data-* attributes
-        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-        var modal = $(this)
-        modal.find('.modal-title').text('New message to ' + recipient)
-        modal.find('.modal-body input').val(recipient)
-    })
-</script>
-@stop
+    
+    @stop
+    

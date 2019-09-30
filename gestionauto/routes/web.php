@@ -39,6 +39,9 @@ Route::get('/maps','AdminController@maps')->name('maps');
 
 Route::get('/mission','AdminController@mission');
 
+Route::get('/course','AdminController@course');
+
+
 Route::get('/mail','AdminController@mail')->name('mail');
 
 

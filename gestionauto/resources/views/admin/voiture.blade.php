@@ -1,32 +1,36 @@
+
 @extends('layout.layout')
 @section('content')
-@section('grand-text','Tableau de Bord')
+@section('grand-text','gestion des Vehicule')
 @section('grands','Tableau de Bord')
-@section('petit-text','Voiture')
+@section('petit-text','Nos Vehicule')
+
 
 <div class="container-fluid">
 
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">Voiture</h3>
+            <h3 class="box-title">Nos Vehicule</h3>
             <form action="" class="form-group">
 
                 <input placeholder="Recherche" id="recherche" class="form-control" style="width: 20%;margin: 10px;" type="search">
 
-                <input class="btn btn-sm" type="button" value="Nouvelle Marque">
-                <input class="btn btn-sm" type="button" value="Nouveaux Model">
+
 
             </form>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="float: right">Ajouter</button>
 
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Ajout Vehicule</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default"  style="float: right">
+                Nouveau Vehicule
+            </button>
+        </div>
+        {{--  nouveaux modal   --}}
+        <div class="modal fade" id="modal-default">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                            <h4 class="modal-title">Nouveaux Vehicule  </h4>
                         </div>
                         <div class="modal-body">
                             <div class="row">
@@ -139,90 +143,60 @@
 
 
                                 </form>
+                                </div>
+
+
                             </div>
 
+
+
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                                <button type="button" class="btn btn-primary">Save changes</button>
+                            </div>
                         </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Ferme</button>
-                            <button type="submit" class="btn btn-primary">Enregister</button>
-                        </div>
+                        <!-- /.modal-content -->
                     </div>
+
+                    <!-- /.modal-dialog -->
                 </div>
-            </div>
-        </div>
 
-        {{--  nouveaux modal   --}}
+                <!-- /.box-header -->
+                <div class="box-body no-padding">
+                    <table class="table table-bordered  table-striped">
+                        <tbody>
+                            <tr>
+                                <th>Nom du Fourniseur</th>
+                                <th>Téléphone</th>
+                                <th>Numero de CNI</th>
+                                <th>Email</th>
+                                <th>Depuis</th>
+                                <th>localisation</th>
+                                <th>Action</th>
+                            </tr>
+                            <tr>
+                                <td>gnakale</td>
+                                <td>022 0 5 0 5</td>
+                                <td>C001 2025 </td>
+                                <td> A1@gmailcom
+                                <td>19/2019/2019</td>
 
+                                <td>Abidjan plataux</td>
+                                <td style="letter-spacing: 3px;text-align:center;">
 
-        <!-- /.box-header -->
-        <div class="box-body no-padding">
-            <table class="table table-bordered  table-striped">
-                <tbody>
-                    <tr>
-                        <th>Immatriculation</th>
-                        <th>Modele</th>
-                        <th>Date</th>
-                        <th>Utilisation</th>
-                        <th>Categorie</th>
-                        <th>Action</th>
-                    </tr>
-                    <tr>
-                        <td>022 BP 01</td>
-                        <td>BMW</td>
-                        <td>2019 </td>
-                        <td>Compabilité</td>
-                        <td>Camion</td>
-                        <td>
-
-                            <a href="#" class="fa fa-eye">
-
-                            </a>
-                            <a href="#" class="fa fa-pencil">
-
-                                </a>
-                                <a href="#" class="red fa fa-trash">
+                                    <a href="#" class="fa fa-eye">
 
                                     </a>
-                        </td>
+                                    <a href="#" class="fa fa-pencil">
 
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td> </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                                    </a>
+                                    <a href="#" class="red fa fa-trash">
 
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td> </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                                    </a>
+                                </td>
 
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td> </td>
-                        <td></td>
-                        <td></td>
-
-                    </tr>
-                    <tr>
-                            <td></td>
-                            <td></td>
-                            <td> </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
-                        </tr>
-
-                        <tr>
+                            </tr>
+                            <tr>
                                 <td></td>
                                 <td></td>
                                 <td> </td>
@@ -230,26 +204,58 @@
                                 <td></td>
                                 <td></td>
 
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td> </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
 
                             </tr>
 
-                    </tbody>
-            </table>
+                            <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td> </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+
+                            </tr>
+                            <tr>
+                                    <td></td>
+                                    <td></td>
+                                    <td> </td>
+                                    <td></td>
+                                    <td></td>
+                                    <td></td>
+
+                            </tr>
+
+                            <tr>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td> </td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </div>
+                <!-- /.box-body -->
+            </div>
+
+
         </div>
-        <!-- /.box-body -->
-    </div>
 
 
-</div>
-<script>
-    $('#exampleModal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget) // Button that triggered the modal
-        var recipient = button.data('whatever') // Extract info from data-* attributes
-        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-        var modal = $(this)
-        modal.find('.modal-title').text('New message to ' + recipient)
-        modal.find('.modal-body input').val(recipient)
-    })
-</script>
-@stop
+
+
+        @stop

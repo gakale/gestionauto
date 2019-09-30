@@ -10,7 +10,7 @@
 
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">Nos Mission</h3>
+            <h3 class="box-title">Nos cours</h3>
             <form action="" class="form-group">
 
                 <input placeholder="Recherche" id="recherche" class="form-control" style="width: 20%;margin: 10px;" type="search">
@@ -30,65 +30,53 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span></button>
-                            <h2 class="modal-title">Nouvelle Mission  </h2>
+                            <h2 class="modal-title">Nouvelle coure  </h2>
                         </div>
                         <div class="modal-body">
                             <div class="row">
                                 <form action="#" class="form-group" method="post">
-                                    <div class="form-group col-md-4">
-                                        <label for="recipient-name" class="col-form-label">Nom et Prenom</label>
-                                        <select type="text" name="name" class="form-control" id="recipient-name">
-                                            <option value="">gnakale</option>
-                                        </select>
-                                    </div>
+
 
                                     <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Le Chauffeur</label>
-                                        <select type="text" name="login" class="form-control" id="recipient-name">
+                                        <select type="text" name="chauffeur" class="form-control" id="recipient-name">
                                             <option value="">Fofona</option>
                                         </select>
                                     </div>
 
                                     <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Montant pour Départ</label>
-                                        <input type="text" name="role" class="form-control" >
+                                        <input type="text" name="montantpodepart" class="form-control" >
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Montant Resté</label>
-                                        <input type="text" name="role" class="form-control" >
+                                        <input type="text" name="montantreste" class="form-control" >
                                     </div>
 
                                     <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Montant Total</label>
-                                        <input type="text" name="role" class="form-control" >
+                                        <input type="text" name="montanttotal" class="form-control" >
                                     </div>
                                     <div class="form-group col-md-4">
-                                        <label for="message-text" class="col-form-label">Lieu de La mission</label>
-                                        <input class="form-control" name="email" id="message-text">
+                                        <label for="message-text" class="col-form-label">Lieu de La course</label>
+                                        <input class="form-control" name="lieucourse" id="message-text">
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Le Motif</label>
-                                        <input type="password" name="password" class="form-control" id="recipient-name">
+                                        <input type="password" name="motifcourse" class="form-control" id="recipient-name">
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="message-text" class="col-form-label">Date</label>
-                                        <input type="date" class="form-control" name="fonction" id="message-text">
+                                        <input type="date" class="form-control" name="date" id="message-text">
                                     </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="message-text" class="col-form-label">Lieu de Départ</label>
-                                        <input class="form-control" name="tel" id="message-text">
-                                    </div>
-                                    <div class="form-group col-md-4">
-                                        <label for="message-text" class="col-form-label">Lieu d arrivé</label>
-                                        <input type="text" class="form-control" name="cni" id="message-text">
-                                    </div>
+
                                     <div class="form-group col-md-4">
                                         <label for="message-text" class="col-form-label">Heure de Départ</label>
-                                        <input type="date" class="form-control" name="tel" id="message-text">
+                                        <input type="date" class="form-control" name="heurdepart" id="message-text">
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Heur de Retour</label>
-                                        <input type="date" name="role" class="form-control" >
+                                        <input type="date" name="heurretour" class="form-control" >
                                     </div>
 
 
@@ -96,7 +84,7 @@
 
                                     <div class="form-group col-md-4">
                                         <label for="message-text" class="col-form-label">Vehicule </label>
-                                        <select class="form-control" name="tel" id="message-text">
+                                        <select class="form-control" name="vehicule" id="message-text">
                                             <option value="bmw">0120 012 </option>
                                         </select>
                                     </div>
@@ -106,31 +94,31 @@
 
                                      <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Caburant Avant Depart</label>
-                                        <input type="text" name="role" class="form-control">
+                                        <input type="text" name="cabutavdepart" class="form-control">
 
                                     </div>
 
                                     <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Caburant Après Depart</label>
-                                        <input type="text" name="role" class="form-control">
+                                        <input type="text" name="cabutapdepart" class="form-control">
 
                                     </div>
 
 
                                     <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Kilometrage Avant Depart</label>
-                                        <input type="text" name="role" class="form-control">
+                                        <input type="text" name="kiloavdepart" class="form-control">
 
                                     </div>
 
                                     <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Kilometrage Après Depart</label>
-                                        <input type="text" name="role" class="form-control">
+                                        <input type="text" name="kiloapdepart" class="form-control">
 
                                     </div>
                                     <div class="form-group col-md-4">
-                                        <label for="recipient-name" class="col-form-label">Fin de la mission</label>
-                                        <select type="checkbox" name="role" class="form-control">
+                                        <label for="recipient-name" class="col-form-label">Fin de la course</label>
+                                        <select type="checkbox" name="niveau" class="form-control">
                                                     <option value="debut">Debut</option>
                                                     <option value="fin">Fin</option>
 
@@ -162,7 +150,6 @@
                 <table class="table table-bordered  table-striped">
                     <tbody>
                         <tr>
-                            <th>Nom Personnel</th>
                             <th>Nom Chauffeur</th>
                             <th>Motif</th>
                             <th>Lieu</th>
@@ -172,12 +159,11 @@
                         </tr>
                         <tr>
                             <td>fofana</td>
-                            <td>BMW</td>
-                            <td>05 02 74 06 </td>
-                            <td>utilisateur</td>
+                            <td>Depot de facture la bni</td>
+                            <td>plateau</td>
+                            <td>200000 CFA</td>
                             <td>BMW</td>
 
-                            <td>users</td>
                             <td style="letter-spacing:0.2em;text-align:center;">
 
                                 <a href="#" class="fa fa-eye">
@@ -202,29 +188,8 @@
                             <td></td>
                             <td></td>
                             <td></td>
-                            <td></td>
 
 
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td> </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
-
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td> </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
 
 
                         </tr>
@@ -236,16 +201,7 @@
                             <td></td>
                             <td></td>
 
-                        </tr>
 
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td> </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
 
 
                         </tr>
@@ -256,7 +212,42 @@
                             <td></td>
                             <td></td>
                             <td></td>
+
+
+
+                        </tr>
+                        <tr>
                             <td></td>
+                            <td> </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+
+                        </tr>
+
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+
+
+
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+
+
 
 
 
@@ -274,4 +265,4 @@
 
 
 
-    @stop
+ @stop

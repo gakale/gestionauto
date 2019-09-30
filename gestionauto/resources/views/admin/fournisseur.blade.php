@@ -108,7 +108,7 @@
                                 <td>19/2019/2019</td>
 
                                 <td>Abidjan plataux</td>
-                                <td>
+                                <td style="letter-spacing: 3px;text-align:center;">
                                     
                                     <a href="#" class="fa fa-eye">
                                         

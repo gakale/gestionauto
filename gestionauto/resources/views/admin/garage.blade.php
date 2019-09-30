@@ -107,7 +107,7 @@
                             <td>2019 </td>
                             <td>Compabilité</td>
                             <td>Camion</td>
-                            <td>
+                            <td style="letter-spacing: 3px;text-align:center;">
                                 
                                 <a href="#" class="fa fa-eye">
                                     

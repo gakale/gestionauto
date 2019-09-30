@@ -122,7 +122,7 @@
                                 <td>C001 2025 </td>
                                 <td>A1</td>
                                 <td>19/2019/2019</td>
-                                <td>
+                                <td style="letter-spacing: 3px;text-align:center;">
                                     
                                     <a href="#" class="fa fa-eye">
                                         

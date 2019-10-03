@@ -219,7 +219,7 @@
 
 </div>
 
-
+@include('layout.pieds-dash')
 
 @stop
 

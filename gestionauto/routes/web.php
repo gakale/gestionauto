@@ -24,7 +24,7 @@ Route::get('/carburant','AdminController@carburant')->name('carburant');
 
 Route::get('/voiture','AdminController@voiture');
 
-Route::get('/operateur','AdminController@operateur')->name('operateur');
+Route::get('/operateur','OperateurController@index')->name('operateur');
 
 Route::get('/garage','AdminController@garage')->name('garage');
 

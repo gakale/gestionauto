@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class OperateurController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,9 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin/dashboard');
+
+         return view('admin/operateur');
+
     }
 
     /**
@@ -80,89 +82,5 @@ class AdminController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-
-    public function users()
-    {
-        return view('admin/users');
-    }
-    public function chauffeur()
-
-
-
-    {
-        return view('admin/chauffeur');
-    }
-
-    public function fournisseur()
-    {
-
-
-        return view('admin/fournisseur');
-    } public function carburant()
-    {
-
-
-        return view('admin/carburant');
-    } public function voiture()
-
-
-    {
-        return view('admin/voiture');
-    }
-
-    public function garage()
-    {
-        return view('admin/garage');
-    }
-
-
-    public function document()
-    {
-        return view('admin/document');
-    }
-
-    public function mail()
-    {
-        return view('admin/mail');
-    }
-
-
-    public function panne()
-    {
-        return view('admin/panne');
-    }
-
-
-    public function stock()
-    {
-        return view('admin/stock');
-    }
-
-
-    public function documents()
-    {
-        return view('admin/documents');
-    }
-
-
-    public function maps()
-    {
-        return view('admin/maps');
-    }
-
-
-
-
-    public function course()
-    {
-        return view('admin/course');
-    }
-
-
-    public function mission()
-    {
-        return view('admin/mission');
     }
 }

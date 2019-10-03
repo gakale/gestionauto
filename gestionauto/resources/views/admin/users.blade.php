@@ -46,20 +46,20 @@
 
                                         <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">Email</label>
-                                            <input class="form-control" name="email" id="message-text">
+                                            <input type="mail" class="form-control" name="email" id="message-text">
                                         </div>
 
                                         <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">Fonction</label>
-                                            <input class="form-control" name="fonction" id="message-text">
+                                            <input type="text" class="form-control" name="fonction" id="message-text">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">Téléphone</label>
-                                            <input class="form-control" name="tel" id="message-text">
+                                            <input type="text" class="form-control" name="telephone" id="message-text">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">Voiture affecté</label>
-                                            <select class="form-control select2" name="tel" id="message-text">
+                                            <select class="form-control select2" name="voiture" id="message-text">
                                                 <option value="">001 BP 05</option>
                                             </select>
                                         </div>

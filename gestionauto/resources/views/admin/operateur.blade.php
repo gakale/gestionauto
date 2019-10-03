@@ -61,7 +61,7 @@
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">Téléphone</label>
-                                            <input class="form-control" name="tel" id="message-text">
+                                            <input class="form-control" name="telephone" id="message-text">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">CNI</label>
@@ -69,11 +69,11 @@
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">date</label>
-                                            <input class="form-control" name="tel" id="message-text">
+                                            <input type="date" class="form-control" name="date" id="message-text">
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="recipient-name" class="col-form-label">Role</label>
-                                            <select type="text" name="role" class="form-control select2 select2-hidden-accessible" id="recipient-name">
+                                            <select type="text" name="role" class="form-control select2" id="recipient-name">
                                                 <option value="Administrateur">Administrateur</option>
                                                 <option value="utilisateur">Utilisatateur</option>
                                             </select>

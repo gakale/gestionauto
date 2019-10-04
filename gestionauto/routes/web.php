@@ -24,9 +24,6 @@ Route::get('/carburant','AdminController@carburant')->name('carburant');
 
 Route::get('/voiture','AdminController@voiture');
 
-
-
-
 Route::get('/operateur','OperateurController@index')->name('operateur');
 
 Route::Post('/operateur','OperateurController@store')->name('operateur.store');

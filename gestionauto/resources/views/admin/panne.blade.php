@@ -37,7 +37,7 @@
                                     <form action="#" class="form-group" method="post">
                                         <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">Immatriculation</label>
-                                            <select type="" class="form-control" id="message-text">
+                                            <select name="imatriculation" type="" class="form-control" id="message-text">
                                                 <option value="">2341BP01</option>
                                                 <option value="">36BP04</option>
                                                 <option value="">0738BP05</option>
@@ -45,7 +45,7 @@
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">Action Méné</label>
-                                            <select class="form-control js-example-basic-multiple" id="message-text" name="states[]" multiple="multiple">
+                                            <select name="action" class="form-control js-example-basic-multiple" id="message-text" name="states[]" multiple="multiple">
                                                 <option value="are-brise"> pare-brise</option>
                                                 <option value="">pare-soleil intérieur</option>
                                                 <option value="">vitres latérales, lunette arrière</option>
@@ -114,26 +114,26 @@
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="recipient-name" class="col-form-label">Prix de L action </label>
-                                            <input type="text" class="form-control" id="recipient-name">
+                                            <input name="prixaction" type="text" class="form-control" id="recipient-name">
                                         </div>
                                         
                                         <div class="form-group col-md-6">
                                             <label for="recipient-name" class="col-form-label">Reçu de Paiement</label>
-                                            <input type="file" class="form-control" id="recipient-name">
+                                            <input name="recupanne" type="file" class="form-control" id="recipient-name">
                                         </div>
                                         
                                         
                                         <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">Nom du Garage</label>
-                                            <select type="file" class="form-control" id="message-text">
-                                                <option value="">Cars</option>
+                                            <select name="garage" type="text" class="form-control" id="message-text">
+                                                <option value="">plateau</option>
                                                 <option value="">Camion</option>
                                                 
                                             </select>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">Nom du Chauffeur</label>
-                                            <select type="file" class="form-control" id="message-text">
+                                            <select name="panne_chauffeur" type="text" class="form-control" id="message-text">
                                                 <option value="">Cars</option>
                                                 <option value="">Camion</option>
                                                 
@@ -141,7 +141,7 @@
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">Date de Réparation</label>
-                                            <input type="date" class="form-control select2-selection__rendered" id="message-text">
+                                            <input type="date" class="form-control select2" id="message-text">
                                             
                                         </div>
                                         

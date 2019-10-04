@@ -37,25 +37,55 @@
                                     <form action="#" class="form-group" method="post">
                                         <div class="form-group col-md-6">
                                             <label for="recipient-name" class="col-form-label">Nom</label>
-                                            <input type="text" name="name" class="form-control" id="recipient-name">
+                                            <input type="text" name="name" class="form-control @error('name') is-invalid @enderror " id="recipient-name">
+
+                                            @error('name')
+                                            <span class="invalid-feedback" role="alert">
+                                                <strong>{{ $message }}</strong>
+                                            </span>
+                                            @enderror
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">Prenom</label>
-                                            <input class="form-control" name="prenom" id="message-text">
+                                            <input class="form-control @error('prenom') is-invalid @enderror" name="prenom" id="message-text">
+
+                                            @error('prenom')
+                                            <span class="invalid-feedback">
+                                                <strong>$message</strong>
+
+                                            </span>
+
                                         </div>
 
                                         <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">Email</label>
-                                            <input type="mail" class="form-control" name="email" id="message-text">
+                                            <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="message-text">
+
+                                            @error('email')
+                                            <span class="invalid-feedback">
+                                                <strong>$message</strong>
+                                            </span>
+                                            @enderror
+
                                         </div>
 
                                         <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">Fonction</label>
-                                            <input type="text" class="form-control" name="fonction" id="message-text">
+                                            <input type="text" class="form-control @error('fonction') is-invalid @enderror" name="fonction" id="message-text">
+
+                                            @error('fonction')
+                                            <span class="invalid-feedback">
+                                                <strong>$message</strong>
+                                            </span>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">Téléphone</label>
-                                            <input type="text" class="form-control" name="telephone" id="message-text">
+                                            <input type="text" class="form-control @error('telephone') is-invalid @enderror" name="telephone" id="message-text">
+                                            @error('telephone')
+
+                                            <span class="invalid-feedback">
+                                                <strong>$message</strong>
+                                            </span>
                                         </div>
 
                                     </form>
@@ -68,7 +98,7 @@
 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
                         </div>
                     </div>
                     <!-- /.modal-content -->

@@ -1,150 +1,237 @@
+
 @extends('layout.layout')
 @section('content')
-@section('grand-text','Tableau de Bord')
+@section('grand-text','gestion des carburant')
 @section('grands','Tableau de Bord')
-@section('petit-text','Carburant')
+@section('petit-text','caburant')
 
-<div class="container-fluid ">
+
+<div class="container-fluid">
+
     <div class="box">
         <div class="box-header">
-            <h3 class="box-title">Carburant</h3>
+            <h3 class="box-title">Nos Carburant</h3>
             <form action="" class="form-group">
+
                 <input placeholder="Recherche" id="recherche" class="form-control" style="width: 20%;margin: 10px;" type="search">
 
-            </form>
-            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" data-whatever="@mdo" style="float: right">Ajouter</button>
 
-            <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                <div class="modal-dialog" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Nouveau Carburant</h5>
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+
+            </form>
+
+            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default"  style="float: right">
+                Nouvelle operateur
+            </button>
+        </div>
+        {{--  nouveaux modal   --}}
+        <div class="modal fade" id="modal-default">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                            <h2 class="modal-title">Nouveaux Carburant  </h2>
                         </div>
                         <div class="modal-body">
                             <div class="row">
-                                <form action="#" class="form-group" method="post">
+                                <form action="{{ route('operateur.store') }}" class="form-group" method="POST" enctype="multipart/form-data">
+                                    @csrf
                                     <div class="form-group col-md-6">
                                         <label for="recipient-name" class="col-form-label">Nom Station</label>
-                                        <input type="text" class="form-control" id="recipient-name">
+                                        <input type="text" name="nomstation" class="form-control @error('nomstation') is-invalid @enderror" id="recipient-name" value="{{ old('nomstation') }}">
+
+                                        @error('nomstation')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="message-text" class="col-form-label">Designation</label>
-                                        <input class="form-control" id="message-text">
+                                        <input  class="form-control @error('designation') is-invalid @enderror" value="{{ old('designation') }}" name="designation" id="message-text" >
+
+                                        @error('designation')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
                                     </div>
                                     <div class="form-group col-md-6">
                                         <label for="recipient-name" class="col-form-label">Litrage</label>
-                                        <input type="text" class="form-control" id="recipient-name">
+                                        <input type="text" name="litrage" class="form-control @error('litrage') is-invalid @enderror" id="recipient-name" value="{{old('litrage')}}">
+
+                                        @error('litrage')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
                                     </div>
+
                                     <div class="form-group col-md-6">
                                         <label for="message-text" class="col-form-label">Montant</label>
-                                        <input class="form-control" id="message-text">
+                                        <input class="form-control @error('montant') is-invalid @enderror" id="recipient-name" value="{{ old('montant') }}"  id="message-text" name="email">
+
+                                        @error('montant')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
                                     </div>
+
                                     <div class="form-group col-md-6">
-                                        <label for="recipient-name" class="col-form-label">Quantité</label>
-                                        <input type="password" class="form-control" id="recipient-name">
+                                        <label for="recipient-name" class="col-form-label">Quantite</label>
+                                        <input type="text" name="quantite" class="form-control @error('quantite') is-invalid @enderror"  id="recipient-name">
+                                        @error('quantite')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
                                     </div>
+
+
                                     <div class="form-group col-md-6">
                                         <label for="message-text" class="col-form-label">Date</label>
-                                        <input class="form-control" id="message-text">
+                                        <input class="form-control @error('date') is-invalid @enderror"  value="{{ old('date') }}" name="date" id="message-text">
+
+                                        @error('date')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
                                     </div>
+
+
                                     <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">AvantRecharge</label>
-                                        <input class="form-control" id="message-text">
+                                        <label for="message-text" class="col-form-label">Avant Recharge</label>
+                                        <input class="form-control @error('avantrecharge') is-invalid @enderror"  value="{{ old('avantrecharge') }}"  name="avantrecharge" id="message-text">
+
+                                        @error('avantrecharge')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
                                     </div>
-                                      <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">AprèsRecharge</label>
-                                        <input class="form-control" id="message-text">
-                                    </div>
-                                    <hr>
+
+
                                     <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">Reçu de Paiement</label>
-                                        <input type="file" class="form-control" id="message-text">
+                                        <label for="message-text" class="col-form-label">Apres Recharge</label>
+                                        <input class="form-control @error('apresrecharge') is-invalid @enderror"  value="{{ old('apresrecharge') }}"  name="apresrecharge" id="message-text">
+
+                                        @error('apresrecharge')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
                                     </div>
-                                     <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">Voiture</label>
-                                        <select class="form-control" id="message-text">
+
+
+                                    <div class="form-group col-md-6">
+                                        <label for="message-text" class="col-form-label">Recu de paiement </label>
+                                        <input type="file" class="form-control @error('paiement') is-invalid @enderror" name="paiement" id="message-text">
+
+                                        @error('paiement')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
+                                    </div>
+
+
+                                    <div class="form-group col-md-6">
+                                        <label for="message-text" class="col-form-label">Choisir Un Vehicule</label>
+                                        <select type="text" class="form-control @error('voiture') is-invalid @enderror" name="voiture" id="message-text">
                                             <option value="">Mercedece</option>
 
                                             <option value="">Permis B</option>
-
                                         </select>
+
+                                        @error('voiture')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
                                     </div>
 
 
-                                </form>
+
                             </div>
 
+
                         </div>
+
+
+
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Ferme</button>
-                            <button type="submit" class="btn btn-primary">Enregister</button>
+                            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                            <input type="submit" class="btn btn-primary">
                         </div>
+                    </form>
                     </div>
+                    <!-- /.modal-content -->
                 </div>
+
+                <!-- /.modal-dialog -->
             </div>
-        </div>
-        <!-- /.box-header -->
-        <div class="box-body no-padding">
-            <table class="table table-bordered  table-striped">
-                <tbody>
-                    <tr>
-                        <th>Nom Station</th>
-                        <th>Designation</th>
-                        <th>Litrage</th>
-                        <th>AvantRecharge</th>
-                        <th>AprèsRecharge</th>
-                        <th>Action</th>
-                    </tr>
-                    <tr>
-                        <td>qklsdksd</td>
-                        <td>qlqsdkk</td>
-                        <td>qkldskls </td>
-                        <td>sdkqlmlqs</td>
-                        <td>qsdkmlkqsd</td>
-                        <td>
 
-                            <a href="#" class="fa fa-eye">
+            <!-- /.box-header -->
+            <div class="box-body no-padding">
+                <table class="table table-bordered  table-striped">
+                    <tbody>
+                        <tr>
+                            <th>Nom Operateur</th>
+                            <th>Mail</th>
+                            <th>Téléphone</th>
+                            <th>Fonction</th>
+                            <th>Rôle</th>
+                            <th>Action</th>
+                        </tr>
+                        <tr>
+                            <td>fofana</td>
+                            <td>BMW</td>
+                            <td>05 02 74 06 </td>
+                            <td>utilisateur</td>
+                            <td>users</td>
+                            <td style="letter-spacing: 3px;text-align:center;">
 
-                            </a>
-                            <a href="#" class="fa fa-pencil">
+                                <a href="#" class="fa fa-eye">
+
+                                </a>
+                                <a href="#" class="fa fa-pencil">
 
                                 </a>
                                 <a href="#" class="red fa fa-trash">
 
-                                    </a>
-                        </td>
+                                </a>
+                            </td>
 
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td> </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
 
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td> </td>
-                        <td></td>
-                        <td></td>
-                        <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
 
-                    </tr>
-                    <tr>
-                        <td></td>
-                        <td></td>
-                        <td> </td>
-                        <td></td>
-                        <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td></td>
+                            <td></td>
 
-                    </tr>
-                    <tr>
+                        </tr>
+                        <tr>
                             <td></td>
                             <td></td>
                             <td> </td>
@@ -155,32 +242,25 @@
                         </tr>
 
                         <tr>
-                                <td></td>
-                                <td></td>
-                                <td> </td>
-                                <td></td>
-                                <td></td>
-                                <td></td>
+                            <td></td>
+                            <td></td>
+                            <td> </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
 
 
-                            </tr>
+                        </tr>
 
                     </tbody>
-            </table>
+                </table>
+            </div>
+            <!-- /.box-body -->
         </div>
-        <!-- /.box-body -->
+
+
     </div>
 
-</div>
-<script>
-    $('#exampleModal').on('show.bs.modal', function (event) {
-        var button = $(event.relatedTarget) // Button that triggered the modal
-        var recipient = button.data('whatever') // Extract info from data-* attributes
-        // If necessary, you could initiate an AJAX request here (and then do the updating in a callback).
-        // Update the modal's content. We'll use jQuery here, but you could use a data binding library or other methods instead.
-        var modal = $(this)
-        modal.find('.modal-title').text('New message to ' + recipient)
-        modal.find('.modal-body input').val(recipient)
-    })
-</script>
-@stop
+
+
+    @stop

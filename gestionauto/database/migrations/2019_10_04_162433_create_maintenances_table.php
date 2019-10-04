@@ -15,6 +15,7 @@ class CreateMaintenancesTable extends Migration
     {
         Schema::create('maintenances', function (Blueprint $table) {
             $table->bigIncrements('id');
+            
             $table->timestamps();
         });
     }

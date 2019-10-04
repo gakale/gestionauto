@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('email');
             $table->string('fonction');
             $table->string('telephone');
-            $table->string('vehicule');
+
             $table->rememberToken();
             $table->timestamps();
         });

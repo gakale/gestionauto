@@ -24,7 +24,14 @@ Route::get('/carburant','AdminController@carburant')->name('carburant');
 
 Route::get('/voiture','AdminController@voiture');
 
+
+
+
 Route::get('/operateur','OperateurController@index')->name('operateur');
+
+Route::Post('/operateur','OperateurController@store')->name('operateur.store');
+
+
 
 Route::get('/garage','AdminController@garage')->name('garage');
 
@@ -33,6 +40,9 @@ Route::get('/documents','AdminController@documents')->name('document');
 Route::get('/stock','AdminController@stock')->name('stock');
 
 Route::get('/maps','AdminController@maps')->name('maps');
+
+
+
 
 
 // les mission et course

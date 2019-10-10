@@ -15,6 +15,14 @@ class CreateChauffeursTable extends Migration
     {
         Schema::create('chauffeurs', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('name');
+            $table->string('prenom');
+            $table->string('fonction');
+            $table->string('adresse');
+            $table->string('email');
+            $table->string('cni');
+            $table->string('permis');
+            $table->string('typepermis');
             $table->timestamps();
         });
     }

@@ -44,51 +44,51 @@
 
                                     <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Le Chauffeur</label>
-                                        <select type="text" name="login" class="form-control" id="recipient-name">
+                                        <select type="text" name="chauffeurs" class="form-control" id="recipient-name">
                                             <option value="">Fofona</option>
                                         </select>
                                     </div>
 
                                     <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Montant pour Départ</label>
-                                        <input type="text" name="role" class="form-control" >
+                                        <input type="text" name="montantdepart" class="form-control" >
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Montant Resté</label>
-                                        <input type="text" name="role" class="form-control" >
+                                        <input type="text" name="montantreste" class="form-control" >
                                     </div>
 
                                     <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Montant Total</label>
-                                        <input type="text" name="role" class="form-control" >
+                                        <input type="text" name="montanttotal" class="form-control" >
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="message-text" class="col-form-label">Lieu de La mission</label>
-                                        <input class="form-control" name="email" id="message-text">
+                                        <input class="form-control" name="missionlieu" id="message-text">
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Le Motif</label>
-                                        <input type="password" name="password" class="form-control" id="recipient-name">
+                                        <input type="text" name="motif" class="form-control" id="recipient-name">
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="message-text" class="col-form-label">Date</label>
-                                        <input type="date" class="form-control" name="fonction" id="message-text">
+                                        <input type="date" class="form-control" name="date" id="message-text">
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="message-text" class="col-form-label">Lieu de Départ</label>
-                                        <input class="form-control" name="tel" id="message-text">
+                                        <input class="form-control" name="lieudepart" id="message-text">
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="message-text" class="col-form-label">Lieu d arrivé</label>
-                                        <input type="text" class="form-control" name="cni" id="message-text">
+                                        <input type="text" class="form-control" name="lieuarrive" id="message-text">
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="message-text" class="col-form-label">Heure de Départ</label>
-                                        <input type="date" class="form-control" name="tel" id="message-text">
+                                        <input type="date" class="form-control" name="heurdepart" id="message-text">
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Heur de Retour</label>
-                                        <input type="date" name="role" class="form-control" >
+                                        <input type="date" name="heurretour" class="form-control" >
                                     </div>
 
 
@@ -96,7 +96,7 @@
 
                                     <div class="form-group col-md-4">
                                         <label for="message-text" class="col-form-label">Vehicule </label>
-                                        <select class="form-control" name="tel" id="message-text">
+                                        <select class="form-control" name="vehicule" id="message-text">
                                             <option value="bmw">0120 012 </option>
                                         </select>
                                     </div>

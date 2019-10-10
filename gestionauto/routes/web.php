@@ -14,17 +14,24 @@
 
 Route::get('/dashboard','AdminController@index')->name('dash');
 
+
 Route::get('/users','AdminController@users')->name('users');
+
 
 Route::get('/chauffeur','AdminController@chauffeur')->name('chauffeur');
 
+
 Route::get('/fournisseur','AdminController@fournisseur')->name('fournisseur');
 
+
+
 Route::get('/carburant','AdminController@carburant')->name('carburant');
+
 
 Route::get('/voiture','AdminController@voiture');
 
 Route::get('/operateur','OperateurController@index')->name('operateur');
+
 
 Route::Post('/operateur','OperateurController@store')->name('operateur.store');
 
@@ -39,10 +46,12 @@ Route::get('/stock','AdminController@stock')->name('stock');
 Route::get('/maps','AdminController@maps')->name('maps');
 
 
+// route assurance
+
+Route::resource('/assurance', 'AssuranceController');
 
 
-
-// les mission et course
+// les missions et courses
 
 Route::get('/mission','AdminController@mission');
 

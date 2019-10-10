@@ -7,20 +7,19 @@
 
 
 <div class="container-fluid">
-    
+
     <div class="box">
         <div class="box-header">
             <h3 class="box-title">Maintenance</h3>
             <form action="" class="form-group">
-                
+
                 <input placeholder="Recherche" id="recherche" class="form-control" style="width: 20%;margin: 10px;" type="search">
-                
-                
-                
+
+
             </form>
-            
+
                 <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default"  style="float: right">
-                    Nouvelle Panne        
+                    Nouvelle Panne
                 </button>
             </div>
             {{--  nouveaux modal   --}}
@@ -45,7 +44,7 @@
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">Action Méné</label>
-                                            <select name="action" class="form-control js-example-basic-multiple" id="message-text" name="states[]" multiple="multiple">
+                                            <select name="action" class="form-control js-example-basic-multiple" id="message-text" multiple="multiple">
                                                 <option value="are-brise"> pare-brise</option>
                                                 <option value="">pare-soleil intérieur</option>
                                                 <option value="">vitres latérales, lunette arrière</option>
@@ -79,8 +78,8 @@
                                                 <option value="">feux de détresse</option>
                                                 <option value="">feux de recul</option>
                                                 <option value="">tous les réflecteurs</option>
-                                                
-                                                
+
+
                                                 <option value="">portières</option>
                                                 <option value=""> rétroviseurs extérieurs</option>
                                                 <option value="">essuie-glaces (balais)</option>
@@ -116,19 +115,19 @@
                                             <label for="recipient-name" class="col-form-label">Prix de L action </label>
                                             <input name="prixaction" type="text" class="form-control" id="recipient-name">
                                         </div>
-                                        
+
                                         <div class="form-group col-md-6">
                                             <label for="recipient-name" class="col-form-label">Reçu de Paiement</label>
                                             <input name="recupanne" type="file" class="form-control" id="recipient-name">
                                         </div>
-                                        
-                                        
+
+
                                         <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">Nom du Garage</label>
                                             <select name="garage" type="text" class="form-control" id="message-text">
                                                 <option value="">plateau</option>
                                                 <option value="">Camion</option>
-                                                
+
                                             </select>
                                         </div>
                                         <div class="form-group col-md-6">
@@ -136,27 +135,27 @@
                                             <select name="panne_chauffeur" type="text" class="form-control" id="message-text">
                                                 <option value="">Cars</option>
                                                 <option value="">Camion</option>
-                                                
+
                                             </select>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">Date de Réparation</label>
                                             <input type="date" class="form-control select2" id="message-text">
-                                            
+
                                         </div>
-                                        
-                                        
-                                        
-                                        
-                                        
+
+
+
+
+
                                     </form>
                                 </div>
-                                
-                            
+
+
                         </div>
-                        
-                        
-                        
+
+
+
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
                             <button type="button" class="btn btn-primary">Save changes</button>
@@ -164,10 +163,10 @@
                     </div>
                     <!-- /.modal-content -->
                 </div>
-                
+
                 <!-- /.modal-dialog -->
             </div>
-            
+
             <!-- /.box-header -->
             <div class="box-body no-padding">
                 <table class="table table-bordered  table-striped">
@@ -187,18 +186,18 @@
                             <td>Compabilité</td>
                             <td>Camion</td>
                             <td>
-                                
+
                                 <a href="#" class="fa fa-eye">
-                                    
+
                                 </a>
                                 <a href="#" class="fa fa-pencil">
-                                    
+
                                 </a>
                                 <a href="#" class="red fa fa-trash">
-                                    
+
                                 </a>
                             </td>
-                            
+
                         </tr>
                         <tr>
                             <td></td>
@@ -207,7 +206,7 @@
                             <td></td>
                             <td></td>
                             <td></td>
-                            
+
                         </tr>
                         <tr>
                             <td></td>
@@ -216,7 +215,7 @@
                             <td></td>
                             <td></td>
                             <td></td>
-                            
+
                         </tr>
                         <tr>
                             <td></td>
@@ -224,7 +223,7 @@
                             <td> </td>
                             <td></td>
                             <td></td>
-                            
+
                         </tr>
                         <tr>
                             <td></td>
@@ -233,9 +232,9 @@
                             <td></td>
                             <td></td>
                             <td></td>
-                            
+
                         </tr>
-                        
+
                         <tr>
                             <td></td>
                             <td></td>
@@ -243,21 +242,20 @@
                             <td></td>
                             <td></td>
                             <td></td>
-                            
-                            
+
+
                         </tr>
-                        
+
                     </tbody>
                 </table>
             </div>
             <!-- /.box-body -->
         </div>
-        
-        
+
+
     </div>
 
-   
 
-    
+
+
     @stop
-    

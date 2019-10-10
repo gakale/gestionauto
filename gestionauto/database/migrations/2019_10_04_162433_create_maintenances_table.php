@@ -15,7 +15,13 @@ class CreateMaintenancesTable extends Migration
     {
         Schema::create('maintenances', function (Blueprint $table) {
             $table->bigIncrements('id');
-            
+            $table->string('imatriculation');
+            $table->string('action');
+            $table->string('prixaction');
+            $table->string('recupanne');
+            $table->string('garage');
+            $table->String('panne_chauffeur');
+            $table->string('date');
             $table->timestamps();
         });
     }

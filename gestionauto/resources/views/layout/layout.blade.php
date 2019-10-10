@@ -236,6 +236,8 @@
 
           </ul>
         </li>
+        <li><a href="assurance"><i class="fa fa-users"></i> <span>Assurance</span></a></li>
+
         <li><a href="documents"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
         <li class="header">LABELS</li>
         <li><a href="carburant"><i class="fa fa-thermometer-full text-red"></i> <span>CARBURANT</span></a></li>

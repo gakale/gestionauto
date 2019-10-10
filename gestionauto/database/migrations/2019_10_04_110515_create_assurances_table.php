@@ -15,6 +15,11 @@ class CreateAssurancesTable extends Migration
     {
         Schema::create('assurances', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->date('date');
+            $table->date('expiration');
+            $table->date('rappele');
+            $table->string('maison');
+            $table->string('assur_voit');
             $table->timestamps();
         });
     }

@@ -7,20 +7,20 @@
 
 
 <div class="container-fluid">
-    
+
     <div class="box">
         <div class="box-header">
             <h3 class="box-title">Nos Chauffeurs</h3>
             <form action="" class="form-group">
-                
+
                 <input placeholder="Recherche" id="recherche" class="form-control" style="width: 20%;margin: 10px;" type="search">
-                
-                
-                
+
+
+
             </form>
-            
+
             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default"  style="float: right">
-                Nouveau chauffeur        
+                Nouveau chauffeur
             </button>
         </div>
         {{--  nouveaux modal   --}}
@@ -35,7 +35,6 @@
                         <div class="modal-body">
                             <div class="row">
                                 <form action="#" class="form-group" method="post">
-                                    <form action="#" class="form-group" method="post">
                                         <div class="form-group col-md-6">
                                             <label for="recipient-name" class="col-form-label">Nom du chauffeur</label>
                                             <input type="text" name="name" class="form-control" id="recipient-name">
@@ -48,7 +47,7 @@
                                             <label for="recipient-name" class="col-form-label">Fonction</label>
                                             <input name="fonction" type="text" class="form-control" id="recipient-name">
                                         </div>
-                                       
+
                                         <div class="form-group col-md-6">
                                             <label for="recipient-name" class="col-form-label">Adresse</label>
                                             <input name="adresse" type="password" class="form-control" id="recipient-name">
@@ -56,7 +55,8 @@
                                         <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">Téléphone</label>
                                             <input name="telephone" class="form-control" id="message-text">
-                                        </div>  <div class="form-group col-md-6">
+                                        </div>
+                                          <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">Email</label>
                                             <input name="email" type="email" class="form-control" id="message-text">
                                         </div>
@@ -67,32 +67,33 @@
                                         <hr>
                                         <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">Photo Permis</label>
-                                            <input type="file" class="form-control" id="message-text">
-                                        </div>  <div class="form-group col-md-6">
+                                            <input name="permis" type="file" class="form-control" id="message-text">
+                                        </div>
+                                          <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">Categorie de permis </label>
-                                            <select class="form-control" id="message-text">
+                                            <select name="typepermis" class="form-control" id="message-text">
                                                 <option value="">Permis A1</option>
                                                 <option value="">Permis A2</option>
-                                                
+
                                                 <option value="">Permis A</option>
-                                                
+
                                                 <option value="">Permis B</option>
-                                                
+
                                             </select>
                                         </div>
                                         <div class="form-group col-md-6">
                                             <label for="message-text" class="col-form-label">Date Permis</label>
-                                            <input class="form-control" id="message-text">
+                                            <input  type="date" class="form-control" id="message-text">
                                         </div>
-                                        
+
                                     </form>
                                 </div>
-                                
-                                
+
+
                             </div>
-                            
-                            
-                            
+
+
+
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
                                 <button type="button" class="btn btn-primary">Save changes</button>
@@ -100,10 +101,10 @@
                         </div>
                         <!-- /.modal-content -->
                     </div>
-                    
+
                     <!-- /.modal-dialog -->
                 </div>
-                
+
                 <!-- /.box-header -->
                 <div class="box-body no-padding">
                     <table class="table table-bordered  table-striped">
@@ -123,18 +124,18 @@
                                 <td>A1</td>
                                 <td>19/2019/2019</td>
                                 <td style="letter-spacing: 3px;text-align:center;">
-                                    
+
                                     <a href="#" class="fa fa-eye">
-                                        
+
                                     </a>
                                     <a href="#" class="fa fa-pencil">
-                                        
+
                                     </a>
                                     <a href="#" class="red fa fa-trash">
-                                        
+
                                     </a>
                                 </td>
-                                
+
                             </tr>
                             <tr>
                                 <td></td>
@@ -143,7 +144,7 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                
+
                             </tr>
                             <tr>
                                 <td></td>
@@ -152,7 +153,7 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                
+
                             </tr>
                             <tr>
                                 <td></td>
@@ -160,7 +161,7 @@
                                 <td> </td>
                                 <td></td>
                                 <td></td>
-                                
+
                             </tr>
                             <tr>
                                 <td></td>
@@ -169,9 +170,9 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                
+
                             </tr>
-                            
+
                             <tr>
                                 <td></td>
                                 <td></td>
@@ -179,21 +180,19 @@
                                 <td></td>
                                 <td></td>
                                 <td></td>
-                                
-                                
+
+
                             </tr>
-                            
+
                         </tbody>
                     </table>
                 </div>
                 <!-- /.box-body -->
             </div>
-            
-            
+
+
         </div>
-        
-        
-        
-        
-        @stop
-        
+
+
+
+@stop

@@ -2,10 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Assurance;
+use App\Personnel;
 use Illuminate\Http\Request;
 
-class AssuranceController extends Controller
+class PersonnelController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,7 +14,7 @@ class AssuranceController extends Controller
      */
     public function index()
     {
-        return view('admin.assurance');
+        //
     }
 
     /**
@@ -41,10 +41,10 @@ class AssuranceController extends Controller
     /**
      * Display the specified resource.
      *
-     * @param  \App\Assurance  $assurance
+     * @param  \App\Personnel  $personnel
      * @return \Illuminate\Http\Response
      */
-    public function show(Assurance $assurance)
+    public function show(Personnel $personnel)
     {
         //
     }
@@ -52,10 +52,10 @@ class AssuranceController extends Controller
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Assurance  $assurance
+     * @param  \App\Personnel  $personnel
      * @return \Illuminate\Http\Response
      */
-    public function edit(Assurance $assurance)
+    public function edit(Personnel $personnel)
     {
         //
     }
@@ -64,10 +64,10 @@ class AssuranceController extends Controller
      * Update the specified resource in storage.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Assurance  $assurance
+     * @param  \App\Personnel  $personnel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Assurance $assurance)
+    public function update(Request $request, Personnel $personnel)
     {
         //
     }
@@ -75,10 +75,10 @@ class AssuranceController extends Controller
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Assurance  $assurance
+     * @param  \App\Personnel  $personnel
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Assurance $assurance)
+    public function destroy(Personnel $personnel)
     {
         //
     }

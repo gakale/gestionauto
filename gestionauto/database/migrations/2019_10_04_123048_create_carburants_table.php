@@ -24,10 +24,6 @@ class CreateCarburantsTable extends Migration
             $table->string('avantrecharge');
             $table->string('apresrecharge');
             $table->string('paiement');
-            $table->unsignedInteger('voit_car');
-
-            $table->foreign('voit_car')->references('id')->on('vehicules');
-
             $table->timestamps();
         });
     }

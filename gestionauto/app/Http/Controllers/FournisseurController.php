@@ -14,7 +14,7 @@ class FournisseurController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin\fournisseur');
     }
 
     /**
@@ -35,7 +35,18 @@ class FournisseurController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = request()->validate([
+
+            'name'=> ['required','min:3'],
+            'prenom'=> ['required','min:3'],
+            'localisation'=> ['required'],
+            'telephone'=> ['required'],
+            'email'=> ['required','min:3'],
+            'cni'=> ['required'],
+            'depuis'=> ['required']
+        ]);
+
+
     }
 
     /**

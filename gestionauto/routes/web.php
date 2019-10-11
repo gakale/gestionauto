@@ -18,10 +18,8 @@ Route::get('/dashboard','AdminController@index')->name('dash');
 Route::get('/users','AdminController@users')->name('users');
 
 
-Route::get('/chauffeur','AdminController@chauffeur')->name('chauffeur');
 
 
-Route::get('/fournisseur','AdminController@fournisseur')->name('fournisseur');
 
 
 
@@ -30,25 +28,7 @@ Route::get('/carburant','AdminController@carburant')->name('carburant');
 
 Route::get('/voiture','AdminController@voiture');
 
-Route::get('/operateur','OperateurController@index')->name('operateur');
 
-
-Route::Post('/operateur','OperateurController@store')->name('operateur.store');
-
-
-
-Route::get('/garage','AdminController@garage')->name('garage');
-
-Route::get('/documents','AdminController@documents')->name('document');
-
-Route::get('/stock','AdminController@stock')->name('stock');
-
-Route::get('/maps','AdminController@maps')->name('maps');
-
-
-// route assurance
-
-Route::resource('/assurance', 'AssuranceController');
 
 
 // les missions et courses
@@ -69,3 +49,43 @@ Route::get('/' , 'LoginsController@login')->name('login');
 
 Route::get('/mdpassoublie' , 'LoginsController@mdpassoublie')->name('mdpassoublie');
 
+
+
+
+
+
+
+// route personnel
+
+
+
+Route::resource('personnel', 'PersonnelController');
+
+
+
+//rout operateur
+
+
+Route::resource('user', 'Usercontroller');
+
+
+
+
+
+// route assurance
+
+Route::resource('/assurance', 'AssuranceController');
+
+
+
+//route chauffeur
+
+
+Route::resource('chauffeur', 'ChauffeurController');
+
+
+
+//route fournisseur
+
+
+Route::resource('fournisseur', 'FournisseurController');

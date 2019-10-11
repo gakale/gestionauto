@@ -36,4 +36,16 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+
+    /**
+     * User has many .
+     *
+     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     */
+    public function missions()
+    {
+        // hasMany(RelatedModel, foreignKeyOnRelatedModel = user_id, localKey = id)
+        return $this->hasMany(Mission::class);
+    }
 }

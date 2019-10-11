@@ -14,7 +14,7 @@ class PersonnelController extends Controller
      */
     public function index()
     {
-        //
+
     }
 
     /**

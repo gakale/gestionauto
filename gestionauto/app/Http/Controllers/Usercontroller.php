@@ -1,10 +1,10 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 
-class AdminController extends Controller
+class Usercontroller extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +13,7 @@ class AdminController extends Controller
      */
     public function index()
     {
-        return view('admin/dashboard');
+        return view('admin\operateur');
     }
 
     /**
@@ -34,7 +34,45 @@ class AdminController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $date = Carbon::Now();
+
+        $data = request()->validate([
+
+         'name' => ['required', 'min:3'],
+         'prenom'=> ['required','min:3'],
+         'login'=> ['required','min:6'],
+         'email' => ['required', 'email'],
+         'password' => ['required' ,],
+         'fonction' => ['required'],
+         'telephone' => ['required'],
+         'cni' => ['required', 'image'],
+         'date' => ['required','date'],
+         'role' => ['required']
+         ]);
+
+         $cniPath = request('cni')->store('uploads','public');
+
+
+         $officialDate = Carbon::now();
+
+
+            operateur::create([
+             'name' => $data['name'],
+             'prenom'=> $data['prenom'],
+             'login'=> $data['login'],
+             'email' => $data['email'],
+             'password' => bcrypt($data['password']),
+             'fonction'=> $data['fonction'],
+             'telephone' => $data['telephone'],
+             'cni' => $cniPath,
+             'date'=> $data['date'],
+             'role' => $data['role'],
+
+             'at_year'=> $officialDate
+
+
+         ]);
+
     }
 
     /**
@@ -80,72 +118,5 @@ class AdminController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-
-     public function carburant()
-    {
-      return view('admin/carburant');
-    }
-
-    public function voiture()
-
-
-    {
-        return view('admin/voiture');
-    }
-
-    public function garage()
-    {
-        return view('admin/garage');
-    }
-
-
-    public function document()
-    {
-        return view('admin/document');
-    }
-
-    public function mail()
-    {
-        return view('admin/mail');
-    }
-
-
-    public function panne()
-    {
-        return view('admin/panne');
-    }
-
-
-    public function stock()
-    {
-        return view('admin/stock');
-    }
-
-
-    public function documents()
-    {
-        return view('admin/documents');
-    }
-
-
-    public function maps()
-    {
-        return view('admin/maps');
-    }
-
-
-
-
-    public function course()
-    {
-        return view('admin/course');
-    }
-
-
-    public function mission()
-    {
-        return view('admin/mission');
     }
 }

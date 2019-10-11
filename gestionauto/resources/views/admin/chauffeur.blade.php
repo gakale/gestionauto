@@ -34,7 +34,8 @@
                         </div>
                         <div class="modal-body">
                             <div class="row">
-                                <form action="#" class="form-group" method="post">
+                                <form action="{{ route('chauffeur.store') }}" class="form-group" method="post">
+                                    @csrf
                                         <div class="form-group col-md-6">
                                             <label for="recipient-name" class="col-form-label">Nom du chauffeur</label>
                                             <input type="text" name="name" class="form-control" id="recipient-name">
@@ -86,7 +87,7 @@
                                             <input  type="date" class="form-control" id="message-text">
                                         </div>
 
-                                    </form>
+
                                 </div>
 
 
@@ -96,12 +97,12 @@
 
                             <div class="modal-footer">
                                 <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                                <button type="button" class="btn btn-primary">Save changes</button>
+                                <button type="submit" class="btn btn-primary">Save changes</button>
                             </div>
                         </div>
                         <!-- /.modal-content -->
                     </div>
-
+                </form>
                     <!-- /.modal-dialog -->
                 </div>
 

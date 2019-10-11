@@ -14,7 +14,7 @@ class ChauffeurController extends Controller
      */
     public function index()
     {
-        //
+        return view("admin\chauffeur");
     }
 
     /**
@@ -35,7 +35,41 @@ class ChauffeurController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = request()->validate([
+
+            'name' => ['required','min:3'],
+            'prenom' => ['required','min:3'],
+            'fonction' => ['required'],
+            'adresse' => ['required'],
+            'telephone'=> ['required'],
+            'email'=> ['email','required'],
+            'cni'=> ['required','image'],
+            'permis' => ['required'],
+            'typepermis'=> ['required'],
+            'date'=> ['date'],
+
+
+
+        ]);
+
+
+        $cniPath = request('cni')->store('uploads','public');
+
+        Chauffeur::create([
+        'name'=> $data['name'],
+        'prenom'=> $data['prenom'],
+        'fonction'=> $data['fonction'],
+        'adresse'=> $data['adresse'],
+        'telephone'=> $data['telephone'],
+        'email'=>$data['email'],
+        'cni'=> $cniPath,
+        'permis'=>$data['permis'],
+        'typepermis'=>$data['typepermis'],
+        'date'=>$data['data'],
+
+
+        ]);
+
     }
 
     /**

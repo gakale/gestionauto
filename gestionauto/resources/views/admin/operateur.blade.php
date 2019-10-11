@@ -20,7 +20,7 @@
             </form>
 
             <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default"  style="float: right">
-                Nouvelle operateur
+                Nouvelle Operateur
             </button>
         </div>
         {{--  nouveaux modal   --}}
@@ -30,11 +30,11 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span></button>
-                            <h2 class="modal-title">Nouvelle operateur  </h2>
+                            <h2 class="modal-title">Nouvelle Operateur  </h2>
                         </div>
                         <div class="modal-body">
                             <div class="row">
-                                <form action="{{ route('operateur.store') }}" class="form-group" method="POST" enctype="multipart/form-data">
+                                <form action="{{ route('user.store') }}" class="form-group" method="POST" enctype="multipart/form-data">
                                     @csrf
                                     <div class="form-group col-md-6">
                                         <label for="recipient-name" class="col-form-label">Nom</label>

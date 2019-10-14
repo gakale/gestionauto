@@ -31,9 +31,7 @@ Route::get('/voiture','AdminController@voiture');
 
 
 
-// les missions et courses
 
-Route::get('/mission','AdminController@mission');
 
 Route::get('/course','AdminController@course');
 
@@ -89,3 +87,10 @@ Route::resource('chauffeur', 'ChauffeurController');
 
 
 Route::resource('fournisseur', 'FournisseurController');
+
+
+
+//Route Mission et Courses
+
+
+Route::resource('mission', 'MissionController');

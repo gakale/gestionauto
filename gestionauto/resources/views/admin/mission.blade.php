@@ -34,7 +34,10 @@
                         </div>
                         <div class="modal-body">
                             <div class="row">
-                                <form action="#" class="form-group" method="post">
+                                <form action="{{ route('mission.store') }}" class="form-group" method="post">
+
+                                    @csrf
+
                                     <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Nom et Prenom</label>
                                         <select type="text" name="name" class="form-control" id="recipient-name">
@@ -53,6 +56,8 @@
                                         <label for="recipient-name" class="col-form-label">Montant pour Départ</label>
                                         <input type="text" name="montantdepart" class="form-control" >
                                     </div>
+
+
                                     <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Montant Resté</label>
                                         <input type="text" name="montantreste" class="form-control" >
@@ -62,30 +67,44 @@
                                         <label for="recipient-name" class="col-form-label">Montant Total</label>
                                         <input type="text" name="montanttotal" class="form-control" >
                                     </div>
+
+
                                     <div class="form-group col-md-4">
                                         <label for="message-text" class="col-form-label">Lieu de La mission</label>
                                         <input class="form-control" name="missionlieu" id="message-text">
                                     </div>
+
+
                                     <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Le Motif</label>
                                         <input type="text" name="motif" class="form-control" id="recipient-name">
                                     </div>
+
+
                                     <div class="form-group col-md-4">
                                         <label for="message-text" class="col-form-label">Date</label>
                                         <input type="date" class="form-control" name="date" id="message-text">
                                     </div>
+
+
                                     <div class="form-group col-md-4">
                                         <label for="message-text" class="col-form-label">Lieu de Départ</label>
-                                        <input class="form-control" name="lieudepart" id="message-text">
+                                        <input type="text" class="form-control" name="lieudepart" id="message-text">
                                     </div>
+
+
                                     <div class="form-group col-md-4">
                                         <label for="message-text" class="col-form-label">Lieu d arrivé</label>
                                         <input type="text" class="form-control" name="lieuarrive" id="message-text">
                                     </div>
+
+
                                     <div class="form-group col-md-4">
                                         <label for="message-text" class="col-form-label">Heure de Départ</label>
                                         <input type="date" class="form-control" name="heurdepart" id="message-text">
                                     </div>
+
+
                                     <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Heur de Retour</label>
                                         <input type="date" name="heurretour" class="form-control" >
@@ -106,31 +125,31 @@
 
                                      <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Caburant Avant Depart</label>
-                                        <input type="text" name="role" class="form-control">
+                                        <input type="text" name="carbuavantdepar" class="form-control">
 
                                     </div>
 
                                     <div class="form-group col-md-4">
-                                        <label for="recipient-name" class="col-form-label">Caburant Après Depart</label>
-                                        <input type="text" name="role" class="form-control">
+                                        <label for="recipient-name" class="col-form-label">Caburant Après Arrivé</label>
+                                        <input type="text" name="carbuapresdepar" class="form-control">
 
                                     </div>
 
 
                                     <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Kilometrage Avant Depart</label>
-                                        <input type="text" name="role" class="form-control">
+                                        <input type="text" name="killoavantdepart" class="form-control">
 
                                     </div>
 
                                     <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Kilometrage Après Depart</label>
-                                        <input type="text" name="role" class="form-control">
+                                        <input type="text" name="killoapresdepart" class="form-control">
 
                                     </div>
                                     <div class="form-group col-md-4">
                                         <label for="recipient-name" class="col-form-label">Fin de la mission</label>
-                                        <select type="checkbox" name="role" class="form-control">
+                                        <select type="checkbox" name="avance" class="form-control">
                                                     <option value="debut">Debut</option>
                                                     <option value="fin">Fin</option>
 
@@ -138,7 +157,7 @@
 
 
                                     </div>
-                                </form>
+
                             </div>
 
 
@@ -148,12 +167,12 @@
 
                         <div class="modal-footer">
                             <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
+                            <button type="submit" class="btn btn-primary">Save changes</button>
                         </div>
                     </div>
                     <!-- /.modal-content -->
                 </div>
-
+            </form>
                 <!-- /.modal-dialog -->
             </div>
 

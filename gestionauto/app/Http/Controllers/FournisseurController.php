@@ -35,6 +35,7 @@ class FournisseurController extends Controller
      */
     public function store(Request $request)
     {
+
         $data = request()->validate([
 
             'name'=> ['required','min:3'],
@@ -45,6 +46,21 @@ class FournisseurController extends Controller
             'cni'=> ['required'],
             'depuis'=> ['required']
         ]);
+
+        Fourniseur::create([
+
+            'name'=> $data['name'],
+            'prenom'=>$data['prenom'],
+            'localisation'=> $data['localisation'],
+            'telephone'=> $data['telephone'],
+            'email'=> $data['email'],
+            'cni'=> $data['cni'],
+            'depuis'=>$data['depuis'],
+
+
+        ]);
+
+        return redirect()->back()->with('message', 'Enregister avec Success');
 
 
     }

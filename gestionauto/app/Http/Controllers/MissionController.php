@@ -14,7 +14,7 @@ class MissionController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin\mission');
     }
 
     /**
@@ -35,7 +35,39 @@ class MissionController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = request()->validate([
+
+            'name'=>['required'],
+            'chauffeurs'=> ['required'],
+            'montantdepart'=> ['required'],
+            'montanttotal'=> ['required'],
+            'missionlieu' => ['required'],
+            'motif'=> ['required'],
+            'date'=> ['lieudepart'],
+            'lieuarrive'=> ['required'],
+            'heurdepart'=> ['required'],
+            'vehicule'=> ['required'],
+            'carbuavantdepar'=> ['required'],
+            'killoavantdepart'=> ['required'],
+
+
+        ]);
+
+        Mission::create([
+            'name'=> $data['name'],
+            'chauffeurs'=> $data['chauffeurs'],
+            'montantdepart'=>$data['montantdepart'],
+            'montanttotal'=>$data['montanttotal'],
+            'missionlieu'=> $data['missionlieu'],
+            'motif'=> $data['motif'],
+            'date'=> $data['date'],
+            'lieuarrive'=>$data['lieuarrive'],
+            'heurdepart'=> $data['heurdepart'],
+            'vehicule'=>$data['vehicule'],
+            'carbuapresdepar'=>$data['carbuapresdepar'],
+            'killoapresdepart'=>$data['killoapresdepart'],
+
+        ]);
     }
 
     /**

@@ -168,7 +168,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="users"><i class="fa fa-user-secret"></i>Personnel</a></li>
+            <li><a href="personnel"><i class="fa fa-user-secret"></i>Personnel</a></li>
             <li><a href="chauffeur"><i class="fa fa-taxi"></i>Chauffeur</a></li>
               <li><a href="fournisseur"><i class="fa fa-send"></i>Fourniseur</a></li>
             <li><a href="user"><i class="fa fa-opera"></i>Operateur</a></li>

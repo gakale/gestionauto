@@ -14,6 +14,7 @@ class PersonnelController extends Controller
      */
     public function index()
     {
+        return view('admin\personnel');
 
     }
 
@@ -35,7 +36,24 @@ class PersonnelController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = request()->validate([
+
+            'name'=> ['required'],
+            'prenom'=> ['required'],
+            'email'=> ['required','email'],
+            'fonction'=> ['required'],
+            'telephone'=> ['required']
+        ]);
+
+        Personnel::create([
+
+            'name'=> $data['name'],
+            'prenom'=> $data['prenom'],
+            'email'=> $data['email'],
+            'fonction'=> $data['fonction'],
+            'telephone'=>$data['telephone']
+
+        ]);
     }
 
     /**

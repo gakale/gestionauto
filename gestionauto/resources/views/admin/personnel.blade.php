@@ -30,19 +30,20 @@
                         <div class="modal-header">
                             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                 <span aria-hidden="true">&times;</span></button>
-                                <h2 class="modal-title">Nouveaux Operateur  </h2>
+                                <h2 class="modal-title">Nouveaux Personnel  </h2>
                             </div>
                             <div class="modal-body">
                                 <div class="row">
-                                    <form action="#" class="form-group" method="post">
+                                    <form action="{{ route('personnel.store') }}" class="form-group" method="post">
+                                        @csrf
                                         <div class="form-group col-md-6">
                                             <label for="recipient-name" class="col-form-label">Nom</label>
                                             <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="recipient-name">
 
                                             @error('name')
-                                            <span class="invalid-feedback" role="alert">
-                                                <strong>{{ $message }}</strong>
-                                            </span>
+                                                <span class="invalid-feedback alert alert-danger" role="alert">
+                                                    <strong>{{ $message }}</strong>
+                                                </span>
                                             @enderror
                                         </div>
                                         <div class="form-group col-md-6">
@@ -91,7 +92,6 @@
                                             @enderror
                                         </div>
 
-                                    </form>
                                 </div>
 
 
@@ -106,6 +106,8 @@
                     </div>
                     <!-- /.modal-content -->
                 </div>
+            </form>
+
 
                 <!-- /.modal-dialog -->
             </div>

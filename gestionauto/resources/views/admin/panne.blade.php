@@ -26,7 +26,7 @@
                 </div>
 
                 <div class="btn-group pull-right" style="margin-right: 10px">
-                    <a href="{{ route('mission.create') }}" class="btn btn-sm btn-success" title="Nouveau">
+                    <a href="{{ route('maintenance.create') }}" class="btn btn-sm btn-success" title="Nouveau">
                         <i class="fa fa-save"></i><span class="hidden-xs">&nbsp;&nbsp;Nouveau</span>
                     </a>
                 </div>

@@ -26,7 +26,6 @@ Route::get('/users','AdminController@users')->name('users');
 Route::get('/carburant','AdminController@carburant')->name('carburant');
 
 
-Route::get('/voiture','AdminController@voiture');
 
 
 
@@ -93,7 +92,20 @@ Route::resource('fournisseur', 'FournisseurController');
 //Route Mission et Courses
 
 
-Route::resource('mission', 'MissionController');
+Route::resource('/mission', 'MissionController');
 
+
+
+Route::get('mencoure','MissionController@mencoure');
 
 Route::resource('/course', 'courseController');
+
+
+
+//Route Vehicule
+
+Route::resource('/vehicule', 'VehiculeController');
+
+//Route Maintenance
+
+Route::resource('/maintenance', 'MaintenanceController');

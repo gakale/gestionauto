@@ -14,7 +14,7 @@ class VehiculeController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin\vehicule');
     }
 
     /**
@@ -35,7 +35,46 @@ class VehiculeController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = request()->validate([
+
+            'imatriculation'=> ['required','min:3'],
+            'kilometrage'=> ['required'],
+            'date'=> ['required','date'],
+            'puissance'=> ['required'],
+            'poids'=> ['required'],
+            'nbreplace'=> ['required'],
+            'capacite'=> ['required'],
+            'etat'=> ['required'],
+            'transmission'=> ['required'],
+            'marque'=> ['required'],
+            'modele' => ['required'],
+            'categorie'=> ['required'],
+            'carburant'=> ['required'],
+            'utilisation'=> ['required'],
+            'carosserie' => ['required']
+
+
+
+        ]);
+
+        Vehicule::create([
+
+            'imatriculation'=> $data['imatriculation'],
+            'kilometrage'=> $data['kilometrage'],
+            'date'=> $data['date'],
+            'puisance'=> $data['puisance'],
+            'poids'=> $data['poids'],
+            'nbreplace'=> $data['nbreplace'],
+            'capacite'=> $data['capacite'],
+            'etat'=> $data['etat'],
+            'transmission'=> $data['transmission'],
+            'marque'=> $data['marque'],
+            'modele'=> $data['modele'],
+            'categorie'=> $data['categorie'],
+            'carburant'=> $data['carburant'],
+            'utilisation'=> $data['utilisation'],
+            'carosserie'=> $data['carosserie']
+        ]);
     }
 
     /**

@@ -24,7 +24,7 @@ class MissionController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin\missioncreate');
     }
 
     /**
@@ -43,7 +43,7 @@ class MissionController extends Controller
             'montanttotal'=> ['required'],
             'missionlieu' => ['required'],
             'motif'=> ['required'],
-            'date'=> ['lieudepart'],
+            'date'=> ['date','required'],
             'lieuarrive'=> ['required'],
             'heurdepart'=> ['required'],
             'vehicule'=> ['required'],
@@ -113,5 +113,13 @@ class MissionController extends Controller
     public function destroy(Mission $mission)
     {
         //
+    }
+
+
+    public function mencoure(){
+
+
+        return view('admin\mencoure');
+
     }
 }

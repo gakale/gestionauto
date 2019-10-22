@@ -124,7 +124,7 @@
       <!-- Sidebar user panel -->
       <div class="user-panel">
         <div class="pull-left image">
-          <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+          <img src="/dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
         </div>
         <div class="pull-left info">
           <p> Mediatec</p>
@@ -179,7 +179,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="mission"><i class="fa fa-book"></i> Rédaction</a></li>
+            <li><a href="{{ route('mission.index') }}"><i class="fa fa-book"></i> Rédaction</a></li>
             <li><a href="mencoure"><i class="fa fa-chain"></i> Mission en coure</a></li>
             <li><a href="course"><i class="fa fa-calendar"></i>Course</a></li>
             <li><a href="cencoure"><i class="fa fa-cc-paypal"></i>Courses en coure</a></li>
@@ -194,7 +194,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="voiture"><i class="fa fa-car"></i>Ajout Voiture</a></li>
+            <li><a href="vehicule"><i class="fa fa-car"></i>Ajout Voiture</a></li>
           </ul>
         </li>
 
@@ -214,7 +214,7 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="panne"><i class="fa fa-circle-o"></i>Panne</a></li>
+            <li><a href="{{ route('maintenance.index') }}"><i class="fa fa-circle-o"></i>Panne</a></li>
             <li><a href="pages/examples/profile.html"><i class="fa fa-circle-o"></i>Top 10 Panne</a></li>
 
           </ul>

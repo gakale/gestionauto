@@ -1,261 +1,173 @@
 
-@extends('layout.layout')
+@extends('../admins/layouts')
 @section('content')
-@section('grand-text','Tableau de Bord')
+@section('grand-text','gestion des missions')
 @section('grands','Tableau de Bord')
-@section('petit-text','Voiture')
+@section('petit-text','Mission')
 
 
 <div class="container-fluid">
-
     <div class="box">
-        <div class="box-header">
-            <h3 class="box-title">Maintenance</h3>
-            <form action="" class="form-group">
 
-                <input placeholder="Recherche" id="recherche" class="form-control" style="width: 20%;margin: 10px;" type="search">
+        <div class="box-header with-border">
+            <div class="pull-right">
 
-
-            </form>
-
-                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default"  style="float: right">
-                    Nouvelle Panne
-                </button>
-            </div>
-            {{--  nouveaux modal   --}}
-            <div class="modal fade" id="modal-default">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title">Nouelle Maintenance</h4>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row">
-                                    <form action="#" class="form-group" method="post">
-                                        <div class="form-group col-md-6">
-                                            <label for="message-text" class="col-form-label">Immatriculation</label>
-                                            <select name="imatriculation" type="" class="form-control" id="message-text">
-                                                <option value="">2341BP01</option>
-                                                <option value="">36BP04</option>
-                                                <option value="">0738BP05</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="message-text" class="col-form-label">Action Méné</label>
-                                            <select name="action" class="form-control js-example-basic-multiple" id="message-text" multiple="multiple">
-                                                <option value="are-brise"> pare-brise</option>
-                                                <option value="">pare-soleil intérieur</option>
-                                                <option value="">vitres latérales, lunette arrière</option>
-                                                <option value="">rétroviseur intérieur</option>
-                                                <option value=""> sièges et banquettes</option>
-                                                <option value=""> ceinture de sécurité</option>
-                                                <option value=""> coussins gonflables (état, témoin)</option>
-                                                <option value=""> lampes témoins (fonctionnement)</option>
-                                                <option value=""> moteur en marche</option>
-                                                <option value="">volant (jeu)</option>
-                                                <option value=""> démarrage au neutre</option>
-                                                <option value="">commande d’accélérateur</option>
-                                                <option value="">commande d’embrayage</option>
-                                                <option value="">commande de freins</option>
-                                                <option value="">frein de service</option>
-                                                <option value="">freins de stationnement</option>
-                                                <option value="">course de la pédale de frein</option>
-                                                <option value="">essuie-glaces (fonctionnement)</option>
-                                                <option value="">lave-glace (fonctionnement)</option>
-                                                <option value="">chauffage, dégivrage</option></option>
-                                                <option value="">indicateur de vitesse et totalisateur</option>
-                                                <option value="">éclairage du tableau de bord</option>
-                                                <option value="">avertisseur sonore (klaxon)</option>
-                                                <option value="">feux de jour</option>
-                                                <option value="">phares de route</option>
-                                                <option value="">phares de croisement</option>
-                                                <option value="">feux de direction</option>
-                                                <option value="">feux d’arrêt</option>
-                                                <option value="">feux de position</option>
-                                                <option value="">feux de plaque</option>
-                                                <option value="">feux de détresse</option>
-                                                <option value="">feux de recul</option>
-                                                <option value="">tous les réflecteurs</option>
-
-
-                                                <option value="">portières</option>
-                                                <option value=""> rétroviseurs extérieurs</option>
-                                                <option value="">essuie-glaces (balais)</option>
-                                                <option value="">ailes, carrosserie</option>
-                                                <option value="">capot, crochet de sécurité</option>
-                                                <option value=""> pare-soleil extérieur</option>
-                                                <option value="">pneus</option>
-                                                <option value=""> roues, valves</option>
-                                                <option value=""> boulons, écrous, pièces de fixation</option>
-                                                <option value="">roulement de roue</option>
-                                                <option value="">portillon, bouchon</option>
-                                                <option value="">vignette valide (carburant gazeux)</option>
-                                                <option value=""> dispositif d’attelage</option>
-                                                <option value=""> sellette d’attelage</option>
-                                                <option value="">mécanisme de verrouillage</option>
-                                                <option value=""> fiche (freins de remorque)</option>
-                                                <option value=""> fiche (éclairage de remorque)</option>
-                                                <option value=""> câbles, chaînes, crochet</option>
-                                                <option value=""> barres d’attellage</option>
-                                                <option value="">espace de chargement</option>
-                                                <option value=""> plateforme</option>
-                                                <option value="">panneaux</option>
-                                                <option value=""> fixations</option>
-                                                <option value="">ridelles</option>
-                                                <option value=""> suspension et freins</option>
-                                                <option value=""> amortisseurs</option>
-                                                <option value="">ancrages</option>
-                                                <option value=""> lames maîtresses</option>
-                                                <option value=""> pièces de fixation</option>
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="recipient-name" class="col-form-label">Prix de L action </label>
-                                            <input name="prixaction" type="text" class="form-control" id="recipient-name">
-                                        </div>
-
-                                        <div class="form-group col-md-6">
-                                            <label for="recipient-name" class="col-form-label">Reçu de Paiement</label>
-                                            <input name="recupanne" type="file" class="form-control" id="recipient-name">
-                                        </div>
-
-
-                                        <div class="form-group col-md-6">
-                                            <label for="message-text" class="col-form-label">Nom du Garage</label>
-                                            <select name="garage" type="text" class="form-control" id="message-text">
-                                                <option value="">plateau</option>
-                                                <option value="">Camion</option>
-
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="message-text" class="col-form-label">Nom du Chauffeur</label>
-                                            <select name="panne_chauffeur" type="text" class="form-control" id="message-text">
-                                                <option value="">Cars</option>
-                                                <option value="">Camion</option>
-
-                                            </select>
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="message-text" class="col-form-label">Date de Réparation</label>
-                                            <input type="date" class="form-control select2" id="message-text">
-
-                                        </div>
-
-
-
-
-
-                                    </form>
-                                </div>
-
-
-                        </div>
-
-
-
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                    <!-- /.modal-content -->
+                <div class="btn-group pull-right" style="margin-right: 10px">
+                    <a class="btn btn-sm btn-twitter" title="Exporter"><i class="fa fa-download"></i><span class="hidden-xs"> Exporter</span></a>
+                    <button type="button" class="btn btn-sm btn-twitter dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/admin/jo/certifications?_export_=all" target="_blank">Tous</a></li>
+                        <li><a href="/admin/jo/certifications?_export_=page%3A1" target="_blank">La page actuelle</a></li>
+                        <li><a href="/admin/jo/certifications?_export_=selected%3A__rows__" target="_blank" class="export-selected">Les lignes sélectionnées</a></li>
+                    </ul>
                 </div>
 
-                <!-- /.modal-dialog -->
+                <div class="btn-group pull-right" style="margin-right: 10px">
+                    <a href="{{ route('mission.create') }}" class="btn btn-sm btn-success" title="Nouveau">
+                        <i class="fa fa-save"></i><span class="hidden-xs">&nbsp;&nbsp;Nouveau</span>
+                    </a>
+                </div>
+
             </div>
+            <span>
+                <a class="btn btn-sm btn-primary grid-refresh" title="Rafraîchir"><i class="fa fa-refresh"></i><span class="hidden-xs"> Rafraîchir</span></a> <div class="btn-group" style="margin-right: 10px" data-toggle="buttons">
+                    <label class="btn btn-sm btn-dropbox 5daed26c39e34-filter-btn " title="Filtre">
+                        <input type="checkbox"><i class="fa fa-filter"></i><span class="hidden-xs">&nbsp;&nbsp;Filtre</span>
+                    </label>
 
-            <!-- /.box-header -->
-            <div class="box-body no-padding">
-                <table class="table table-bordered  table-striped">
-                    <tbody>
-                        <tr>
-                            <th>Immatriculation</th>
-                            <th>Motif de Rep</th>
-                            <th>Date Rep</th>
-                            <th>Chauffeur</th>
-                            <th>Montant Dépensé</th>
-                            <th>Action</th>
-                        </tr>
-                        <tr>
-                            <td>022 BP 01</td>
-                            <td>BMW</td>
-                            <td>2019 </td>
-                            <td>Compabilité</td>
-                            <td>Camion</td>
-                            <td>
-
-                                <a href="#" class="fa fa-eye">
-
-                                </a>
-                                <a href="#" class="fa fa-pencil">
-
-                                </a>
-                                <a href="#" class="red fa fa-trash">
-
-                                </a>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td> </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td> </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td> </td>
-                            <td></td>
-                            <td></td>
-
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td> </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
-                        </tr>
-
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td> </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
-
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-            <!-- /.box-body -->
+                </div>
+            </span>
         </div>
 
+        <div class="box-header with-border hide" id="filter-box">
+            <form action="http://197.159.206.237/admin/jo/certifications" class="form-horizontal" pjax-container="" method="get">
 
-    </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box-body">
+                            <div class="fields-group">
+                                <div class="form-group is-empty">
+                                    <label class="col-sm-2 control-label"> Nom</label>
+                                    <div class="col-sm-8">
+                                        <div class="input-group input-group-sm">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-pencil"></i>
+                                            </div>
+
+                                            <input type="text" class="form-control name" placeholder="Nom" name="name" value="">
+                                        </div>    </div>
+                                    </div>
+                                    <div class="form-group is-empty">
+                                        <label class="col-sm-2 control-label"> Matricule</label>
+                                        <div class="col-sm-8">
+                                            <div class="input-group input-group-sm">
+                                                <div class="input-group-addon">
+                                                    <i class="fa fa-pencil"></i>
+                                                </div>
+
+                                                <input type="text" class="form-control matricule" placeholder="Matricule" name="matricule" value="">
+                                            </div>    </div>
+                                        </div>
+                                        <div class="form-group is-empty">
+                                            <label class="col-sm-2 control-label"> Type</label>
+                                            <div class="col-sm-8">
+                                                <div class="input-group input-group-sm">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-pencil"></i>
+                                                    </div>
+
+                                                    <input type="text" class="form-control roles_id" placeholder="Type" name="roles[id]" value="">
+                                                </div>    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+
+                            <div class="box-footer">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-8">
+                                            <div class="btn-group pull-left">
+                                                <button class="btn btn-info submit btn-sm"><i class="fa fa-search"></i>&nbsp;&nbsp;Chercher</button>
+                                            </div>
+                                            <div class="btn-group pull-left " style="margin-left: 10px;">
+                                                <a href="http://197.159.206.237/admin/jo/certifications" class="btn btn-default btn-sm"><i class="fa fa-undo"></i>&nbsp;&nbsp;Réinitialiser</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+
+                    <!-- /.box-header -->
+                    <div class="box-body table-responsive no-padding">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th> </th>
+                                    <th>Création</th>
+                                    <th>Nom</th>
+                                    <th>Prénom</th>
+                                    <th>Matricule</th>
+                                    <th>Numéro de téléphone</th>
+                                    <th>Email</th>
+                                    <th>ASE</th>
+                                    <th>Qualification</th>
+                                    <th>Role</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                            </tbody>
+                        </table>
+
+                    </div>
+
+
+
+                    <div class="box-footer clearfix">
+                        <b></b> à <b></b> de <b>0</b> lignes<ul class="pagination pagination-sm no-margin pull-right">
+                            <!-- Previous Page Link -->
+                            <li class="page-item disabled"><span class="page-link">«</span></li>
+
+                            <!-- Pagination Elements -->
+                            <!-- "Three Dots" Separator -->
+
+                            <!-- Array Of Links -->
+                            <li class="page-item active"><span class="page-link">1</span></li>
+
+                            <!-- Next Page Link -->
+                            <li class="page-item disabled"><span class="page-link">»</span></li>
+                        </ul>
+
+                        <label class="control-label pull-right" style="margin-right: 10px; font-weight: 100;">
+
+                            <small>Affiche</small>&nbsp;
+                            <select class="input-sm grid-per-pager" name="per-page">
+                                <option value="http://197.159.206.237/admin/jo/certifications?per_page=10">10</option>
+                                <option value="http://197.159.206.237/admin/jo/certifications?per_page=20" selected="">20</option>
+                                <option value="http://197.159.206.237/admin/jo/certifications?per_page=30">30</option>
+                                <option value="http://197.159.206.237/admin/jo/certifications?per_page=50">50</option>
+                                <option value="http://197.159.206.237/admin/jo/certifications?per_page=100">100</option>
+                            </select>
+                            &nbsp;<small>lignes</small>
+                        </label>
+
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+            </div>
 
 
 
 
-    @stop
+            @stop

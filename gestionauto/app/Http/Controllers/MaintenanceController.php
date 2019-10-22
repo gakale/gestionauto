@@ -14,7 +14,7 @@ class MaintenanceController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin\panne');
     }
 
     /**
@@ -24,7 +24,7 @@ class MaintenanceController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin/pannecreate');
     }
 
     /**

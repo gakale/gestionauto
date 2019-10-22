@@ -94,3 +94,6 @@ Route::resource('fournisseur', 'FournisseurController');
 
 
 Route::resource('mission', 'MissionController');
+
+
+Route::resource('/course', 'courseController');

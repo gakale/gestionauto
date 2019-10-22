@@ -27,7 +27,17 @@ class CreateMissionsTable extends Migration
             $table->string('lieuarrive')->nullable();
             $table->date('heurdepart');
             $table->date('heurretour')->nullable();
-            $table->string('recupaiement');
+            $table->string('vehicule');
+            $table->string('carbuavantdepar');
+
+            $table->string('carbuapresdepar')->nullable();
+
+            $table->string('killoavantdepart');
+
+            $table->string('killoapresdepart')->nullable();
+
+            $table->string('avance')->nullable();
+
             $table->timestamps();
         });
     }

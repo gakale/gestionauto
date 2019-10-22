@@ -146,16 +146,11 @@
       <ul class="sidebar-menu" data-widget="tree">
         <li class="header">MAIN NAVIGATION</li>
         <li class="active treeview">
-          <a href="#">
+          <a href="dashboard">
             <i class="fa fa-dashboard"></i> <span>Tableau de Bord</span>
-            <span class="pull-right-container">
-              <i class="fa fa-angle-left pull-right"></i>
-            </span>
+
           </a>
-          <ul class="treeview-menu">
-            <li class="active"><a href="index.html"><i class="fa fa-circle-o"></i> Tableau de Bord</a></li>
-            <li><a href="index2.html"><i class="fa fa-circle-o"></i>Tableau de Bord</a></li>
-          </ul>
+
         </li>
 
 
@@ -185,8 +180,9 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="mission"><i class="fa fa-book"></i> Rédaction</a></li>
-            <li><a href="pages/forms/advanced.html"><i class="fa fa-circle-o"></i>Les Mission</a></li>
-            <li><a href="cours"><i class="fa fa-circle-o"></i>Les Cours</a></li>
+            <li><a href="mencoure"><i class="fa fa-chain"></i> Mission en coure</a></li>
+            <li><a href="course"><i class="fa fa-calendar"></i>Course</a></li>
+            <li><a href="cencoure"><i class="fa fa-cc-paypal"></i>Courses en coure</a></li>
 
           </ul>
         </li>

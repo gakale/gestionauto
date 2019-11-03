@@ -24,14 +24,17 @@
             <div class="BanLogin col-md-6">
                 <h1>PARC AUTO</h1>
                 <p>Bienvenue ! SVP connectez vous à votre compte.</p>
-                <form action="dashboard">
+                <form  action="{{ route('') }}" method="POST">
+                    @csrf
                     <div class="texte">
-                        <input type="email" name="" id="" >
+                        <input type="email" name="name" id="" >
+                        {{$errors->first('email')}}
                         <span data-placeholder="E-mail"></span>
                     </div>
 
                     <div class="texte">
-                        <input type="password" name="">
+                        <input type="password" name="password">
+                        {{$errors->first('password')}}
                         <span data-placeholder="Mot de passe"></span>
                     </div>
 

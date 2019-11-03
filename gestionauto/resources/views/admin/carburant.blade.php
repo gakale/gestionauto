@@ -1,266 +1,170 @@
 
-@extends('layout.layout')
+@extends('../admins/layouts')
 @section('content')
-@section('grand-text','gestion des carburant')
+@section('grand-text','gestion des missions')
 @section('grands','Tableau de Bord')
-@section('petit-text','caburant')
+@section('petit-text','Mission')
 
 
 <div class="container-fluid">
-
     <div class="box">
-        <div class="box-header">
-            <h3 class="box-title">Nos Carburant</h3>
-            <form action="" class="form-group">
 
-                <input placeholder="Recherche" id="recherche" class="form-control" style="width: 20%;margin: 10px;" type="search">
+        <div class="box-header with-border">
+            <div class="pull-right">
 
-
-
-            </form>
-
-            <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default"  style="float: right">
-                Nouvelle operateur
-            </button>
-        </div>
-        {{--  nouveaux modal   --}}
-        <div class="modal fade" id="modal-default">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span></button>
-                            <h2 class="modal-title">Nouveaux Carburant  </h2>
-                        </div>
-                        <div class="modal-body">
-                            <div class="row">
-                                <form action="{{ route('operateur.store') }}" class="form-group" method="POST" enctype="multipart/form-data">
-                                    @csrf
-                                    <div class="form-group col-md-6">
-                                        <label for="recipient-name" class="col-form-label">Nom Station</label>
-                                        <input type="text" name="nomstation" class="form-control @error('nomstation') is-invalid @enderror" id="recipient-name" value="{{ old('nomstation') }}">
-
-                                        @error('nomstation')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">Designation</label>
-                                        <input  class="form-control @error('designation') is-invalid @enderror" value="{{ old('designation') }}" name="designation" id="message-text" >
-
-                                        @error('designation')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                    </div>
-                                    <div class="form-group col-md-6">
-                                        <label for="recipient-name" class="col-form-label">Litrage</label>
-                                        <input type="text" name="litrage" class="form-control @error('litrage') is-invalid @enderror" id="recipient-name" value="{{old('litrage')}}">
-
-                                        @error('litrage')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                    </div>
-
-                                    <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">Montant</label>
-                                        <input class="form-control @error('montant') is-invalid @enderror" id="recipient-name" value="{{ old('montant') }}"  id="message-text" name="email">
-
-                                        @error('montant')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                    </div>
-
-                                    <div class="form-group col-md-6">
-                                        <label for="recipient-name" class="col-form-label">Quantite</label>
-                                        <input type="text" name="quantite" class="form-control @error('quantite') is-invalid @enderror"  id="recipient-name">
-                                        @error('quantite')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                    </div>
-
-
-                                    <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">Date</label>
-                                        <input class="form-control @error('date') is-invalid @enderror"  value="{{ old('date') }}" name="date" id="message-text">
-
-                                        @error('date')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                    </div>
-
-
-                                    <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">Avant Recharge</label>
-                                        <input class="form-control @error('avantrecharge') is-invalid @enderror"  value="{{ old('avantrecharge') }}"  name="avantrecharge" id="message-text">
-
-                                        @error('avantrecharge')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                    </div>
-
-
-                                    <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">Apres Recharge</label>
-                                        <input class="form-control @error('apresrecharge') is-invalid @enderror"  value="{{ old('apresrecharge') }}"  name="apresrecharge" id="message-text">
-
-                                        @error('apresrecharge')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                    </div>
-
-
-                                    <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">Recu de paiement </label>
-                                        <input type="file" class="form-control @error('paiement') is-invalid @enderror" name="paiement" id="message-text">
-
-                                        @error('paiement')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                    </div>
-
-
-                                    <div class="form-group col-md-6">
-                                        <label for="message-text" class="col-form-label">Choisir Un Vehicule</label>
-                                        <select type="text" class="form-control @error('voiture') is-invalid @enderror" name="voiture" id="message-text">
-                                            <option value="">Mercedece</option>
-
-                                            <option value="">Permis B</option>
-                                        </select>
-
-                                        @error('voiture')
-                                        <span class="invalid-feedback" role="alert">
-                                            <strong>{{ $message }}</strong>
-                                        </span>
-                                        @enderror
-                                    </div>
-
-
-
-                            </div>
-
-
-                        </div>
-
-
-
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                            <input type="submit" class="btn btn-primary">
-                        </div>
-                    </form>
-                    </div>
-                    <!-- /.modal-content -->
+                <div class="btn-group pull-right" style="margin-right: 10px">
+                    <a class="btn btn-sm btn-twitter" title="Exporter"><i class="fa fa-download"></i><span class="hidden-xs"> Exporter</span></a>
+                    <button type="button" class="btn btn-sm btn-twitter dropdown-toggle" data-toggle="dropdown">
+                        <span class="caret"></span>
+                        <span class="sr-only">Toggle Dropdown</span>
+                    </button>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="/admin/jo/certifications?_export_=all" target="_blank">Tous</a></li>
+                        <li><a href="/admin/jo/certifications?_export_=page%3A1" target="_blank">La page actuelle</a></li>
+                        <li><a href="/admin/jo/certifications?_export_=selected%3A__rows__" target="_blank" class="export-selected">Les lignes sélectionnées</a></li>
+                    </ul>
                 </div>
 
-                <!-- /.modal-dialog -->
+                <div class="btn-group pull-right" style="margin-right: 10px">
+                    <a href="{{ route('carburant.create') }}" class="btn btn-sm btn-success" title="Nouveau">
+                        <i class="fa fa-save"></i><span class="hidden-xs">&nbsp;&nbsp;Nouveau</span>
+                    </a>
+                </div>
+
             </div>
+            <span>
+                <a href="{{ route('carburant.index') }}" class="btn btn-sm btn-primary grid-refresh" title="Rafraîchir"><i class="fa fa-refresh"></i><span class="hidden-xs"> Rafraîchir</span></a> <div class="btn-group" style="margin-right: 10px" data-toggle="buttons">
+                    <label class="btn btn-sm btn-dropbox 5daed26c39e34-filter-btn " title="Filtre">
+                        <input type="checkbox"><i class="fa fa-filter"></i><span class="hidden-xs">&nbsp;&nbsp;Filtre</span>
+                    </label>
 
-            <!-- /.box-header -->
-            <div class="box-body no-padding">
-                <table class="table table-bordered  table-striped">
-                    <tbody>
-                        <tr>
-                            <th>Nom Operateur</th>
-                            <th>Mail</th>
-                            <th>Téléphone</th>
-                            <th>Fonction</th>
-                            <th>Rôle</th>
-                            <th>Action</th>
-                        </tr>
-                        <tr>
-                            <td>fofana</td>
-                            <td>BMW</td>
-                            <td>05 02 74 06 </td>
-                            <td>utilisateur</td>
-                            <td>users</td>
-                            <td style="letter-spacing: 3px;text-align:center;">
-
-                                <a href="#" class="fa fa-eye">
-
-                                </a>
-                                <a href="#" class="fa fa-pencil">
-
-                                </a>
-                                <a href="#" class="red fa fa-trash">
-
-                                </a>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td> </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td> </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td> </td>
-                            <td></td>
-                            <td></td>
-
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td> </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
-                        </tr>
-
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td> </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
-
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-            <!-- /.box-body -->
+                </div>
+            </span>
         </div>
 
+        <div class="box-header with-border hide" id="filter-box">
+            <form action="http://197.159.206.237/admin/jo/certifications" class="form-horizontal" pjax-container="" method="get">
 
-    </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box-body">
+                            <div class="fields-group">
+                                <div class="form-group is-empty">
+                                    <label class="col-sm-2 control-label"> Nom</label>
+                                    <div class="col-sm-8">
+                                        <div class="input-group input-group-sm">
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-pencil"></i>
+                                            </div>
+
+                                            <input type="text" class="form-control name" placeholder="Nom" name="name" value="">
+                                        </div>    </div>
+                                    </div>
+                                    <div class="form-group is-empty">
+                                        <label class="col-sm-2 control-label"> Matricule</label>
+                                        <div class="col-sm-8">
+                                            <div class="input-group input-group-sm">
+                                                <div class="input-group-addon">
+                                                    <i class="fa fa-pencil"></i>
+                                                </div>
+
+                                                <input type="text" class="form-control matricule" placeholder="Matricule" name="matricule" value="">
+                                            </div>    </div>
+                                        </div>
+                                        <div class="form-group is-empty">
+                                            <label class="col-sm-2 control-label"> Type</label>
+                                            <div class="col-sm-8">
+                                                <div class="input-group input-group-sm">
+                                                    <div class="input-group-addon">
+                                                        <i class="fa fa-pencil"></i>
+                                                    </div>
+
+                                                    <input type="text" class="form-control roles_id" placeholder="Type" name="roles[id]" value="">
+                                                </div>    </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /.box-body -->
+
+                            <div class="box-footer">
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="col-md-2"></div>
+                                        <div class="col-md-8">
+                                            <div class="btn-group pull-left">
+                                                <button class="btn btn-info submit btn-sm"><i class="fa fa-search"></i>&nbsp;&nbsp;Chercher</button>
+                                            </div>
+                                            <div class="btn-group pull-left " style="margin-left: 10px;">
+                                                <a href="http://197.159.206.237/admin/jo/certifications" class="btn btn-default btn-sm"><i class="fa fa-undo"></i>&nbsp;&nbsp;Réinitialiser</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>*
+
+                    <!-- /.box-header -->
+                    <div class="box-body table-responsive no-padding">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th> </th>
+                                    <th>Création</th>
+                                    <th>Nom</th>
+                                    <th>Prénom</th>
+                                    <th>Matricule</th>
+                                    <th>Numéro de téléphone</th>
+                                    <th>Email</th>
+                                    <th>ASE</th>
+                                    <th>Qualification</th>
+                                    <th>Role</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+
+                            <tbody>
+                            </tbody>
+                        </table>
+
+                    </div>
+                    <div class="box-footer clearfix">
+                        <b></b> à <b></b> de <b>0</b> lignes<ul class="pagination pagination-sm no-margin pull-right">
+                            <!-- Previous Page Link -->
+                            <li class="page-item disabled"><span class="page-link">«</span></li>
+
+                            <!-- Pagination Elements -->
+                            <!-- "Three Dots" Separator -->
+
+                            <!-- Array Of Links -->
+                            <li class="page-item active"><span class="page-link">1</span></li>
+
+                            <!-- Next Page Link -->
+                            <li class="page-item disabled"><span class="page-link">»</span></li>
+                        </ul>
+
+                        <label class="control-label pull-right" style="margin-right: 10px; font-weight: 100;">
+
+                            <small>Affiche</small>&nbsp;
+                            <select class="input-sm grid-per-pager" name="per-page">
+                                <option value="http://197.159.206.237/admin/jo/certifications?per_page=10">10</option>
+                                <option value="http://197.159.206.237/admin/jo/certifications?per_page=20" selected="">20</option>
+                                <option value="http://197.159.206.237/admin/jo/certifications?per_page=30">30</option>
+                                <option value="http://197.159.206.237/admin/jo/certifications?per_page=50">50</option>
+                                <option value="http://197.159.206.237/admin/jo/certifications?per_page=100">100</option>
+                            </select>
+                            &nbsp;<small>lignes</small>
+                        </label>
+
+                    </div>
+                    <!-- /.box-body -->
+                </div>
+            </div>
 
 
 
-    @stop
+
+            @stop

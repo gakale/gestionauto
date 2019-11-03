@@ -70,13 +70,13 @@
                         <!-- User Account: style can be found in dropdown.less -->
                         <li class="dropdown user user-menu">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                                <img src="dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
+                                <img src="../dist/img/user2-160x160.jpg" class="user-image" alt="User Image">
                                 <span class="hidden-xs">Mediatec</span>
                             </a>
                             <ul class="dropdown-menu">
                                 <!-- User image -->
                                 <li class="user-header">
-                                    <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                                    <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
 
                                     <p>
                                         Mediatec - Web Developer
@@ -124,7 +124,7 @@
                 <!-- Sidebar user panel -->
                 <div class="user-panel">
                     <div class="pull-left image">
-                        <img src="dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
+                        <img src="../dist/img/user2-160x160.jpg" class="img-circle" alt="User Image">
                     </div>
                     <div class="pull-left info">
                         <p> Mediatec</p>
@@ -182,7 +182,7 @@
                             <li><a href="{{ route('mission.index') }}"><i class="fa fa-book"></i> Rédaction</a></li>
                             <li><a href="mencoure"><i class="fa fa-chain"></i> Mission en coure</a></li>
                             <li><a href="{{ route('course.index') }}"><i class="fa fa-calendar"></i>Course</a></li>
-                            <li><a href="course"><i class="fa fa-cc-paypal"></i>Courses en coure</a></li>
+                            <li><a href="cencoure"><i class="fa fa-cc-paypal"></i>Courses en coure</a></li>
 
                         </ul>
                     </li>
@@ -232,12 +232,12 @@
 
                             </ul>
                         </li>
-                        <li><a href="assurance"><i class="fa fa-users"></i> <span>Assurance</span></a></li>
+                        <li><a href="{{ route('assurance.index') }}"><i class="fa fa-users"></i> <span>Assurance</span></a></li>
 
                         <li><a href="documents"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
                         <li class="header">LABELS</li>
-                        <li><a href="carburant"><i class="fa fa-thermometer-full text-red"></i> <span>CARBURANT</span></a></li>
-                        <li><a href="stock"><i class="fa fa-share text-yellow"></i> <span>STOCK</span></a></li>
+                        <li><a href="{{ route('carburant.index') }}"><i class="fa fa-thermometer-full text-red"></i> <span>CARBURANT</span></a></li>
+                        <li><a href="{{ route('stock.index') }}"><i class="fa fa-share text-yellow"></i> <span>STOCK</span></a></li>
                         <li><a href="maps"><i class="fa fa-map text-aqua"></i> <span>GPS</span></a></li>
                     </ul>
                 </section>

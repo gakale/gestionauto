@@ -24,7 +24,7 @@ class CourseController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin\coursecreate');
     }
 
     /**
@@ -110,5 +110,11 @@ class CourseController extends Controller
     public function destroy(Course $course)
     {
         //
+    }
+
+    public function cencoure(){
+
+
+        return view('admin\cencoure');
     }
 }

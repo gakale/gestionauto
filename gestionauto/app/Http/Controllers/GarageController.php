@@ -14,7 +14,7 @@ class GarageController extends Controller
      */
     public function index()
     {
-        //
+       return view('admin\garage');
     }
 
     /**

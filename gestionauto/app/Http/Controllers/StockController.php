@@ -14,7 +14,7 @@ class StockController extends Controller
      */
     public function index()
     {
-        //
+        return view('admin\stock');
     }
 
     /**
@@ -35,7 +35,38 @@ class StockController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = request()->validate([
+
+            'nameprod' => ['required'],
+            'designation' => ['required'],
+            'stock' => ['required'],
+            'prix' => ['required'],
+            'date' => ['required','date'],
+            'quantentre' => ['required'],
+            'quantsortie' => ['required'],
+            'stockfinal' => ['required'],
+            'recupaiement' => ['required']
+
+        ]);
+
+        $recupaiement = request('recupaiement')->store('uploads','public');
+
+        Stock::create([
+
+            'nameprod'=> $data['nameprod'],
+
+            'designation'=> $data['designation'],
+
+            'stock'=> $data['stock'],
+            'prix' => $data['prix'],
+            'date'=> $data['date'],
+            'quantentre'=> $data['quantentre'],
+            'quantsortie'=> $data['quantsortie'],
+            'stockfinal'=> $data['stockfinal'],
+            'recupaiement'=> $recupaiement, 
+
+        ]);
+
     }
 
     /**

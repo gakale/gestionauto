@@ -14,7 +14,7 @@ class MaintenanceController extends Controller
      */
     public function index()
     {
-        return view('admin\panne');
+        return view('admin\maintenance');
     }
 
     /**
@@ -24,7 +24,7 @@ class MaintenanceController extends Controller
      */
     public function create()
     {
-        return view('admin/pannecreate');
+        return view('admin\maintenancecreate');
     }
 
     /**
@@ -35,7 +35,11 @@ class MaintenanceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = request()->validate([
+
+
+            'imatriculation'=> ['required']
+        ]);
     }
 
     /**

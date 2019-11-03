@@ -23,26 +23,10 @@ Route::get('/users','AdminController@users')->name('users');
 
 
 
-Route::get('/carburant','AdminController@carburant')->name('carburant');
-
-
-
-
-
-
-
-
-Route::get('/course','AdminController@course');
-
-
 Route::get('/mail','AdminController@mail')->name('mail');
 
 
-Route::get('/panne','AdminController@panne')->name('panne');
 
-
-
-Route::get('/' , 'LoginsController@login')->name('login');
 
 Route::get('/mdpassoublie' , 'LoginsController@mdpassoublie')->name('mdpassoublie');
 
@@ -50,11 +34,15 @@ Route::get('/mdpassoublie' , 'LoginsController@mdpassoublie')->name('mdpassoubli
 
 
 
+// route carburant
+
+
+Route::resource('carburant', 'CarburantController');
+
+
 
 
 // route personnel
-
-
 
 Route::resource('personnel', 'PersonnelController');
 
@@ -109,3 +97,24 @@ Route::resource('/vehicule', 'VehiculeController');
 //Route Maintenance
 
 Route::resource('/maintenance', 'MaintenanceController');
+
+
+
+//route STOCK
+
+Route::resource('stock', 'StockController');
+
+
+
+// Route course en course
+
+
+Route::get('cencoure','CourseController@cencoure');
+
+
+
+
+// ROUTE logins
+
+
+Route::resource('/', 'LoginsController');

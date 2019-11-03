@@ -14,17 +14,15 @@ class CarburantController extends Controller
      */
     public function index()
     {
-        //
-    }
-
-    /**
+            return view('admin\carburant');
+    }    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
      */
     public function create()
     {
-        //
+        return view('admin\carburantcreate');
     }
 
     /**
@@ -35,7 +33,41 @@ class CarburantController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = request()->validate([
+
+
+            'nomstation'=> ['required'],
+            'designation'=> ['required'],
+            'litrage'=> ['required'],
+            'montant'=> ['required'],
+            'quantite'=> ['required'],
+            'date' => ['required','date'],
+            'avantrecharge'=> ['required'],
+            'apresrecharge'=> ['required'],
+            'vehicule'=> ['required'],
+            'paiement'=> ['required', 'image']
+
+        ]);
+
+        $paiement = request('paiement')->store('uploads','public');
+
+
+        Carburant::create([
+            'nomstation'=> $data['nomstation'],
+            'description'=> $data['description'],
+            'litrage'=> $data['litrage'],
+            'montant'=> $data['montant'],
+            'quantite'=> $data['quantite'],
+            'date'=> $data['date'],
+            'avantrecharge'=> $data['avantrecharge'],
+            'apresrecharge'=> $data['apresrecharge'],
+            'vehicule'=> $data['vehicule'],
+            'paiement'=> $paiement,
+        ]);
+
+
+
+
     }
 
     /**

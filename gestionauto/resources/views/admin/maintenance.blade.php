@@ -1,9 +1,9 @@
 
 @extends('../admins/layouts')
 @section('content')
-@section('grand-text','gestion des Vehicule')
+@section('grand-text','gestion des missions')
 @section('grands','Tableau de Bord')
-@section('petit-text','Vehicule')
+@section('petit-text','Mission')
 
 
 <div class="container-fluid">
@@ -26,7 +26,7 @@
                 </div>
 
                 <div class="btn-group pull-right" style="margin-right: 10px">
-                    <a href="{{ route('vehicule.create') }}" class="btn btn-sm btn-success" title="Nouveau">
+                    <a href="{{ route('maintenance.create') }}" class="btn btn-sm btn-success" title="Nouveau">
                         <i class="fa fa-save"></i><span class="hidden-xs">&nbsp;&nbsp;Nouveau</span>
                     </a>
                 </div>
@@ -113,13 +113,16 @@
                             <thead>
                                 <tr>
                                     <th> </th>
-                                    <th>Imatriculation</th>
-                                    <th>Modèle</th>
-                                    <th>Utilisation</th>
-                                    <th>Date</th>
-                                    <th>Etat</th>
+                                    <th>Création</th>
+                                    <th>Nom</th>
+                                    <th>Prénom</th>
+                                    <th>Matricule</th>
+                                    <th>Numéro de téléphone</th>
                                     <th>Email</th>
-                                        <th>Action</th>
+                                    <th>ASE</th>
+                                    <th>Qualification</th>
+                                    <th>Role</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
 

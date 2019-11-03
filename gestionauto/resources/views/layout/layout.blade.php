@@ -180,9 +180,9 @@
           </a>
           <ul class="treeview-menu">
             <li><a href="{{ route('mission.index') }}"><i class="fa fa-book"></i> Rédaction</a></li>
-            <li><a href="mencoure"><i class="fa fa-chain"></i> Mission en coure</a></li>
+            <li><a href="mencoure"><i class="fa fa-chain"></i> Mission encoure</a></li>
             <li><a href="course"><i class="fa fa-calendar"></i>Course</a></li>
-            <li><a href="cencoure"><i class="fa fa-cc-paypal"></i>Courses en coure</a></li>
+            <li><a href="cencoure"><i class="fa fa-cc-paypal"></i>Courses encoure</a></li>
 
           </ul>
         </li>
@@ -237,7 +237,7 @@
         <li><a href="documents"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
         <li class="header">LABELS</li>
         <li><a href="carburant"><i class="fa fa-thermometer-full text-red"></i> <span>CARBURANT</span></a></li>
-        <li><a href="stock"><i class="fa fa-share text-yellow"></i> <span>STOCK</span></a></li>
+        <li><a href="{{ route('stock.index') }}"><i class="fa fa-share text-yellow"></i> <span>STOCK</span></a></li>
         <li><a href="maps"><i class="fa fa-map text-aqua"></i> <span>GPS</span></a></li>
       </ul>
     </section>

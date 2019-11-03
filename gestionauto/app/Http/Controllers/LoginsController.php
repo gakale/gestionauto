@@ -1,10 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-use Carbon\Carbon;
+use App\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
-class Usercontroller extends Controller
+class LoginsController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -13,7 +14,7 @@ class Usercontroller extends Controller
      */
     public function index()
     {
-        return view('admin\operateur');
+        return view('login\login');
     }
 
     /**
@@ -34,47 +35,27 @@ class Usercontroller extends Controller
      */
     public function store(Request $request)
     {
-        $date = Carbon::Now();
+        try {
+            $user = User::where('name', $request->name)
+                ->orWhere('email', $request->email)
+                ->first();
 
-        $data = request()->validate([
+            if ($user) {
+                if (\Hash::check($request->password, $user->password)) {
+                    auth()->login($user, $request->has('remember'));
 
-         'name' => ['required', 'min:3'],
-         'prenom'=> ['required','min:3'],
-         'login'=> ['required','min:6'],
-         'email' => ['required', 'email'],
-         'password' => ['required' ,],
-         'fonction' => ['required'],
-         'telephone' => ['required'],
-         'cni' => ['required', 'image'],
-         'date' => ['required','date'],
-         'role' => ['required']
-         ]);
+                    if (auth()->user()->isAdmin())
+                        return redirect('dashboard/dashboard');
 
+                    return redirect('/dashboard');
+                }
+                return $this->messageError($request);
+            }
+            return $this->messageError($request);
+        } catch (Exception $e) {
+            echo 'Exception reçue : ', $e->getMessage(), "\n";
 
-         
-         $cniPath = request('cni')->store('uploads','public');
-
-
-         $officialDate = Carbon::now();
-
-
-            operateur::create([
-             'name' => $data['name'],
-             'prenom'=> $data['prenom'],
-             'login'=> $data['login'],
-             'email' => $data['email'],
-             'password' => bcrypt($data['password']),
-             'fonction'=> $data['fonction'],
-             'telephone' => $data['telephone'],
-             'cni' => $cniPath,
-             'date'=> $data['date'],
-             'role' => $data['role'],
-
-             'at_year'=> $officialDate
-
-
-         ]);
-
+        }
     }
 
     /**
@@ -119,6 +100,20 @@ class Usercontroller extends Controller
      */
     public function destroy($id)
     {
-        //
+       
+        auth()->logout();
+
+
+        return redirect('/');
+    }
+
+    public function messageError($request)
+    {
+        return back()->with([
+            'color' => 'red',
+            'message' => "Identifiant incorrect!"
+        ])->withInput([
+            'name' => $request->name,
+        ]);
     }
 }

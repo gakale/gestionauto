@@ -1,13 +1,13 @@
 
 @extends('layout.layout')
 @section('content')
-@section('grand-text','gestion des Encoure')
+@section('grand-text','gestion des Course Encoure')
 @section('grands','Tableau de Bord')
-@section('petit-text','Encoure')
+@section('petit-text','Course Encoure')
 <div class="container-fluid">
 <div class="box">
         <div class="box-header">
-          <h3 class="box-title">Les Mission Encoure</h3>
+          <h3 class="box-title">Les Course Encoure</h3>
 
           <div class="box-tools">
             <div class="input-group input-group-sm" style="width: 150px;">

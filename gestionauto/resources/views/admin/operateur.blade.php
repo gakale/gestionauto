@@ -113,8 +113,8 @@
                             <thead>
                                 <tr>
                                     <th> </th>
-                                    <th>Création</th>
-                                    <th>Nom</th>
+                                    <th>Nom Login</th>
+                                    <th>Email</th>
                                     <th>Prénom</th>
                                     <th>Matricule</th>
                                     <th>Numéro de téléphone</th>
@@ -173,4 +173,4 @@
 
 
 
-            @stop
+        @stop

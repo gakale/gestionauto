@@ -12,6 +12,18 @@
 */
 
 
+
+
+// ROUTE logins
+
+
+Route::resource('/login', 'LoginsController');
+
+
+
+
+
+
 Route::get('/dashboard','AdminController@index')->name('dash');
 
 
@@ -113,8 +125,3 @@ Route::get('cencoure','CourseController@cencoure');
 
 
 
-
-// ROUTE logins
-
-
-Route::resource('/', 'LoginsController');

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
-
+use App\User;
 class Usercontroller extends Controller
 {
     /**
@@ -23,7 +23,7 @@ class Usercontroller extends Controller
      */
     public function create()
     {
-        //
+        return view('admin\operateurcreate');
     }
 
     /**
@@ -51,14 +51,14 @@ class Usercontroller extends Controller
          ]);
 
 
-         
+
          $cniPath = request('cni')->store('uploads','public');
 
 
          $officialDate = Carbon::now();
 
 
-            operateur::create([
+            User::create([
              'name' => $data['name'],
              'prenom'=> $data['prenom'],
              'login'=> $data['login'],
@@ -74,6 +74,7 @@ class Usercontroller extends Controller
 
 
          ]);
+
 
     }
 

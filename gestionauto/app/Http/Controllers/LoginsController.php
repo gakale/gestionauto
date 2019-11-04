@@ -35,26 +35,11 @@ class LoginsController extends Controller
      */
     public function store(Request $request)
     {
-        try {
-            $user = User::where('name', $request->name)
-                ->orWhere('email', $request->email)
-                ->first();
+        $credentials = $request->only('email', 'password');
 
-            if ($user) {
-                if (\Hash::check($request->password, $user->password)) {
-                    auth()->login($user, $request->has('remember'));
-
-                    if (auth()->user()->isAdmin())
-                        return redirect('dashboard/dashboard');
-
-                    return redirect('/dashboard');
-                }
-                return $this->messageError($request);
-            }
-            return $this->messageError($request);
-        } catch (Exception $e) {
-            echo 'Exception reçue : ', $e->getMessage(), "\n";
-
+        if (Auth::attempt($credentials)) {
+            // Authentication passed...
+            return redirect()->intended('dashboard');
         }
     }
 
@@ -100,7 +85,7 @@ class LoginsController extends Controller
      */
     public function destroy($id)
     {
-       
+
         auth()->logout();
 
 

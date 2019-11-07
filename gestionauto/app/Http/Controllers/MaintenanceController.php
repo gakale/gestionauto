@@ -39,7 +39,10 @@ class MaintenanceController extends Controller
 
 
             'imatriculation'=> ['required']
+
         ]);
+
+        Maintenance::create([]);
     }
 
     /**

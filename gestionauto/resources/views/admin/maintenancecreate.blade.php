@@ -34,7 +34,7 @@
                             <div class="col-sm-8">
 
                                 <select class="form-control select2" style="width: 100%;" name="imatriculation" data-value="" tabindex="-1" aria-hidden="true">
-                                    <option value="">Fofana</option>
+                                    <option value="Fofana">Fofana</option>
                                     <option value="">gnakale</option>
 
                                 </select>
@@ -48,21 +48,21 @@
 
                             <div class="col-sm-8">
 
-                                <select class="form-control select2" style="width: 100%;" name="action" data-value="" tabindex="-1" aria-hidden="true">
-                                    <option value="are-brise"> pare-brise</option>
+                                <select class="form-control select2" style="width: 100%;" name="action" data-value="" tabindex="-1" aria-hidden="true" multiple="multiple">
+                                    <option value="pare-brise"> pare-brise</option>
                                     <option value="pare-soleil intérieur">pare-soleil intérieur</option>
                                     <option value="vitres latérales, lunette arrière">vitres latérales, lunette arrière</option>
-                                    <option value="">rétroviseur intérieur</option>
-                                    <option value=""> sièges et banquettes</option>
-                                    <option value=""> ceinture de sécurité</option>
-                                    <option value=""> coussins gonflables (état, témoin)</option>
-                                    <option value=""> lampes témoins (fonctionnement)</option>
-                                    <option value=""> moteur en marche</option>
-                                    <option value="">volant (jeu)</option>
-                                    <option value=""> démarrage au neutre</option>
-                                    <option value="">commande d’accélérateur</option>
-                                    <option value="">commande d’embrayage</option>
-                                    <option value="">commande de freins</option>
+                                    <option value="rétroviseur intérieur">rétroviseur intérieur</option>
+                                    <option value="sièges et banquettes"> sièges et banquettes</option>
+                                    <option value="ceinture de sécurité"> ceinture de sécurité</option>
+                                    <option value="coussins gonflables (état, témoin)"> coussins gonflables (état, témoin)</option>
+                                    <option value="lampes témoins (fonctionnement)"> lampes témoins (fonctionnement)</option>
+                                    <option value="moteur en marche"> moteur en marche</option>
+                                    <option value="volant (jeu)">volant (jeu)</option>
+                                    <option value="démarrage au neutre"> démarrage au neutre</option>
+                                    <option value="commande d’accélérateur">commande d’accélérateur</option>
+                                    <option value="commande d’embrayage">commande d’embrayage</option>
+                                    <option value="commande de freins">commande de freins</option>
                                     <option value="">frein de service</option>
                                     <option value="">freins de stationnement</option>
                                     <option value="">course de la pédale de frein</option>
@@ -74,7 +74,7 @@
                                     <option value="">avertisseur sonore (klaxon)</option>
                                     <option value="">feux de jour</option>
                                     <option value="">phares de route</option>
-                                    <option value="">phares de croisement</option>
+                                    <option value="phares de croisement">phares de croisement</option>
                                     <option value="">feux de direction</option>
                                     <option value="">feux d’arrêt</option>
                                     <option value="">feux de position</option>

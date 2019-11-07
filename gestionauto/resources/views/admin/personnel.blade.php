@@ -1,9 +1,9 @@
 
 @extends('../admins/layouts')
 @section('content')
-@section('grand-text','gestion des Vehicule')
+@section('grand-text','gestion des Personnel')
 @section('grands','Tableau de Bord')
-@section('petit-text','Vehicule')
+@section('petit-text','Personnel')
 
 
 <div class="container-fluid">
@@ -41,7 +41,7 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th> </th>
+                        <th>1</th>
                         <th>Imatriculation</th>
                         <th>Modèle</th>
                         <th>Utilisation</th>
@@ -53,6 +53,33 @@
                 </thead>
 
                 <tbody>
+                <tr>
+                 <td>salue</td>
+
+                  <td>salue</td>
+
+                  <td>salue</td>
+                  <td>salue</td>
+                  <td>salue</td>
+
+                  <td>salue</td>
+                  <td>salue</td>
+                  <td>
+                  <a href="#" class="fa fa-eye">
+
+                                </a>
+                                <a href="#" class="fa fa-pencil">
+
+                                </a>
+                                <a href="#" class="red fa fa-trash"></td>
+                                
+                 
+                </tr>
+
+                 <tr>
+                
+                </tr>
+                   
                 </tbody>
             </table>
 

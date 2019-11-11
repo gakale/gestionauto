@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Fournisseur;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class FournisseurController extends Controller
@@ -14,7 +15,15 @@ class FournisseurController extends Controller
      */
     public function index()
     {
-        return view('admin\fournisseur');
+       
+        $fournisseur = DB::table('fournisseurs')->orderBy('created_at','DESC')->paginate(10);
+
+
+        
+        return view('admin\fournisseur', [
+
+            'fournisseur'=> $fournisseur
+        ]);
     }
 
     /**

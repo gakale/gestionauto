@@ -35,14 +35,23 @@ class MaintenanceController extends Controller
      */
     public function store(Request $request)
     {
+        
         $data = request()->validate([
 
-
-            'imatriculation'=> ['required']
+            'imatriculation' => ['required'],
+            'action' => ['required'],
+            'prixaction' => ['required'],
+            'garage'=> ['required'],
+            'panne_chauffeur' => ['required'],
+            'date' => ['required'],
+            'recupanne'=> ['image']
 
         ]);
 
-        Maintenance::create([]);
+        
+
+            
+       
     }
 
     /**

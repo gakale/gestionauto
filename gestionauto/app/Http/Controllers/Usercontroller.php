@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Carbon\Carbon;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 use App\User;
 class Usercontroller extends Controller
 {
@@ -13,7 +14,14 @@ class Usercontroller extends Controller
      */
     public function index()
     {
-        return view('admin\operateur');
+        $users = DB::table('users')->orderBy('created_at','DESC')->paginate(10);
+
+
+        
+        return view('admin\operateur', [
+
+            'users'=> $users
+        ]);
     }
 
     /**
@@ -86,7 +94,7 @@ class Usercontroller extends Controller
      */
     public function show($id)
     {
-        //
+        return view('admin\operateurview');
     }
 
     /**

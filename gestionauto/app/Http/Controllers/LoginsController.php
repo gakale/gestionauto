@@ -14,6 +14,8 @@ class LoginsController extends Controller
      */
     public function index()
     {
+       
+
         return view('login\login');
     }
 
@@ -51,7 +53,7 @@ class LoginsController extends Controller
      */
     public function show($id)
     {
-        //
+       //
     }
 
     /**

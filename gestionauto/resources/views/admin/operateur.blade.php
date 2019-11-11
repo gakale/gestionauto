@@ -13,7 +13,7 @@
             <div class="pull-right">
 
                 <div class="btn-group pull-right" style="margin-right: 10px">
-                    <a class="btn btn-sm btn-twitter" title="Exporter"><i class="fa fa-download"></i><span class="hidden-xs"> Exporter</span></a>
+                    <a  class="btn btn-sm btn-twitter" title="Exporter"><i class="fa fa-download"></i><span class="hidden-xs"> Exporter</span></a>
                     <button type="button" class="btn btn-sm btn-twitter dropdown-toggle" data-toggle="dropdown">
                         <span class="caret"></span>
                         <span class="sr-only">Toggle Dropdown</span>
@@ -33,7 +33,7 @@
 
             </div>
             <span>
-                <a class="btn btn-sm btn-primary grid-refresh" title="Rafraîchir"><i class="fa fa-refresh"></i><span class="hidden-xs"> Rafraîchir</span></a> <div class="btn-group" style="margin-right: 10px" data-toggle="buttons">
+                <a href="{{route('user.index')}}" class="btn btn-sm btn-primary grid-refresh" title="Rafraîchir"><i class="fa fa-refresh"></i><span class="hidden-xs"> Rafraîchir</span></a> <div class="btn-group" style="margin-right: 10px" data-toggle="buttons">
                     <label class="btn btn-sm btn-dropbox 5daed26c39e34-filter-btn " title="Filtre">
                         <input type="checkbox"><i class="fa fa-filter"></i><span class="hidden-xs">&nbsp;&nbsp;Filtre</span>
                     </label>
@@ -112,15 +112,10 @@
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th> </th>
-                                    <th>Nom Login</th>
+                                  
+                                    <th>Nom</th>
                                     <th>Email</th>
-                                    <th>Prénom</th>
-                                    <th>Matricule</th>
-                                    <th>Numéro de téléphone</th>
-                                    <th>Email</th>
-                                    <th>ASE</th>
-                                    <th>Qualification</th>
+                                    <th>login</th>
                                     <th>Role</th>
                                     <th>Action</th>
                                 </tr>
@@ -128,11 +123,37 @@
 
                                 
                             </thead>
-
+                       
+                            
+                        
                             <tbody>
-                            </tbody>
-                        </table>
+                     @foreach($users as $user)
 
+                                        <tr>
+                                            <td>{{$user->name}}</td>
+                                            <td>{{$user->email}}</td>
+                                            <td>{{$user->login}}</td>
+                                            <td>{{$user->telephone}}</td>
+                                            <td>
+                                            <a href="#">
+                                                    <i class="fa fa-eye"></i>
+                                                </a>
+                                                <a href="/" >
+                                                    <i class="fa fa-trash"></i>
+                                                </a>
+                                                <a href="{{url('facture/'.$user->id)}}" >
+                                                    <i class="fa fa-print"></i>
+                                                </a>
+                                                </td>
+                                        </tr>
+
+                                        </tr>
+                                    @endforeach
+              
+                            </tbody>
+
+                         
+                        </table>
                     </div>
 
 

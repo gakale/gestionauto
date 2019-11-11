@@ -1,9 +1,9 @@
 
 @extends('../admins/layouts')
 @section('content')
-@section('grand-text','gestion des missions')
+@section('grand-text','gestion des Maintenance')
 @section('grands','Tableau de Bord')
-@section('petit-text','Mission')
+@section('petit-text','Maintenance')
 
 
 <div class="container-fluid">
@@ -69,8 +69,9 @@
                                                 </div>
 
                                                 <input type="text" class="form-control matricule" placeholder="Matricule" name="matricule" value="">
-                                            </div>    </div>
-                                        </div>
+                                            </div>   
+                                            </div>
+                                    </div>
                                         <div class="form-group is-empty">
                                             <label class="col-sm-2 control-label"> Type</label>
                                             <div class="col-sm-8">
@@ -170,4 +171,4 @@
 
 
 
-            @stop
+  @stop

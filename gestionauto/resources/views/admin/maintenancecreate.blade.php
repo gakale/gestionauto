@@ -1,9 +1,9 @@
 
 @extends('../admins/layouts')
 @section('content')
-@section('grand-text','gestion des missions')
+@section('grand-text','gestion des maintenances')
 @section('grands','Tableau de Bord')
-@section('petit-text','Mission')
+@section('petit-text','Maintenance')
 <div class="container-fluid">
     <div class="col-md-12">
         <div class="box box-info">
@@ -35,7 +35,7 @@
 
                                 <select class="form-control select2" style="width: 100%;" name="imatriculation" data-value="" tabindex="-1" aria-hidden="true">
                                     <option value="Fofana">Fofana</option>
-                                    <option value="">gnakale</option>
+                                    <option value="gnakale">gnakale</option>
 
                                 </select>
 
@@ -48,7 +48,7 @@
 
                             <div class="col-sm-8">
 
-                                <select class="form-control select2" style="width: 100%;" name="action" data-value="" tabindex="-1" aria-hidden="true" multiple="multiple">
+                                <select class="form-control select2" style="width: 100%;" name="action[]" data-value="" tabindex="-1" aria-hidden="true" multiple="multiple">
                                     <option value="pare-brise"> pare-brise</option>
                                     <option value="pare-soleil intérieur">pare-soleil intérieur</option>
                                     <option value="vitres latérales, lunette arrière">vitres latérales, lunette arrière</option>
@@ -63,8 +63,8 @@
                                     <option value="commande d’accélérateur">commande d’accélérateur</option>
                                     <option value="commande d’embrayage">commande d’embrayage</option>
                                     <option value="commande de freins">commande de freins</option>
-                                    <option value="">frein de service</option>
-                                    <option value="">freins de stationnement</option>
+                                    <option value="frein de service">frein de service</option>
+                                    <option value="freins de stationnement">freins de stationnement</option>
                                     <option value="">course de la pédale de frein</option>
                                     <option value="">essuie-glaces (fonctionnement)</option>
                                     <option value="">lave-glace (fonctionnement)</option>
@@ -150,8 +150,8 @@
                             <div class="col-sm-8">
 
                                 <select class="form-control select2" style="width: 100%;" name="garage" data-value="" tabindex="-1" aria-hidden="true">
-                                    <option value="">Fofana</option>
-                                    <option value="">gnakale</option>
+                                    <option value="Fofana">Fofana</option>
+                                    <option value="gnakale">gnakale</option>
 
                                 </select>
 
@@ -165,8 +165,8 @@
                                 <div class="col-sm-8">
 
                                     <select class="form-control select2" style="width: 100%;" name="panne_chauffeur" data-value="" tabindex="-1" aria-hidden="true">
-                                        <option value="">Fofana</option>
-                                        <option value="">gnakale</option>
+                                        <option value="Fofana">Fofana</option>
+                                        <option value="gnakale">gnakale</option>
 
                                     </select>
 

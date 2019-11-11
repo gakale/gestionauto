@@ -14,6 +14,10 @@ class PersonnelController extends Controller
      */
     public function index()
     {
+
+        $personnel = Personnel::all();
+
+        
         return view('admin\personnel');
 
     }

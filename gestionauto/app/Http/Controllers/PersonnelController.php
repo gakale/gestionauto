@@ -15,10 +15,15 @@ class PersonnelController extends Controller
     public function index()
     {
 
-        $personnel = Personnel::all();
+        $personnel = DB::table('personnels')->orderBy('created_at','DESC')->paginate(10);
+
 
         
-        return view('admin\personnel');
+        return view('admin\personnel', [
+
+            'users'=> $personnel
+        ]);
+        
 
     }
 

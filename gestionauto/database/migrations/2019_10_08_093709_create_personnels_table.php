@@ -19,6 +19,7 @@ class CreatePersonnelsTable extends Migration
             $table->string('prenom');
             $table->string('email');
             $table->string('fonction');
+            $table->string('telephone');
             $table->timestamps();
         });
     }

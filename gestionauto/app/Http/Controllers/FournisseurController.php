@@ -1,4 +1,4 @@
-.<?php
+<?php
 
 namespace App\Http\Controllers;
 
@@ -51,7 +51,7 @@ class FournisseurController extends Controller
             'telephone'=> ['required'],
             'email'=> ['required','min:3'],
             'cni'=> ['required'],
-            'depuis'=> ['required']
+            'date'=> ['required']
         ]);
 
         Fourniseur::create([
@@ -62,7 +62,7 @@ class FournisseurController extends Controller
             'telephone'=> $data['telephone'],
             'email'=> $data['email'],
             'cni'=> $data['cni'],
-            'depuis'=>$data['depuis'],
+            'date'=>$data['date'],
 
 
         ]);

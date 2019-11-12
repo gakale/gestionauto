@@ -70,7 +70,7 @@
                             <a href="/" >
                                 <i class="fa fa-trash"></i>
                             </a>
-                            <a href="{{url('facture/'.$user->id)}}" >
+                            <a href="{{url('facture/'.$chauffeurs->id)}}" >
                                 <i class="fa fa-print"></i>
                             </a>
                             </td>
@@ -146,14 +146,14 @@
 
                             <div class="form-group col-md-6">
                                 <label for="recipient-name" class="col-form-label">Adresse</label>
-                                <input name="adresse" type="password" class="form-control" id="recipient-name">
+                                <input name="adresse" type="text" class="form-control" id="recipient-name">
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="message-text" class="col-form-label">Téléphone</label>
                                 <input name="telephone" class="form-control" id="message-text">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="message-text" class="col-form-label">Email</label>
+                                <label for="message-text" class="col-form-label">E-mail</label>
                                 <input name="email" type="email" class="form-control" id="message-text">
                             </div>
                             <div class="form-group col-md-6">
@@ -167,7 +167,7 @@
                             </div>
                             <div class="form-group col-md-6">
                                 <label for="message-text" class="col-form-label">Categorie de permis </label>
-                                <select name="typepermis" class="form-control" id="message-text">
+                                <select name="typepermis" class="form-control @error('typepermis') is-invalid @enderror" id="message-text">
                                     <option value="">Permis A1</option>
                                     <option value="">Permis A2</option>
 

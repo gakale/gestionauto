@@ -53,17 +53,17 @@
                 @foreach($fournisseur as $fournisseurs)
 
                     <tr>
-                        <td>{{$chauffeurs->name}}</td>
-                        <td>{{$chauffeurs->localisation}}</td>
-                        <td>{{$chauffeurs->email}}</td>
-                        <td>{{$chauffeurs->telephone}}</td>
+                        <td>{{$fournisseurs->name}}</td>
+                        <td>{{$fournisseurs->localisation}}</td>
+                        <td>{{$fournisseurs->email}}</td>
+                        <td>{{$fournisseurs->telephone}}</td>
                         <a href="#">
                                 <i class="fa fa-eye"></i>
                             </a>
                             <a href="/" >
                                 <i class="fa fa-trash"></i>
                             </a>
-                            <a href="{{url('facture/'.$user->id)}}" >
+                            <a href="{{url('facture/'.$fournisseurs->id)}}" >
                                 <i class="fa fa-print"></i>
                             </a>
                             </td>
@@ -179,9 +179,9 @@
 
                             <div class="form-group col-md-6">
                                 <label for="message-text" class="col-form-label">Dépuis</label>
-                                <input  name="depuis" type="date" class="form-control @error('date') is-invalid @enderror" id="message-text">
+                                <input  name="date" type="date" class="form-control @error('date') is-invalid @enderror" id="message-text">
 
-                                @error('depuis')
+                                @error('date')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

@@ -1,7 +1,7 @@
 
 @extends('../admins/layouts')
 @section('content')
-@section('grand-text','gestion des Personnel')
+@section('grand-text','Gestion des Personnels')
 @section('grands','Tableau de Bord')
 @section('petit-text','Personnel')
 
@@ -41,46 +41,41 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th>1</th>
-                        <th>Imatriculation</th>
-                        <th>Modèle</th>
-                        <th>Utilisation</th>
-                        <th>Date</th>
-                        <th>Etat</th>
-                        <th>Email</th>
+                        <th>Nom Personnel</th>
+                        <th>Prénom Personnel</th>
+                        <th>E-mail</th>
+                        <th>Téléphone</th>
+                        <th>Fonction</th>
                         <th>Action</th>
                     </tr>
                 </thead>
 
                 <tbody>
-                <tr>
-                 <td>salue</td>
+                     @foreach($personnel as $personnels)
 
-                  <td>salue</td>
+                                        <tr>
+                                            <td>{{$personnels->name}}</td>
+                                            <td>{{$personnels->prenom}}</td>
+                                            <td>{{$personnels->email}}</td>
+                                            <td>{{$personnels->telephone}}</td>
+                                            <td>{{$personnels->fonction}}</td>
+                                            <td>
+                                            <a href="#">
+                                                    <i class="fa fa-eye"></i>
+                                                </a>
+                                                <a href="/" >
+                                                    <i class="fa fa-trash"></i>
+                                                </a>
+                                                <a href="{{url('facture/'.$user->id)}}" >
+                                                    <i class="fa fa-print"></i>
+                                                </a>
+                                                </td>
+                                        </tr>
 
-                  <td>salue</td>
-                  <td>salue</td>
-                  <td>salue</td>
-
-                  <td>salue</td>
-                  <td>salue</td>
-                  <td>
-                  <a href="#" class="fa fa-eye">
-
-                                </a>
-                                <a href="#" class="fa fa-pencil">
-
-                                </a>
-                                <a href="#" class="red fa fa-trash"></td>
-                                
-                 
-                </tr>
-
-                 <tr>
-                
-                </tr>
-                   
-                </tbody>
+                                        </tr>
+                                    @endforeach
+              
+                            </tbody>
             </table>
 
         </div>
@@ -127,7 +122,7 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
-                    <h2 class="modal-title">Nouveaux Personnel  </h2>
+                    <h2 class="modal-title">Nouveau Personnel  </h2>
                 </div>
                 <div class="modal-body">
                     <div class="row">
@@ -144,7 +139,7 @@
                                 @enderror
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="message-text" class="col-form-label">Prenom</label>
+                                <label for="message-text" class="col-form-label">Prénom</label>
                                 <input class="form-control @error('prenom') is-invalid @enderror" name="prenom" id="message-text">
 
                                 @error('prenom')
@@ -157,7 +152,7 @@
                             </div>
 
                             <div class="form-group col-md-6">
-                                <label for="message-text" class="col-form-label">Email</label>
+                                <label for="message-text" class="col-form-label">E-mail</label>
                                 <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="message-text">
 
                                 @error('email')

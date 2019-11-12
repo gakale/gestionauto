@@ -1,9 +1,9 @@
 
 @extends('../admins/layouts')
 @section('content')
-@section('grand-text','gestion des Operateur')
+@section('grand-text','Gestion des Opérateurs')
 @section('grands','Tableau de Bord')
-@section('petit-text','Operateur')
+@section('petit-text','Opérateur')
 
 
 <div class="container-fluid">
@@ -112,10 +112,11 @@
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                  
                                     <th>Nom</th>
-                                    <th>Email</th>
-                                    <th>login</th>
+                                    <th>Prénom</th>
+                                    <th>E-mail</th>
+                                    <th>Téléphone</th>
+                                    <th>Login</th>
                                     <th>Role</th>
                                     <th>Action</th>
                                 </tr>
@@ -131,9 +132,11 @@
 
                                         <tr>
                                             <td>{{$user->name}}</td>
+                                            <td>{{$user->prenom}}</td>
                                             <td>{{$user->email}}</td>
-                                            <td>{{$user->login}}</td>
                                             <td>{{$user->telephone}}</td>
+                                            <td>{{$user->login}}</td>
+                                            <td>{{$user->role}}</td>
                                             <td>
                                             <a href="#">
                                                     <i class="fa fa-eye"></i>

@@ -8,7 +8,7 @@
     <div class="col-md-12">
         <div class="box box-info">
             <div class="box-header with-border">
-                <h3 class="box-title">Nouvelle Operateur</h3>
+                <h3 class="box-title">Nouvel Opérateur</h3>
 
                 <div class="box-tools">
                     <div class="btn-group pull-right" style="margin-right: 5px">
@@ -29,7 +29,7 @@
 
                         <div class="form-group   is-empty">
 
-                            <label for="name" class="col-sm-2  control-label">Nom de l Operateur</label>
+                            <label for="name" class="col-sm-2  control-label">Nom Opérateur</label>
 
                             <div class="col-sm-8">
 
@@ -41,11 +41,11 @@
 
                           <div class="form-group   is-empty">
 
-                            <label for="prenom" class="col-sm-2  control-label">Prenom d Operateur</label>
+                            <label for="prenom" class="col-sm-2  control-label">Prénom Opérateur</label>
 
                             <div class="col-sm-8">
 
-                                <input class="form-control " style="width: 100%;" name="prenom" data-value="" tabindex="-1" aria-hidden="true" placeholder="Entrée Prenom">
+                                <input class="form-control " style="width: 100%;" name="prenom" data-value="" tabindex="-1" aria-hidden="true" placeholder="Entrée Prénom">
                                    
 
 
@@ -61,7 +61,7 @@
                                     <div class="input-group">
                                      <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
 
-                                <input class="form-control" style="width: 100%;" name="login" data-value="" tabindex="-1" aria-hidden="true" placeholder="Entrée login">
+                                <input class="form-control" style="width: 100%;" name="login" data-value="" tabindex="-1" aria-hidden="true" placeholder="Entrée Nom Utilisateur">
                                 </div>
                             </div>
                         </div>
@@ -78,7 +78,7 @@
 
                                     <span class="input-group-addon"><i class="fa fa-money fa-fw"></i></span>
 
-                                    <input type="text" id="email" name="email" value="" class="form-control password" placeholder="Entrée Montant de Départ">
+                                    <input type="text" id="email" name="email" value="" class="form-control password" placeholder="Entrée E-mail">
 
 
                                 </div>
@@ -90,7 +90,7 @@
 
                         <div class="form-group   is-empty">
 
-                            <label for="password" class="col-sm-2  control-label">Entrée password</label>
+                            <label for="password" class="col-sm-2  control-label">Entrée Mot de Passe</label>
 
                             <div class="col-sm-8">
 
@@ -99,7 +99,7 @@
 
                                     <span class="input-group-addon"><i class="fa fa-money fa-fw"></i></span>
 
-                                    <input type="password" id="password" name="password" value="" class="form-control password" placeholder="Entrée Montant de Départ">
+                                    <input type="password" id="password" name="password" value="" class="form-control password" placeholder="Entrée Mot de Passe">
 
 
                                 </div>
@@ -163,7 +163,7 @@
 
                                     <span class="input-group-addon"><i class="fa fa-money fa-fw"></i></span>
 
-                                    <input type="file" id="cni" name="cni" value="" class="form-control password" placeholder="Entrée Montant de Départ">
+                                    <input type="file" id="cni" name="cni" value="" class="form-control password" placeholder="Selectionnez une Photo">
 
 
                                 </div>
@@ -175,7 +175,7 @@
 
                          <div class="form-group   is-empty">
 
-                            <label for="date" class="col-sm-2  control-label">Entrée date</label>
+                            <label for="date" class="col-sm-2  control-label">Entrée date Naiss</label>
 
                             <div class="col-sm-8">
 
@@ -184,7 +184,7 @@
 
                                     <span class="input-group-addon"><i class="fa fa-money fa-fw"></i></span>
 
-                                    <input type="date" id="date" name="date" value="" class="form-control password" placeholder="Entrée Montant de Départ">
+                                    <input type="date" id="date" name="date" value="" class="form-control password" placeholder="Entrée Date de Naissance">
 
 
                                 </div>
@@ -210,7 +210,7 @@
 
                                 <select  name="role" class="form-control select2" id="recipient-name">
                                     <option value="Administrateur">Administrateur</option>
-                                    <option value="Utilisateur">Utilisatateur</option>
+                                    <option value="Utilisateur">Utilisateur</option>
                                 </select>
 
                                 </div>

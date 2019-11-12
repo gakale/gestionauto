@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Personnel;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class PersonnelController extends Controller
@@ -21,7 +22,7 @@ class PersonnelController extends Controller
         
         return view('admin\personnel', [
 
-            'users'=> $personnel
+            'personnel'=> $personnel
         ]);
         
 

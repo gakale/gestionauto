@@ -20,6 +20,7 @@ class PersonnelController extends Controller
 
 
         
+        
         return view('admin\personnel', [
 
             'personnel'=> $personnel

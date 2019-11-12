@@ -52,7 +52,7 @@
                         <input type="submit" value="Se connecter" class="bouton">
                     </div>
                     <div class="signature row">
-                        <p>By MediaTEC Group | Tout droit réservé !</p>
+                        <p>MediaTEC Group 2019+ | Tout Droit Réservé !</p>
                     </div>
                 </form>
             </div>

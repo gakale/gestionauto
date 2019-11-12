@@ -1,9 +1,9 @@
 
 @extends('../admins/layouts')
 @section('content')
-@section('grand-text','gestion des Vehicule')
+@section('grand-text','Gestion des Chaufeurs')
 @section('grands','Tableau de Bord')
-@section('petit-text','Vehicule')
+@section('petit-text','Chauffeur')
 
 
 <div class="container-fluid">
@@ -41,18 +41,43 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th> </th>
-                        <th>Imatriculation</th>
-                        <th>Modèle</th>
-                        <th>Utilisation</th>
-                        <th>Date</th>
-                        <th>Etat</th>
-                        <th>Email</th>
-                        <th>Action</th>
+                        <th>Nom</th>
+                        <th>Prénom</th>
+                        <th>E-mail</th>
+                        <th>Téléphone</th>
+                        <th>Adresse</th>
+                        <th>Fonction</th>
+                        <th>Catégorie Permis</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
 
                 <tbody>
+                @foreach($chauffeur as $chauffeurs)
+
+                    <tr>
+                        <td>{{$chauffeurs->name}}</td>
+                        <td>{{$chauffeurs->prenom}}</td>
+                        <td>{{$chauffeurs->email}}</td>
+                        <td>{{$chauffeurs->telephone}}</td>
+                        <td>{{$chauffeurs->adresse}}</td>
+                        <td>{{$chauffeurs->fonction}}</td>
+                        <td>{{$chauffeurs->typepermis}}</td>
+                        <td>
+                        <a href="#">
+                                <i class="fa fa-eye"></i>
+                            </a>
+                            <a href="/" >
+                                <i class="fa fa-trash"></i>
+                            </a>
+                            <a href="{{url('facture/'.$user->id)}}" >
+                                <i class="fa fa-print"></i>
+                            </a>
+                            </td>
+                    </tr>
+
+                    </tr>
+                    @endforeach
                 </tbody>
             </table>
 
@@ -100,18 +125,18 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
-                    <h2 class="modal-title">Nouveaux Personnel  </h2>
+                    <h2 class="modal-title">Nouveau Chauffeur  </h2>
                 </div>
                 <div class="modal-body">
                     <div class="row">
                         <form action="{{ route('chauffeur.store') }}" class="form-group" method="post">
                             @csrf
                             <div class="form-group col-md-6">
-                                <label for="recipient-name" class="col-form-label">Nom du chauffeur</label>
+                                <label for="recipient-name" class="col-form-label">Nom Chauffeur</label>
                                 <input type="text" name="name" class="form-control" id="recipient-name">
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="message-text" class="col-form-label">Prenom</label>
+                                <label for="message-text" class="col-form-label">Prénom Chauffeur</label>
                                 <input name="prenom" class="form-control" id="message-text">
                             </div>
                             <div class="form-group col-md-6">

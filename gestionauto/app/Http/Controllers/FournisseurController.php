@@ -1,4 +1,4 @@
-<?php
+.<?php
 
 namespace App\Http\Controllers;
 
@@ -18,8 +18,6 @@ class FournisseurController extends Controller
        
         $fournisseur = DB::table('fournisseurs')->orderBy('created_at','DESC')->paginate(10);
 
-
-        
         return view('admin\fournisseur', [
 
             'fournisseur'=> $fournisseur
@@ -35,7 +33,7 @@ class FournisseurController extends Controller
     {
         //
     }
-
+ 
     /**
      * Store a newly created resource in storage.
      *

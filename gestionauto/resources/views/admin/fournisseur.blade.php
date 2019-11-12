@@ -1,9 +1,9 @@
 
 @extends('../admins/layouts')
 @section('content')
-@section('grand-text','gestion des Vehicule')
+@section('grand-text','Gestion des Fournisseurs')
 @section('grands','Tableau de Bord')
-@section('petit-text','Vehicule')
+@section('petit-text','Fournisseur')
 
 
 <div class="container-fluid">
@@ -41,18 +41,36 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th> </th>
-                        <th>Imatriculation</th>
-                        <th>Modèle</th>
-                        <th>Utilisation</th>
-                        <th>Date</th>
-                        <th>Etat</th>
-                        <th>Email</th>
+                        <th>Nom</th>
+                        <th>Localisation</th>
+                        <th>E-mail</th>
+                        <th>Téléphone</th>
                         <th>Action</th>
                     </tr>
                 </thead>
 
                 <tbody>
+                @foreach($fournisseur as $fournisseurs)
+
+                    <tr>
+                        <td>{{$chauffeurs->name}}</td>
+                        <td>{{$chauffeurs->localisation}}</td>
+                        <td>{{$chauffeurs->email}}</td>
+                        <td>{{$chauffeurs->telephone}}</td>
+                        <a href="#">
+                                <i class="fa fa-eye"></i>
+                            </a>
+                            <a href="/" >
+                                <i class="fa fa-trash"></i>
+                            </a>
+                            <a href="{{url('facture/'.$user->id)}}" >
+                                <i class="fa fa-print"></i>
+                            </a>
+                            </td>
+                    </tr>
+
+                    </tr>
+                    @endforeach
                 </tbody>
             </table>
 
@@ -100,14 +118,14 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
-                    <h2 class="modal-title">Nouveaux Personnel  </h2>
+                    <h2 class="modal-title">Nouveau Fournisseur</h2>
                 </div>
                 <div class="modal-body">
                     <div class="row">
                         <form action="{{ route('fournisseur.store') }}" class="form-group" method="post">
                             @csrf
                             <div class="form-group col-md-6">
-                                <label for="recipient-name" class="col-form-label">Nom du Fourniseur</label>
+                                <label for="recipient-name" class="col-form-label">Nom du Fournisseur</label>
                                 <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="recipient-name">
                                 @error('name')
                                     <span class="invalid-feedback" role="alert">
@@ -139,7 +157,7 @@
                             @enderror
                             </div>
                             <div class="form-group col-md-6">
-                                <label for="message-text" class="col-form-label">Email</label>
+                                <label for="message-text" class="col-form-label">E-mail</label>
                                 <input name="email" type="email" class="form-control @error('email') is-invalid @enderror" id="message-text">
 
                                 @error('email')
@@ -160,7 +178,7 @@
                             </div>
 
                             <div class="form-group col-md-6">
-                                <label for="message-text" class="col-form-label">Depuis</label>
+                                <label for="message-text" class="col-form-label">Dépuis</label>
                                 <input  name="depuis" type="date" class="form-control @error('date') is-invalid @enderror" id="message-text">
 
                                 @error('depuis')

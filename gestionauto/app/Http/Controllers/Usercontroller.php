@@ -96,7 +96,12 @@ class Usercontroller extends Controller
      */
     public function show($id)
     {
-        return view('admin\operateurview');
+        $user = User::where('id',$id)->first();
+
+        return view('admin\operateurview',[
+
+            'user'=> $user
+        ]);
     }
 
     /**
@@ -105,9 +110,9 @@ class Usercontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(User $user)
     {
-        //
+        return view('admin\operateuredit', compact('user'));
     }
 
     /**

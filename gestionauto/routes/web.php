@@ -63,10 +63,17 @@ Route::resource('personnel', 'PersonnelController');
 //rout operateur
 
 
-Route::resource('user', 'Usercontroller');
+Route::get('user.index', 'Usercontroller@index')->name('user.index');
 
+Route::get('/user.create', 'Usercontroller@create')->name('user.create');
 
+Route::get('/user.show/{user}', 'Usercontroller@show')->name('user.show');
 
+Route::post('/user.store', 'Usercontroller@store')->name('user.store');
+
+Route::get('/user/{user}/edit','Usercontroller@edit')->name('user.edit');
+
+Route::patch('/user/{user}/','Usercontroller@update')->name('user.update');
 
 
 // route assurance

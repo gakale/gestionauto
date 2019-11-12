@@ -67,7 +67,7 @@ class FournisseurController extends Controller
 
         ]);
 
-        return redirect()->back()->with('message', 'Enregister avec Success');
+        
 
 
     }

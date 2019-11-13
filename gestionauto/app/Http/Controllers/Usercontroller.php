@@ -14,7 +14,7 @@ class Usercontroller extends Controller
      */
     public function index()
     {
-        $users = DB::table('users')->orderBy('created_at','DESC')->paginate(10);
+        $users = DB::table('users')->orderBy('created_at','ASC')->paginate(10);
 
 
         

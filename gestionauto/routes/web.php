@@ -73,6 +73,9 @@ Route::post('/user.store', 'Usercontroller@store')->name('user.store');
 
 Route::get('/user/{user}/edit','Usercontroller@edit')->name('user.edit');
 
+
+
+
 Route::patch('/user/{user}/','Usercontroller@update')->name('user.update');
 
 

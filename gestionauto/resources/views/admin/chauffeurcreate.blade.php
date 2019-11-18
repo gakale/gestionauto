@@ -18,8 +18,8 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form action="" method="post" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data" pjax-container="">
-
+            <form action="{{route('chauffeur.store')}}" method="POST" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data" pjax-container="">
+                @csrf
                 <div class="box-body">
 
                     <div class="fields-group">
@@ -160,7 +160,7 @@
 
                                                         <div class="input-group">
 
-                                                            <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
+                                                            <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
 
                                                             <input type="text" id="cni" name="cni" value="" class="form-control password" placeholder="Entrée cni">
 
@@ -182,7 +182,7 @@
 
                                                             <div class="input-group">
 
-                                                                <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
+                                                                <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
 
                                                                 <select type="date" id="typepermis" name="typepermis[]"  class="form-control password select2" placeholder="Entrée Heure de Départ" multiple="multiple">
 

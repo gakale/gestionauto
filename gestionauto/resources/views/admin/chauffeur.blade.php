@@ -18,14 +18,14 @@
                 </div>
 
                 <div class="btn-group pull-right" style="margin-right: 10px">
-                    <a type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal-default" title="Nouveau">
+                    <a href="{{route('chauffeur.create')}}" type="button" class="btn btn-sm btn-success" title="Nouveau">
                         <i class="fa fa-save"></i><span class="hidden-xs">&nbsp;&nbsp;Nouveau</span>
                     </a>
                 </div>
 
             </div>
             <span>
-                <a href="{{ route('personnel.index') }}" class="btn btn-sm btn-primary grid-refresh" title="Rafraîchir"><i class="fa fa-refresh"></i><span class="hidden-xs"> Actualisé</span></a> <div class="btn-group" style="margin-right: 10px" data-toggle="buttons">
+                <a href="{{ route('chauffeur.index') }}" class="btn btn-sm btn-primary grid-refresh" title="Rafraîchir"><i class="fa fa-refresh"></i><span class="hidden-xs"> Actualisé</span></a> <div class="btn-group" style="margin-right: 10px" data-toggle="buttons">
                     <label class="btn btn-sm btn-dropbox 5daed26c39e34-filter-btn " title="Filtre">
                         <input type="checkbox"><i class="fa fa-filter"></i><span class="hidden-xs">&nbsp;&nbsp;Filtre</span>
                     </label>
@@ -119,88 +119,6 @@
 </div>
 
 
-<div class="modal fade" id="modal-default">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span></button>
-                    <h2 class="modal-title">Nouveau Chauffeur  </h2>
-                </div>
-                <div class="modal-body">
-                    <div class="row">
-                        <form action="{{ route('chauffeur.store') }}" class="form-group" method="post">
-                            @csrf
-                            <div class="form-group col-md-6">
-                                <label for="recipient-name" class="col-form-label">Nom Chauffeur</label>
-                                <input type="text" name="name" class="form-control" id="recipient-name">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="message-text" class="col-form-label">Prénom Chauffeur</label>
-                                <input name="prenom" class="form-control" id="message-text">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="recipient-name" class="col-form-label">Fonction</label>
-                                <input name="fonction" type="text" class="form-control" id="recipient-name">
-                            </div>
 
-                            <div class="form-group col-md-6">
-                                <label for="recipient-name" class="col-form-label">Adresse</label>
-                                <input name="adresse" type="text" class="form-control" id="recipient-name">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="message-text" class="col-form-label">Téléphone</label>
-                                <input name="telephone" class="form-control" id="message-text">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="message-text" class="col-form-label">E-mail</label>
-                                <input name="email" type="email" class="form-control" id="message-text">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="message-text" class="col-form-label">N° CNI</label>
-                                <input  name="cni" type="text" class="form-control" id="message-text">
-                            </div>
-                            <hr>
-                            <div class="form-group col-md-6">
-                                <label for="message-text" class="col-form-label">Photo Permis</label>
-                                <input name="permis" type="file" class="form-control" id="message-text">
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="message-text" class="col-form-label">Categorie de permis </label>
-                                <select name="typepermis" class="form-control @error('typepermis') is-invalid @enderror" id="message-text">
-                                    <option value="">Permis A1</option>
-                                    <option value="">Permis A2</option>
-
-                                    <option value="">Permis A</option>
-
-                                    <option value="">Permis B</option>
-
-                                </select>
-                            </div>
-                            <div class="form-group col-md-6">
-                                <label for="message-text" class="col-form-label">Date Permis</label>
-                                <input  type="date" class="form-control" id="message-text">
-                            </div>
-
-
-                        </div>
-
-
-                    </div>
-
-
-
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                        <button type="submit" class="btn btn-primary">Save changes</button>
-                    </div>
-                </div>
-                <!-- /.modal-content -->
-            </div>
-        </form>
-
-        
-        <!-- /.modal-dialog -->
-    </div>
 
     @stop

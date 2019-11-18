@@ -25,7 +25,7 @@
 
             </div>
             <span>
-                <a href="{{ route('personnel.index') }}" class="btn btn-sm btn-primary grid-refresh" title="Rafraîchir"><i class="fa fa-refresh"></i><span class="hidden-xs"> Actualisé</span></a> <div class="btn-group" style="margin-right: 10px" data-toggle="buttons">
+                <a href="{{ route('fournisseur.index') }}" class="btn btn-sm btn-primary grid-refresh" title="Rafraîchir"><i class="fa fa-refresh"></i><span class="hidden-xs"> Actualisé</span></a> <div class="btn-group" style="margin-right: 10px" data-toggle="buttons">
                     <label class="btn btn-sm btn-dropbox 5daed26c39e34-filter-btn " title="Filtre">
                         <input type="checkbox"><i class="fa fa-filter"></i><span class="hidden-xs">&nbsp;&nbsp;Filtre</span>
                     </label>
@@ -122,7 +122,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="row">
-                        <form action="{{ route('fournisseur.store') }}" class="form-group" method="post">
+                        <form action="{{ route('fournisseur.store') }}" class="form-group" method="POST">
                             @csrf
                             <div class="form-group col-md-6">
                                 <label for="recipient-name" class="col-form-label">Nom du Fournisseur</label>
@@ -179,9 +179,9 @@
 
                             <div class="form-group col-md-6">
                                 <label for="message-text" class="col-form-label">Dépuis</label>
-                                <input  name="date" type="date" class="form-control @error('date') is-invalid @enderror" id="message-text">
+                                <input  name="depuis" type="date" class="form-control @error('depuis') is-invalid @enderror" id="message-text">
 
-                                @error('date')
+                                @error('depuis')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

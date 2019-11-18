@@ -81,7 +81,8 @@
                                                     </div>
 
                                                     <input type="text" class="form-control roles_id" placeholder="Type" name="roles[id]" value="">
-                                                </div>    </div>
+                                                </div>   
+                                                 </div>
                                             </div>
                                         </div>
                                     </div>

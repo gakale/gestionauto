@@ -88,7 +88,14 @@ Route::resource('/assurance', 'AssuranceController');
 //route chauffeur
 
 
-Route::resource('chauffeur', 'ChauffeurController');
+Route::get('/chauffeur.index', 'ChauffeurController@index')->name('chauffeur.index');
+
+
+Route::get('/chauffeur.create', 'ChauffeurController@create')->name('chauffeur.create');
+
+
+Route::post('/chauffeur.store', 'ChauffeurController@store')->name('chauffeur.store');
+
 
 
 

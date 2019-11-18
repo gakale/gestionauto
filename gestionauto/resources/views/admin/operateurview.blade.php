@@ -53,7 +53,7 @@
                 <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                      {{$user->name}} &nbsp;
+                      {{$user->login}} &nbsp;
             </div>
                             <!-- /.box-body -->
         </div>
@@ -65,51 +65,53 @@
                 <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                                    Koffi&nbsp;
+                                    {{$user->name}}&nbsp;
                             </div><!-- /.box-body -->
         </div>
             </div>
 </div>
                                     <div class="form-group ">
-    <label class="col-sm-2 control-label">Rôles</label>
+    <label class="col-sm-2 control-label">Prenom</label>
     <div class="col-sm-8">
                 <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                                    <span class="label label-success">Athlète</span>&nbsp;
-    </div><!-- /.box-body -->
+                                    {{$user->prenom}}
+    </div>
+    <!-- /.box-body -->
+        </div>
+         </div>
+</div>
+                                    <div class="form-group ">
+    <label class="col-sm-2 control-label">Rôle</label>
+    <div class="col-sm-8">
+                <div class="box box-solid box-default no-margin box-show">
+            <!-- /.box-header -->
+            <div class="box-body">
+                             <span class="label label-primary">{{$user->role}}</span>&nbsp
+             </div>
+                            <!-- /.box-body -->
         </div>
             </div>
 </div>
                                     <div class="form-group ">
-    <label class="col-sm-2 control-label">Droits</label>
+    <label class="col-sm-2 control-label">Email </label>
     <div class="col-sm-8">
                 <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                                    <span class="label label-success">Competition Read</span>&nbsp;<span class="label label-success">Documentation Read</span>&nbsp;<span class="label label-success">Stats Read</span>&nbsp;<span class="label label-success">Partner Read</span>&nbsp;<span class="label label-success">Messagerie Read</span>&nbsp;
-                            </div><!-- /.box-body -->
-        </div>
-            </div>
-</div>
-                                    <div class="form-group ">
-    <label class="col-sm-2 control-label">Créé à</label>
-    <div class="col-sm-8">
-                <div class="box box-solid box-default no-margin box-show">
-            <!-- /.box-header -->
-            <div class="box-body">
-                                      {{$user->created_at}}&nbsp;
+                                      {{$user->email}}&nbsp;
                             </div><!-- /.box-body -->
         </div>
             </div>
 </div>
  <div class="form-group ">
-    <label class="col-sm-2 control-label">Mis à jour à</label>
+    <label class="col-sm-2 control-label">Fonction</label>
     <div class="col-sm-8">
          <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                  {{$user->created_at}}&nbsp;
+                  {{$user->fonction}}&nbsp;
              </div>
                 <!-- /.box-body -->
         </div>
@@ -118,7 +120,65 @@
  </div>
 
  <div class="form-group ">
-    <label class="col-sm-2 control-label">Mis à jour à</label>
+    <label class="col-sm-2 control-label">Télephone</label>
+    <div class="col-sm-8">
+         <div class="box box-solid box-default no-margin box-show">
+            <!-- /.box-header -->
+            <div class="box-body">
+                  {{$user->telephone}}&nbsp;
+             </div>
+                <!-- /.box-body -->
+        </div>
+    </div>
+</div>
+
+
+
+
+<div class="form-group ">
+    <label class="col-sm-2 control-label">Photo cni</label>
+    <div class="col-sm-8">
+         <div class="box box-solid box-default no-margin box-show">
+            <!-- /.box-header -->
+            <div class="box-body">
+                  {{$user->cni}}&nbsp;
+             </div>
+                <!-- /.box-body -->
+        </div>
+    </div>
+</div>
+
+
+<div class="form-group ">
+    <label class="col-sm-2 control-label">Password</label>
+    <div class="col-sm-8">
+         <div class="box box-solid box-default no-margin box-show">
+            <!-- /.box-header -->
+            <div class="box-body">
+                  {{$user->password}}&nbsp;
+             </div>
+                <!-- /.box-body -->
+        </div>
+    </div>
+</div>
+
+
+<div class="form-group ">
+    <label class="col-sm-2 control-label">Date d'ajout </label>
+    <div class="col-sm-8">
+         <div class="box box-solid box-default no-margin box-show">
+            <!-- /.box-header -->
+            <div class="box-body">
+                  {{$user->date}}&nbsp;
+             </div>
+                <!-- /.box-body -->
+        </div>
+    </div>
+</div>
+
+
+<div class="form-group ">
+    <label class="col-sm-2 control-label">Crée</label>
     <div class="col-sm-8">
          <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
@@ -131,56 +191,13 @@
 </div>
 
 
-
-
 <div class="form-group ">
     <label class="col-sm-2 control-label">Mis à jour à</label>
     <div class="col-sm-8">
          <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                  {{$user->created_at}}&nbsp;
-             </div>
-                <!-- /.box-body -->
-        </div>
-    </div>
-</div>
-
-
-<div class="form-group ">
-    <label class="col-sm-2 control-label">Mis à jour à</label>
-    <div class="col-sm-8">
-         <div class="box box-solid box-default no-margin box-show">
-            <!-- /.box-header -->
-            <div class="box-body">
-                  {{$user->created_at}}&nbsp;
-             </div>
-                <!-- /.box-body -->
-        </div>
-    </div>
-</div>
-
-
-<div class="form-group ">
-    <label class="col-sm-2 control-label">Mis à jour à</label>
-    <div class="col-sm-8">
-         <div class="box box-solid box-default no-margin box-show">
-            <!-- /.box-header -->
-            <div class="box-body">
-                  {{$user->created_at}}&nbsp;
-             </div>
-                <!-- /.box-body -->
-        </div>
-    </div>
-</div>
-
-<div class="form-group ">
-    <label class="col-sm-2 control-label">Mis à jour à</label>
-    <div class="col-sm-8">
-         <div class="box box-solid box-default no-margin box-show">
-            <!-- /.box-header -->
-            <div class="box-body">
-                  {{$user->created_at}}&nbsp;
+                  {{$user->updated_at}}&nbsp;
              </div>
                 <!-- /.box-body -->
         </div>
@@ -194,3 +211,5 @@
     </div>
 
 @stop    
+
+

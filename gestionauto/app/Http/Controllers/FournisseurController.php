@@ -46,7 +46,6 @@ class FournisseurController extends Controller
         $data = request()->validate([
 
             'name'=> ['required','min:3'],
-            'prenom'=> ['required','min:3'],
             'localisation'=> ['required'],
             'telephone'=> ['required'],
             'email'=> ['required','min:3'],
@@ -54,19 +53,19 @@ class FournisseurController extends Controller
             'date'=> ['required']
         ]);
 
-        Fourniseur::create([
+        Fournisseur::create([
 
             'name'=> $data['name'],
-            'prenom'=>$data['prenom'],
             'localisation'=> $data['localisation'],
             'telephone'=> $data['telephone'],
             'email'=> $data['email'],
             'cni'=> $data['cni'],
-            'date'=>$data['date'],
+            'date'=>$data['date']
+
+        ]); 
 
 
-        ]);
-
+      
         
 
 

@@ -87,9 +87,14 @@ class ChauffeurController extends Controller
      * @param  \App\Chauffeur  $chauffeur
      * @return \Illuminate\Http\Response
      */
-    public function show(Chauffeur $chauffeur)
+    public function show(Chauffeur $chauffeurs)
     {
-        //
+        $chauffeurs = User::where('id',$id)->first();
+
+        return view('admin\operateurview',[
+
+            'chauffeurs'=> $chauffeurs
+        ]);
     }
 
     /**
@@ -98,7 +103,7 @@ class ChauffeurController extends Controller
      * @param  \App\Chauffeur  $chauffeur
      * @return \Illuminate\Http\Response
      */
-    public function edit(Chauffeur $chauffeur)
+    public function edit(Chauffeur $chauffeurs)
     {
         //
     }
@@ -110,7 +115,7 @@ class ChauffeurController extends Controller
      * @param  \App\Chauffeur  $chauffeur
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Chauffeur $chauffeur)
+    public function update(Request $request, Chauffeur $chauffeurs)
     {
         //
     }

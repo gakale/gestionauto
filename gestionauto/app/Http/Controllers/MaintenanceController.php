@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 
 class MaintenanceController extends Controller
 {
+
     /**
      * Display a listing of the resource.
      *
@@ -48,7 +49,21 @@ class MaintenanceController extends Controller
 
         ]);
 
-        // ok pas de problème 
+     
+
+        $cniPath = request('recupanne')->store('uploads','public');
+
+            
+        Maintenance::create([
+            'imatriculation'=> $data['imatriculation'],
+            'action' => $data['action'],
+              
+            'prixaction'=> $data['prixaction'],
+            'garage'=>$data['garage'],
+            'panne_chauffeur'=> $data['panne_chauffeur'],
+            'date'=> ['date'],
+            'recupanne'=>$cniPath,
+        ]);
 
             
        

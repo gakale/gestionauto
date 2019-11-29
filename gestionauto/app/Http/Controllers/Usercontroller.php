@@ -78,10 +78,10 @@ class Usercontroller extends Controller
              'date'=> $data['date'],
              'role' => $data['role'],
 
-             'at_year'=> $officialDate
 
 
          ]);
+         return redirect()->route('user.index');
 
          
                 
@@ -112,6 +112,7 @@ class Usercontroller extends Controller
      */
     public function edit(User $user)
     {
+        
         return view('admin\operateuredit', compact('user'));
     }
 
@@ -122,9 +123,25 @@ class Usercontroller extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(User $user)
     {
-        //
+        $data=request()->validate([
+
+            'name' => ['required', 'min:3'],
+            'prenom'=> ['required','min:3'],
+            'login'=> ['required','min:6'],
+            'email' => ['required', 'email'],
+            'password' => ['required' ,],
+            'fonction' => ['required'],
+            'telephone' => ['required'],
+            'date' => ['required','date'],
+            'role' => ['required']
+
+        ]);
+
+            $user->update($data);
+
+            return redirect()->route('user.index', ['user'=> $user]);
     }
 
     /**

@@ -48,7 +48,7 @@
 
                             <div class="col-sm-8">
 
-                                <select class="form-control select2" style="width: 100%;" name="action[]" data-value="" tabindex="-1" aria-hidden="true" multiple="multiple">
+                                <select class="form-control select2" style="width: 100%;" name="action[]" multiple="multiple">
                                     <option value="pare-brise"> pare-brise</option>
                                     <option value="pare-soleil intérieur">pare-soleil intérieur</option>
                                     <option value="vitres latérales, lunette arrière">vitres latérales, lunette arrière</option>

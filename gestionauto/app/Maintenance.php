@@ -6,5 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Maintenance extends Model
 {
-    protected $fillable = ['imatriculation'];
+    protected $guarded = [];
+
+    protected $casts = [ 'action' => 'array'];
 }

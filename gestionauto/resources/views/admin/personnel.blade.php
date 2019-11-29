@@ -60,14 +60,14 @@
                                             <td>{{$personnels->telephone}}</td>
                                             <td>{{$personnels->fonction}}</td>
                                             <td>
-                                            <a href="#">
+                                            <a href="{{route('personnel.show',$personnels->id)}}">
                                                     <i class="fa fa-eye"></i>
                                                 </a>
-                                                <a href="/" >
-                                                    <i class="fa fa-trash"></i>
+                                                <a href="{{route('personnel.edit', $personnels->id)}}">
+                                                    <i class="fa fa-pencil"></i>
                                                 </a>
-                                                <a href="{{url('facture/'.$personnels->id)}}" >
-                                                    <i class="fa fa-print"></i>
+                                                <a href="#" >
+                                                    <i class="fa fa-trash"></i>
                                                 </a>
                                                 </td>
                                         </tr>

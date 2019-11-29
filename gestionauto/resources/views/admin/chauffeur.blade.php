@@ -64,7 +64,7 @@
                         <td>{{$chauffeurs->fonction}}</td>
                         <td>{{$chauffeurs->typepermis}}</td>
                         <td>
-                        <a href="#">
+                        <a href="{{route('chauffeur.show',$chauffeurs->id)}}">
                                 <i class="fa fa-eye"></i>
                             </a>
                             <a href="/" >

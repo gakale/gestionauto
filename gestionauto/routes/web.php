@@ -56,7 +56,15 @@ Route::resource('carburant', 'CarburantController');
 
 // route personnel
 
-Route::resource('personnel', 'PersonnelController');
+Route::get('personnel.index', 'PersonnelController@index')->name('personnel.index');
+
+Route::get('personnel.show/{personnel}', 'PersonnelController@show')->name('personnel.show');
+
+Route::post('personnel.store', 'PersonnelController@store')->name('personnel.store');
+
+Route::get('personnel/{personnels}/edit', 'PersonnelController@edit')->name('personnel.edit');
+
+Route::patch('/personnel.update/{personnels}/','PersonnelController@update')->name('personnel.update');
 
 
 
@@ -74,9 +82,7 @@ Route::post('/user.store', 'Usercontroller@store')->name('user.store');
 Route::get('/user/{user}/edit','Usercontroller@edit')->name('user.edit');
 
 
-
-
-Route::patch('/user/{user}/','Usercontroller@update')->name('user.update');
+Route::patch('/user.update/{user}/','Usercontroller@update')->name('user.update');
 
 
 // route assurance

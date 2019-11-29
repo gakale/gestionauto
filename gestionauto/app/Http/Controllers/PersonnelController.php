@@ -18,8 +18,6 @@ class PersonnelController extends Controller
 
         $personnel = DB::table('personnels')->orderBy('created_at','DESC')->paginate(10);
 
-
-        
         
         return view('admin\personnel', [
 
@@ -65,6 +63,8 @@ class PersonnelController extends Controller
             'telephone'=>$data['telephone']
 
         ]);
+        return redirect()->route('personnel.index');
+
     }
 
     /**
@@ -73,9 +73,15 @@ class PersonnelController extends Controller
      * @param  \App\Personnel  $personnel
      * @return \Illuminate\Http\Response
      */
-    public function show(Personnel $personnel)
+    public function show($id)
     {
-        //
+       
+        $personnels = Personnel::where('id',$id)->first();
+
+        return view('admin\personnelview',[
+
+            'personnels'=> $personnels
+        ]);
     }
 
     /**
@@ -84,9 +90,10 @@ class PersonnelController extends Controller
      * @param  \App\Personnel  $personnel
      * @return \Illuminate\Http\Response
      */
-    public function edit(Personnel $personnel)
+    public function edit(Personnel $personnels)
     {
-        //
+      
+        return view('admin\personneledit',compact('personnels'));
     }
 
     /**
@@ -96,9 +103,20 @@ class PersonnelController extends Controller
      * @param  \App\Personnel  $personnel
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Personnel $personnel)
+    public function update(Personnel $personnels)
     {
-        //
+        $data = request()->validate([
+
+            'name'=> ['required'],
+            'prenom'=> ['required'],
+            'email'=> ['required','email'],
+            'fonction'=> ['required'],
+            'telephone'=> ['required'],
+        ]);
+        
+        $personnels->update($data);
+
+        return redirect()->route('personnel.index', ['personnels'=> $personnels]);
     }
 
     /**

@@ -43,7 +43,7 @@
         </div>
 
         <div class="box-header with-border hide" id="filter-box">
-            <form action="http://197.159.206.237/admin/jo/certifications" class="form-horizontal" pjax-container="" method="get">
+            <form action="{{route('maintenance.store')}}" class="form-horizontal" pjax-container="" method="get">
 
                 <div class="row">
                     <div class="col-md-12">
@@ -58,7 +58,8 @@
                                             </div>
 
                                             <input type="text" class="form-control name" placeholder="Nom" name="name" value="">
-                                        </div>    </div>
+                                        </div>  
+                                          </div>
                                     </div>
                                     <div class="form-group is-empty">
                                         <label class="col-sm-2 control-label"> Matricule</label>
@@ -80,7 +81,7 @@
                                                         <i class="fa fa-pencil"></i>
                                                     </div>
 
-                                                    <input type="text" class="form-control roles_id" placeholder="Type" name="roles[id]" value="">
+                                                    <input type="text" class="form-control roles_id" placeholder="Type" name="roles[]" value="">
                                                 </div>   
                                                  </div>
                                             </div>

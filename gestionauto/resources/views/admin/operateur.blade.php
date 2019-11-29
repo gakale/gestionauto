@@ -151,7 +151,7 @@
                                         </tr>
 
                                         </tr>
-                                    @endforeach
+                          @endforeach
               
                             </tbody>
 

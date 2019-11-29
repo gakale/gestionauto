@@ -16,11 +16,11 @@
         <i class="fa fa-trash"></i><span class="hidden-xs">  Supprimer</span>
     </a>
 </div><div class="btn-group pull-right" style="margin-right: 5px">
-    <a href="{{route('chauffeur.edit',$chauffeur->id)}}" class="btn btn-sm btn-primary" title="Editer">
+    <a href="{{route('personnel.edit',$personnels->id)}}" class="btn btn-sm btn-primary" title="Editer">
         <i class="fa fa-edit"></i><span class="hidden-xs"> Editer</span>
     </a>
 </div><div class="btn-group pull-right" style="margin-right: 5px">
-    <a href="{{route('chauffeur.index')}}" class="btn btn-sm btn-default" title="Liste">
+    <a href="{{route('personnel.index')}}" class="btn btn-sm btn-default" title="Liste">
         <i class="fa fa-list"></i><span class="hidden-xs"> Liste</span>
     </a>
 </div>
@@ -40,7 +40,7 @@
                 <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                 {{$chauffeur->id}}&nbsp;
+                 {{$personnels->id}}&nbsp;
             </div>
                             
                             <!-- /.box-body -->
@@ -53,44 +53,20 @@
                 <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                      {{$chauffeur->name}} &nbsp;
+                      {{$personnels->name}} &nbsp;
             </div>
                             <!-- /.box-body -->
         </div>
      </div>
 </div>
                                     <div class="form-group ">
-    <label class="col-sm-2 control-label">Prenom</label>
+    <label class="col-sm-2 control-label">Prenom </label>
     <div class="col-sm-8">
                 <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                                    {{$chauffeur->prenom}}&nbsp;
+                                    {{$personnels->prenom}}&nbsp;
                             </div><!-- /.box-body -->
-        </div>
-            </div>
-</div>
-                                    <div class="form-group ">
-    <label class="col-sm-2 control-label">fonction</label>
-    <div class="col-sm-8">
-                <div class="box box-solid box-default no-margin box-show">
-            <!-- /.box-header -->
-            <div class="box-body">
-                                    {{$chauffeur->prenom}}
-    </div>
-    <!-- /.box-body -->
-        </div>
-         </div>
-</div>
-                                    <div class="form-group ">
-    <label class="col-sm-2 control-label">Adresse</label>
-    <div class="col-sm-8">
-                <div class="box box-solid box-default no-margin box-show">
-            <!-- /.box-header -->
-            <div class="box-body">
-                             <span class="label label-primary">{{$chauffeur->adresse}}</span>&nbsp
-             </div>
-                            <!-- /.box-body -->
         </div>
             </div>
 </div>
@@ -100,18 +76,42 @@
                 <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                                      {{$chauffeur->email}}&nbsp;
+                                    {{$personnels->email}}
+    </div>
+    <!-- /.box-body -->
+        </div>
+         </div>
+</div>
+                                    <div class="form-group ">
+    <label class="col-sm-2 control-label">Focntion</label>
+    <div class="col-sm-8">
+                <div class="box box-solid box-default no-margin box-show">
+            <!-- /.box-header -->
+            <div class="box-body">
+                             <span class="label label-primary">{{$personnels->fonction}}</span>&nbsp
+             </div>
+                            <!-- /.box-body -->
+        </div>
+            </div>
+</div>
+                                    <div class="form-group ">
+    <label class="col-sm-2 control-label">Télephone </label>
+    <div class="col-sm-8">
+                <div class="box box-solid box-default no-margin box-show">
+            <!-- /.box-header -->
+            <div class="box-body">
+                                      {{$personnels->telephone}}&nbsp;
                             </div><!-- /.box-body -->
         </div>
             </div>
 </div>
  <div class="form-group ">
-    <label class="col-sm-2 control-label">Cni </label>
+    <label class="col-sm-2 control-label">Fonction</label>
     <div class="col-sm-8">
          <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                  {{$chauffeur->cni}}&nbsp;
+                  {{$personnels->fonction}}&nbsp;
              </div>
                 <!-- /.box-body -->
         </div>
@@ -119,48 +119,8 @@
 </div>
  </div>
 
- <div class="form-group ">
-    <label class="col-sm-2 control-label">Télephone</label>
-    <div class="col-sm-8">
-         <div class="box box-solid box-default no-margin box-show">
-            <!-- /.box-header -->
-            <div class="box-body">
-                  {{$chauffeur->permis}}&nbsp;
-             </div>
-                <!-- /.box-body -->
-        </div>
-    </div>
-</div>
 
 
-
-
-<div class="form-group ">
-    <label class="col-sm-2 control-label">Photo cni</label>
-    <div class="col-sm-8">
-         <div class="box box-solid box-default no-margin box-show">
-            <!-- /.box-header -->
-            <div class="box-body">
-                  {{$chauffeur->typepermis}}&nbsp;
-             </div>
-                <!-- /.box-body -->
-        </div>
-    </div>
-</div>
-
-
-<div class="form-group ">
-    <label class="col-sm-2 control-label">Date ajout </label>
-    <div class="col-sm-8">
-         <div class="box box-solid box-default no-margin box-show">
-            <!-- /.box-header -->
-            <div class="box-body">
-                  {{$chauffeur->date}}&nbsp;
-             </div>
-                <!-- /.box-body -->
-        </div>
-    </div>
-</div>
 
 
 <div class="form-group ">
@@ -169,7 +129,7 @@
          <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                  {{$chauffeur->created_at}}&nbsp;
+                  {{$personnels->created_at}}&nbsp;
              </div>
                 <!-- /.box-body -->
         </div>
@@ -183,7 +143,7 @@
          <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                  {{$chauffeur->created_at}}&nbsp;
+                  {{$personnels->updated_at}}&nbsp;
              </div>
                 <!-- /.box-body -->
         </div>
@@ -191,18 +151,7 @@
 </div>
 
 
-<div class="form-group ">
-    <label class="col-sm-2 control-label">Mis à jour à</label>
-    <div class="col-sm-8">
-         <div class="box box-solid box-default no-margin box-show">
-            <!-- /.box-header -->
-            <div class="box-body">
-                  {{$chauffeur->updated_at}}&nbsp;
-             </div>
-                <!-- /.box-body -->
-        </div>
-    </div>
-</div>
+
 
         </div>
         <!-- /.box-body -->

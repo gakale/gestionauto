@@ -8,7 +8,7 @@ class Personnel extends Model
 {
 
 
-    protected $fillable = ['name','prenom','email','fonction','telephone'];
+    protected $guarded  = [];
 
 
     public function missions()

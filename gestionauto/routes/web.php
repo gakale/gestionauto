@@ -102,6 +102,14 @@ Route::get('/chauffeur.create', 'ChauffeurController@create')->name('chauffeur.c
 
 Route::post('/chauffeur.store', 'ChauffeurController@store')->name('chauffeur.store');
 
+Route::get('/chauffeur.show/{chauffeurs}','ChauffeurController@show')->name('chauffeur.show');
+
+Route::get('/chauffeur/{chauffeurs}/edit','Usercontroller@edit')->name('chauffeur.edit');
+
+
+Route::patch('/chauffeur.update/{chauffeurs}/','Usercontroller@update')->name('chauffeur.update');
+
+
 
 
 
@@ -131,8 +139,25 @@ Route::resource('/vehicule', 'VehiculeController');
 
 //Route Maintenance
 
-Route::resource('/maintenance', 'MaintenanceController');
 
+
+Route::get('/maintenance.index', 'MaintenanceController@index')->name('maintenance.index');
+
+
+Route::get('/maintenance.create', 'MaintenanceController@create')->name('maintenance.create');
+
+
+Route::post('/maintenance.store', 'MaintenanceController@store')->name('maintenance.store');
+
+
+
+
+Route::get('/chauffeur.show/{chauffeurs}','MaintenanceController@show')->name('chauffeur.show');
+
+Route::get('/chauffeur/{chauffeurs}/edit','Usercontroller@edit')->name('chauffeur.edit');
+
+
+Route::patch('/chauffeur.update/{chauffeurs}/','Usercontroller@update')->name('chauffeur.update');
 
 
 //route STOCK
@@ -145,6 +170,3 @@ Route::resource('stock', 'StockController');
 
 
 Route::get('cencoure','CourseController@cencoure');
-
-
-

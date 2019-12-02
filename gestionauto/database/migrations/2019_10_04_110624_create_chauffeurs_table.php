@@ -21,7 +21,6 @@ class CreateChauffeursTable extends Migration
             $table->string('adresse');
             $table->string('email');
             $table->string('cni');
-            $table->string('permis');
             $table->string('typepermis');
             $table->date('date');
             $table->timestamps();

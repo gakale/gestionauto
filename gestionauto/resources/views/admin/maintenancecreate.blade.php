@@ -1,128 +1,53 @@
 
 @extends('../admins/layouts')
 @section('content')
-@section('grand-text','gestion des maintenances')
+@section('grand-text','gestion des courses')
 @section('grands','Tableau de Bord')
-@section('petit-text','Maintenance')
+@section('petit-text','course')
 <div class="container-fluid">
     <div class="col-md-12">
         <div class="box box-info">
             <div class="box-header with-border">
-                <h3 class="box-title">Nouvelle Panne</h3>
+                <h3 class="box-title">Nouvelle Course</h3>
 
                 <div class="box-tools">
                     <div class="btn-group pull-right" style="margin-right: 5px">
-                        <a href="{{ route('maintenance.index') }}" class="btn btn-sm btn-default" title="Liste"><i class="fa fa-list"></i><span class="hidden-xs">&nbsp;Liste</span></a>
+                        <a href="{{ route('chauffeur.index') }}" class="btn btn-sm btn-default" title="Liste"><i class="fa fa-list"></i><span class="hidden-xs">&nbsp;Liste</span></a>
                     </div>
                 </div>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form action="{{ route('maintenance.store') }}" method="POST" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data" pjax-container="">
+            <form action="{{route('chauffeur.store')}}" method="POST" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data" pjax-container="">
                 @csrf
                 <div class="box-body">
 
                     <div class="fields-group">
 
+                            <div class="form-group   is-empty">
 
+                                    <label for="name" class="col-sm-2  control-label">Nom Chauffeur</label>
+
+                                    <div class="col-sm-8">
+
+
+                                        <div class="input-group">
+
+                                            <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
+
+                                            <input type="text" id="name" name="name"  class="form-control password" placeholder="Entrée Le Motif de la course">
+
+
+                                        </div>
+
+
+                                    </div>
+                                </div>
 
 
                         <div class="form-group   is-empty">
 
-                            <label for="imatriculation" class="col-sm-2  control-label">Vehicule Concerné</label>
-
-                            <div class="col-sm-8">
-
-                                <select class="form-control select2" style="width: 100%;" name="imatriculation" data-value="" tabindex="-1" aria-hidden="true">
-                                    <option value="Fofana">Fofana</option>
-                                    <option value="gnakale">gnakale</option>
-
-                                </select>
-
-
-                            </div>
-                        </div>
-                        <div class="form-group   is-empty">
-
-                            <label for="action" class="col-sm-2  control-label">Action  Méné</label>
-
-                            <div class="col-sm-8">
-
-                                <select class="form-control select2" style="width: 100%;" name="action[]" multiple="multiple">
-                                    <option value="pare-brise"> pare-brise</option>
-                                    <option value="pare-soleil intérieur">pare-soleil intérieur</option>
-                                    <option value="vitres latérales, lunette arrière">vitres latérales, lunette arrière</option>
-                                    <option value="rétroviseur intérieur">rétroviseur intérieur</option>
-                                    <option value="sièges et banquettes"> sièges et banquettes</option>
-                                    <option value="ceinture de sécurité"> ceinture de sécurité</option>
-                                    <option value="coussins gonflables (état, témoin)"> coussins gonflables (état, témoin)</option>
-                                    <option value="lampes témoins (fonctionnement)"> lampes témoins (fonctionnement)</option>
-                                    <option value="moteur en marche"> moteur en marche</option>
-                                    <option value="volant (jeu)">volant (jeu)</option>
-                                    <option value="démarrage au neutre"> démarrage au neutre</option>
-                                    <option value="commande d’accélérateur">commande d’accélérateur</option>
-                                    <option value="commande d’embrayage">commande d’embrayage</option>
-                                    <option value="commande de freins">commande de freins</option>
-                                    <option value="frein de service">frein de service</option>
-                                    <option value="freins de stationnement">freins de stationnement</option>
-                                    <option value="">course de la pédale de frein</option>
-                                    <option value="">essuie-glaces (fonctionnement)</option>
-                                    <option value="">lave-glace (fonctionnement)</option>
-                                    <option value="">chauffage, dégivrage</option></option>
-                                    <option value="">indicateur de vitesse et totalisateur</option>
-                                    <option value="">éclairage du tableau de bord</option>
-                                    <option value="">avertisseur sonore (klaxon)</option>
-                                    <option value="">feux de jour</option>
-                                    <option value="">phares de route</option>
-                                    <option value="phares de croisement">phares de croisement</option>
-                                    <option value="">feux de direction</option>
-                                    <option value="">feux d’arrêt</option>
-                                    <option value="">feux de position</option>
-                                    <option value="">feux de plaque</option>
-                                    <option value="">feux de détresse</option>
-                                    <option value="">feux de recul</option>
-                                    <option value="">tous les réflecteurs</option>
-
-
-                                    <option value="">portières</option>
-                                    <option value=""> rétroviseurs extérieurs</option>
-                                    <option value="">essuie-glaces (balais)</option>
-                                    <option value="">ailes, carrosserie</option>
-                                    <option value="">capot, crochet de sécurité</option>
-                                    <option value=""> pare-soleil extérieur</option>
-                                    <option value="">pneus</option>
-                                    <option value=""> roues, valves</option>
-                                    <option value=""> boulons, écrous, pièces de fixation</option>
-                                    <option value="">roulement de roue</option>
-                                    <option value="">portillon, bouchon</option>
-                                    <option value="">vignette valide (carburant gazeux)</option>
-                                    <option value=""> dispositif d’attelage</option>
-                                    <option value=""> sellette d’attelage</option>
-                                    <option value="">mécanisme de verrouillage</option>
-                                    <option value=""> fiche (freins de remorque)</option>
-                                    <option value=""> fiche (éclairage de remorque)</option>
-                                    <option value=""> câbles, chaînes, crochet</option>
-                                    <option value=""> barres d’attellage</option>
-                                    <option value="">espace de chargement</option>
-                                    <option value=""> plateforme</option>
-                                    <option value="">panneaux</option>
-                                    <option value=""> fixations</option>
-                                    <option value="">ridelles</option>
-                                    <option value=""> suspension et freins</option>
-                                    <option value=""> amortisseurs</option>
-                                    <option value="">ancrages</option>
-                                    <option value=""> lames maîtresses</option>
-                                    <option value=""> pièces de fixation</option>
-
-                                </select>
-
-
-                            </div>
-                        </div>
-
-                        <div class="form-group   is-empty">
-
-                            <label for="prixaction" class="col-sm-2  control-label">Prix de L action</label>
+                            <label for="prenom" class="col-sm-2  control-label">Prenom Chauffeur</label>
 
                             <div class="col-sm-8">
 
@@ -131,7 +56,7 @@
 
                                     <span class="input-group-addon"><i class="fa fa-money fa-fw"></i></span>
 
-                                    <input type="text" id="prixaction" name="prixaction" value="" class="form-control password" placeholder="Entrée Montant de Départ">
+                                    <input type="text" id="prenom" name="prenom" class="form-control password" placeholder="Entrée Montant de Départ">
 
 
                                 </div>
@@ -139,53 +64,19 @@
 
                             </div>
                         </div>
-
-
-
 
                         <div class="form-group   is-empty">
 
-                            <label for="garage" class="col-sm-2  control-label">Nom du Garage</label>
-
-                            <div class="col-sm-8">
-
-                                <select class="form-control select2" style="width: 100%;" name="garage" data-value="" tabindex="-1" aria-hidden="true">
-                                    <option value="Fofana">Fofana</option>
-                                    <option value="gnakale">gnakale</option>
-
-                                </select>
-
-
-                            </div>
-                        </div>
-                            <div class="form-group   is-empty">
-
-                                <label for="panne_chauffeur" class="col-sm-2  control-label">Selectionne le Chauffeur</label>
-
-                                <div class="col-sm-8">
-
-                                    <select class="form-control select2" style="width: 100%;" name="panne_chauffeur" data-value="" tabindex="-1" aria-hidden="true">
-                                        <option value="Fofana">Fofana</option>
-                                        <option value="gnakale">gnakale</option>
-
-                                    </select>
-
-
-                                </div>
-
-                            </div>
-                            <div class="form-group   is-empty">
-
-                                <label for="date" class="col-sm-2  control-label">Date de Réparation</label>
+                                <label for="fonction" class="col-sm-2  control-label">Fonction</label>
 
                                 <div class="col-sm-8">
 
 
                                     <div class="input-group">
 
-                                        <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
+                                        <span class="input-group-addon"><i class="fa fa-money fa-fw"></i></span>
 
-                                        <input type="date" id="date" name="date" value="" class="form-control password_confirmation" placeholder="Entrée Date de Réparation">
+                                        <input type="text" id="fonction" name="fonction"  class="form-control password" placeholder="Entrée Montant Resté">
 
 
                                     </div>
@@ -194,27 +85,146 @@
                                 </div>
                             </div>
 
-                        </div>
 
-                        <div class="form-group   is-empty">
+                            <div class="form-group   is-empty">
 
-                            <label for="recupanne" class="col-sm-2  control-label">Reçu de Paiement</label>
+                                    <label for="adresse" class="col-sm-2  control-label">Adresse</label>
 
-                            <div class="col-sm-8">
-
-
-                                <div class="input-group">
-
-                                    <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-
-                                    <input type="file" id="recupanne" name="recupanne" value="" class="form-control etablissement" placeholder="Entré Reçu de Paiement">
+                                    <div class="col-sm-8">
 
 
+                                        <div class="input-group">
+
+                                            <span class="input-group-addon"><i class="fa fa-money fa-fw"></i></span>
+
+                                            <input type="text" id="adresse" name="adresse"  class="form-control password" placeholder="Entrée Montant Total">
+
+
+                                        </div>
+
+
+                                    </div>
                                 </div>
 
 
+                                {{-- <div class="form-group   is-empty">
+
+                                        <label for="telephone" class="col-sm-2  control-label">Téléphone</label>
+
+                                        <div class="col-sm-8">
+
+
+                                            <div class="input-group">
+
+                                                <span class="input-group-addon"><i class="fa fa-money fa-fw"></i></span>
+
+                                                <input type="text" id="telephone" name="telephone" class="form-control password" placeholder="Entrée Lieu de La course">
+
+
+                                            </div>
+
+
+                                        </div>
+                                    </div> --}}
+
+
+
+                                        <div class="form-group   is-empty">
+
+                                                <label for="email" class="col-sm-2  control-label">Votre email</label>
+
+                                                <div class="col-sm-8">
+
+
+                                                    <div class="input-group">
+
+                                                        <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
+
+                                                        <input type="text" id="email" name="email"  class="form-control password" placeholder="Entrée votre mail">
+
+
+                                                    </div>
+
+
+                                                </div>
+                                            </div>
+
+
+
+                                            <div class="form-group   is-empty">
+
+                                                    <label for="cni" class="col-sm-2  control-label">N° CNI</label>
+
+                                                    <div class="col-sm-8">
+
+
+                                                        <div class="input-group">
+
+                                                            <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
+
+                                                            <input type="text" id="cni" name="cni" value="" class="form-control password" placeholder="Entrée cni">
+
+
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+
+
+
+                                                <div class="form-group   is-empty">
+
+                                                        <label for="typepermis" class="col-sm-2  control-label">Type de permis</label>
+
+                                                        <div class="col-sm-8">
+
+
+                                                            <div class="input-group">
+
+                                                                <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
+
+                                                                <select id="typepermis" name="typepermis[]"  class="form-control password select2" placeholder="Entrée Heure de Départ" multiple="multiple">
+
+                                                                            <option value="Permis A1">Permis A1</option>
+                                                                            <option value="Permis A2">Permis A2</option>
+
+                                                                            <option value="Permis A">Permis A</option>
+
+                                                                            <option value="Permis B">Permis B</option>
+
+                                                                </select>
+
+
+                                                            </div>
+
+
+                                                        </div>
+                                                    </div>
+
+<div class="form-group   is-empty">
+
+                                                    <label for="date" class="col-sm-2  control-label">La Date </label>
+
+                                                    <div class="col-sm-8">
+
+
+                                                        <div class="input-group">
+
+                                                            <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
+
+                                                            <input type="date" id="date" name="date" class="form-control password" placeholder="Entrée date">
+
+
+                                                        </div>
+
+
+                                                    </div>
+                                                </div>
+
+
+
                             </div>
-                        </div>
 
                         <div class="box-footer">
 

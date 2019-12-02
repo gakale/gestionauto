@@ -15,11 +15,11 @@ class ChauffeurController extends Controller
      */
     public function index()
     {
-        
+
         $chauffeur = DB::table('chauffeurs')->orderBy('created_at','DESC')->paginate(10);
 
 
-        
+
         return view('admin\chauffeur', [
 
             'chauffeur'=> $chauffeur
@@ -46,38 +46,34 @@ class ChauffeurController extends Controller
     {
         $data = request()->validate([
 
-            'name' => ['required','min:3'],
-            'prenom' => ['required','min:3'],
+            'name' => ['min:3'],
+            'prenom' => ['min:3'],
             'fonction' => ['required'],
             'adresse' => ['required'],
-            'telephone'=> ['required'],
             'email'=> ['email','required'],
-            'cni'=> ['required','image'],
-            'permis' => ['required'],
+            'cni'=> ['required'],
             'typepermis'=> ['required'],
             'date'=> ['date'],
-
-
-
         ]);
 
 
-        $cniPath = request('cni')->store('uploads','public');
+        $table = serialize($data['typepermis']);
 
         Chauffeur::create([
         'name'=> $data['name'],
         'prenom'=> $data['prenom'],
         'fonction'=> $data['fonction'],
         'adresse'=> $data['adresse'],
-        'telephone'=> $data['telephone'],
         'email'=>$data['email'],
-        'cni'=> $cniPath,
-        'permis'=>$data['permis'],
-        'typepermis'=>$data['typepermis'],
-        'date'=>$data['data'],
+        'cni'=> $data['cni'],
+        'typepermis'=>$table,
+        'date'=>$data['date'],
 
 
         ]);
+
+        return redirect()->route('chauffeur.index');
+
 
     }
 
@@ -87,11 +83,11 @@ class ChauffeurController extends Controller
      * @param  \App\Chauffeur  $chauffeur
      * @return \Illuminate\Http\Response
      */
-    public function show(Chauffeur $chauffeurs)
+    public function show($id)
     {
-        $chauffeurs = User::where('id',$id)->first();
+        $chauffeurs = Chauffeur::where('id',$id)->first();
 
-        return view('admin\operateurview',[
+        return view('admin\chauffeurview',[
 
             'chauffeurs'=> $chauffeurs
         ]);

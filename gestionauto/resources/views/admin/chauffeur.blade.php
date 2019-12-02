@@ -59,7 +59,7 @@
                         <td>{{$chauffeurs->name}}</td>
                         <td>{{$chauffeurs->prenom}}</td>
                         <td>{{$chauffeurs->email}}</td>
-                        <td>{{$chauffeurs->telephone}}</td>
+                        {{-- <td>{{$chauffeurs->telephone}}</td> --}}
                         <td>{{$chauffeurs->adresse}}</td>
                         <td>{{$chauffeurs->fonction}}</td>
                         <td>{{$chauffeurs->typepermis}}</td>

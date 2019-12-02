@@ -35,7 +35,7 @@
 
                                             <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
 
-                                            <input type="text" id="name" name="name" value="" class="form-control password" placeholder="Entrée Le Motif de la course">
+                                            <input type="text" id="name" name="name"  class="form-control password" placeholder="Entrée Le Motif de la course">
 
 
                                         </div>
@@ -67,7 +67,7 @@
 
                         <div class="form-group   is-empty">
 
-                                <label for="Fonction" class="col-sm-2  control-label">Fonction</label>
+                                <label for="fonction" class="col-sm-2  control-label">Fonction</label>
 
                                 <div class="col-sm-8">
 
@@ -76,7 +76,7 @@
 
                                         <span class="input-group-addon"><i class="fa fa-money fa-fw"></i></span>
 
-                                        <input type="text" id="Fonction" name="Fonction" value="" class="form-control password" placeholder="Entrée Montant Resté">
+                                        <input type="text" id="fonction" name="fonction"  class="form-control password" placeholder="Entrée Montant Resté">
 
 
                                     </div>
@@ -97,7 +97,7 @@
 
                                             <span class="input-group-addon"><i class="fa fa-money fa-fw"></i></span>
 
-                                            <input type="text" id="adresse" name="adresse" value="" class="form-control password" placeholder="Entrée Montant Total">
+                                            <input type="text" id="adresse" name="adresse"  class="form-control password" placeholder="Entrée Montant Total">
 
 
                                         </div>
@@ -107,7 +107,7 @@
                                 </div>
 
 
-                                <div class="form-group   is-empty">
+                                {{-- <div class="form-group   is-empty">
 
                                         <label for="telephone" class="col-sm-2  control-label">Téléphone</label>
 
@@ -118,14 +118,14 @@
 
                                                 <span class="input-group-addon"><i class="fa fa-money fa-fw"></i></span>
 
-                                                <input type="text" id="telephone" name="telephone" value="" class="form-control password" placeholder="Entrée Lieu de La course">
+                                                <input type="text" id="telephone" name="telephone" class="form-control password" placeholder="Entrée Lieu de La course">
 
 
                                             </div>
 
 
                                         </div>
-                                    </div>
+                                    </div> --}}
 
 
 
@@ -140,7 +140,7 @@
 
                                                         <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
 
-                                                        <input type="text" id="date" name="email" value="" class="form-control password" placeholder="Entrée votre mail">
+                                                        <input type="text" id="email" name="email"  class="form-control password" placeholder="Entrée votre mail">
 
 
                                                     </div>
@@ -184,7 +184,7 @@
 
                                                                 <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
 
-                                                                <select type="date" id="typepermis" name="typepermis[]"  class="form-control password select2" placeholder="Entrée Heure de Départ" multiple="multiple">
+                                                                <select id="typepermis" name="typepermis[]"  class="form-control password select2" placeholder="Entrée Heure de Départ" multiple="multiple">
 
                                                                             <option value="Permis A1">Permis A1</option>
                                                                             <option value="Permis A2">Permis A2</option>
@@ -192,7 +192,7 @@
                                                                             <option value="Permis A">Permis A</option>
 
                                                                             <option value="Permis B">Permis B</option>
-                                                                                                
+
                                                                 </select>
 
 
@@ -213,7 +213,7 @@
 
                                                             <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
 
-                                                            <input type="text" id="date" name="date" value="" class="form-control password" placeholder="Entrée date">
+                                                            <input type="date" id="date" name="date" class="form-control password" placeholder="Entrée date">
 
 
                                                         </div>

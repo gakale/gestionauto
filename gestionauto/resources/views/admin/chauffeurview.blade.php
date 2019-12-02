@@ -16,7 +16,7 @@
         <i class="fa fa-trash"></i><span class="hidden-xs">  Supprimer</span>
     </a>
 </div><div class="btn-group pull-right" style="margin-right: 5px">
-    <a href="{{route('chauffeur.edit',$chauffeur->id)}}" class="btn btn-sm btn-primary" title="Editer">
+    <a href="{{route('chauffeur.edit',$chauffeurs->id)}}" class="btn btn-sm btn-primary" title="Editer">
         <i class="fa fa-edit"></i><span class="hidden-xs"> Editer</span>
     </a>
 </div><div class="btn-group pull-right" style="margin-right: 5px">
@@ -40,9 +40,9 @@
                 <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                 {{$chauffeur->id}}&nbsp;
+                 {{$chauffeurs->id}}&nbsp;
             </div>
-                            
+
                             <!-- /.box-body -->
         </div>
             </div>
@@ -53,7 +53,7 @@
                 <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                      {{$chauffeur->name}} &nbsp;
+                      {{$chauffeurs->name}} &nbsp;
             </div>
                             <!-- /.box-body -->
         </div>
@@ -65,7 +65,7 @@
                 <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                                    {{$chauffeur->prenom}}&nbsp;
+                                    {{$chauffeurs->prenom}}&nbsp;
                             </div><!-- /.box-body -->
         </div>
             </div>
@@ -76,7 +76,7 @@
                 <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                                    {{$chauffeur->prenom}}
+                                    {{$chauffeurs->prenom}}
     </div>
     <!-- /.box-body -->
         </div>
@@ -88,7 +88,7 @@
                 <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                             <span class="label label-primary">{{$chauffeur->adresse}}</span>&nbsp
+                             <span class="label label-primary">{{$chauffeurs->adresse}}</span>&nbsp
              </div>
                             <!-- /.box-body -->
         </div>
@@ -100,7 +100,7 @@
                 <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                                      {{$chauffeur->email}}&nbsp;
+                                      {{$chauffeurs->email}}&nbsp;
                             </div><!-- /.box-body -->
         </div>
             </div>
@@ -111,7 +111,7 @@
          <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                  {{$chauffeur->cni}}&nbsp;
+                  {{$chauffeurs->cni}}&nbsp;
              </div>
                 <!-- /.box-body -->
         </div>
@@ -125,7 +125,7 @@
          <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                  {{$chauffeur->permis}}&nbsp;
+                  {{$chauffeurs->permis}}&nbsp;
              </div>
                 <!-- /.box-body -->
         </div>
@@ -141,7 +141,7 @@
          <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                  {{$chauffeur->typepermis}}&nbsp;
+                  {{$chauffeurs->typepermis}}&nbsp;
              </div>
                 <!-- /.box-body -->
         </div>
@@ -155,7 +155,7 @@
          <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                  {{$chauffeur->date}}&nbsp;
+                  {{$chauffeurs->date}}&nbsp;
              </div>
                 <!-- /.box-body -->
         </div>
@@ -169,7 +169,7 @@
          <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                  {{$chauffeur->created_at}}&nbsp;
+                  {{$chauffeurs->created_at}}&nbsp;
              </div>
                 <!-- /.box-body -->
         </div>
@@ -183,7 +183,7 @@
          <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                  {{$chauffeur->created_at}}&nbsp;
+                  {{$chauffeurs->created_at}}&nbsp;
              </div>
                 <!-- /.box-body -->
         </div>
@@ -197,7 +197,7 @@
          <div class="box box-solid box-default no-margin box-show">
             <!-- /.box-header -->
             <div class="box-body">
-                  {{$chauffeur->updated_at}}&nbsp;
+                  {{$chauffeurs->updated_at}}&nbsp;
              </div>
                 <!-- /.box-body -->
         </div>
@@ -210,6 +210,4 @@
 </div>
     </div>
 
-@stop    
-
-
+@stop

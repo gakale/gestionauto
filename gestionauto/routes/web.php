@@ -152,14 +152,6 @@ Route::post('/maintenance.store', 'MaintenanceController@store')->name('maintena
 
 
 
-Route::get('/chauffeur.show/{chauffeurs}','MaintenanceController@show')->name('chauffeur.show');
-
-Route::get('/chauffeur/{chauffeurs}/edit','Usercontroller@edit')->name('chauffeur.edit');
-
-
-Route::patch('/chauffeur.update/{chauffeurs}/','Usercontroller@update')->name('chauffeur.update');
-
-
 //route STOCK
 
 Route::resource('stock', 'StockController');

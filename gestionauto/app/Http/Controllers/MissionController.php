@@ -52,10 +52,13 @@ class MissionController extends Controller
 
 
         ]);
+        $name = serialize($data['name']);
+        $chauffeur = serialize($data['chauffeur']);
+        $vehicule = serialize($data['vehicule'])
 
         Mission::create([
-            'name'=> $data['name'],
-            'chauffeurs'=> $data['chauffeurs'],
+            'name'=> $name,
+            'chauffeurs'=> $chauffeur,
             'montantdepart'=>$data['montantdepart'],
             'montanttotal'=>$data['montanttotal'],
             'missionlieu'=> $data['missionlieu'],
@@ -63,7 +66,7 @@ class MissionController extends Controller
             'date'=> $data['date'],
             'lieuarrive'=>$data['lieuarrive'],
             'heurdepart'=> $data['heurdepart'],
-            'vehicule'=>$data['vehicule'],
+            'vehicule'=>$vehicule,
             'carbuapresdepar'=>$data['carbuapresdepar'],
             'killoapresdepart'=>$data['killoapresdepart'],
 

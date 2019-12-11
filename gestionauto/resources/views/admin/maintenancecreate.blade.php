@@ -12,13 +12,13 @@
 
                 <div class="box-tools">
                     <div class="btn-group pull-right" style="margin-right: 5px">
-                        <a href="{{ route('chauffeur.index') }}" class="btn btn-sm btn-default" title="Liste"><i class="fa fa-list"></i><span class="hidden-xs">&nbsp;Liste</span></a>
+                        <a href="{{ route('maintenance.index') }}" class="btn btn-sm btn-default" title="Liste"><i class="fa fa-list"></i><span class="hidden-xs">&nbsp;Liste</span></a>
                     </div>
                 </div>
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form action="{{route('chauffeur.store')}}" method="POST" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data" pjax-container="">
+            <form action="{{route('maintenance.store')}}" method="POST" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data" pjax-container="">
                 @csrf
                 <div class="box-body">
 
@@ -26,7 +26,7 @@
 
                             <div class="form-group   is-empty">
 
-                                    <label for="name" class="col-sm-2  control-label">Nom Chauffeur</label>
+                                    <label for="imatriculation" class="col-sm-2  control-label">Imatriculation</label>
 
                                     <div class="col-sm-8">
 
@@ -35,7 +35,7 @@
 
                                             <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
 
-                                            <input type="text" id="name" name="name"  class="form-control password" placeholder="Entrée Le Motif de la course">
+                                            <input type="text" id="imatriculation" name="imatriculation"  class="form-control password" placeholder="Entrée Le Motif de la course">
 
 
                                         </div>
@@ -47,7 +47,7 @@
 
                         <div class="form-group   is-empty">
 
-                            <label for="prenom" class="col-sm-2  control-label">Prenom Chauffeur</label>
+                            <label for="prixaction" class="col-sm-2  control-label">Prix Action</label>
 
                             <div class="col-sm-8">
 
@@ -56,7 +56,7 @@
 
                                     <span class="input-group-addon"><i class="fa fa-money fa-fw"></i></span>
 
-                                    <input type="text" id="prenom" name="prenom" class="form-control password" placeholder="Entrée Montant de Départ">
+                                    <input type="text" id="prixaction" name="prixaction" class="form-control password" placeholder="Entrée Montant de Départ">
 
 
                                 </div>
@@ -67,7 +67,7 @@
 
                         <div class="form-group   is-empty">
 
-                                <label for="fonction" class="col-sm-2  control-label">Fonction</label>
+                                <label for="fonction" class="col-sm-2  control-label">Mes Garages</label>
 
                                 <div class="col-sm-8">
 
@@ -76,7 +76,7 @@
 
                                         <span class="input-group-addon"><i class="fa fa-money fa-fw"></i></span>
 
-                                        <input type="text" id="fonction" name="fonction"  class="form-control password" placeholder="Entrée Montant Resté">
+                                        <input type="text" id="garage" name="garage"  class="form-control password" placeholder="Entrée Montant Resté">
 
 
                                     </div>
@@ -88,7 +88,7 @@
 
                             <div class="form-group   is-empty">
 
-                                    <label for="adresse" class="col-sm-2  control-label">Adresse</label>
+                                    <label for="panne_chauffeur" class="col-sm-2  control-label">Panne chauffeur</label>
 
                                     <div class="col-sm-8">
 
@@ -97,7 +97,7 @@
 
                                             <span class="input-group-addon"><i class="fa fa-money fa-fw"></i></span>
 
-                                            <input type="text" id="adresse" name="adresse"  class="form-control password" placeholder="Entrée Montant Total">
+                                            <input type="text" id="panne_chauffeur" name="panne_chauffeur"  class="form-control password" placeholder="Entrée Montant Total">
 
 
                                         </div>
@@ -118,7 +118,7 @@
 
                                                 <span class="input-group-addon"><i class="fa fa-money fa-fw"></i></span>
 
-                                                <input type="text" id="telephone" name="telephone" class="form-control password" placeholder="Entrée Lieu de La course">
+                                                <input type="text" id="telephone" imatriculation="telephone" class="form-control password" placeholder="Entrée Lieu de La course">
 
 
                                             </div>
@@ -129,50 +129,30 @@
 
 
 
-                                        <div class="form-group   is-empty">
-
-                                                <label for="email" class="col-sm-2  control-label">Votre email</label>
-
-                                                <div class="col-sm-8">
 
 
-                                                    <div class="input-group">
+                                                {{-- <div class="form-group   is-empty">
 
-                                                        <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
+                                                        <label for="cni" class="col-sm-2  control-label">N° CNI</label>
 
-                                                        <input type="text" id="email" name="email"  class="form-control password" placeholder="Entrée votre mail">
-
-
-                                                    </div>
+                                                        <div class="col-sm-8">
 
 
-                                                </div>
-                                            </div>
+                                                            <div class="input-group">
+
+                                                                <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
+
+                                                                <input type="text" id="cni" name="cni" value="" class="form-control password" placeholder="Entrée cni">
 
 
-
-                                            <div class="form-group   is-empty">
-
-                                                    <label for="cni" class="col-sm-2  control-label">N° CNI</label>
-
-                                                    <div class="col-sm-8">
-
-
-                                                        <div class="input-group">
-
-                                                            <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-
-                                                            <input type="text" id="cni" name="cni" value="" class="form-control password" placeholder="Entrée cni">
+                                                            </div>
 
 
                                                         </div>
-
-
                                                     </div>
-                                                </div>
+     --}}
 
-
-
+{{--
                                                 <div class="form-group   is-empty">
 
                                                         <label for="typepermis" class="col-sm-2  control-label">Type de permis</label>
@@ -184,7 +164,7 @@
 
                                                                 <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
 
-                                                                <select id="typepermis" name="typepermis[]"  class="form-control password select2" placeholder="Entrée Heure de Départ" multiple="multiple">
+                                                                <select id="typepermis" imatriculation="typepermis[]"  class="form-control password select2" placeholder="Entrée Heure de Départ" multiple="multiple">
 
                                                                             <option value="Permis A1">Permis A1</option>
                                                                             <option value="Permis A2">Permis A2</option>
@@ -200,7 +180,7 @@
 
 
                                                         </div>
-                                                    </div>
+                                                    </div> --}}
 
 <div class="form-group   is-empty">
 

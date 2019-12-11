@@ -19,11 +19,7 @@ class ChauffeurController extends Controller
         $chauffeur = DB::table('chauffeurs')->orderBy('created_at','DESC')->paginate(10);
 
 
-
-        return view('admin\chauffeur', [
-
-            'chauffeur'=> $chauffeur
-        ]);
+        return view('admin\chauffeur',compact('chauffeur'));
     }
 
     /**
@@ -56,7 +52,7 @@ class ChauffeurController extends Controller
             'date'=> ['date'],
         ]);
 
-
+        
         $table = serialize($data['typepermis']);
 
         Chauffeur::create([
@@ -86,11 +82,13 @@ class ChauffeurController extends Controller
     public function show($id)
     {
         $chauffeurs = Chauffeur::where('id',$id)->first();
-
+        $tables =unserialize($chauffeurs['typepermis']);
         return view('admin\chauffeurview',[
-
+            'tables'=> $tables,
             'chauffeurs'=> $chauffeurs
         ]);
+
+
     }
 
     /**

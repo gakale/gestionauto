@@ -33,9 +33,12 @@
 
                             <div class="col-sm-8">
 
-                                <select class="form-control select2" style="width: 100%;" name="name" data-value="" tabindex="-1" aria-hidden="true">
-                                    <option value="">Fofana</option>
-                                    <option value="">gnakale</option>
+                                <select class="form-control select2" style="width: 100%;" name="name[]" data-value="" tabindex="-1" aria-hidden="true"multiple="multiple">
+
+                                    <option value="" disabled>Choose your option</option>
+                                    <option value="Fofana">Fofana</option>
+                                    <option value="gnakale">gnakale</option>
+
 
                                 </select>
 
@@ -48,9 +51,9 @@
 
                                 <div class="col-sm-8">
 
-                                    <select class="form-control select2" style="width: 100%;" name="chauffeurs" data-value="" tabindex="-1" aria-hidden="true">
-                                        <option value="">Fofana</option>
-                                        <option value="">gnakale</option>
+                                    <select class="form-control select2" style="width: 100%;" name="chauffeurs[]" data-value="" tabindex="-1" aria-hidden="true" multiple="multiple">
+                                        <option value="Fofana">Fofana</option>
+                                        <option value="gnakale">gnakale</option>
 
                                     </select>
 
@@ -265,9 +268,9 @@
 
                                         <div class="col-sm-8">
 
-                                            <select class="form-control select2" style="width: 100%;" name="vehicule" data-value="" tabindex="-1" aria-hidden="true">
-                                                <option value="">Fofana</option>
-                                                <option value="">gnakale</option>
+                                            <select class="form-control select2" style="width: 100%;" name="vehicule[]" data-value="" tabindex="-1" aria-hidden="true" multiple="multiple">
+                                                <option value="Fofana">Fofana</option>
+                                                <option value="gnakale">gnakale</option>
 
                                             </select>
 
@@ -372,25 +375,24 @@
 
                                                             </div>
                                                         </div>
-            <div class="box-footer">
+                            <div class="box-footer">
 
 
-                <div class="col-md-2">
-                </div>
+                                <div class="col-md-2">
+                                </div>
 
-                <div class="col-md-8">
+                                <div class="col-md-8">
 
-                    <div class="btn-group pull-right">
-                        <button type="submit" class="btn btn-primary">Soumettre</button>
-                    </div>
+                                    <div class="btn-group pull-right">
+                                        <button type="submit" class="btn btn-primary">Soumettre</button>
+                                    </div>
 
 
-                    <div class="btn-group pull-left">
-                        <button type="reset" class="btn btn-warning">Réinitialiser</button>
-                    </div>
-                </div>
-            </div>
-
+                                    <div class="btn-group pull-left">
+                                        <button type="reset" class="btn btn-warning">Réinitialiser</button>
+                                    </div>
+                                </div>
+                            </div>
 
 
             <!-- /.box-footer -->

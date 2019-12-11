@@ -37,27 +37,29 @@ class MaintenanceController extends Controller
     public function store(Request $request)
     {
     // $table = request( ['action']);
-    
-
-        $data = request()->validate([
-
-            'imatriculation' => ['required'],
-            'prixaction' => ['required'],
-            'garage'=> ['required'],
-            'panne_chauffeur' => ['required'],
-            'date' => ['required'],
-            // 'recupanne'=> ['required',  'image']
-
-        ]);
 
 
+        // $data = request()->validate([
+        //
+        //     'imatriculation' => ['required'],
+        //     'prixaction' => ['required'],
+        //     'garage'=> ['required'],
+        //     'panne_chauffeur' => ['required'],
+        //     'date' => ['required'],
+        //     // 'recupanne'=> ['required',  'image']
+
+        // ]);
+
+        $data = $request;
 
         // $cniPath = request('recupanne')->store('uploads','public');
 
+    
 
 
 
         Maintenance::create([
+
             'imatriculation'=> $data['imatriculation'],
 
             // 'action' => $data['action'],

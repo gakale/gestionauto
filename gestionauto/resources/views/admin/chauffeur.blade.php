@@ -53,6 +53,7 @@
                 </thead>
 
                 <tbody>
+
                 @foreach($chauffeur as $chauffeurs)
 
                     <tr>
@@ -62,7 +63,10 @@
                         {{-- <td>{{$chauffeurs->telephone}}</td> --}}
                         <td>{{$chauffeurs->adresse}}</td>
                         <td>{{$chauffeurs->fonction}}</td>
-                        <td>{{$chauffeurs->typepermis}}</td>
+                        <td>
+                            {{$chauffeurs->typepermis}}
+                        </td>
+
                         <td>
                         <a href="{{route('chauffeur.show',$chauffeurs->id)}}">
                                 <i class="fa fa-eye"></i>

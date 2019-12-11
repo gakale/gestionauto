@@ -18,8 +18,8 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
-            <form action="" method="post" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data" pjax-container="">
-
+            <form action="{{route('mission.store')}}" method="post" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data" pjax-container="">
+                @csrf
                 <div class="box-body">
 
                     <div class="fields-group">

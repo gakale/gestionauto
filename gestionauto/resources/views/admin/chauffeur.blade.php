@@ -60,15 +60,12 @@
                         <td>{{$chauffeurs->name}}</td>
                         <td>{{$chauffeurs->prenom}}</td>
                         <td>{{$chauffeurs->email}}</td>
-                        {{-- <td>{{$chauffeurs->telephone}}</td> --}}
+                        <td>{{$chauffeurs->telephone}}</td>
                         <td>{{$chauffeurs->adresse}}</td>
                         <td>{{$chauffeurs->fonction}}</td>
+                        <td>{{$chauffeurs->typepermis}}</td>
                         <td>
-                            {{$chauffeurs->typepermis}}
-                        </td>
-
-                        <td>
-                        <a href="{{route('chauffeur.show',$chauffeurs->id)}}">
+                            <a href="{{route('chauffeur.show',$chauffeurs->id)}}">
                                 <i class="fa fa-eye"></i>
                             </a>
                             <a href="/" >
@@ -77,11 +74,11 @@
                             <a href="{{url('facture/'.$chauffeurs->id)}}" >
                                 <i class="fa fa-print"></i>
                             </a>
-                            </td>
+                        </td>
                     </tr>
 
-                    </tr>
                     @endforeach
+                    
                 </tbody>
             </table>
 

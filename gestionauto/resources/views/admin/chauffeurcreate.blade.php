@@ -107,7 +107,7 @@
                                 </div>
 
 
-                                {{-- <div class="form-group   is-empty">
+                                    <div class="form-group   is-empty">
 
                                         <label for="telephone" class="col-sm-2  control-label">Téléphone</label>
 
@@ -125,7 +125,7 @@
 
 
                                         </div>
-                                    </div> --}}
+                                    </div> 
 
 
 

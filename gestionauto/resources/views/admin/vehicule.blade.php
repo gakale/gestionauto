@@ -112,18 +112,54 @@
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th> </th>
                                     <th>Imatriculation</th>
+                                    <th>Marque</th>
                                     <th>Modèle</th>
+                                    <th>Catégorie</th>
+                                    <th>Puissance</th>
+                                    <th>Kilométrage</th>
+                                    <th>Carburant</th>
+                                    <th>Carossérie</th>
                                     <th>Utilisation</th>
-                                    <th>Date</th>
+                                    <th>Places</th>
                                     <th>Etat</th>
-                                    <th>Email</th>
-                                        <th>Action</th>
+                                    <th>Date</th>
+                                    <th>Action</th>
                                 </tr>
                             </thead>
 
-                            <tbody>
+                            <tbody> 
+
+                            @foreach($vehicule as $vehicules)
+
+                            <tr>
+                                <td>{{$vehicules->imatriculation}}</td>
+                                <td>{{$vehicules->marque}}</td>
+                                <td>{{$vehicules->modele}}</td>
+                                <td>{{$vehicules->categorie}}</td>
+                                <td>{{$vehicules->puissance}}</td>
+                                <td>{{$vehicules->kilometrage}}</td>
+                                <td>{{$vehicules->carburant}}</td>
+                                <td>{{$vehicules->carosserie}}</td>
+                                <td>{{$vehicules->utilisation}}</td>
+                                <td>{{$vehicules->nbreplace}}</td>
+                                <td>{{$vehicules->etat}}</td>
+                                <td>{{$vehicules->date}}</td>
+                                <td>
+                                    <a href="#">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    <a href="#">
+                                        <i class="fa fa-pencil"></i>
+                                    </a>
+                                    <a href="#" >
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            @endforeach
+
                             </tbody>
                         </table>
 

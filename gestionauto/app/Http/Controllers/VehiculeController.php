@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Vehicule;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class VehiculeController extends Controller
@@ -14,6 +15,13 @@ class VehiculeController extends Controller
      */
     public function index()
     {
+        $vehicule = DB::table('vehicules')->orderBy('created_at','DESC')->paginate(10);
+
+        
+        return view('admin\vehicule', [
+
+            'vehicule'=> $vehicule
+        ]);
         return view('admin\vehicule');
     }
 

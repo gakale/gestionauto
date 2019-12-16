@@ -57,7 +57,8 @@
                         <td>{{$fournisseurs->localisation}}</td>
                         <td>{{$fournisseurs->email}}</td>
                         <td>{{$fournisseurs->telephone}}</td>
-                        <a href="#">
+                        <td>
+                            <a href="#">
                                 <i class="fa fa-eye"></i>
                             </a>
                             <a href="/" >
@@ -66,7 +67,7 @@
                             <a href="{{url('facture/'.$fournisseurs->id)}}" >
                                 <i class="fa fa-print"></i>
                             </a>
-                            </td>
+                        </td>
                     </tr>
 
                     </tr>

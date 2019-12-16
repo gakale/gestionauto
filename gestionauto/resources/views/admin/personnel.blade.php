@@ -53,29 +53,28 @@
                 <tbody>
                      @foreach($personnel as $personnels)
 
-                                        <tr>
-                                            <td>{{$personnels->name}}</td>
-                                            <td>{{$personnels->prenom}}</td>
-                                            <td>{{$personnels->email}}</td>
-                                            <td>{{$personnels->telephone}}</td>
-                                            <td>{{$personnels->fonction}}</td>
-                                            <td>
-                                            <a href="{{route('personnel.show',$personnels->id)}}">
-                                                    <i class="fa fa-eye"></i>
-                                                </a>
-                                                <a href="{{route('personnel.edit', $personnels->id)}}">
-                                                    <i class="fa fa-pencil"></i>
-                                                </a>
-                                                <a href="#" >
-                                                    <i class="fa fa-trash"></i>
-                                                </a>
-                                                </td>
-                                        </tr>
+                        <tr>
+                            <td>{{$personnels->name}}</td>
+                            <td>{{$personnels->prenom}}</td>
+                            <td>{{$personnels->email}}</td>
+                            <td>{{$personnels->telephone}}</td>
+                            <td>{{$personnels->fonction}}</td>
+                            <td>
+                                <a href="{{route('personnel.show',$personnels->id)}}">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                                <a href="{{route('personnel.edit', $personnels->id)}}">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                <a href="#" >
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
 
-                                        </tr>
-                                    @endforeach
+                    @endforeach
               
-                            </tbody>
+                </tbody>
             </table>
 
         </div>
@@ -145,7 +144,6 @@
                                 @error('prenom')
                                 <span class="invalid-feedback">
                                     <strong>$message</strong>
-
                                 </span>
                                 @enderror
 

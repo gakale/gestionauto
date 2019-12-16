@@ -123,7 +123,23 @@ Route::resource('fournisseur', 'FournisseurController');
 //Route Mission et Courses
 
 
-Route::resource('/mission', 'MissionController');
+
+
+Route::get('mission.index', 'MissionController@index')->name('mission.index');
+
+Route::get('/mission.create', 'MissionController@create')->name('mission.create');
+
+Route::get('/mission.show/{missions}', 'MissionController@show')->name('mission.show');
+
+Route::post('/mission.store', 'MissionController@store')->name('mission.store');
+
+Route::get('/mission/{mission}/edit','MissionController@edit')->name('mission.edit');
+
+
+Route::patch('/mission.update/{mission}/','Usercontroller@update')->name('mission.update');
+
+
+
 
 
 
@@ -136,6 +152,8 @@ Route::resource('/course', 'courseController');
 //Route Vehicule
 
 Route::resource('/vehicule', 'VehiculeController');
+
+
 
 //Route Maintenance
 

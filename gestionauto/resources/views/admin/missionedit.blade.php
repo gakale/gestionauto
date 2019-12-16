@@ -20,6 +20,7 @@
             <!-- form start -->
             <form action="{{route('mission.store')}}" method="post" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data" pjax-container="">
                 @csrf
+                @method('PATCH')
                 <div class="box-body">
 
                     <div class="fields-group">
@@ -70,7 +71,7 @@
 
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
 
-                                    <input type="text" id="montantdepart" name="montantdepart" value="" class="form-control password" placeholder="Entrée Montant de Départ">
+                                    <input type="text" id="montantdepart" name="montantdepart" value="{{$mission->montantdepart}}" class="form-control password" placeholder="Entrée Montant de Départ">
 
 
                                 </div>
@@ -91,7 +92,7 @@
 
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
 
-                                    <input type="text" id="missionlieu" name="missionlieu" value="" class="form-control etablissement" placeholder="Lieu de La mission">
+                                    <input type="text" id="missionlieu" name="missionlieu" value="{{$mission->missionlieu}}" class="form-control etablissement" placeholder="Lieu de La mission">
 
 
                                 </div>
@@ -110,7 +111,7 @@
 
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
 
-                                    <input type="text" id="motif" name="motif" value="" class="form-control birth_date" placeholder="Entrée le motif de la mission">
+                                    <input type="text" id="motif" name="motif" value="{{$mission->motif}}" class="form-control birth_date" placeholder="Entrée le motif de la mission">
 
 
                                 </div>
@@ -131,7 +132,7 @@
 
                                     <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
 
-                                    <input type="date" id="date" name="date" value="" class="form-control matricule">
+                                    <input type="date" id="date" name="date" value="{{$mission->date}}" class="form-control matricule">
 
 
                                 </div>
@@ -150,7 +151,7 @@
 
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
 
-                                    <input type="text" id="lieudepart" name="lieudepart" value="" class="form-control phone" placeholder="Entrée le lieu de Départ">
+                                    <input type="text" id="lieudepart" name="lieudepart" value="{{$mission->lieudepart}}" class="form-control phone" placeholder="Entrée le lieu de Départ">
 
 
                                 </div>
@@ -169,7 +170,7 @@
 
                                         <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
 
-                                        <input type="text" id="lieuarrive" name="lieuarrive" value="" class="form-control phone" placeholder="Entrée Lieu d arrivé">
+                                        <input type="text" id="lieuarrive" name="lieuarrive" value="{{$mission->lieuarrive}}" class="form-control phone" placeholder="Entrée Lieu d arrivé">
 
 
                                     </div>
@@ -190,7 +191,7 @@
 
                                             <span class="input-group-addon"><i class="fa fa-clock-o fa-fw"></i></span>
 
-                                            <input type="date" id="heurdepart" name="heurdepart" value="" class="form-control phone" placeholder="Entrée Heure de Départ">
+                                            <input type="date" id="heurdepart" name="heurdepart" value="{{$mission->heurdepart}}" class="form-control phone" placeholder="Entrée Heure de Départ">
 
 
                                         </div>
@@ -227,7 +228,7 @@
 
                                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
 
-                                                    <input type="text" id="carbuavantdepar" name="carbuavantdepar" value="" class="form-control phone" placeholder="Entrée Caburant Avant Depart">
+                                                    <input type="text" id="carbuavantdepar" name="carbuavantdepar" value="{{$mission->carbuavantdepar}}" class="form-control phone" placeholder="Entrée Caburant Avant Depart">
 
 
                                                 </div>
@@ -251,7 +252,7 @@
 
                                                             <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
 
-                                                            <input type="text" id="killoavantdepart" name="killoavantdepart" value="" class="form-control phone" placeholder="Entrée Kilometrage Avant Depart">
+                                                            <input type="text" id="killoavantdepart" name="killoavantdepart" value="{{$mission->killoavantdepart}}" class="form-control phone" placeholder="Entrée Kilometrage Avant Depart">
 
 
                                                         </div>
@@ -277,6 +278,10 @@
 
                                                             </div>
                                                         </div>
+
+                                                    </div>
+
+                                                </div>
                             <div class="box-footer">
 
 

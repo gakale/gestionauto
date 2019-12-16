@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mission;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class MissionController extends Controller
 {
@@ -14,7 +15,9 @@ class MissionController extends Controller
      */
     public function index()
     {
-        return view('admin\mission');
+        $mission = DB::table('missions')->orderBy('created_at','DESC')->paginate(10);
+
+        return view('admin\mission', compact('mission'));
     }
 
     /**
@@ -35,23 +38,25 @@ class MissionController extends Controller
      */
     public function store(Request $request)
     {
-        $data = request()->validate([
+        $data = request();
 
-            'name'=>['required'],
-            'chauffeurs'=> ['required'],
-            'montantdepart'=> ['required'],
-            'montanttotal'=> ['required'],
-            'missionlieu' => ['required'],
-            'motif'=> ['required'],
-            'date'=> ['date','required'],
-            'lieuarrive'=> ['required'],
-            'heurdepart'=> ['required'],
-            'vehicule'=> ['required'],
-            'carbuavantdepar'=> ['required'],
-            'killoavantdepart'=> ['required'],
-
-
-        ]);
+        // ->validate([
+        //
+        //     'name'=>['required'],
+        //     'chauffeurs'=> ['required'],
+        //     'montantdepart'=> ['required'],
+        //     'missionlieu' => ['required'],
+        //     'motif'=> ['required'],
+        //     'date'=> ['date','required'],
+        //     'lieudepart'=> ['required'],
+        //     'lieuarrive'=> ['required'],
+        //     'heurdepart'=> ['date','required'],
+        //     'vehicule'=> ['required'],
+        //     'carbuavantdepar'=> ['required'],
+        //     'killoavantdepart'=> ['required'],
+        //
+        //
+        // ]);
         $name = serialize($data['name']);
         $chauffeur = serialize($data['chauffeurs']);
         $vehicule = serialize($data['vehicule']);
@@ -60,10 +65,10 @@ class MissionController extends Controller
             'name'=> $name,
             'chauffeurs'=> $chauffeur,
             'montantdepart'=>$data['montantdepart'],
-            'montanttotal'=>$data['montanttotal'],
             'missionlieu'=> $data['missionlieu'],
             'motif'=> $data['motif'],
             'date'=> $data['date'],
+            'lieudepart'=> $data['lieudepart'],
             'lieuarrive'=>$data['lieuarrive'],
             'heurdepart'=> $data['heurdepart'],
             'vehicule'=>$vehicule,
@@ -71,6 +76,7 @@ class MissionController extends Controller
             'killoavantdepart'=>$data['killoavantdepart'],
 
         ]);
+          return redirect()->route('mission.index');
     }
 
     /**
@@ -79,9 +85,21 @@ class MissionController extends Controller
      * @param  \App\Mission  $mission
      * @return \Illuminate\Http\Response
      */
-    public function show(Mission $mission)
+    public function show($id)
     {
-        //
+
+   $mission = Mission::where('id',$id)->first();
+   $tables =unserialize($mission['name']);
+   $chauffeurs =unserialize($mission['chauffeurs']);
+   $vehicule =unserialize($mission['vehicule']);
+
+   return view('admin\missionview',[
+
+       'mission'=> $mission,
+       'tables'=> $tables,
+       'chauffeurs'=> $chauffeurs,
+       'vehicule'=> $vehicule
+   ]);
     }
 
     /**
@@ -92,7 +110,8 @@ class MissionController extends Controller
      */
     public function edit(Mission $mission)
     {
-        //
+      return view('admin\missionedit',compact('mission'));
+
     }
 
     /**
@@ -104,9 +123,46 @@ class MissionController extends Controller
      */
     public function update(Request $request, Mission $mission)
     {
-        //
-    }
 
+      $data = request();
+
+     // ->validate([
+     //
+     //     'name'=>['required'],
+     //     'chauffeurs'=> ['required'],
+     //     'montantdepart'=> ['required'],
+     //     'missionlieu' => ['required'],
+     //     'motif'=> ['required'],
+     //     'date'=> ['date','required'],
+     //     'lieudepart'=> ['required'],
+     //     'lieuarrive'=> ['required'],
+     //     'heurdepart'=> ['date','required'],
+     //     'vehicule'=> ['required'],
+     //     'carbuavantdepar'=> ['required'],
+     //     'killoavantdepart'=> ['required'],
+     //
+     //
+     // ]);
+     $name = serialize($data['name']);
+     $chauffeur = serialize($data['chauffeurs']);
+     $vehicule = serialize($data['vehicule']);
+
+     Mission::update([
+         'name'=> $name,
+         'chauffeurs'=> $chauffeur,
+         'montantdepart'=>$data['montantdepart'],
+         'missionlieu'=> $data['missionlieu'],
+         'motif'=> $data['motif'],
+         'date'=> $data['date'],
+         'lieudepart'=> $data['lieudepart'],
+         'lieuarrive'=>$data['lieuarrive'],
+         'heurdepart'=> $data['heurdepart'],
+         'vehicule'=>$vehicule,
+         'carbuavantdepar'=>$data['carbuavantdepar'],
+         'killoavantdepart'=>$data['killoavantdepart'],
+
+    ]);
+}
     /**
      * Remove the specified resource from storage.
      *

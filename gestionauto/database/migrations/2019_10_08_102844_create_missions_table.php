@@ -19,11 +19,11 @@ class CreateMissionsTable extends Migration
             $table->string('chauffeurs');
             $table->integer('montantdepart');
             $table->integer('montantreste')->nullable();
-            $table->date('montanttotal');
+            $table->integer('montanttotal')->nullable();
             $table->string('missionlieu');
-            $table->integer('motif');
+            $table->string('motif');
             $table->date('date');
-            $table->string('lieudepart');
+            $table->string('lieudepart')->nullable();
             $table->string('lieuarrive')->nullable();
             $table->date('heurdepart');
             $table->date('heurretour')->nullable();

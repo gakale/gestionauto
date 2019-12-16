@@ -112,26 +112,69 @@
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th> </th>
-                                    <th>Création</th>
-                                    <th>Nom</th>
-                                    <th>Prénom</th>
-                                    <th>Matricule</th>
-                                    <th>Numéro de téléphone</th>
-                                    <th>Email</th>
-                                    <th>ASE</th>
-                                    <th>Qualification</th>
-                                    <th>Role</th>
-                                    <th>Action</th>
+                                    <th>id </th>
+                                    <th>Nom de projet</th>
+                                    <th>Le Chauffeur</th>
+                                    <th>Montant</th>
+                                    <th>Lieu Mission</th>
+                                    <th>Le motif </th>
+
+
                                 </tr>
                             </thead>
 
                             <tbody>
+                              @foreach($mission as $missions)
+
+                                                 <tr>
+                                                     <td>{{$missions->id}}</td>
+                                                     <td>{{$missions->name}}</td>
+                                                     <td>{{$missions->chauffeurs}}</td>
+                                                     <td>{{$missions->montantdepart}}</td>
+                                                     <td>{{$missions->missionlieu}}</td>
+                                                     <td>{{$missions->motif}}</td>
+                                                     <td>
+                                                     <a href="{{route('mission.show',$missions->id)}}">
+                                                             <i class="fa fa-eye"></i>
+                                                         </a>
+                                                         <a href="{{route('mission.edit', $missions->id)}}">
+                                                             <i class="fa fa-pencil"></i>
+                                                         </a>
+
+
+                                                         <a type="button" class="btn btn-sm btn-danger" data-toggle="modal" data-target="#modal-default" title="Nouveau" >
+                                                             <i class="fa fa-trash"></i>
+                                                         </a>
+                                                         </td>
+                                                 </tr>
+
+                                                 </tr>
+                                             @endforeach
+
                             </tbody>
                         </table>
 
                     </div>
+                    <div class="modal fade" id="modal-default">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        <h3>être vous sure ! </h3>
+                                    </div>
 
+                                    <div class="modal-footer">
+                                        <a  class="btn btn-default pull-left" data-dismiss="modal">Annulation</button>
+                                        <a href="" class="btn btn-primary">Supprimer</a>
+                                    </div>
+
+                            <!-- /.modal-dialog -->
+                        </div>
+                        </div>
+                        </div>
 
 
                     <div class="box-footer clearfix">

@@ -16,11 +16,11 @@
                             <i class="fa fa-trash"></i><span class="hidden-xs">  Supprimer</span>
                         </a>
                     </div><div class="btn-group pull-right" style="margin-right: 5px">
-                        <a href="{{route('chauffeur.edit',$mission->id)}}" class="btn btn-sm btn-primary" title="Editer">
+                        <a href="{{route('mission.edit',$mission->id)}}" class="btn btn-sm btn-primary" title="Editer">
                             <i class="fa fa-edit"></i><span class="hidden-xs"> Editer</span>
                         </a>
                     </div><div class="btn-group pull-right" style="margin-right: 5px">
-                        <a href="{{route('chauffeur.index')}}" class="btn btn-sm btn-default" title="Liste">
+                        <a href="{{route('mission.index')}}" class="btn btn-sm btn-default" title="Liste">
                             <i class="fa fa-list"></i><span class="hidden-xs"> Liste</span>
                         </a>
                     </div>

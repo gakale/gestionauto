@@ -74,7 +74,7 @@
 
                                         </tr>
                                     @endforeach
-              
+
                             </tbody>
             </table>
 

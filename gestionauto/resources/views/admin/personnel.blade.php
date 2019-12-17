@@ -53,31 +53,6 @@
                 <tbody>
                      @foreach($personnel as $personnels)
 
-<<<<<<< HEAD
-                                        <tr>
-                                            <td>{{$personnels->name}}</td>
-                                            <td>{{$personnels->prenom}}</td>
-                                            <td>{{$personnels->email}}</td>
-                                            <td>{{$personnels->telephone}}</td>
-                                            <td>{{$personnels->fonction}}</td>
-                                            <td>
-                                            <a href="{{route('personnel.show',$personnels->id)}}">
-                                                    <i class="fa fa-eye"></i>
-                                                </a>
-                                                <a href="{{route('personnel.edit', $personnels->id)}}">
-                                                    <i class="fa fa-pencil"></i>
-                                                </a>
-                                                <a href="#" >
-                                                    <i class="fa fa-trash"></i>
-                                                </a>
-                                                </td>
-                                        </tr>
-
-                                        </tr>
-                                    @endforeach
-
-                            </tbody>
-=======
                         <tr>
                             <td>{{$personnels->name}}</td>
                             <td>{{$personnels->prenom}}</td>
@@ -98,9 +73,9 @@
                         </tr>
 
                     @endforeach
-              
-                </tbody>
->>>>>>> 5a580eaa72869a48eccf1e0045059d1257d15d9d
+
+                            </tbody>
+
             </table>
 
         </div>

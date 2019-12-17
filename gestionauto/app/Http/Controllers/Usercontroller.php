@@ -81,10 +81,7 @@ class Usercontroller extends Controller
 
 
          ]);
-         return redirect()->route('user.index');
-
-         
-                
+         return redirect()->route('user.index');          
 
     }
 

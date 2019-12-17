@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Maintenance;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class MaintenanceController extends Controller
@@ -15,6 +16,13 @@ class MaintenanceController extends Controller
      */
     public function index()
     {
+        $vehicule = DB::table('maintenances')->orderBy('created_at','DESC')->paginate(10);
+
+        
+        return view('admin\maintenance', [
+
+            'maintenance'=> $vehicule
+        ]);
         return view('admin\maintenance');
     }
 
@@ -36,37 +44,29 @@ class MaintenanceController extends Controller
      */
     public function store(Request $request)
     {
-    // $table = request( ['action']);
+     $table = request( ['action']);
 
 
-        // $data = request()->validate([
-        //
-        //     'imatriculation' => ['required'],
-        //     'prixaction' => ['required'],
-        //     'garage'=> ['required'],
-        //     'panne_chauffeur' => ['required'],
-        //     'date' => ['required'],
-        //     // 'recupanne'=> ['required',  'image']
+         $data = request()->validate([
+        
+            'imatriculation' => ['required'],
+            'prixaction' => ['required'],
+            'action' => ['required'],
+            'garage'=> ['required'],
+            'panne_chauffeur' => ['required'],
+            'date' => ['required'],
 
-        // ]);
+         ]);
 
         $data = $request;
-
-        // $cniPath = request('recupanne')->store('uploads','public');
-
-    
 
 
 
         Maintenance::create([
 
             'imatriculation'=> $data['imatriculation'],
-
-            // 'action' => $data['action'],
-
-            'prixaction'=> $data['prixaction'],
-            // 'recupanne'=>$cniPath,
-
+            'prixaction' => $data['prixaction'],
+            'action'=> $data['action'],
             'garage'=>$data['garage'],
             'panne_chauffeur'=> $data['panne_chauffeur'],
             'date'=> ['date'],
@@ -82,9 +82,14 @@ class MaintenanceController extends Controller
      * @param  \App\Maintenance  $maintenance
      * @return \Illuminate\Http\Response
      */
-    public function show(Maintenance $maintenance)
+    public function show($id)
     {
-        //
+        $maintenances = Maintenance::where('id',$id)->first();
+
+        return view('admin\maintenanceview',[
+
+            'maintenances'=> $maintenances
+        ]);
     }
 
     /**
@@ -93,9 +98,9 @@ class MaintenanceController extends Controller
      * @param  \App\Maintenance  $maintenance
      * @return \Illuminate\Http\Response
      */
-    public function edit(Maintenance $maintenance)
+    public function edit(Maintenance $maintenances)
     {
-        //
+        return view('admin\maintenanceedit',compact('maintenances'));
     }
 
     /**

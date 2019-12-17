@@ -121,43 +121,27 @@
 
 
                         <div class="form-group   is-empty">
-
                             <label for="date" class="col-sm-2  control-label">Date de la Mission</label>
-
                             <div class="col-sm-8">
-
-
                                 <div class="input-group">
-
                                     <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-
                                     <input type="date" id="date" name="date" value="" class="form-control matricule">
-
-
                                 </div>
-
-
                             </div>
                         </div>
+
+
                         <div class="form-group   is-empty">
-
                             <label for="lieudepart" class="col-sm-2  control-label">Lieu de Départ</label>
-
                             <div class="col-sm-8">
-
-
                                 <div class="input-group">
-
                                     <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-
                                     <input type="text" id="lieudepart" name="lieudepart" value="" class="form-control phone" placeholder="Entrée le lieu de Départ">
-
-
                                 </div>
-
-
                             </div>
                         </div>
+
+                        
                         <div class="form-group   is-empty">
 
                                 <label for="lieuarrive" class="col-sm-2  control-label">Lieu d Arrivé</label>

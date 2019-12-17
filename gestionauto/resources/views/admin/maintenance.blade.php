@@ -115,21 +115,40 @@
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th> </th>
-                                    <th>Création</th>
-                                    <th>Nom</th>
-                                    <th>Prénom</th>
-                                    <th>Matricule</th>
-                                    <th>Numéro de téléphone</th>
-                                    <th>Email</th>
-                                    <th>ASE</th>
-                                    <th>Qualification</th>
-                                    <th>Role</th>
+                                    <th>Imatriculation</th>
+                                    <th>Type de panne</th>
+                                    <th>Garage</th>
+                                    <th>Prix des actions</th>
+                                    <th>Chauffeur conserné</th>
+                                    <th>Date</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
 
                             <tbody>
+                            @foreach($maintenance as $maintenances)
+
+                            <tr>
+                                <td>{{$maintenances->imatriculation}}</td>
+                                <td>{{$maintenances->action}}</td>
+                                <td>{{$maintenances->garage}}</td>
+                                <td>{{$maintenances->prixaction}}</td>
+                                <td>{{$maintenances->panne_chauffeur}}</td>
+                                <td>{{$maintenances->date}}</td>
+                                <td>
+                                    <a href="{{route('maintenance.show',$maintenances->id)}}">
+                                        <i class="fa fa-eye"></i>
+                                    </a>
+                                    <a href="{{route('maintenance.edit', $maintenances->id)}}">
+                                        <i class="fa fa-pencil"></i>
+                                    </a>
+                                    <a href="#" >
+                                        <i class="fa fa-trash"></i>
+                                    </a>
+                                </td>
+                            </tr>
+
+                            @endforeach
                             </tbody>
                         </table>
 

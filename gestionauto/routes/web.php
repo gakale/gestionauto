@@ -161,8 +161,13 @@ Route::resource('/vehicule', 'VehiculeController');
 
 Route::get('/maintenance.index', 'MaintenanceController@index')->name('maintenance.index');
 
+Route::get('maintenance.show/{maintenances}', 'MaintenanceController@show')->name('maintenance.show');
 
 Route::get('/maintenance.create', 'MaintenanceController@create')->name('maintenance.create');
+
+Route::get('maintenance/{maintenances}/edit', 'MaintenanceController@edit')->name('maintenance.edit');
+
+Route::patch('/maintenance.update/{maintenances}/','MaintenanceController@update')->name('maintenance.update');
 
 
 Route::post('/maintenance.store', 'MaintenanceController@store')->name('maintenance.store');

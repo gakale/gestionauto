@@ -61,11 +61,11 @@
                             <a href="#">
                                 <i class="fa fa-eye"></i>
                             </a>
+                            <a href="{{url('facture/'.$fournisseurs->id)}}" >
+                                <i class="fa fa-pencil"></i>
+                            </a>
                             <a href="/" >
                                 <i class="fa fa-trash"></i>
-                            </a>
-                            <a href="{{url('facture/'.$fournisseurs->id)}}" >
-                                <i class="fa fa-print"></i>
                             </a>
                         </td>
                     </tr>

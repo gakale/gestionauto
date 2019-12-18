@@ -16,14 +16,15 @@ class MaintenanceController extends Controller
      */
     public function index()
     {
-        $vehicule = DB::table('maintenances')->orderBy('created_at','DESC')->paginate(10);
+        $maintenance = DB::table('maintenances')->orderBy('created_at','DESC')->paginate(10);
 
         
         return view('admin\maintenance', [
 
-            'maintenance'=> $vehicule
+            'maintenance'=> $maintenance
         ]);
-        return view('admin\maintenance');
+
+        
     }
 
     /**
@@ -54,11 +55,10 @@ class MaintenanceController extends Controller
             'action' => ['required'],
             'garage'=> ['required'],
             'panne_chauffeur' => ['required'],
-            'date' => ['required'],
+            'date' => ['required','date'],
 
          ]);
 
-        $data = $request;
 
 
 
@@ -72,7 +72,7 @@ class MaintenanceController extends Controller
             'date'=> ['date'],
         ]);
 
-
+        return redirect()->route('maintenance.index');
 
     }
 

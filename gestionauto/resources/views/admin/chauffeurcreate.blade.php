@@ -1,14 +1,14 @@
 
 @extends('../admins/layouts')
 @section('content')
-@section('grand-text','gestion des courses')
+@section('grand-text','gestion des Chauffeurs')
 @section('grands','Tableau de Bord')
-@section('petit-text','course')
+@section('petit-text','Chauffeur')
 <div class="container-fluid">
     <div class="col-md-12">
         <div class="box box-info">
             <div class="box-header with-border">
-                <h3 class="box-title">Nouvelle Course</h3>
+                <h3 class="box-title">Nouveau Chauffeur</h3>
 
                 <div class="box-tools">
                     <div class="btn-group pull-right" style="margin-right: 5px">

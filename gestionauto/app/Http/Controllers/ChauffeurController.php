@@ -84,7 +84,7 @@ class ChauffeurController extends Controller
     public function show($id)
     {
         $chauffeurs = Chauffeur::where('id',$id)->first();
-        $tables =unserialize($chauffeurs['typepermis']);
+        $tables = unserialize($chauffeurs['typepermis']);
         return view('admin\chauffeurview',[
             'tables'=> $tables,
             'chauffeurs'=> $chauffeurs

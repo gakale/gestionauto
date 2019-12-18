@@ -1,11 +1,10 @@
 
 @extends('../admins/layouts')
 @section('content')
-@section('grand-text','Gestion des Maintenances')
+@section('grand-text','Gestion des Garages')
 @section('grands','Tableau de Bord')
-@section('petit-text','Maintenance')
-<div class="col-md-12">
-<div class="box box-info">
+@section('petit-text','Garage')
+<div class="col-md-12"><div class="box box-info">
     <div class="box-header with-border">
         <h3 class="box-title">Editer</h3>
         <div class="box-tools">  
@@ -13,14 +12,14 @@
     </div>
     <!-- /.box-header -->
     <!-- form start -->
-    <form action="{{route('maintenance.update',['maintenances'=> $maintenances])}}" method="POST" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data" pjax-container="">
+    <form action="{{ route('garage.update',['garages'=> $garages]) }}" method="POST" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data" pjax-container="">
         @csrf
         @method('PATCH')
            
             <div class="form-group">
                 <label class="col-sm-2  control-label"></label>
                 <div class="col-sm-8">
-                    <h3 class="text-center">-- Maintenance --</h3>
+                    <h3 class="text-center">-- Garage --</h3>
                 </div>
             </div>
 
@@ -30,13 +29,13 @@
 
 
             <div class="form-group">
-                <label for="email" class="col-sm-2  control-label">Imatriculation</label>
+                <label for="email" class="col-sm-2  control-label">Nom du garage</label>
                 <div class="col-sm-8">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></span>
-                        <input type="text" id="email" name="imatriculation" value="{{$maintenances->imatriculation}}" class="form-control @error('imatriculation') is-invalid @enderror" placeholder="Entrez le numéro d'imatriculation du Véhicule">
+                        <input type="text" id="email" name="name" value="{{$garages->name}}" class="form-control @error('name') is-invalid @enderror" placeholder="Entrez le nom du garage">
                     </div>
-                    @error('imatriculation')
+                    @error('name')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{$message}}</strong>
                         </span>
@@ -47,13 +46,13 @@
 
 
             <div class="form-group  ">
-                <label for="login" class="col-sm-2  control-label">Type de panne</label>
+                <label for="login" class="col-sm-2  control-label">Localisation</label>
                 <div class="col-sm-8">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                        <input type="text" id="login" name="action" value="{{$maintenances->action}}" class="form-control etablissement @error('action') is-invalid @enderror" placeholder="Entrez Le type de panne">           
+                        <input type="text" id="login" name="localisation" value="{{$garages->localisation}}" class="form-control etablissement @error('localisation') is-invalid @enderror" placeholder="Entrez la localisation du garage">           
                     </div>
-                    @error('action')
+                    @error('localisation')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{$message}}</strong>
                         </span>
@@ -63,13 +62,13 @@
 
 
             <div class="form-group">
-                <label for="password" class="col-sm-2  control-label">Prix de l'action</label>
+                <label for="password" class="col-sm-2  control-label">Nom maître entretien</label>
                 <div class="col-sm-8">                
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                        <input type="text" id="password" name="prixaction" value="{{$maintenances->prixaction}}" class="form-control  @error('prixaction') is-invalid @enderror" placeholder="Entrée Mot de passe">
+                        <input type="text" id="password" name="nommaitre" value="{{$garages->nommaitre}}" class="form-control  @error('nommaitre') is-invalid @enderror" placeholder="Entrée le nom du maitre entretien">
                     </div>
-                    @error('prixaction')
+                    @error('nommaitre')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{$message}}</strong>
                         </span>
@@ -83,13 +82,13 @@
 
 
             <div class="form-group">
-                <label for="role" class="col-sm-2  control-label">Garage de maintenance</label>
+                <label for="role" class="col-sm-2  control-label">Contact maître entretien</label>
                 <div class="col-sm-8">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                        <input type="text" id="password" name="garage" value="{{$maintenances->garage}}" class="form-control  @error('garage') is-invalid @enderror" placeholder="Entrée Mot de passe">
+                        <input type="text" id="password" name="contactmaitre" value="{{$garages->contactmaitre}}" class="form-control  @error('contactmaitre') is-invalid @enderror" placeholder="Entrée le contact du maître entretien">
                     </div>
-                    @error('garage')
+                    @error('contactmaitre')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{$message}}</strong>
                         </span>
@@ -99,13 +98,13 @@
 
 
             <div class="form-group">
-                <label for="name" class="col-sm-2  control-label">Chauffeur conserné</label>
+                <label for="name" class="col-sm-2  control-label">Dépuis</label>
                 <div class="col-sm-8">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                        <input type="text" id="name" name="panne_chauffeur" value="{{$maintenances->panne_chauffeur}}" class="form-control name" placeholder="Entrez le nom du chauffeur conserné">
+                        <input type="date" id="password" name="depuis" value="{{$garages->depuis}}" class="form-control  @error('depuis') is-invalid @enderror" placeholder="Entrée la date de partenariat">
                     </div>
-                    @error('panne_chauffeur')
+                    @error('depuis')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{$message}}</strong>
                         </span>
@@ -114,21 +113,36 @@
             </div>
 
 
-            <div class="form-group   is-empty">
-                <label for="date" class="col-sm-2  control-label">Date</label>
+            <div class="form-group">
+                <label for="name" class="col-sm-2  control-label">Contact du garage</label>
                 <div class="col-sm-8">
                     <div class="input-group">
-                        <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-                        <input type="date" id="date" name="date" value="{{$maintenances->date}}" class="form-control matricule @error('date') is-invalid @enderror">
+                        <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
+                        <input type="text" id="password" name="numero" value="{{$garages->numero}}" class="form-control  @error('numero') is-invalid @enderror" placeholder="Entrée le contact du garage">
                     </div>
-                    @error('date')
+                    @error('numero')
                         <span class="invalid-feedback" role="alert">
-                            <strong>{{ $message }}</strong>
+                            <strong>{{$message}}</strong>
                         </span>
                     @enderror
                 </div>
             </div>
 
+
+            <div class="form-group">
+                <label for="name" class="col-sm-2  control-label">E-mail du garage</label>
+                <div class="col-sm-8">
+                    <div class="input-group">
+                        <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
+                        <input type="email" id="password" name="email" value="{{$garages->email}}" class="form-control  @error('email') is-invalid @enderror" placeholder="Entrée le e-mail du garage">
+                    </div>
+                    @error('email')
+                        <span class="invalid-feedback" role="alert">
+                            <strong>{{$message}}</strong>
+                        </span>
+                    @enderror
+                </div>
+            </div>
 
 
     <div class="form-group  ">

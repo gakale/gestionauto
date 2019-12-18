@@ -227,7 +227,7 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="garage"><i class="fa fa-cog"></i>Entretient</a></li>
+                            <li><a href="{{ route('garage.index') }}"><i class="fa fa-cog"></i>Entretient</a></li>
                             <li class="treeview">
 
                             </ul>

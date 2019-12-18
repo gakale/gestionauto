@@ -87,7 +87,17 @@ Route::patch('/user.update/{user}/','Usercontroller@update')->name('user.update'
 
 // route assurance
 
-Route::resource('/assurance', 'AssuranceController');
+//Route::resource('/assurance', 'AssuranceController');
+
+Route::get('/assurance.index', 'AssuranceController@index')->name('assurance.index');
+
+Route::post('/assurance.store', 'AssuranceController@store')->name('assurance.store');
+
+Route::get('assurance.show/{assurances}', 'AssuranceController@show')->name('assurance.show');
+
+Route::get('assurance/{assurances}/edit', 'AssuranceController@edit')->name('assurance.edit');
+
+Route::patch('/assurance.update/{assurances}/','Assurancecontroller@update')->name('assurance.update');
 
 
 
@@ -152,6 +162,24 @@ Route::resource('/course', 'courseController');
 //Route Vehicule
 
 Route::resource('/vehicule', 'VehiculeController');
+
+
+
+
+
+//Route Garage
+
+//Route::resource('/garage', 'GarageController');
+
+Route::get('garage.index', 'GarageController@index')->name('garage.index');
+
+Route::post('/garage.store', 'GarageController@store')->name('garage.store');
+
+Route::get('garage.show/{garages}', 'GarageController@show')->name('garage.show');
+
+Route::get('garage/{garages}/edit', 'GarageController@edit')->name('garage.edit');
+
+Route::patch('/garage.update/{garages}/','GarageController@update')->name('garage.update');
 
 
 

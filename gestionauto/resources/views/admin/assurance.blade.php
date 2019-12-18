@@ -1,9 +1,9 @@
 
 @extends('../admins/layouts')
 @section('content')
-@section('grand-text','gestion des Vehicule')
+@section('grand-text','gestion des Assurances')
 @section('grands','Tableau de Bord')
-@section('petit-text','Vehicule')
+@section('petit-text','Assurance')
 
 
 <div class="container-fluid">
@@ -11,21 +11,17 @@
 
         <div class="box-header with-border">
             <div class="pull-right">
-
                 <div class="btn-group pull-right" style="margin-right: 10px">
-
-
                 </div>
-
                 <div class="btn-group pull-right" style="margin-right: 10px">
                     <a type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal-default" title="Nouveau">
                         <i class="fa fa-save"></i><span class="hidden-xs">&nbsp;&nbsp;Nouveau</span>
                     </a>
                 </div>
-
             </div>
+
             <span>
-                <a href="{{ route('assurance.index') }}" class="btn btn-sm btn-primary grid-refresh" title="Rafraîchir"><i class="fa fa-refresh"></i><span class="hidden-xs"> Actualisé</span></a> <div class="btn-group" style="margin-right: 10px" data-toggle="buttons">
+                <a href="{{ route('assurance.index') }}" class="btn btn-sm btn-primary grid-refresh" title="Rafraîchir"><i class="fa fa-refresh"></i><span class="hidden-xs">Actualisé</span></a> <div class="btn-group" style="margin-right: 10px" data-toggle="buttons">
                     <label class="btn btn-sm btn-dropbox 5daed26c39e34-filter-btn " title="Filtre">
                         <input type="checkbox"><i class="fa fa-filter"></i><span class="hidden-xs">&nbsp;&nbsp;Filtre</span>
                     </label>
@@ -41,18 +37,38 @@
             <table class="table table-hover">
                 <thead>
                     <tr>
-                        <th> </th>
-                        <th>Imatriculation</th>
-                        <th>Modèle</th>
-                        <th>Utilisation</th>
-                        <th>Date</th>
-                        <th>Etat</th>
-                        <th>Email</th>
+                        <th>Date d'abonnement</th>
+                        <th>Date d'expiration</th>
+                        <th>Date de rappel</th>
+                        <th>Maison d'assurance</th>
+                        <th>Voiture a assurée</th>
                         <th>Action</th>
                     </tr>
                 </thead>
 
                 <tbody>
+                    @foreach($assurance as $assurances)
+
+                        <tr>
+                            <td>{{$assurances->date}}</td>
+                            <td>{{$assurances->expiration}}</td>
+                            <td>{{$assurances->rappele}}</td>
+                            <td>{{$assurances->maison}}</td>
+                            <td>{{$assurances->assur_voit}}</td>
+                            <td>
+                                <a href="{{route('assurance.show',$assurances->id)}}">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                                <a href="{{route('assurance.edit', $assurances->id)}}">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                <a href="#" >
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+
+                    @endforeach
                 </tbody>
             </table>
 
@@ -100,51 +116,49 @@
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span></button>
-                    <h2 class="modal-title">Nouveaux Assurance  </h2>
+                    <h2 class="modal-title">Nouvelle Assurance  </h2>
                 </div>
                 <div class="modal-body">
                     <div class="row">
                         <form action="{{ route('assurance.store') }}" class="form-group" method="POST" enctype="multipart/form-data">
                             @csrf
-                            <div class="form-group col-md-6">
-                                <label for="recipient-name" class="col-form-label">Date D abonnement </label>
-                                <input type="date" name="date" class="form-control @error('date') is-invalid @enderror" id="recipient-name">
 
+                            <div class="form-group col-md-6">
+                                <label for="recipient-name" class="col-form-label">Date d'abonnement </label>
+                                <input type="date" name="date" class="form-control @error('date') is-invalid @enderror" id="recipient-name">
                                 @error('date')
                                 <span class="invalid-feedback" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                                 @enderror
                             </div>
-                            <div class="form-group col-md-6">
-                                <label for="message-text" class="col-form-label">Expiration</label>
-                                <input type="date" class="form-control @error('expiration') is-invalid @enderror" name="expiration" id="message-text">
 
+
+                            <div class="form-group col-md-6">
+                                <label for="message-text" class="col-form-label">Date d'expiration</label>
+                                <input type="date" class="form-control @error('expiration') is-invalid @enderror" name="expiration" id="message-text">
                                 @error('expiration')
                                 <span class="invalid-feedback">
                                     <strong>$message</strong>
-
                                 </span>
                                 @enderror
-
                             </div>
 
-                            <div class="form-group col-md-6">
-                                <label for="message-text" class="col-form-label">Date de Rappelle</label>
-                                <input type="date" class="form-control @error('rappele') is-invalid @enderror" name="rappele" id="message-text">
 
+                            <div class="form-group col-md-6">
+                                <label for="message-text" class="col-form-label">Date de rappel</label>
+                                <input type="date" class="form-control @error('rappele') is-invalid @enderror" name="rappele" id="message-text">
                                 @error('rappele')
                                 <span class="invalid-feedback">
                                     <strong>$message</strong>
                                 </span>
                                 @enderror
-
                             </div>
 
-                            <div class="form-group col-md-6">
-                                <label for="message-text" class="col-form-label">Maison D assurance</label>
-                                <input type="text" class="form-control @error('maison') is-invalid @enderror" name="maison" id="message-text">
 
+                            <div class="form-group col-md-6">
+                                <label for="message-text" class="col-form-label">Maison d'Assurance</label>
+                                <input type="text" class="form-control @error('maison') is-invalid @enderror" name="maison" id="message-text">
                                 @error('maison')
                                 <span class="invalid-feedback">
                                     <strong>$message</strong>
@@ -152,17 +166,15 @@
                                 @enderror
                             </div>
 
-                            <div class="form-group col-md-6">
-                                <label for="message-text" class="col-form-label">La voiture</label>
-                                <select  class="form-control @error('maison') is-invalid @enderror" name="maison" id="message-text">
-                                    <option value="">BMW 407</option>
-                                    <option value="">MECEDECS 705</option>
-                                    <option value="">BMW 407</option>
-                                    <option value="">MECEDECS 705</option>
-                                    <option value="">BMW 407</option>
-                                </select>
 
-                                @error('maison')
+                            <div class="form-group col-md-12">
+                                <label for="message-text" class="col-form-label">La voiture</label>
+                                <select class="form-control select2 @error('assur_voit') is-invalid @enderror" style="width: 100%" name="assur_voit" data-value="" tabindex="-1" aria-hidden="true">
+                                    <option value="123hk01">123hk01</option>
+                                    <option value="123hj01">123hj01</option>
+                                    <option value="124hk01">124hk01</option>
+                                </select>
+                                @error('assur_voit')
                                 <span class="invalid-feedback">
                                     <strong>$message</strong>
                                 </span>

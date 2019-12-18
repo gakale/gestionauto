@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Assurance;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class AssuranceController extends Controller
@@ -14,7 +15,15 @@ class AssuranceController extends Controller
      */
     public function index()
     {
-        return view('admin.assurance');
+        $assurance = DB::table('assurances')->orderBy('created_at','DESC')->paginate(10);
+
+        
+        return view('admin\assurance', [
+
+            'assurance'=> $assurance
+        ]);
+        return view('admin\assurance');
+        
     }
 
     /**
@@ -35,7 +44,25 @@ class AssuranceController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = request()->validate([
+
+            'date'=> ['required'],
+            'expiration'=> ['required'],
+            'rappele'=> ['required'],
+            'maison'=> ['required'],
+            'assur_voit'=> ['required']
+        ]);
+
+        Assurance::create([
+
+            'date'=> $data['date'],
+            'expiration'=> $data['expiration'],
+            'rappele'=> $data['rappele'],
+            'maison'=> $data['maison'],
+            'assur_voit'=>$data['assur_voit']
+
+        ]);
+        return redirect()->route('assurance.index');
     }
 
     /**
@@ -44,9 +71,14 @@ class AssuranceController extends Controller
      * @param  \App\Assurance  $assurance
      * @return \Illuminate\Http\Response
      */
-    public function show(Assurance $assurance)
+    public function show($id)
     {
-        //
+        $assurances = Assurance::where('id',$id)->first();
+
+        return view('admin\assuranceview',[
+
+            'assurances'=> $assurances
+        ]);
     }
 
     /**
@@ -55,9 +87,9 @@ class AssuranceController extends Controller
      * @param  \App\Assurance  $assurance
      * @return \Illuminate\Http\Response
      */
-    public function edit(Assurance $assurance)
+    public function edit(Assurance $assurances)
     {
-        //
+        return view('admin\assuranceedit',compact('assurances'));
     }
 
     /**
@@ -67,9 +99,20 @@ class AssuranceController extends Controller
      * @param  \App\Assurance  $assurance
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Assurance $assurance)
+    public function update(Assurance $assurances)
     {
-        //
+        $data = request()->validate([
+
+            'date'=> ['required'],
+            'expiration'=> ['required'],
+            'rappele'=> ['required'],
+            'maison'=> ['required'],
+            'assur_voit'=> ['required']
+        ]);
+        
+        $assurances->update($data);
+
+        return redirect()->route('assurance.index', ['assurances'=> $assurances]);
     }
 
     /**

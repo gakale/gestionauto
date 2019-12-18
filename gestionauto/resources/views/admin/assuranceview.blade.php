@@ -1,8 +1,8 @@
 @extends('../admins/layouts')
 @section('content')
-@section('grand-text','Gestion des Maintenances')
+@section('grand-text','Gestion des Assurances')
 @section('grands','Tableau de Bord')
-@section('petit-text','Maintenance')
+@section('petit-text','Assurance')
 
 <div class="col-md-12">
     <div class="box box-info">
@@ -15,18 +15,18 @@
                     </a>
                 </div>
                 <div class="btn-group pull-right" style="margin-right: 5px">
-                    <a href="{{route('maintenance.edit', $maintenances->id)}}" class="btn btn-sm btn-primary" title="Editer">
+                    <a href="{{route('assurance.edit', $assurances->id)}}" class="btn btn-sm btn-primary" title="Editer">
                         <i class="fa fa-edit"></i><span class="hidden-xs"> Editer</span>
                     </a>
                 </div> 
                 <div class="btn-group pull-right" style="margin-right: 5px">
-                    <a href="{{route('maintenance.index')}}" class="btn btn-sm btn-default" title="Liste">
+                    <a href="{{route('assurance.index')}}" class="btn btn-sm btn-default" title="Liste">
                         <i class="fa fa-list"></i><span class="hidden-xs"> Liste</span>
                     </a>
                 </div>
             </div>
         </div>
-    
+   
     <!-- /.box-header -->
     <!-- form start -->
     <div class="form-horizontal">
@@ -39,7 +39,7 @@
                         <div class="box box-solid box-default no-margin box-show">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                 {{$maintenances->id}}&nbsp;
+                                 {{$assurances->id}}&nbsp;
                             </div>               
                             <!-- /.box-body -->
                         </div>
@@ -48,12 +48,12 @@
 
 
                 <div class="form-group ">
-                    <label class="col-sm-2 control-label">Imatriculation</label>
+                    <label class="col-sm-2 control-label">Date d'abonnement</label>
                     <div class="col-sm-8">
                         <div class="box box-solid box-default no-margin box-show">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                <span class="label label-primary">{{$maintenances->imatriculation}}</span>&nbsp;
+                                <span class="label label-primary">{{$assurances->date}}</span>&nbsp;
                             </div>
                             <!-- /.box-body -->
                         </div>
@@ -62,12 +62,12 @@
 
 
                 <div class="form-group ">
-                    <label class="col-sm-2 control-label">Type de panne </label>
+                    <label class="col-sm-2 control-label">Date d'expiration</label>
                     <div class="col-sm-8">
                         <div class="box box-solid box-default no-margin box-show">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                {{$maintenances->action}}&nbsp;
+                                {{$assurances->expiration}}&nbsp;
                             </div>
                             <!-- /.box-body -->
                         </div>
@@ -76,12 +76,12 @@
 
 
                 <div class="form-group ">
-                    <label class="col-sm-2 control-label">Prix de l'action </label>
+                    <label class="col-sm-2 control-label">Date de rappel</label>
                     <div class="col-sm-8">
                         <div class="box box-solid box-default no-margin box-show">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                {{$maintenances->prixaction}}
+                                {{$assurances->rappele}}
                             </div>
                             <!-- /.box-body -->
                         </div>
@@ -90,12 +90,12 @@
 
 
                 <div class="form-group ">
-                    <label class="col-sm-2 control-label">Garage de maintenance</label>
+                    <label class="col-sm-2 control-label">Maison d'assurance</label>
                     <div class="col-sm-8">
                         <div class="box box-solid box-default no-margin box-show">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                <span class="label label-primary">{{$maintenances->garage}}</span>&nbsp;
+                                <span class="label label-primary">{{$assurances->maison}}</span>&nbsp;
                             </div>
                             <!-- /.box-body -->
                         </div>
@@ -104,12 +104,12 @@
 
 
                 <div class="form-group ">
-                    <label class="col-sm-2 control-label">Chauffeur conserné </label>
+                    <label class="col-sm-2 control-label">Voiture sous assurance</label>
                     <div class="col-sm-8">
                         <div class="box box-solid box-default no-margin box-show">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                {{$maintenances->panne_chauffeur}}&nbsp;
+                                {{$assurances->assur_voit}}&nbsp;
                             </div>
                             <!-- /.box-body -->
                         </div>
@@ -118,28 +118,14 @@
 
 
                 <div class="form-group ">
-                    <label class="col-sm-2 control-label">Date</label>
+                    <label class="col-sm-2 control-label">Date d'ajout</label>
                     <div class="col-sm-8">
                         <div class="box box-solid box-default no-margin box-show">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                  {{$maintenances->date}}&nbsp;
+                                  {{$assurances->created_at}}&nbsp;
                             </div>
                             <!-- /.box-body -->
-                        </div>
-                    </div>
-                </div>
-
-
-                <div class="form-group ">
-                    <label class="col-sm-2 control-label">Date d'ajout </label>
-                    <div class="col-sm-8">
-                         <div class="box box-solid box-default no-margin box-show">
-                            <!-- /.box-header -->
-                            <div class="box-body">
-                                  {{$maintenances->created_at}}&nbsp;
-                             </div>
-                                <!-- /.box-body -->
                         </div>
                     </div>
                 </div>
@@ -151,7 +137,7 @@
                          <div class="box box-solid box-default no-margin box-show">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                  {{$maintenances->updated_at}}&nbsp;
+                                  {{$assurances->updated_at}}&nbsp;
                              </div>
                                 <!-- /.box-body -->
                         </div>
@@ -164,5 +150,6 @@
     </div>
 </div>
 </div>
+
 
 @stop    

@@ -45,7 +45,7 @@ class MaintenanceController extends Controller
      */
     public function store(Request $request)
     {
-     $table = request( ['action']);
+        $table = request( ['action']);
 
 
          $data = request()->validate([
@@ -58,8 +58,6 @@ class MaintenanceController extends Controller
             'date' => ['required','date'],
 
          ]);
-
-
 
 
         Maintenance::create([
@@ -110,9 +108,20 @@ class MaintenanceController extends Controller
      * @param  \App\Maintenance  $maintenance
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Maintenance $maintenance)
+    public function update(Maintenance $maintenances)
     {
-        //
+        $data = request()->validate([
+
+            'name'=> ['required'],
+            'prenom'=> ['required'],
+            'email'=> ['required','email'],
+            'fonction'=> ['required'],
+            'telephone'=> ['required'],
+        ]);
+        
+        $maintenances->update($data);
+
+        return redirect()->route('maintenance.index', ['maintenances'=> $maintenances]);
     }
 
     /**

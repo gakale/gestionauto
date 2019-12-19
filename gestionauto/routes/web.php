@@ -48,8 +48,21 @@ Route::get('/mdpassoublie' , 'LoginsController@mdpassoublie')->name('mdpassoubli
 
 // route carburant
 
+//Route::resource('carburant', 'CarburantController');
 
-Route::resource('carburant', 'CarburantController');
+Route::get('carburant.index', 'CarburantController@index')->name('carburant.index');
+
+Route::get('/carburant.create', 'Carburantcontroller@create')->name('carburant.create');
+
+Route::get('carburant.show/{carburants}', 'CarburantController@show')->name('carburant.show');
+
+Route::post('carburant.store', 'CarburantController@store')->name('carburant.store');
+
+Route::get('carburant/{carburants}/edit', 'CarburantController@edit')->name('carburant.edit');
+
+Route::patch('/carburant.update/{carburants}/','CarburantController@update')->name('carburant.update');
+
+Route::post('/carburant.destroy/{id}/','CarburantController@destroy')->name('carburant.destroy');
 
 
 
@@ -81,7 +94,6 @@ Route::post('/user.store', 'Usercontroller@store')->name('user.store');
 
 Route::get('/user/{user}/edit','Usercontroller@edit')->name('user.edit');
 
-
 Route::patch('/user.update/{user}/','Usercontroller@update')->name('user.update');
 
 
@@ -99,6 +111,8 @@ Route::get('assurance/{assurances}/edit', 'AssuranceController@edit')->name('ass
 
 Route::patch('/assurance.update/{assurances}/','Assurancecontroller@update')->name('assurance.update');
 
+Route::post('/assurance.destroy/{id}/','AssuranceController@destroy')->name('assurance.destroy');
+
 
 
 //route chauffeur
@@ -106,16 +120,13 @@ Route::patch('/assurance.update/{assurances}/','Assurancecontroller@update')->na
 
 Route::get('/chauffeur.index', 'ChauffeurController@index')->name('chauffeur.index');
 
-
 Route::get('/chauffeur.create', 'ChauffeurController@create')->name('chauffeur.create');
-
 
 Route::post('/chauffeur.store', 'ChauffeurController@store')->name('chauffeur.store');
 
 Route::get('/chauffeur.show/{chauffeurs}','ChauffeurController@show')->name('chauffeur.show');
 
 Route::get('/chauffeur/{chauffeurs}/edit','Usercontroller@edit')->name('chauffeur.edit');
-
 
 Route::patch('/chauffeur.update/{chauffeurs}/','Usercontroller@update')->name('chauffeur.update');
 
@@ -196,7 +207,6 @@ Route::get('/maintenance.create', 'MaintenanceController@create')->name('mainten
 Route::get('maintenance/{maintenances}/edit', 'MaintenanceController@edit')->name('maintenance.edit');
 
 Route::patch('/maintenance.update/{maintenances}/','MaintenanceController@update')->name('maintenance.update');
-
 
 Route::post('/maintenance.store', 'MaintenanceController@store')->name('maintenance.store');
 

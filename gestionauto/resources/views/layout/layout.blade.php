@@ -236,7 +236,7 @@
 
         <li><a href="documents"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
         <li class="header">LABELS</li>
-        <li><a href="carburant"><i class="fa fa-thermometer-full text-red"></i> <span>CARBURANT</span></a></li>
+        <li><a href="{{ route('carburant.index') }}"><i class="fa fa-thermometer-full text-red"></i> <span>CARBURANT</span></a></li>
         <li><a href="{{ route('stock.index') }}"><i class="fa fa-share text-yellow"></i> <span>STOCK</span></a></li>
         <li><a href="maps"><i class="fa fa-map text-aqua"></i> <span>GPS</span></a></li>
       </ul>

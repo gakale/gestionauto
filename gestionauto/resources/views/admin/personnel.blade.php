@@ -121,27 +121,28 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span></button>
-                    <h2 class="modal-title">Nouveau Personnel  </h2>
-                </div>
+                    <span aria-hidden="true">&times;</span>
+                </button>
+                <h2 class="modal-title">Nouveau Personnel  </h2>
+            </div>
                 <div class="modal-body">
                     <div class="row">
                         <form action="{{ route('personnel.store') }}" class="form-group" method="post">
                             @csrf
+
                             <div class="form-group col-md-6">
                                 <label for="recipient-name" class="col-form-label">Nom</label>
                                 <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="recipient-name">
-
                                 @error('name')
                                 <span class="invalid-feedback alert alert-danger" role="alert">
                                     <strong>{{ $message }}</strong>
                                 </span>
                                 @enderror
                             </div>
+
                             <div class="form-group col-md-6">
                                 <label for="message-text" class="col-form-label">Prénom</label>
                                 <input class="form-control @error('prenom') is-invalid @enderror" name="prenom" id="message-text">
-
                                 @error('prenom')
                                 <span class="invalid-feedback">
                                     <strong>$message</strong>
@@ -153,7 +154,6 @@
                             <div class="form-group col-md-6">
                                 <label for="message-text" class="col-form-label">E-mail</label>
                                 <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="message-text">
-
                                 @error('email')
                                 <span class="invalid-feedback">
                                     <strong>$message</strong>
@@ -165,18 +165,17 @@
                             <div class="form-group col-md-6">
                                 <label for="message-text" class="col-form-label">Fonction</label>
                                 <input type="text" class="form-control @error('fonction') is-invalid @enderror" name="fonction" id="message-text">
-
                                 @error('fonction')
                                 <span class="invalid-feedback">
                                     <strong>$message</strong>
                                 </span>
                                 @enderror
                             </div>
+
                             <div class="form-group col-md-6">
                                 <label for="message-text" class="col-form-label">Téléphone</label>
                                 <input type="text" class="form-control @error('telephone') is-invalid @enderror" name="telephone" id="message-text">
                                 @error('telephone')
-
                                 <span class="invalid-feedback">
                                     <strong>$message</strong>
                                 </span>

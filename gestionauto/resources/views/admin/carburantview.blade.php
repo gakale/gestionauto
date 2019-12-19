@@ -1,8 +1,8 @@
 @extends('../admins/layouts')
 @section('content')
-@section('grand-text','Gestion des Assurances')
+@section('grand-text','Gestion des Carburants')
 @section('grands','Tableau de Bord')
-@section('petit-text','Assurance')
+@section('petit-text','Carburant')
 
 <div class="col-md-12">
     <div class="box box-info">
@@ -15,12 +15,12 @@
                     </a>
                 </div>
                 <div class="btn-group pull-right" style="margin-right: 5px">
-                    <a href="{{route('assurance.edit', $assurances->id)}}" class="btn btn-sm btn-primary" title="Editer">
+                    <a href="{{route('carburant.edit', $carburants->id)}}" class="btn btn-sm btn-primary" title="Editer">
                         <i class="fa fa-edit"></i><span class="hidden-xs"> Editer</span>
                     </a>
                 </div> 
                 <div class="btn-group pull-right" style="margin-right: 5px">
-                    <a href="{{route('assurance.index')}}" class="btn btn-sm btn-default" title="Liste">
+                    <a href="{{route('carburant.index')}}" class="btn btn-sm btn-default" title="Liste">
                         <i class="fa fa-list"></i><span class="hidden-xs"> Liste</span>
                     </a>
                 </div>
@@ -30,7 +30,8 @@
     <!-- /.box-header -->
 
 
-<!-- Confirmation de la Suppression des données -->
+
+    <!-- Confirmation de la Suppression des données -->
 
                     <div class="modal fade" id="modal-delete">
                         <div class="modal-dialog">
@@ -43,7 +44,7 @@
                                 </div>
                                     <div class="modal-body">
                                         <div class="row">
-                                            <form action="{{route('assurance.destroy',$assurances->id)}}" class="form-group" method="post">
+                                            <form action="{{ route('carburant.destroy', $carburants->id ) }}" class="form-group" method="post">
                                                 {{@csrf_field()}}
 
                                                 <div class="form-group col-md-12">
@@ -64,7 +65,8 @@
                             <!-- /.modal-dialog -->
                         </div>
 
-    
+
+
     <!-- form start -->
     <div class="form-horizontal">
         <div class="box-body">
@@ -76,7 +78,7 @@
                         <div class="box box-solid box-default no-margin box-show">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                 {{$assurances->id}}&nbsp;
+                                 {{$carburants->id}}&nbsp;
                             </div>               
                             <!-- /.box-body -->
                         </div>
@@ -85,12 +87,12 @@
 
 
                 <div class="form-group ">
-                    <label class="col-sm-2 control-label">Date d'abonnement</label>
+                    <label class="col-sm-2 control-label">Nom Station</label>
                     <div class="col-sm-8">
                         <div class="box box-solid box-default no-margin box-show">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                <span class="label label-primary">{{$assurances->date}}</span>&nbsp;
+                                <span class="label label-primary">{{$carburants->nomstation}}</span>&nbsp;
                             </div>
                             <!-- /.box-body -->
                         </div>
@@ -99,12 +101,12 @@
 
 
                 <div class="form-group ">
-                    <label class="col-sm-2 control-label">Date d'expiration</label>
+                    <label class="col-sm-2 control-label">Type de carburant</label>
                     <div class="col-sm-8">
                         <div class="box box-solid box-default no-margin box-show">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                {{$assurances->expiration}}&nbsp;
+                                {{$carburants->designation}}&nbsp;
                             </div>
                             <!-- /.box-body -->
                         </div>
@@ -113,12 +115,12 @@
 
 
                 <div class="form-group ">
-                    <label class="col-sm-2 control-label">Date de rappel</label>
+                    <label class="col-sm-2 control-label">Litrage</label>
                     <div class="col-sm-8">
                         <div class="box box-solid box-default no-margin box-show">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                {{$assurances->rappele}}
+                                {{$carburants->litrage}}
                             </div>
                             <!-- /.box-body -->
                         </div>
@@ -127,12 +129,12 @@
 
 
                 <div class="form-group ">
-                    <label class="col-sm-2 control-label">Maison d'assurance</label>
+                    <label class="col-sm-2 control-label">Montant Total</label>
                     <div class="col-sm-8">
                         <div class="box box-solid box-default no-margin box-show">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                <span class="label label-primary">{{$assurances->maison}}</span>&nbsp;
+                                <span class="label label-primary">{{$carburants->montant}}</span>&nbsp;
                             </div>
                             <!-- /.box-body -->
                         </div>
@@ -141,12 +143,82 @@
 
 
                 <div class="form-group ">
-                    <label class="col-sm-2 control-label">Voiture sous assurance</label>
+                    <label class="col-sm-2 control-label">Quantité en litre</label>
                     <div class="col-sm-8">
                         <div class="box box-solid box-default no-margin box-show">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                {{$assurances->assur_voit}}&nbsp;
+                                {{$carburants->quantite}}&nbsp;
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group ">
+                    <label class="col-sm-2 control-label">La date de recharge</label>
+                    <div class="col-sm-8">
+                        <div class="box box-solid box-default no-margin box-show">
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                {{$carburants->date}}&nbsp;
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group ">
+                    <label class="col-sm-2 control-label">Avant Recharge</label>
+                    <div class="col-sm-8">
+                        <div class="box box-solid box-default no-margin box-show">
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                {{$carburants->avantrecharge}}&nbsp;
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group ">
+                    <label class="col-sm-2 control-label">Apres Recharge</label>
+                    <div class="col-sm-8">
+                        <div class="box box-solid box-default no-margin box-show">
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                {{$carburants->apresrecharge}}&nbsp;
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group ">
+                    <label class="col-sm-2 control-label">Réçu de paiement</label>
+                    <div class="col-sm-8">
+                        <div class="box box-solid box-default no-margin box-show">
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                {{$carburants->paiement}}&nbsp;
+                            </div>
+                            <!-- /.box-body -->
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="form-group ">
+                    <label class="col-sm-2 control-label">Selection le Véhicule</label>
+                    <div class="col-sm-8">
+                        <div class="box box-solid box-default no-margin box-show">
+                            <!-- /.box-header -->
+                            <div class="box-body">
+                                {{$carburants->vehicule}}&nbsp;
                             </div>
                             <!-- /.box-body -->
                         </div>
@@ -160,7 +232,7 @@
                         <div class="box box-solid box-default no-margin box-show">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                  {{$assurances->created_at}}&nbsp;
+                                  {{$carburants->created_at}}&nbsp;
                             </div>
                             <!-- /.box-body -->
                         </div>
@@ -174,7 +246,7 @@
                          <div class="box box-solid box-default no-margin box-show">
                             <!-- /.box-header -->
                             <div class="box-body">
-                                  {{$assurances->updated_at}}&nbsp;
+                                  {{$carburants->updated_at}}&nbsp;
                              </div>
                                 <!-- /.box-body -->
                         </div>

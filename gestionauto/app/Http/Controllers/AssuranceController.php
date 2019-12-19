@@ -121,8 +121,10 @@ class AssuranceController extends Controller
      * @param  \App\Assurance  $assurance
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Assurance $assurance)
+    public function destroy($id)
     {
-        //
+        $assurances = Assurance::where('id',$id)->first();
+        $assurances -> delete();
+        return redirect()->route('assurance.index');
     }
 }

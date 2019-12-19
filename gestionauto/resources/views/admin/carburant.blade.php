@@ -1,9 +1,9 @@
 
 @extends('../admins/layouts')
 @section('content')
-@section('grand-text','gestion des missions')
+@section('grand-text','gestion des Carburants')
 @section('grands','Tableau de Bord')
-@section('petit-text','Mission')
+@section('petit-text','Carburant')
 
 
 <div class="container-fluid">
@@ -105,32 +105,91 @@
                             </div>
 
                         </form>
-                    </div>*
+                    </div>
 
                     <!-- /.box-header -->
                     <div class="box-body table-responsive no-padding">
                         <table class="table table-hover">
                             <thead>
                                 <tr>
-                                    <th> </th>
-                                    <th>Création</th>
-                                    <th>Nom</th>
-                                    <th>Prénom</th>
-                                    <th>Matricule</th>
-                                    <th>Numéro de téléphone</th>
-                                    <th>Email</th>
-                                    <th>ASE</th>
-                                    <th>Qualification</th>
-                                    <th>Role</th>
-                                    <th>Action</th>
+                                    <th>Nom Station</th>
+                                    <th>Type de carburant</th>
+                                    <th>Litrage</th>
+                                    <th>Montant Total</th>
+                                    <th>Quantité (litre)</th>
+                                    <th>Selection Véhicule</th>
+                                    <th>Date de recharge</th>
+                                    <th>Actions</th>
                                 </tr>
                             </thead>
 
                             <tbody>
+                                @foreach($carburant as $carburants)
+
+                                    <tr>
+                                        <td>{{$carburants->nomstation}}</td>
+                                        <td>{{$carburants->designation}}</td>
+                                        <td>{{$carburants->litrage}}</td>
+                                        <td>{{$carburants->montant}}</td>
+                                        <td>{{$carburants->quantite}}</td>
+                                        <td>{{$carburants->vehicule}}</td>
+                                        <td>{{$carburants->date}}</td>
+                                        <td>
+                                            <a type="button" class="btn btn-xs" href="{{route('carburant.show',$carburants->id)}}" title="Voir détails">
+                                                <i class="fa fa-eye"></i>
+                                            </a>
+                                            <a type="button" class="btn btn-xs" href="{{route('carburant.edit',$carburants->id)}}" title="Modifier">
+                                                <i class="fa fa-pencil"></i>
+                                            </a>
+                                            <a type="button" class="btn btn-xs" data-toggle="modal" data-target="#modal-delete" title="Supprimer">
+                                                <i class="fa fa-trash"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+
+                                @endforeach
                             </tbody>
                         </table>
-
                     </div>
+
+
+                    <!-- Confirmation de la Suppression des données -->
+
+                    <div class="modal fade" id="modal-delete">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h2 class="modal-title"  style="text-align: center;">Attention !</h2>
+                                </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <form action="{{ route('carburant.destroy', $carburants->id ) }}" class="form-group" method="post">
+                                                {{@csrf_field()}}
+
+                                                <div class="form-group col-md-12">
+                                                    <h3 class="" style="text-align: center;">Voulez vous vraiment supprimer ces données ?</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-success pull-left" data-dismiss="modal">Non, Rétour</button>
+                                            <button type="submit" class="btn btn-danger">Oui, Supprimer</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                            </form>
+                            <!-- /.modal-dialog -->
+                        </div>
+
+                    
+
+
                     <div class="box-footer clearfix">
                         <b></b> à <b></b> de <b>0</b> lignes<ul class="pagination pagination-sm no-margin pull-right">
                             <!-- Previous Page Link -->

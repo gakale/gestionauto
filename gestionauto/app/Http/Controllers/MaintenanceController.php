@@ -130,8 +130,10 @@ class MaintenanceController extends Controller
      * @param  \App\Maintenance  $maintenance
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Maintenance $maintenance)
+    public function destroy($id)
     {
-        //
+        $maintenances = Maintenance::where('id',$id)->first();
+        $maintenances -> delete();
+        return redirect()->route('maintenance.index');
     }
 }

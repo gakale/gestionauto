@@ -41,7 +41,7 @@
                         <th>Date de rappel</th>
                         <th>Maison d'assurance</th>
                         <th>Voiture a assurée</th>
-                        <th>Action</th>
+                        <th>Actions</th>
                     </tr>
                 </thead>
 

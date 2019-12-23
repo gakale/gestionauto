@@ -10,7 +10,7 @@
             <h3 class="box-title">Détail</h3>
             <div class="box-tools">
                 <div class="btn-group pull-right" style="margin-right: 5px">
-                    <a href="javascript:void(0);" class="btn btn-sm btn-danger 5dcbe63be40ce-delete" title="Supprimer">
+                    <a data-toggle="modal" data-target="#modal-delete" class="btn btn-sm btn-danger" title="Supprimer">
                         <i class="fa fa-trash"></i><span class="hidden-xs">  Supprimer</span>
                     </a>
                 </div>
@@ -26,6 +26,45 @@
                 </div>
             </div>
         </div>
+
+
+
+<!-- Confirmation de la Suppression des données -->
+
+                    <div class="modal fade" id="modal-delete">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h2 class="modal-title"  style="text-align: center;">Attention !</h2>
+                                </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <form action="{{route('garage.destroy',$garages->id)}}" class="form-group" method="post">
+                                                {{@csrf_field()}}
+
+                                                <div class="form-group col-md-12">
+                                                    <h3 class="" style="text-align: center;">Voulez vous vraiment supprimer ces données ?</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-success pull-left" data-dismiss="modal">Non, Rétour</button>
+                                            <button type="submit" class="btn btn-danger">Oui, Supprimer</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                            </form>
+                            <!-- /.modal-dialog -->
+                        </div>
+
+
+        
    
     <!-- /.box-header -->
     <!-- form start -->

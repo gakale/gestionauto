@@ -42,7 +42,7 @@
             </span>
         </div>
 
-        <div class="box-header with-border hide" id="filter-box">
+        <!--<div class="box-header with-border hide" id="filter-box">
             <form action="{{route('maintenance.store')}}" class="form-horizontal" pjax-container="" method="get">
 
                 <div class="row">
@@ -88,10 +88,13 @@
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div>  -->
+
+
+
                             <!-- /.box-body -->
 
-                            <div class="box-footer">
+                            <!--<div class="box-footer">
                                 <div class="row">
                                     <div class="col-md-12">
                                         <div class="col-md-2"></div>
@@ -108,7 +111,7 @@
                             </div>
 
                         </form>
-                    </div>
+                    </div>  -->
 
                     <!-- /.box-header -->
                     <div class="box-body table-responsive no-padding">
@@ -121,7 +124,7 @@
                                     <th>Prix des actions</th>
                                     <th>Chauffeur conserné</th>
                                     <th>Date</th>
-                                    <th>Action</th>
+                                    <th>Actions</th>
                                 </tr>
                             </thead>
 
@@ -136,13 +139,13 @@
                                 <td>{{$maintenances->panne_chauffeur}}</td>
                                 <td>{{$maintenances->date}}</td>
                                 <td>
-                                    <a href="{{route('maintenance.show',$maintenances->id)}}">
+                                    <a type="button" class="btn btn-xs" href="{{route('maintenance.show',$maintenances->id)}}" title="Voir détails">
                                         <i class="fa fa-eye"></i>
                                     </a>
-                                    <a href="{{route('maintenance.edit', $maintenances->id)}}">
+                                    <a type="button" class="btn btn-xs" href="{{route('maintenance.edit', $maintenances->id)}}" title="Modifier">
                                         <i class="fa fa-pencil"></i>
                                     </a>
-                                    <a href="#" >
+                                    <a type="button" class="btn btn-xs" data-toggle="modal" data-target="#modal-delete" title="Supprimer">
                                         <i class="fa fa-trash"></i>
                                     </a>
                                 </td>
@@ -153,6 +156,44 @@
                         </table>
 
                     </div>
+
+
+
+                    <!-- Confirmation de la Suppression des données -->
+
+                    <div class="modal fade" id="modal-delete">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h2 class="modal-title"  style="text-align: center;">Attention !</h2>
+                                </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <form action="{{route('maintenance.destroy',$maintenances->id)}}" class="form-group" method="post">
+                                                {{@csrf_field()}}
+
+                                                <div class="form-group col-md-12">
+                                                    <h3 class="" style="text-align: center;">Voulez vous vraiment supprimer ces données ?</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-success pull-left" data-dismiss="modal">Non, Rétour</button>
+                                            <button type="submit" class="btn btn-danger">Oui, Supprimer</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                            </form>
+                            <!-- /.modal-dialog -->
+                        </div>
+
+
 
 
 

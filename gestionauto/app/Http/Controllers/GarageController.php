@@ -125,8 +125,10 @@ class GarageController extends Controller
      * @param  \App\Garage  $garage
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Garage $garage)
+    public function destroy($id)
     {
-        //
+        $garages = Garage::where('id',$id)->first();
+        $garages -> delete();
+        return redirect()->route('garage.index');
     }
 }

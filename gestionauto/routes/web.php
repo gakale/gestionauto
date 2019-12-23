@@ -192,6 +192,8 @@ Route::get('garage/{garages}/edit', 'GarageController@edit')->name('garage.edit'
 
 Route::patch('/garage.update/{garages}/','GarageController@update')->name('garage.update');
 
+Route::post('/garage.destroy/{id}/','GarageController@destroy')->name('garage.destroy');
+
 
 
 //Route Maintenance
@@ -209,6 +211,8 @@ Route::get('maintenance/{maintenances}/edit', 'MaintenanceController@edit')->nam
 Route::patch('/maintenance.update/{maintenances}/','MaintenanceController@update')->name('maintenance.update');
 
 Route::post('/maintenance.store', 'MaintenanceController@store')->name('maintenance.store');
+
+Route::post('/maintenance.destroy/{id}/','MaintenanceController@destroy')->name('maintenance.destroy');
 
 
 

@@ -40,10 +40,11 @@ class ChauffeurController extends Controller
      */
     public function store(Request $request)
     {
-        $data = request()->validate([
 
-            'name' => ['min:3'],
-            'prenom' => ['min:3'],
+        $data=request()->validate([
+
+            'name' => ['required'],
+            'prenom' => ['required'],
             'fonction' => ['required'],
             'adresse' => ['required'],
             'telephone'=> ['required'],
@@ -53,24 +54,14 @@ class ChauffeurController extends Controller
             'date'=> ['date'],
         ]);
 
-        
+
         $table = serialize($data['typepermis']);
 
         Chauffeur::create([
-        'name'=> $data['name'],
-        'prenom'=> $data['prenom'],
-        'fonction'=> $data['fonction'],
-        'adresse'=> $data['adresse'],
-        'telephone'=> ['required'],
-        'email'=>$data['email'],
-        'cni'=> $data['cni'],
-        'typepermis'=>$table,
-        'date'=>$data['date'],
-
-
+            'name'=> $data['name'],
         ]);
 
-        return redirect()->route('chauffeur.index');
+     return redirect()->route('chauffeur.index');
 
 
     }
@@ -84,7 +75,7 @@ class ChauffeurController extends Controller
     public function show($id)
     {
         $chauffeurs = Chauffeur::where('id',$id)->first();
-        $tables =unserialize($chauffeurs['typepermis']);
+        $tables = unserialize($chauffeurs['typepermis']);
         return view('admin\chauffeurview',[
             'tables'=> $tables,
             'chauffeurs'=> $chauffeurs

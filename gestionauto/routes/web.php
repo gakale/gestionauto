@@ -135,6 +135,8 @@ Route::post('/mission.store', 'MissionController@store')->name('mission.store');
 
 Route::get('/mission/{mission}/edit','MissionController@edit')->name('mission.edit');
 
+Route::destroy('/mission.destroy/{missions}','MissionController@destroy')->name('mission.destroy');
+
 
 Route::patch('/mission.update/{mission}/','Usercontroller@update')->name('mission.update');
 

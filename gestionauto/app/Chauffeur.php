@@ -6,9 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Chauffeur extends Model
 {
-    //
+  protected $guarded  = [];
 
-    protected $fillable = ['name','prenom','fonction','adresse','telephone','email','cni','permis','typepermis','date'];
     public function missions()
     {
         return $this->belongsTo(Mission::class);

@@ -35,7 +35,7 @@
 
                                             <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
 
-                                            <input type="text" id="name" name="name"  class="form-control password" placeholder="Entrée Le Motif de la course">
+                                            <input type="text" id="name" name="name"  class="form-control password" placeholder="Entrée nom chauffeur">
 
 
                                         </div>
@@ -56,7 +56,7 @@
 
                                     <span class="input-group-addon"><i class="fa fa-money fa-fw"></i></span>
 
-                                    <input type="text" id="prenom" name="prenom" class="form-control password" placeholder="Entrée Montant de Départ">
+                                    <input type="text" id="prenom" name="prenom" class="form-control password" placeholder="Entrée prenom chauffeur">
 
 
                                 </div>
@@ -76,7 +76,7 @@
 
                                         <span class="input-group-addon"><i class="fa fa-money fa-fw"></i></span>
 
-                                        <input type="text" id="fonction" name="fonction"  class="form-control password" placeholder="Entrée Montant Resté">
+                                        <input type="text" id="fonction" name="fonction"  class="form-control password" placeholder="Entrée la fonction">
 
 
                                     </div>
@@ -97,7 +97,7 @@
 
                                             <span class="input-group-addon"><i class="fa fa-money fa-fw"></i></span>
 
-                                            <input type="text" id="adresse" name="adresse"  class="form-control password" placeholder="Entrée Montant Total">
+                                            <input type="text" id="adresse" name="adresse"  class="form-control password" placeholder="Entrée l'adresse">
 
 
                                         </div>
@@ -118,14 +118,14 @@
 
                                                 <span class="input-group-addon"><i class="fa fa-money fa-fw"></i></span>
 
-                                                <input type="text" id="telephone" name="telephone" class="form-control password" placeholder="Entrée Lieu de La course">
+                                                <input type="text" id="telephone" name="telephone" class="form-control password" placeholder="Entrée le Téléphone">
 
 
                                             </div>
 
 
                                         </div>
-                                    </div> 
+                                    </div>
 
 
 
@@ -140,7 +140,7 @@
 
                                                         <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
 
-                                                        <input type="text" id="email" name="email"  class="form-control password" placeholder="Entrée votre mail">
+                                                        <input type="email" id="email" name="email"  class="form-control password" placeholder="Entrée votre mail">
 
 
                                                     </div>
@@ -184,7 +184,7 @@
 
                                                                 <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
 
-                                                                <select id="typepermis" name="typepermis[]"  class="form-control password select2" placeholder="Entrée Heure de Départ" multiple="multiple">
+                                                                <select id="typepermis" name="typepermis[]"  class="form-control password select2" placeholder="type permis " multiple="multiple">
 
                                                                             <option value="Permis A1">Permis A1</option>
                                                                             <option value="Permis A2">Permis A2</option>

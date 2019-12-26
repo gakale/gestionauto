@@ -169,9 +169,11 @@ class MissionController extends Controller
      * @param  \App\Mission  $mission
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Mission $mission)
+    public function destroy(Mission $missions)
     {
-        //
+        Mission::destroy($missions->id);
+
+        redirect('/dashboard');
     }
 
 

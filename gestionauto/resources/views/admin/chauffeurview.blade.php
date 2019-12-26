@@ -142,7 +142,7 @@
                         <div class="col-sm-8">
                             <div class="box box-solid box-default no-margin box-show">
                                 <!-- /.box-header -->
-                                @foreach ($tables as $table)
+                                {{-- @foreach ($tables as $table)
 
 
                                     <div class="box-body">
@@ -151,7 +151,7 @@
                                         &nbsp;
                                     </div>
                                     <!-- /.box-body -->
-                                @endforeach
+                                @endforeach --}}
                             </div>
                         </div>
                     </div>

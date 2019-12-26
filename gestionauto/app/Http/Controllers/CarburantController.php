@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Carburant;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class CarburantController extends Controller
@@ -14,8 +15,16 @@ class CarburantController extends Controller
      */
     public function index()
     {
-            return view('admin\carburant');
-    }    /**
+        $carburant = DB::table('carburants')->orderBy('created_at','DESC')->paginate(10);
+
+        
+        return view('admin\carburant', [
+
+            'carburant'=> $carburant
+        ]);
+    }    
+
+    /**
      * Show the form for creating a new resource.
      *
      * @return \Illuminate\Http\Response
@@ -54,7 +63,7 @@ class CarburantController extends Controller
 
         Carburant::create([
             'nomstation'=> $data['nomstation'],
-            'description'=> $data['description'],
+            'designation'=> $data['designation'],
             'litrage'=> $data['litrage'],
             'montant'=> $data['montant'],
             'quantite'=> $data['quantite'],
@@ -66,7 +75,7 @@ class CarburantController extends Controller
         ]);
 
 
-
+        return redirect()->route('carburant.index');
 
     }
 
@@ -76,9 +85,14 @@ class CarburantController extends Controller
      * @param  \App\Carburant  $carburant
      * @return \Illuminate\Http\Response
      */
-    public function show(Carburant $carburant)
+    public function show($id)
     {
-        //
+        $carburants = Carburant::where('id',$id)->first();
+
+        return view('admin\carburantview',[
+
+            'carburants'=> $carburants
+        ]);
     }
 
     /**
@@ -87,9 +101,9 @@ class CarburantController extends Controller
      * @param  \App\Carburant  $carburant
      * @return \Illuminate\Http\Response
      */
-    public function edit(Carburant $carburant)
+    public function edit(Carburant $carburants)
     {
-        //
+        return view('admin\carburantedit',compact('carburants'));
     }
 
     /**
@@ -99,9 +113,25 @@ class CarburantController extends Controller
      * @param  \App\Carburant  $carburant
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Carburant $carburant)
+    public function update(Carburant $carburants)
     {
-        //
+        $data = request()->validate([
+
+            'nomstation'=> ['required'],
+            'designation'=> ['required'],
+            'litrage'=> ['required'],
+            'montant'=> ['required'],
+            'quantite'=> ['required'],
+            'date' => ['required','date'],
+            'avantrecharge'=> ['required'],
+            'apresrecharge'=> ['required'],
+            'vehicule'=> ['required'],
+            'paiement'=> ['required', 'image']
+        ]);
+        
+        $carburants->update($data);
+
+        return redirect()->route('carburant.index', ['carburants'=> $carburants]);
     }
 
     /**
@@ -110,8 +140,10 @@ class CarburantController extends Controller
      * @param  \App\Carburant  $carburant
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Carburant $carburant)
+    public function destroy($id)
     {
-        //
+        $carburants = Carburant::where('id',$id)->first();
+        $carburants -> delete();
+        return redirect()->route('carburant.index');
     }
 }

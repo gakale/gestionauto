@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Garage;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 
 class GarageController extends Controller
@@ -14,7 +15,13 @@ class GarageController extends Controller
      */
     public function index()
     {
-       return view('admin\garage');
+       $garage = DB::table('garages')->orderBy('created_at','DESC')->paginate(10);
+
+        
+        return view('admin\garage', [
+
+            'garage'=> $garage
+        ]);
     }
 
     /**
@@ -35,7 +42,29 @@ class GarageController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = request()->validate([
+
+            'name'=> ['required'],
+            'localisation'=> ['required'],
+            'nommaitre'=> ['required'],
+            'contactmaitre'=> ['required'],
+            'depuis'=> ['required'],
+            'numero'=> ['required'],
+            'email'=> ['required','email']
+        ]);
+
+        Garage::create([
+
+            'name'=> $data['name'],
+            'localisation'=> $data['localisation'],
+            'nommaitre'=> $data['nommaitre'],
+            'contactmaitre'=> $data['contactmaitre'],
+            'depuis'=>$data['depuis'],
+            'numero'=>$data['numero'],
+            'email'=>$data['email'],
+
+        ]);
+        return redirect()->route('garage.index');
     }
 
     /**
@@ -44,9 +73,14 @@ class GarageController extends Controller
      * @param  \App\Garage  $garage
      * @return \Illuminate\Http\Response
      */
-    public function show(Garage $garage)
+    public function show($id)
     {
-        //
+        $garages = Garage::where('id',$id)->first();
+
+        return view('admin\garageview',[
+
+            'garages'=> $garages
+        ]);
     }
 
     /**
@@ -55,9 +89,9 @@ class GarageController extends Controller
      * @param  \App\Garage  $garage
      * @return \Illuminate\Http\Response
      */
-    public function edit(Garage $garage)
+    public function edit(Garage $garages)
     {
-        //
+        return view('admin\garageedit',compact('garages'));
     }
 
     /**
@@ -67,9 +101,22 @@ class GarageController extends Controller
      * @param  \App\Garage  $garage
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Garage $garage)
+    public function update(Garage $garages)
     {
-        //
+        $data = request()->validate([
+
+            'name'=> ['required'],
+            'localisation'=> ['required'],
+            'nommaitre'=> ['required'],
+            'contactmaitre'=> ['required'],
+            'depuis'=> ['required'],
+            'numero'=> ['required'],
+            'email'=> ['required','email']
+        ]);
+        
+        $garages->update($data);
+
+        return redirect()->route('garage.index', ['garages'=> $garages]);
     }
 
     /**
@@ -78,8 +125,10 @@ class GarageController extends Controller
      * @param  \App\Garage  $garage
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Garage $garage)
+    public function destroy($id)
     {
-        //
+        $garages = Garage::where('id',$id)->first();
+        $garages -> delete();
+        return redirect()->route('garage.index');
     }
 }

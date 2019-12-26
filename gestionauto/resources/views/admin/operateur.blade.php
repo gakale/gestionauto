@@ -138,16 +138,16 @@
                                             <td>{{$user->login}}</td>
                                             <td>{{$user->role}}</td>
                                             <td>
-                                            <a href="{{route('user.show',$user->id)}}">
+                                                <a href="{{route('user.show',$user->id)}}">
                                                     <i class="fa fa-eye"></i>
-                                                </a>
-                                                <a href="/" >
-                                                    <i class="fa fa-trash"></i>
                                                 </a>
                                                 <a href="{{route('user.edit',$user->id)}}" >
                                                     <i class="fa fa-pencil"></i>
                                                 </a>
-                                                </td>
+                                                <a href="/" >
+                                                    <i class="fa fa-trash"></i>
+                                                </a>
+                                            </td>
                                         </tr>
 
                                         </tr>

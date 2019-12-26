@@ -63,6 +63,8 @@ class PersonnelController extends Controller
             'telephone'=>$data['telephone']
 
         ]);
+
+        //session()->flash('message','Enregistré avec Succès !');
         return redirect()->route('personnel.index');
 
     }

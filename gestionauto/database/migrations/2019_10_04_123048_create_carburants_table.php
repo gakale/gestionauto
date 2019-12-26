@@ -20,10 +20,11 @@ class CreateCarburantsTable extends Migration
             $table->string('litrage');
             $table->string('montant');
             $table->string('quantite');
-            $table->date('date');
             $table->string('avantrecharge');
             $table->string('apresrecharge');
+            $table->string('vehicule');
             $table->string('paiement');
+            $table->date('date');
             $table->timestamps();
         });
     }

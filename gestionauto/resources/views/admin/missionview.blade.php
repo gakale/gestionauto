@@ -239,7 +239,7 @@
 
 
                     <div class="form-group ">
-                        <label class="col-sm-2 control-label">A crée </label>
+                        <label class="col-sm-2 control-label">Date d'ajout</label>
                         <div class="col-sm-8">
                             <div class="box box-solid box-default no-margin box-show">
                                 <!-- /.box-header -->
@@ -253,7 +253,7 @@
 
 
                     <div class="form-group ">
-                        <label class="col-sm-2 control-label">Mis à ajour </label>
+                        <label class="col-sm-2 control-label">Dernière Mise à Jour</label>
                         <div class="col-sm-8">
                             <div class="box box-solid box-default no-margin box-show">
                                 <!-- /.box-header -->

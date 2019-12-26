@@ -1,181 +1,265 @@
 
-@extends('layout.layout')
+@extends('../admins/layouts')
 @section('content')
-@section('grand-text','gestion des garages')
+@section('grand-text','Gestion des Garages')
 @section('grands','Tableau de Bord')
 @section('petit-text','Garage')
 
 
 <div class="container-fluid">
-
     <div class="box">
-        <div class="box-header">
-            <h3 class="box-title">Nos Garages</h3>
-            <form action="" class="form-group">
-
-                <input placeholder="Recherche" id="recherche" class="form-control" style="width: 20%;margin: 10px;" type="search">
-
-
-
-            </form>
-
-                <button type="button" class="btn btn-default" data-toggle="modal" data-target="#modal-default"  style="float: right">
-                    Nouveaux Garage
-                </button>
-            </div>
-            {{--  nouveaux modal   --}}
-            <div class="modal fade" id="modal-default">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                <span aria-hidden="true">&times;</span></button>
-                                <h4 class="modal-title">Nouveau Garage  </h4>
-                            </div>
-                            <div class="modal-body">
-                                <div class="row">
-                                    <form action="#" class="form-group" method="post">
-                                        <div class="form-group col-md-6">
-                                            <label for="message-text" class="col-form-label">Nom du garage</label>
-                                            <input name="name" type="text" class="form-control" id="message-text">
-
-
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="message-text" class="col-form-label">Localisation</label>
-                                            <input name="localisation"  class="form-control " id="message-text" name="states[]" multiple="multiple">
-
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="recipient-name" class="col-form-label">Depuis </label>
-                                            <input name="depuis" type="text" class="form-control" id="recipient-name">
-                                        </div>
-
-                                        <div class="form-group col-md-6">
-                                            <label for="recipient-name" class="col-form-label">Numero du garage</label>
-                                            <input name="numero" type="text" class="form-control" id="recipient-name">
-                                        </div>
-
-
-
-                                        <div class="form-group col-md-6">
-                                            <label for="message-text" class="col-form-label">Mail du garage</label>
-                                            <input type="email" name="email" class="form-control" id="message-text">
-
-
-                                        </div>
-
-
-
-
-                                    </form>
-                                </div>
-
-
-                        </div>
-
-
-
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                    <!-- /.modal-content -->
+        <div class="box-header with-border">
+            <div class="pull-right">
+                <div class="btn-group pull-right" style="margin-right: 10px">
                 </div>
-
-                <!-- /.modal-dialog -->
+                <div class="btn-group pull-right" style="margin-right: 10px">
+                    <a type="button" class="btn btn-sm btn-success" data-toggle="modal" data-target="#modal-default" title="Nouveau">
+                        <i class="fa fa-save"></i><span class="hidden-xs">&nbsp;&nbsp;Nouveau</span>
+                    </a>
+                </div>
             </div>
+            <span>
+                <a href="{{ route('garage.index') }}" class="btn btn-sm btn-primary grid-refresh" title="Rafraîchir"><i class="fa fa-refresh"></i><span class="hidden-xs"> Actualisé</span></a> <div class="btn-group" style="margin-right: 10px" data-toggle="buttons">
+                    <label class="btn btn-sm btn-dropbox 5daed26c39e34-filter-btn " title="Filtre">
+                        <input type="checkbox"><i class="fa fa-filter"></i><span class="hidden-xs">&nbsp;&nbsp;Filtre</span>
+                    </label>
 
-            <!-- /.box-header -->
-            <div class="box-body no-padding">
-                <table class="table table-bordered  table-striped">
-                    <tbody>
-                        <tr>
-                            <th>Nom du garage</th>
-                            <th>localisation</th>
-                            <th>Depuis</th>
-                            <th>Numero garage</th>
-                            <th>Mail garage</th>
-                            <th>Action</th>
-                        </tr>
-                        <tr>
-                            <td>022 BP 01</td>
-                            <td>BMW</td>
-                            <td>2019 </td>
-                            <td>Compabilité</td>
-                            <td>Camion</td>
-                            <td style="letter-spacing: 3px;text-align:center;">
-
-                                <a href="#" class="fa fa-eye">
-
-                                </a>
-                                <a href="#" class="fa fa-pencil">
-
-                                </a>
-                                <a href="#" class="red fa fa-trash">
-
-                                </a>
-                            </td>
-
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td> </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td> </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td> </td>
-                            <td></td>
-                            <td></td>
-
-                        </tr>
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td> </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
-                        </tr>
-
-                        <tr>
-                            <td></td>
-                            <td></td>
-                            <td> </td>
-                            <td></td>
-                            <td></td>
-                            <td></td>
-
-
-                        </tr>
-
-                    </tbody>
-                </table>
-            </div>
-            <!-- /.box-body -->
+                </div>
+            </span>
         </div>
 
 
+
+        <!-- /.box-header -->
+        <div class="box-body table-responsive no-padding">
+            <table class="table table-hover">
+                <thead>
+                    <tr>
+                        <th>Nom du garage</th>
+                        <th>Localisation</th>
+                        <th>Nom Maître entretien</th>
+                        <th>Contact Maître entretien</th>
+                        <th>Dépuis</th>
+                        <th>Contact garage</th>
+                        <th>E-mail garage</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                     @foreach($garage as $garages)
+
+                        <tr>
+                            <td>{{$garages->name}}</td>
+                            <td>{{$garages->localisation}}</td>
+                            <td>{{$garages->nommaitre}}</td>
+                            <td>{{$garages->contactmaitre}}</td>
+                            <td>{{$garages->depuis}}</td>
+                            <td>{{$garages->numero}}</td>
+                            <td>{{$garages->email}}</td>
+                            <td>
+                                <a  type="button" class="btn btn-xs" href="{{route('garage.show',$garages->id)}}" title="Voir détails">
+                                    <i class="fa fa-eye"></i>
+                                </a>
+                                <a type="button" class="btn btn-xs" href="{{route('garage.edit', $garages->id)}}" title="Modifier">
+                                    <i class="fa fa-pencil"></i>
+                                </a>
+                                <a type="button" class="btn btn-xs" data-toggle="modal" data-target="#modal-delete" title="Supprimer">
+                                    <i class="fa fa-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+
+                    @endforeach
+
+                </tbody>
+
+            </table>
+
+        </div>
+
+
+
+        <div class="box-footer clearfix">
+            <b></b> à <b></b> de <b>0</b> lignes<ul class="pagination pagination-sm no-margin pull-right">
+                <!-- Previous Page Link -->
+                <li class="page-item disabled"><span class="page-link">«</span></li>
+
+                <!-- Pagination Elements -->
+                <!-- "Three Dots" Separator -->
+
+                <!-- Array Of Links -->
+                <li class="page-item active"><span class="page-link">1</span></li>
+
+                <!-- Next Page Link -->
+                <li class="page-item disabled"><span class="page-link">»</span></li>
+            </ul>
+
+            <label class="control-label pull-right" style="margin-right: 10px; font-weight: 100;">
+
+                <small>Affiche</small>&nbsp;
+                <select class="input-sm grid-per-pager" name="per-page">
+                    <option value="http://197.159.206.237/admin/jo/certifications?per_page=10">10</option>
+                    <option value="http://197.159.206.237/admin/jo/certifications?per_page=20" selected="">20</option>
+                    <option value="http://197.159.206.237/admin/jo/certifications?per_page=30">30</option>
+                    <option value="http://197.159.206.237/admin/jo/certifications?per_page=50">50</option>
+                    <option value="http://197.159.206.237/admin/jo/certifications?per_page=100">100</option>
+                </select>
+                &nbsp;<small>lignes</small>
+            </label>
+
+        </div>
+        <!-- /.box-body -->
     </div>
+</div>
 
 
 
+<!-- Confirmation de la Suppression des données -->
+
+                    <div class="modal fade" id="modal-delete">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h2 class="modal-title"  style="text-align: center;">Attention !</h2>
+                                </div>
+                                    <div class="modal-body">
+                                        <div class="row">
+                                            <form action="{{route('garage.destroy',$garages->id)}}" class="form-group" method="post">
+                                                {{@csrf_field()}}
+
+                                                <div class="form-group col-md-12">
+                                                    <h3 class="" style="text-align: center;">Voulez vous vraiment supprimer ces données ?</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                        <div class="modal-footer">
+                                            <button type="button" class="btn btn-success pull-left" data-dismiss="modal">Non, Rétour</button>
+                                            <button type="submit" class="btn btn-danger">Oui, Supprimer</button>
+                                        </div>
+                                    </div>
+                                    <!-- /.modal-content -->
+                                </div>
+                            </form>
+                            <!-- /.modal-dialog -->
+                        </div>
+
+
+
+
+<div class="modal fade" id="modal-default">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span></button>
+                    <h2 class="modal-title">Nouveau Personnel  </h2>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <form action="{{ route('garage.store') }}" class="form-group" method="post">
+                            @csrf
+
+                            <div class="form-group col-md-6">
+                                <label for="recipient-name" class="col-form-label">Nom du garage</label>
+                                <input type="text" name="name" class="form-control @error('name') is-invalid @enderror" id="recipient-name">
+                                @error('name')
+                                <span class="invalid-feedback alert alert-danger" role="alert">
+                                    <strong>{{ $message }}</strong>
+                                </span>
+                                @enderror
+                            </div>
+
+
+                            <div class="form-group col-md-6">
+                                <label for="message-text" class="col-form-label">Nom Maître entretien</label>
+                                <input class="form-control @error('nommaitre') is-invalid @enderror" name="nommaitre" id="message-text">
+                                @error('nommaitre')
+                                <span class="invalid-feedback">
+                                    <strong>$message</strong>
+                                </span>
+                                @enderror
+                            </div>
+
+
+                            <div class="form-group col-md-6">
+                                <label for="message-text" class="col-form-label">Contact Maître entretien</label>
+                                <input class="form-control @error('contactmaitre') is-invalid @enderror" name="contactmaitre" id="message-text">
+                                @error('contactmaitre')
+                                <span class="invalid-feedback">
+                                    <strong>$message</strong>
+                                </span>
+                                @enderror
+                            </div>
+
+
+                            <div class="form-group col-md-6">
+                                <label for="message-text" class="col-form-label">Localisation</label>
+                                <input class="form-control @error('localisation') is-invalid @enderror" name="localisation" id="message-text">
+                                @error('localisation')
+                                <span class="invalid-feedback">
+                                    <strong>$message</strong>
+                                </span>
+                                @enderror
+                            </div>
+
+
+                            <div class="form-group col-md-6">
+                                <label for="message-text" class="col-form-label">Dépuis</label>
+                                <input type="date" class="form-control @error('depuis') is-invalid @enderror" name="depuis" id="message-text">
+                                @error('depuis')
+                                <span class="invalid-feedback">
+                                    <strong>$message</strong>
+                                </span>
+                                @enderror
+                            </div>
+
+
+                            <div class="form-group col-md-6">
+                                <label for="message-text" class="col-form-label">Contact du garage</label>
+                                <input type="text" class="form-control @error('numero') is-invalid @enderror" name="numero" id="message-text">
+                                @error('numero')
+                                <span class="invalid-feedback">
+                                    <strong>$message</strong>
+                                </span>
+                                @enderror
+                            </div>
+
+
+                            <div class="form-group col-md-6">
+                                <label for="message-text" class="col-form-label">E-mail du garage</label>
+                                <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="message-text">
+                                @error('email')
+                                <span class="invalid-feedback">
+                                    <strong>$message</strong>
+                                </span>
+                                @enderror
+                            </div>
+                            
+
+                        </div>
+
+
+                    </div>
+
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default pull-left" data-dismiss="modal">Close</button>
+                        <button type="submit" class="btn btn-primary">Save changes</button>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+        </form>
+
+
+        <!-- /.modal-dialog -->
+    </div>
 
     @stop

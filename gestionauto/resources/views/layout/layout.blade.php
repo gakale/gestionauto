@@ -227,16 +227,16 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="garage"><i class="fa fa-cog"></i>Entretient</a></li>
+            <li><a href="{{ route('garage.index') }}"><i class="fa fa-cog"></i>Entretient</a></li>
             <li class="treeview">
 
           </ul>
         </li>
-        <li><a href="assurance"><i class="fa fa-users"></i> <span>Assurance</span></a></li>
+        <li><a href="{{ route('assurance.index') }}"><i class="fa fa-users"></i> <span>Assurance</span></a></li>
 
         <li><a href="documents"><i class="fa fa-book"></i> <span>Documentation</span></a></li>
         <li class="header">LABELS</li>
-        <li><a href="carburant"><i class="fa fa-thermometer-full text-red"></i> <span>CARBURANT</span></a></li>
+        <li><a href="{{ route('carburant.index') }}"><i class="fa fa-thermometer-full text-red"></i> <span>CARBURANT</span></a></li>
         <li><a href="{{ route('stock.index') }}"><i class="fa fa-share text-yellow"></i> <span>STOCK</span></a></li>
         <li><a href="maps"><i class="fa fa-map text-aqua"></i> <span>GPS</span></a></li>
       </ul>
@@ -267,7 +267,7 @@
     <div class="pull-right hidden-xs">
       <b>Version</b> 2.4.0
     </div>
-    <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Mediatec</a>.</strong>Tous droit réservé
+    <strong>Copyright &copy; 2019-2020 <a href="https://adminlte.io">Mediatec </a>|</strong> Tout droit réservé
   </footer>
 
   <!-- Control Sidebar -->

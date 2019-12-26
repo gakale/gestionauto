@@ -227,7 +227,7 @@
                             </span>
                         </a>
                         <ul class="treeview-menu">
-                            <li><a href="garage"><i class="fa fa-cog"></i>Entretient</a></li>
+                            <li><a href="{{ route('garage.index') }}"><i class="fa fa-cog"></i>Entretient</a></li>
                             <li class="treeview">
 
                             </ul>
@@ -267,7 +267,7 @@
                 <div class="pull-right hidden-xs">
                     <b>Version</b> 2.4.0
                 </div>
-                <strong>Copyright &copy; 2014-2016 <a href="https://adminlte.io">Mediatec</a>.</strong>Tous droit réservé
+                <strong>Copyright &copy; 2019-2020 <a href="https://adminlte.io">Mediatec</a> | </strong>Tout droit réservé
             </footer>
 
             <!-- Control Sidebar -->

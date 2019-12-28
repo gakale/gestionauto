@@ -59,6 +59,14 @@ class ChauffeurController extends Controller
 
         Chauffeur::create([
             'name'=> $data['name'],
+            'prenom'=> $data['prenom'],
+            'fonction'=>$data['fonction'],
+            'adresse'=> $data['adresse'],
+            // 'telephone'=>$data['telephone']
+            'email'=>$data['email'],
+            'cni'=>$data['cni'],
+            'typepermis'=>$table,
+            'date'=>$data['date']
         ]);
 
      return redirect()->route('chauffeur.index');

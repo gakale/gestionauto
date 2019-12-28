@@ -43,7 +43,7 @@
         </div>
 
         <!--<div class="box-header with-border hide" id="filter-box">
-            <form action="{{route('maintenance.store')}}" class="form-horizontal" pjax-container="" method="get">
+            {{-- <form action="{{route('maintenance.store')}}" class="form-horizontal" pjax-container="" method="get"> --}}
 
                 <div class="row">
                     <div class="col-md-12">
@@ -58,7 +58,7 @@
                                             </div>
 
                                             <input type="text" class="form-control name" placeholder="Nom" name="name" value="">
-                                        </div>  
+                                        </div>
                                           </div>
                                     </div>
                                     <div class="form-group is-empty">
@@ -70,7 +70,7 @@
                                                 </div>
 
                                                 <input type="text" class="form-control matricule" placeholder="Matricule" name="matricule" value="">
-                                            </div>   
+                                            </div>
                                             </div>
                                     </div>
                                         <div class="form-group is-empty">
@@ -82,7 +82,7 @@
                                                     </div>
 
                                                     <input type="text" class="form-control roles_id" placeholder="Type" name="roles[]" value="">
-                                                </div>   
+                                                </div>
                                                  </div>
                                             </div>
                                         </div>
@@ -172,8 +172,8 @@
                                 </div>
                                     <div class="modal-body">
                                         <div class="row">
-                                            <form action="{{route('maintenance.destroy',$maintenances->id)}}" class="form-group" method="post">
-                                                {{@csrf_field()}}
+                                            {{-- <form action="{{route('maintenance.destroy',$maintenances->id)}}" class="form-group" method="post">
+                                                {{@csrf_field()}} --}}
 
                                                 <div class="form-group col-md-12">
                                                     <h3 class="" style="text-align: center;">Voulez vous vraiment supprimer ces données ?</h3>

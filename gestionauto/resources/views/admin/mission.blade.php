@@ -168,12 +168,12 @@
 
                                     <div class="modal-footer">
                                         <a  class="btn btn-default pull-left" data-dismiss="modal">Annulation</button>
-                                          <form action="{{route('mission.destroy',$missions)}}" method="post">
+                                          {{-- <form action="{{route('mission.destroy',$missions)}}" method="post">
                                               @crsf
                                               @method('DELETE')
 
                                         <a type="button" class="btn btn-primary">Supprimer</a>
-                                          </form>
+                                          </form> --}}
                                     </div>
 
                             <!-- /.modal-dialog -->

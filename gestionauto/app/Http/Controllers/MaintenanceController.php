@@ -18,13 +18,13 @@ class MaintenanceController extends Controller
     {
         $maintenance = DB::table('maintenances')->orderBy('created_at','DESC')->paginate(10);
 
-        
+
         return view('admin\maintenance', [
 
             'maintenance'=> $maintenance
         ]);
 
-        
+
     }
 
     /**
@@ -45,11 +45,11 @@ class MaintenanceController extends Controller
      */
     public function store(Request $request)
     {
-        $table = request( ['action']);
+
 
 
          $data = request()->validate([
-        
+
             'imatriculation' => ['required'],
             'prixaction' => ['required'],
             'action' => ['required'],
@@ -59,15 +59,18 @@ class MaintenanceController extends Controller
 
          ]);
 
+         $table = serialize($data['action']);
 
         Maintenance::create([
 
             'imatriculation'=> $data['imatriculation'],
-            'prixaction' => $data['prixaction'],
-            'action'=> $data['action'],
+            'prixaction'=>$data['prixaction'],
+            'action'=>$table,
             'garage'=>$data['garage'],
-            'panne_chauffeur'=> $data['panne_chauffeur'],
-            'date'=> ['date'],
+            'panne_chauffeur'=>$data['panne_chauffeur'],
+            'date'=>$data['date']
+
+
         ]);
 
         return redirect()->route('maintenance.index');
@@ -83,10 +86,11 @@ class MaintenanceController extends Controller
     public function show($id)
     {
         $maintenances = Maintenance::where('id',$id)->first();
-
+        $table = $maintenances['action'];
         return view('admin\maintenanceview',[
 
-            'maintenances'=> $maintenances
+            'maintenances'=> $maintenances,
+            'table'=> $table
         ]);
     }
 
@@ -96,9 +100,12 @@ class MaintenanceController extends Controller
      * @param  \App\Maintenance  $maintenance
      * @return \Illuminate\Http\Response
      */
-    public function edit(Maintenance $maintenances)
+    public function edit(Maintenance $maintenance)
     {
-        return view('admin\maintenanceedit',compact('maintenances'));
+
+        $table = $maintenance['action'];
+
+        return view('admin\maintenanceedit',compact('maintenance','table'));
     }
 
     /**
@@ -111,14 +118,17 @@ class MaintenanceController extends Controller
     public function update(Maintenance $maintenances)
     {
         $data = request()->validate([
+            'imatriculation' => ['required'],
+            'prixaction' => ['required'],
+            'action' => ['required'],
+            'garage'=> ['required'],
+            'panne_chauffeur' => ['required'],
+            'date' => ['required','date'],
 
-            'name'=> ['required'],
-            'prenom'=> ['required'],
-            'email'=> ['required','email'],
-            'fonction'=> ['required'],
-            'telephone'=> ['required'],
         ]);
-        
+        $table = serialize($data['action']);
+
+
         $maintenances->update($data);
 
         return redirect()->route('maintenance.index', ['maintenances'=> $maintenances]);

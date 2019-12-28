@@ -156,7 +156,7 @@ Route::post('/mission.store', 'MissionController@store')->name('mission.store');
 
 Route::get('/mission/{mission}/edit','MissionController@edit')->name('mission.edit');
 
-Route::destroy('/mission.destroy/{missions}','MissionController@destroy')->name('mission.destroy');
+Route::post('/mission.destroy/{missions}','MissionController@destroy')->name('mission.destroy');
 
 
 Route::patch('/mission.update/{mission}/','Usercontroller@update')->name('mission.update');
@@ -204,13 +204,13 @@ Route::post('/garage.destroy/{id}/','GarageController@destroy')->name('garage.de
 
 Route::get('/maintenance.index', 'MaintenanceController@index')->name('maintenance.index');
 
-Route::get('maintenance.show/{maintenances}', 'MaintenanceController@show')->name('maintenance.show');
+Route::get('maintenance.show/{maintenance}', 'MaintenanceController@show')->name('maintenance.show');
 
 Route::get('/maintenance.create', 'MaintenanceController@create')->name('maintenance.create');
 
-Route::get('maintenance/{maintenances}/edit', 'MaintenanceController@edit')->name('maintenance.edit');
+Route::get('maintenance/{maintenance}/edit', 'MaintenanceController@edit')->name('maintenance.edit');
 
-Route::patch('/maintenance.update/{maintenances}/','MaintenanceController@update')->name('maintenance.update');
+Route::patch('/maintenance.update/{maintenance}/','MaintenanceController@update')->name('maintenance.update');
 
 Route::post('/maintenance.store', 'MaintenanceController@store')->name('maintenance.store');
 

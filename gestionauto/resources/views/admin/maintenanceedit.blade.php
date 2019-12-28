@@ -8,15 +8,15 @@
 <div class="box box-info">
     <div class="box-header with-border">
         <h3 class="box-title">Editer</h3>
-        <div class="box-tools">  
+        <div class="box-tools">
         </div>
     </div>
     <!-- /.box-header -->
     <!-- form start -->
-    <form action="{{route('maintenance.update',['maintenances'=> $maintenances])}}" method="POST" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data" pjax-container="">
+    <form action="{{route('maintenance.update',['maintenances'=> $maintenance])}}" method="POST" accept-charset="UTF-8" class="form-horizontal" enctype="multipart/form-data" pjax-container="">
         @csrf
         @method('PATCH')
-           
+
             <div class="form-group">
                 <label class="col-sm-2  control-label"></label>
                 <div class="col-sm-8">
@@ -34,7 +34,7 @@
                 <div class="col-sm-8">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-envelope fa-fw"></i></span>
-                        <input type="text" id="email" name="imatriculation" value="{{$maintenances->imatriculation}}" class="form-control @error('imatriculation') is-invalid @enderror" placeholder="Entrez le numéro d'imatriculation du Véhicule">
+                        <input type="text" id="email" name="imatriculation" value="{{$maintenance->imatriculation}}" class="form-control @error('imatriculation') is-invalid @enderror" placeholder="Entrez le numéro d'imatriculation du Véhicule">
                     </div>
                     @error('imatriculation')
                         <span class="invalid-feedback" role="alert">
@@ -51,7 +51,7 @@
                 <div class="col-sm-8">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                        <input type="text" id="login" name="action" value="{{$maintenances->action}}" class="form-control etablissement @error('action') is-invalid @enderror" placeholder="Entrez Le type de panne">           
+                        <input type="text" id="login" name="action" value="{{$maintenance->action}}" class="form-control etablissement @error('action') is-invalid @enderror" placeholder="Entrez Le type de panne">
                     </div>
                     @error('action')
                         <span class="invalid-feedback" role="alert">
@@ -64,21 +64,21 @@
 
             <div class="form-group">
                 <label for="password" class="col-sm-2  control-label">Prix de l'action</label>
-                <div class="col-sm-8">                
+                <div class="col-sm-8">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                        <input type="text" id="password" name="prixaction" value="{{$maintenances->prixaction}}" class="form-control  @error('prixaction') is-invalid @enderror" placeholder="Entrée Mot de passe">
+                        <input type="text" id="password" name="prixaction" value="{{$maintenance->prixaction}}" class="form-control  @error('prixaction') is-invalid @enderror" placeholder="Entrée Mot de passe">
                     </div>
                     @error('prixaction')
                         <span class="invalid-feedback" role="alert">
                             <strong>{{$message}}</strong>
                         </span>
                     @enderror
-                </div>  
+                </div>
             </div>
 
 
-            <div class="form-group">   
+            <div class="form-group">
             </div>
 
 
@@ -87,7 +87,7 @@
                 <div class="col-sm-8">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                        <input type="text" id="password" name="garage" value="{{$maintenances->garage}}" class="form-control  @error('garage') is-invalid @enderror" placeholder="Entrée Mot de passe">
+                        <input type="text" id="password" name="garage" value="{{$maintenance->garage}}" class="form-control  @error('garage') is-invalid @enderror" placeholder="Entrée Mot de passe">
                     </div>
                     @error('garage')
                         <span class="invalid-feedback" role="alert">
@@ -103,7 +103,7 @@
                 <div class="col-sm-8">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-pencil fa-fw"></i></span>
-                        <input type="text" id="name" name="panne_chauffeur" value="{{$maintenances->panne_chauffeur}}" class="form-control name" placeholder="Entrez le nom du chauffeur conserné">
+                        <input type="text" id="name" name="panne_chauffeur" value="{{$maintenance->panne_chauffeur}}" class="form-control name" placeholder="Entrez le nom du chauffeur conserné">
                     </div>
                     @error('panne_chauffeur')
                         <span class="invalid-feedback" role="alert">
@@ -119,7 +119,7 @@
                 <div class="col-sm-8">
                     <div class="input-group">
                         <span class="input-group-addon"><i class="fa fa-calendar fa-fw"></i></span>
-                        <input type="date" id="date" name="date" value="{{$maintenances->date}}" class="form-control matricule @error('date') is-invalid @enderror">
+                        <input type="date" id="date" name="date" value="{{$maintenance->date}}" class="form-control matricule @error('date') is-invalid @enderror">
                     </div>
                     @error('date')
                         <span class="invalid-feedback" role="alert">
@@ -136,7 +136,7 @@
 
     </div>
 
-  
+
         <!-- /.box-body -->
 
     <div class="box-footer">
@@ -152,7 +152,7 @@
         </div>
     </div>
 
-        
+
         <!-- /.box-footer -->
     </form>
 </div>

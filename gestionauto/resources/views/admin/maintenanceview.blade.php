@@ -18,7 +18,7 @@
                     <a href="{{route('maintenance.edit', $maintenances->id)}}" class="btn btn-sm btn-primary" title="Editer">
                         <i class="fa fa-edit"></i><span class="hidden-xs"> Editer</span>
                     </a>
-                </div> 
+                </div>
                 <div class="btn-group pull-right" style="margin-right: 5px">
                     <a href="{{route('maintenance.index')}}" class="btn btn-sm btn-default" title="Liste">
                         <i class="fa fa-list"></i><span class="hidden-xs"> Liste</span>
@@ -64,8 +64,8 @@
                         </div>
 
 
-        
-    
+
+
     <!-- /.box-header -->
     <!-- form start -->
     <div class="form-horizontal">
@@ -79,7 +79,7 @@
                             <!-- /.box-header -->
                             <div class="box-body">
                                  {{$maintenances->id}}&nbsp;
-                            </div>               
+                            </div>
                             <!-- /.box-body -->
                         </div>
                     </div>
@@ -105,9 +105,16 @@
                     <div class="col-sm-8">
                         <div class="box box-solid box-default no-margin box-show">
                             <!-- /.box-header -->
-                            <div class="box-body">
-                                {{$maintenances->action}}&nbsp;
-                            </div>
+                            @foreach ($table as $tables)
+
+
+                                  <div class="box-body">
+
+                                      <span> {{$tables}}</span>
+                                      &nbsp;
+                                  </div>
+                                  <!-- /.box-body -->
+                                @endforeach
                             <!-- /.box-body -->
                         </div>
                     </div>
@@ -204,4 +211,4 @@
 </div>
 </div>
 
-@stop    
+@stop
